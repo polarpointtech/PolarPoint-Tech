@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+.home3-container {
+  position: relative;
+  width: 100%;
+  height: 900px; 
+  background: linear-gradient(180deg, #EAF8FF 0%, #FFFFFF 100%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
+
+  .grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+    background-size: 100px 100px;
+    background-position: center top;
+    -webkit-mask-image: 
+      linear-gradient(45deg, transparent 5%, black 60%),
+      linear-gradient(to bottom, transparent 0%, black 100px), 
+      linear-gradient(to left, transparent 0%, black 100px);
+    mask-image: 
+      linear-gradient(45deg, transparent 5%, black 60%),
+      linear-gradient(to bottom, transparent 0%, black 100px), 
+      linear-gradient(to left, transparent 0%, black 100px);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+    pointer-events: none;      
+    z-index: 1;
+  }
+
+  .floating-icons-layer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1440px; 
+    height: 100%;
+    pointer-events: none; 
+    z-index: 15;
+
+    .floating-wrapper {
+      position: absolute;
+      pointer-events: auto; 
+      
+      &:hover {
+        z-index: 20;
+        
+        .icon-btn {
+          transform: translateY(-2px); 
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .hover-info {
+          opacity: 1;
+          visibility: visible;
+          transform: translate(0, -15%); 
+        }
+      }
+
+      // --- 左側按鈕樣式 ---
+      // 佈局：按鈕在左，文字在右
+      &.left-side {
+        .hover-info {
+          left: 55px; // 位於按鈕右側
+          top: 0;
+          transform: translate(30px, -15%); // 初始從右邊滑入
+          
+          .info-title, .info-desc {
+            padding-left: 20px; // ★ 重要：避開左邊的斜線
+            text-align: left;
+          }
+        }
+      }
+
+      // --- 右側按鈕樣式 ---
+      // 佈局：按鈕在右，文字在左
+      &.right-side {
+        .hover-info {
+          right: 55px; // 位於按鈕左側
+          left: auto;
+          top: 0;
+          transform: translate(-30px, -15%); // 初始從左邊滑入
+          
+          .info-title, .info-desc {
+            padding-left: 0; // 右側佈局不需要左邊距
+            padding-right: 0; 
+            text-align: left; // ★ 修正：依照截圖，文字依然靠左對齊
+          }
+        }
+      }
+    }
+
+    .icon-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.1); 
+      background: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04); 
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      z-index: 5; 
+
+      &.brand-shadow {
+        box-shadow: 0px 4px 4px 0px #FF8C6B; 
+        border: none; 
+      }
+      svg { width: 24px; height: 24px; }
+    }
+
+    .hover-info {
+      position: absolute;
+      width: 250px; 
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+      z-index: 1; 
+
+      .info-title {
+        margin: 0;
+        font-size: 20px;    
+        font-weight: 500;   
+        color: #555;        
+        line-height: 1;
+        // ★ 增加間距，確保不壓線
+        padding-bottom: 4px; 
+      }
+
+      .line-container {
+        width: 100%;
+        height: 35px; // 配合 SVG 高度
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+        .callout-line-svg {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+
+      .info-desc {
+        margin: 0; 
+        font-size: 13px;
+        line-height: 1.4;
+        color: #888; 
+        // ★ 增加間距，確保不壓線
+        padding-top: 4px; 
+      }
+    }
+  }
+
+  // Content Wrapper 保持不變...
+  .content-wrapper {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0px; 
+      z-index: 12;
+
+      .sub-caption {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #333333;
+        width: 564px;
+        max-width: 100%;
+        margin-bottom: 13px; 
+      }
+
+      .deco-line {
+        width: 547.86px;
+        height: 7.12px;
+        background: linear-gradient(90deg, #FF7601 0%, #8243EA 100%);
+        border-radius: 4px;
+        margin-bottom: 7px;
+        max-width: 90%;
+      }
+
+      .main-title {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 150%;
+        color: #000000;
+        width: 846px;
+        max-width: 100%;
+        margin-bottom: 0; 
+      }
+    }
+
+    .image-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      z-index: 11;
+
+      .arm-image {
+        width: 702px;
+        height: 528px;
+        object-fit: cover; 
+        -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 95%);
+        mask-image: radial-gradient(circle at center, black 50%, transparent 95%);
+      }
+    }
+  }
+}

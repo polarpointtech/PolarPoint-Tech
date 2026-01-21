@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.home5-container {
+  // 1. 外層容器：負責滿版背景
+  position: relative;
+  width: 100%;       // 強制滿版 (Full Bleed)
+  // max-width: 1440px; // ❌ 移除這行！不要限制最大寬度，否則大螢幕兩邊會留白
+  height: 800px;     // 鎖定高度
+  
+  // 背景圖設定
+  background-image: url('/src/assets/home5-1.png');
+  background-size: cover;       // 確保圖片填滿整個區域
+  background-position: center top; // 圖片上方置中對齊 (通常 Hero Section 建議這樣設)
+  background-repeat: no-repeat;
+  
+  overflow: hidden;
+
+  // 2. 內容包裝層：負責定位文字
+  .content-wrapper {
+    position: absolute;
+    // 根據截圖數據 Top: 285px
+    top: 285px;
+    
+    // 絕對置中大法：以容器(視窗)中心點為準
+    left: 50%;
+    transform: translateX(-50%);
+    
+    // 鎖定文字區塊寬度 (710px)
+    width: 710px;
+    
+    // 預防手機版破版
+    max-width: 90vw; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px; 
+
+    .main-title {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 56px; 
+      line-height: 1.2;
+      color: #000000;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      margin: 0;
+      // 根據截圖規格
+      font-family: 'Satoshi', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      color: #000000;
+      white-space: pre-line; // 保留 JSX 中的換行符號
+      
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}
+
+// RWD：手機版調整
+@media (max-width: 768px) {
+  .home5-container {
+    height: 600px; // 手機版高度可稍微縮減
+    background-position: center; // 手機版改為完全置中
+    
+    .content-wrapper {
+      top: 150px; // 手機版位置上移
+      width: 100%;
+      padding: 0 20px;
+      
+      .main-title {
+        font-size: 32px;
+      }
+      
+      .subtitle {
+        font-size: 16px;
+        br { display: none; } // 手機版取消強制換行
+      }
+    }
+  }
+}

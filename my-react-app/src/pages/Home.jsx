@@ -1,0 +1,1 @@
+import Home1 from '../sections/Home1'; import Home2 from '../sections/Home2'; import Home3 from '../sections/Home3'; import Home4 from '../sections/Home4'; import Home5 from '../sections/Home5'; import Home6 from '../sections/Home6'; export default function Home() { return (<div> <Home1 /> <Home2 /> <Home3 /> <Home4 /> <Home5 /> <Home6 /> </div>); }

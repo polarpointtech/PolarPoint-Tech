@@ -1,0 +1,74 @@
+// 定義設計稿總寬度變數，方便計算
+$canvas-width: 1440;
+
+@function to-vw($px) {
+  @return ($px / $canvas-width) * 100vw;
+}
+
+.home1-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 12vh;
+
+  .image-overlay-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    img {
+      position: absolute;
+      // 圖片大小保持固定 px，不隨螢幕縮放（這是你的要求）
+      width: 344px; 
+      height: 242px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    // --- 按圖施工：比例位移 ---
+
+    .img-1-2 { 
+      left: to-vw(-12); // 設計稿 Left: -12px
+      top: 262px;       // 高度通常建議保持 px 或用 vh，這裡維持 px
+      border-radius: 24px; 
+    }
+
+    .img-1-3 { 
+      left: to-vw(359); // 設計稿 Left: 359px
+      top: 110px; 
+      border-radius: 40px; 
+    }
+
+    .img-1-4 { 
+      left: to-vw(731); // 設計稿 Left: 731px
+      top: 306px; 
+      border-radius: 45px; 
+    }
+
+    .img-1-5 { 
+      left: to-vw(1106); // 設計稿 Left: 1106px
+      top: 151px; 
+      border-radius: 35px; 
+    }
+  }
+
+  .text-content {
+    z-index: 10;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    .main-title { font-size: clamp(2.2rem, 4.2vw, 4rem); font-weight: 800; color: #333; }
+    .sub-description { font-size: 1.2rem; color: #666; margin-top: 10px; }
+  }
+}

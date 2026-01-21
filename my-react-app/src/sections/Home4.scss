@@ -1,0 +1,74 @@
+.home4-marquee {
+  // 1. 設定滿版寬度
+  width: 100%; // 佔滿螢幕寬度
+  // max-width: 1440px; // ❌ 移除這行，不要限制最大寬度
+  
+  // 2. 嚴格鎖定總高度
+  height: 173px; 
+  
+  // 3. 佈局歸零與背景
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  overflow: hidden;
+  
+  // 4. 內容垂直置中
+  display: flex;
+  align-items: center; 
+
+  .marquee-track {
+    display: flex;
+    align-items: center;
+    // 寬度由內容自動撐開
+    
+    // 動畫：40秒跑完一輪
+    animation: scroll 40s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  .brand-item {
+    // 🌟 關鍵修正：滿版數學計算
+    // 要讓 5 個品牌剛好填滿螢幕寬度 (滿版)，不管螢幕多大
+    // 100vw / 5 = 20vw
+    flex: 0 0 20vw; 
+    width: 20vw;
+    
+    // 確保 Logo 在這 20vw 的區塊內置中
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      // 圖片高度維持設計稿比例 (約 40px ~ 50px 較為剛好)
+      height: 40px; 
+      width: auto;
+      object-fit: contain;
+
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// 滾動動畫
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    // 因為我們複製了 4 組
+    // 每一組的寬度現在是 100vw (20vw * 5)
+    // 總寬度是 400vw
+    // 移動 25% (即 100vw) 剛好跑完一組，達成無縫循環
+    transform: translateX(-25%);
+  }
+}

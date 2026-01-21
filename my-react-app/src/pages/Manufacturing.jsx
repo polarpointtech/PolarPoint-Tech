@@ -1,0 +1,1 @@
+import M1 from '../sections/Manufacturing1'; import M2 from '../sections/Manufacturing2'; import M3 from '../sections/Manufacturing3'; import M4 from '../sections/Manufacturing4'; export default function Manufacturing() { return (<div> <M1 /> <M2 /> <M3 /> <M4 /> </div>); }
