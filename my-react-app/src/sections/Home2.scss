@@ -1,75 +1,150 @@
+// src/sections/Home2.scss
+
 .home2-container {
   display: grid;
-  // 關鍵：強制切成三等份，隨螢幕變寬自動變寬
+  // 強制切成三等份，確保寬度一致
   grid-template-columns: repeat(3, 1fr); 
+  
+  // 間距維持細邊 4px
+  gap: 4px; 
+  
+  // 左右不留白
+  padding: 0; 
+  
   width: 100%;
-  // 按圖施工：鎖定高度為設計稿的 457px
   height: 457px; 
+  background-color: #ffffff; 
   overflow: hidden;
 
   .category-card {
     position: relative;
-    background-size: cover;
-    background-position: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
     cursor: pointer;
-    // 讓圖片有互動感
-    transition: transform 0.5s ease; 
 
-    &:hover {
-      background-size: 110%; // 滑鼠移過去背景稍微放大
-      .overlay {
-        background: rgba(0, 0, 0, 0.3); // 變亮一點
-      }
+    // --- 1. 背景圖片層 ---
+    .card-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      
+      // 預設模糊
+      filter: blur(5px);
+      transform: scale(1.05); 
+      transition: all 0.5s ease;
     }
 
+    // --- 2. 遮罩層 ---
     .overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      // 根據截圖，圖片上有一層黑色半透明遮罩
-      background: rgba(0, 0, 0, 0.5); 
+      
+      background: rgba(0, 0, 0, 0.6); 
+      
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: background 0.3s ease;
+      
+      transition: all 0.5s ease;
     }
 
+    // --- 3. 滑鼠懸停效果 (Hover) ---
+    &:hover {
+      .card-bg {
+        filter: blur(0px);
+        transform: scale(1); 
+      }
+      .overlay {
+        background: rgba(0, 0, 0, 0.2); 
+      }
+    }
+
+    // --- 4. 標題樣式 ---
     .category-title {
       color: #ffffff;
-      font-size: 2.5rem; // 根據截圖字體大小
+      font-size: 2.5rem; 
       font-weight: 600;
-      margin-bottom: 80px; // 拉開與按鈕的距離
+      margin-bottom: 60px;
       text-align: center;
       letter-spacing: 1px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      pointer-events: none;
     }
 
+    // --- 5. 按鈕樣式 (根據截圖 image_716650 & 716618 修改) ---
     .category-button {
-      // 模擬設計稿：深色半透明膠囊按鈕
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(4px);
+      // 🌟 尺寸設定 (Fixed 163x63)
+      width: 163px;
+      height: 63px;
+      
+      // 🌟 形狀 (Radius 100)
+      border-radius: 100px;
+      
+      // 🌟 背景顏色 (#8C8C8C 25%)
+      background: rgba(140, 140, 140, 0.25);
+      
+      // 🌟 模糊特效 (Blur 12)
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      
+      // 🌟 邊框 (截圖視覺上有細邊框，這裡設為淡淡的白)
       border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 50px; // 圓弧膠囊狀
-      padding: 10px 32px;
-      color: #ff7e5f; // 根據截圖的橘紅色文字
-      font-size: 1rem;
-      font-weight: 500;
+      
+      // 🌟 陰影 (Y:1 Blur:8 Black 10%)
+      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+      
+      // 🌟 文字樣式 (#FF8C6B, 17px, Semibold)
+      color: #FF8C6B;
+      font-family: 'Inter', sans-serif; // 優先使用系統字體或 Inter
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.1px;
+      line-height: 20px;
+      
+      // 排版置中
       display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      gap: 8px; // Icon 與文字的間距
+      padding: 0; // 尺寸固定了，所以不需要 padding 撐開
+      
       cursor: pointer;
       transition: all 0.3s ease;
 
+      // 按鈕懸停效果 (微調背景與文字顏色)
       &:hover {
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
+        background: rgba(140, 140, 140, 0.5); // 變深一點
+        color: #ffffff; // 文字變白
+        border-color: #FF8C6B; // 邊框變橘
       }
-
+      
       .icon {
         font-size: 1.2rem;
       }
+    }
+  }
+}
+
+// RWD
+@media (max-width: 768px) {
+  .home2-container {
+    grid-template-columns: 1fr; 
+    height: auto; 
+    gap: 4px;
+    
+    .category-card {
+      height: 300px; 
     }
   }
 }

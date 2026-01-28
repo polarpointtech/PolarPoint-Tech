@@ -1,1 +1,116 @@
-.Footer-container { position: relative; width: 100%; }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.footer-container {
+  width: 100%;
+  // 根據 image_715b70.png 設定固定高度
+  height: 194px; 
+  background-color: #FFFFFF;
+  
+  // 讓內容居中
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // 引入 Poppins 字體
+  font-family: 'Poppins', sans-serif;
+
+  .footer-content {
+    width: 100%;
+    // 限制最大寬度為設計稿的 1440px
+    max-width: 1440px;
+    // 左右留一點邊距，以免太貼齊螢幕邊緣
+    padding: 0 60px; 
+    
+    display: flex;
+    justify-content: space-between;
+    // 讓左右兩側在垂直方向上「置底對齊」或「居中」
+    // 根據截圖，連結似乎是對齊下方的文字，這裡設為 flex-end 會比較像
+    align-items: flex-end; 
+    
+    // 也可以設為 center，看您覺得哪個視覺順眼
+    // align-items: center; 
+  }
+
+  // --- 左側區域 ---
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    // 根據 image_715b31.png，圖示與文字間距 16px
+    gap: 16px; 
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 20px; // 圖示之間的間距
+
+      .icon-link {
+        color: #52525B; // 圖示顏色
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #1C1C1C; // Hover 變黑色
+        }
+      }
+    }
+
+    .copyright {
+      // 根據 image_715ad3.png
+      font-size: 14px;
+      color: #52525B;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+  // --- 右側區域 ---
+  .right-section {
+    display: flex;
+    align-items: center;
+    // 連結之間的間距，大約 32px 或 40px
+    gap: 40px; 
+    // 稍微把連結往上推一點，對齊左邊文字的視覺中心
+    padding-bottom: 2px; 
+
+    .footer-link {
+      text-decoration: none;
+      // 根據 image_715ad3.png
+      font-size: 14px;
+      color: #52525B;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #1C1C1C; // Hover 變黑色
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// RWD 手機版調整
+@media (max-width: 768px) {
+  .footer-container {
+    height: auto;
+    padding: 40px 0;
+
+    .footer-content {
+      flex-direction: column;
+      align-items: center; // 手機版置中
+      gap: 30px;
+      padding: 0 20px;
+
+      .left-section {
+        align-items: center; // 文字置中
+        text-align: center;
+      }
+
+      .right-section {
+        flex-wrap: wrap; // 連結太多就換行
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+  }
+}

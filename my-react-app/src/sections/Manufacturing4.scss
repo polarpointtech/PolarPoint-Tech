@@ -1,1 +1,144 @@
-.Manufacturing4-container { position: relative; width: 100%; }
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inter:wght@400&display=swap');
+
+.manufacturing4-container {
+  width: 100%;
+  // 高度維持 900px
+  height: 900px; 
+  
+  position: relative;
+  z-index: 1;
+
+  // 🌟 背景修正：反轉為「上白下藍」
+  // 0% (頂部) 是白色 #FFFFFF
+  // 100% (底部) 是淺藍色 #DCEEFC
+  background: linear-gradient(to bottom, #ebf1f5 0%, #DCEEFC 100%);
+
+  // 核心畫布：鎖定 1440px
+  .content-wrapper {
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+  }
+
+  // --- 1. 藍色文字區塊 ---
+  // Top: 3128 (Global), Left: 167, W: 1097, H: 271
+  .info-text-block {
+    position: absolute;
+    // 使用區域座標，預留 80px 頂部空間
+    top: 80px; 
+    left: 167px;
+    width: 1097px;
+    height: 271px;
+    
+    // 讓文字垂直置中
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-family: 'Inria Sans', sans-serif;
+      font-weight: 700; // Bold
+      font-size: 36px;
+      line-height: 1.5; // 150%
+      color: #3264BA; // 指定藍色
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  // --- 2. 下方圖示區 (沿用 Manu2 樣式) ---
+  .features-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .feature-item {
+    position: absolute; 
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+    // RWD 寬度比例 (513.65 / 1440)
+    width: 35.67%; 
+    height: 147px;
+
+    // 圓圈樣式
+    .icon-circle {
+      width: 90.65px; 
+      height: 90.65px;
+      border-radius: 50%;
+      background: 
+        linear-gradient(#93E8FF, #93E8FF) padding-box, 
+        linear-gradient(to bottom, #FFFFFF 0%, #36C5F0 100%) border-box;
+      border: 3.24px solid transparent;
+      box-shadow: 0px 1.92px 86.87px 0px #3DCBFF;
+      
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      flex-shrink: 0;
+
+      svg { width: 40px; height: 40px; stroke: white; stroke-width: 2; }
+    }
+
+    // 文字樣式
+    .feature-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400; 
+      font-size: 24px;
+      line-height: 1.0; 
+      color: #3F3F3F;
+      width: 100%; 
+    }
+  }
+
+  // --- 個別定位 ---
+  // 1. 左上
+  .item-1 {
+    top: 422px; 
+    left: 12.43%; // 179px
+  }
+
+  // 2. 右上
+  .item-2 {
+    top: 421px; 
+    left: 52.22%; // 752px
+  }
+
+  // 3. 左下
+  .item-3 {
+    top: 633px; 
+    left: 12.43%;
+  }
+
+  // 4. 右下
+  .item-4 {
+    top: 633px; 
+    left: 52.22%;
+  }
+}
+
+// RWD 手機版
+@media (max-width: 1024px) {
+  .manufacturing4-container {
+    height: auto;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #DCEEFC 100%); // 手機版維持上白下藍
+
+    .content-wrapper { padding: 50px 20px; }
+
+    .info-text-block {
+      position: relative; top: auto; left: auto;
+      width: 100%; height: auto;
+      margin-bottom: 50px;
+      h2 { font-size: 28px; text-align: center; }
+    }
+
+    .feature-item {
+      position: relative !important; top: auto !important; left: auto !important;
+      width: 100% !important; margin-bottom: 40px;
+    }
+  }
+}

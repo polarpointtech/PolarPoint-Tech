@@ -1,1 +1,184 @@
-.Manufacturing1-container { position: relative; width: 100%; }
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Wix+Madefor+Text:wght@400;500&display=swap');
+
+.manufacturing1-container {
+  width: 100%;
+  height: 1077px; 
+  position: relative;
+  overflow: visible;
+
+  // 背景：上白下藍
+  background: linear-gradient(to bottom, #FFFFFF 0%, #DCEEFC 100%);
+  
+  z-index: 10;
+
+  // 🌟 格線層設定
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    // 🌟 修正1：格線大小改為 80px (1440 / 18 = 80)
+    // 這樣在 1440px 寬度下正好會有 18 格，對齊您的設計稿
+    background-size: 80px 80px;
+
+    // 🌟 修正2：格線顏色
+    // 使用稍深一點的藍色 (#B0DAF7)，確保在底部淺藍色背景 (#DCEEFC) 上不會消失
+    background-image: 
+      linear-gradient(#B0DAF7 1px, transparent 1px),
+      linear-gradient(90deg, #B0DAF7 1px, transparent 1px);
+    
+    background-position: center top;
+    
+    // 🌟 遮罩效果：
+    // 頂部 (0%) 透明 -> 讓格子稍微消失
+    // 25% 之後變成全黑 (不透明) -> 讓下面的格子清楚顯示
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
+    
+    z-index: -1; 
+  }
+
+  .content-wrapper {
+    width: 100%;
+    max-width: 1440px; 
+    height: 100%;
+    margin: 0 auto; 
+    position: relative; 
+    padding: 0;
+  }
+
+  // --- 1. 標題區域 ---
+  .title-group {
+    position: absolute;
+    top: 108px;
+    left: 275px; 
+    width: 585px; 
+    z-index: 3; 
+
+    .main-title {
+      font-family: 'Inria Sans', sans-serif;
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 1.1;
+      color: #3F3F3F;
+      margin: 0 0 20px 0;
+    }
+    .sub-title {
+      font-family: 'Inria Sans', sans-serif;
+      font-weight: 700;
+      font-size: 40px; 
+      color: #3F3F3F;
+      margin: 0;
+    }
+  }
+
+  // --- 2. 描述文字 ---
+  .description-block {
+    position: absolute;
+    top: 590px;
+    left: 285px; 
+    width: 331px;
+    z-index: 3;
+    p {
+      font-family: 'Wix Madefor Text', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.5;
+      color: #3F3F3F;
+      margin: 0;
+    }
+  }
+
+  // --- 3. 大機器人圖片 ---
+  .hero-image-container {
+    position: absolute;
+    top: 209px;
+    left: 480px; // 正好對齊第 6 條格線 (80 * 6 = 480)
+    width: 972px;
+    height: auto;
+    z-index: 1;
+    img { width: 100%; height: auto; object-fit: contain; }
+  }
+
+  // --- 4. 製程卡片區 ---
+  .process-cards-container {
+    .process-card {
+      position: absolute;
+      top: 994px; 
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
+      border-radius: 56px; 
+      z-index: 20;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0; width: 100%; height: 50%;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      }
+
+      .card-label {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-family: 'Inria Sans', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        z-index: 1;
+        letter-spacing: 1px;
+      }
+    }
+
+    // 卡片 B: UV-Curing (中間)
+    .card-uv {
+      left: 50%;
+      transform: translateX(-50%); 
+      width: 397px; 
+      height: 380px; 
+    }
+
+    // 卡片 A: Resin (左邊) - 左邊距剛好 80px (對齊第 1 條格線)
+    .card-resin {
+      left: calc(50% - 198.5px - 66px - 381px);
+      width: 381px; 
+      height: 380px; 
+    }
+
+    // 卡片 C: Metal (右邊)
+    .card-metal {
+      left: calc(50% + 198.5px + 51px);
+      width: 381px; 
+      height: 380px; 
+    }
+  }
+}
+
+// RWD 手機版
+@media (max-width: 1024px) {
+  .manufacturing1-container {
+    height: auto;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #DCEEFC 100%);
+    &::before { display: none; } // 手機版隱藏格線
+
+    .content-wrapper { padding-bottom: 50px; }
+    
+    .title-group, .description-block, .hero-image-container {
+      position: relative; top: auto; left: auto; width: 100%; margin: 20px 0; padding: 0 20px;
+      .main-title { font-size: 60px; }
+    }
+    .hero-image-container { left: 0; }
+
+    .process-cards-container {
+      position: relative; display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 50px;
+      .process-card { 
+        position: relative; top: auto; left: auto !important; transform: none !important;
+        width: 90% !important; height: 350px !important; 
+      }
+    }
+  }
+}

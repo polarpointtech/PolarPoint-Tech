@@ -1,1 +1,260 @@
-.Technology1-container { position: relative; width: 100%; }
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inter:wght@400;500;700&family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
+
+.technology1-container {
+  width: 100%; height: 1077px; position: relative; overflow: visible;
+  background: linear-gradient(to bottom, #FFFFFF 0%, #DCEEFC 100%);
+  z-index: 10;
+
+  // 格線背景 (維持不變)
+  &::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-size: 80px 80px;
+    background-image: linear-gradient(#B0DAF7 1px, transparent 1px), linear-gradient(90deg, #B0DAF7 1px, transparent 1px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
+    z-index: -1; 
+  }
+
+  .content-wrapper { width: 100%; max-width: 1440px; height: 100%; margin: 0 auto; position: relative; }
+  .main-title { position: absolute; top: 88px; left: 371px; font-family: 'Inria Sans', sans-serif; font-weight: 700; font-size: 96px; color: #3F3F3F; line-height: 1.1; margin: 0; z-index: 3; }
+
+  // 🌟 動態容器：位置尺寸鎖定 (參考您的 Glass 參數)
+  .dynamic-card-container {
+    position: absolute;
+    top: 264px; left: 244px;
+    width: 529px; height: 782px;
+    z-index: 20;
+    transition: all 0.4s ease; // 讓切換滑順
+    box-sizing: border-box;
+
+    // ==========================================
+    // 1. GLASS THEME (您提供的樣式)
+    // ==========================================
+    &.theme-glass {
+      background: linear-gradient(180deg, #667EEA 0%, #764BA2 100%);
+      border-radius: 40px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+      padding: 32px;
+      
+      .glass-content {
+        width: 100%; height: 100%; display: flex; flex-direction: column; gap: 24px;
+
+        .header-block {
+          width: 100%; height: 140px; 
+          background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px);
+          border: 1px solid rgba(255,255,255,0.3); border-radius: 24px; padding: 24px;
+          display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;
+          h3 { font-family: 'Inter'; font-size: 24px; font-weight: 700; color: #fff; margin: 0 0 8px 0; }
+          p { font-family: 'Inter'; font-size: 16px; color: rgba(255,255,255,0.8); margin: 0; }
+        }
+
+        .music-block {
+          flex: 1; width: 100%; 
+          background: linear-gradient(180deg, #C27AFF 0%, #FB64B6 100%);
+          border-radius: 32px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between;
+          color: #fff; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); box-sizing: border-box;
+          
+          .card-visual { flex: 1; display: flex; justify-content: center; align-items: center; svg { stroke: #fff; opacity: 0.9; } }
+          
+          .player-controls {
+            background: rgba(255, 255, 255, 0.2); border-radius: 24px; padding: 24px; 
+            backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.25);
+            .song-info { margin-bottom: 15px; font-weight: 700; font-family: 'Inter'; font-size: 20px;}
+            .progress-bar { height: 5px; background: rgba(255,255,255,0.3); border-radius: 3px; margin-bottom: 8px; position: relative; .progress-fill { height: 100%; width: 40%; background: #fff; } }
+            .time-info { display: flex; justify-content: space-between; font-size: 12px; opacity: 0.9; }
+            .control-buttons { display: flex; justify-content: center; gap: 30px; align-items: center; margin-top: 15px; .play { width: 50px; height: 50px; background: rgba(255,255,255,0.3); border-radius: 50%; display: flex; justify-content: center; align-items: center; } }
+          }
+        }
+      }
+    }
+
+    // ==========================================
+    // 2. RETRO THEME (復古像素)
+    // ==========================================
+    &.theme-retro {
+      // 橘黃漸層背景 (image_3dbf41)
+      background: linear-gradient(180deg, #FFDE59 0%, #FF914D 100%);
+      border: 8px solid #000;
+      border-radius: 12px; // 復古只需要小圓角
+      box-shadow: 15px 15px 0px #000000; // 硬陰影
+      padding: 24px;
+      font-family: 'Press Start 2P', cursive; // 像素字體
+
+      .retro-content {
+        width: 100%; height: 100%; display: flex; flex-direction: column; gap: 20px;
+
+        // Header (對應 Glass 的 header-block 位置)
+        .retro-header-box {
+          height: 120px; // 稍微調整以符合比例
+          background: #98E2C6; // 薄荷綠
+          border: 4px solid #000;
+          box-shadow: 6px 6px 0px #000;
+          padding: 20px; border-radius: 4px;
+          display: flex; flex-direction: column; justify-content: center;
+          h3 { font-size: 18px; color: #000; margin-bottom: 15px; line-height: 1.4; }
+          p { font-size: 12px; color: #333; line-height: 1.4; }
+        }
+
+        // Main Screen (對應 Glass 的 music-block 上半部)
+        .retro-main-box {
+          flex: 1; 
+          background: #4A1C88; // 深紫色背景
+          border: 4px solid #000;
+          border-radius: 8px;
+          padding: 15px;
+          box-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+          display: flex; flex-direction: column;
+
+          .retro-screen-stats {
+            display: flex; justify-content: space-between; margin-bottom: 15px;
+            .retro-badge {
+              padding: 8px 12px; font-size: 10px; color: #fff; border: 2px solid #fff;
+              &.red { background: #FF5F5F; }
+              &.teal { background: #2BC4A9; }
+            }
+          }
+          .retro-screen {
+            flex: 1; border: 4px solid #F7CE46; // 黃色螢幕框
+            display: flex; justify-content: center; align-items: center;
+          }
+        }
+
+        // Controls (對應 Glass 的 player-controls)
+        .retro-controls-box {
+          background: #FF5F5F; // 紅色底
+          border: 4px solid #000; border-radius: 4px;
+          padding: 20px;
+          display: flex; flex-direction: column; gap: 15px;
+
+          .primary-actions {
+            display: flex; justify-content: space-between;
+            .retro-btn.yellow {
+              background: #F7CE46; color: #000; border: 3px solid #000;
+              padding: 12px 10px; font-family: inherit; font-size: 10px; cursor: pointer;
+              box-shadow: 4px 4px 0 #000;
+              &:active { transform: translate(2px,2px); box-shadow: 2px 2px 0 #000; }
+            }
+          }
+          .secondary-actions {
+            display: flex; gap: 10px;
+            .retro-btn.teal {
+              background: #2BC4A9; color: #000; border: 3px solid #000;
+              padding: 12px; width: 100%; font-family: inherit; font-size: 10px; cursor: pointer;
+              box-shadow: 4px 4px 0 #000;
+              &:active { transform: translate(2px,2px); box-shadow: 2px 2px 0 #000; }
+            }
+          }
+        }
+      }
+    }
+
+    // ==========================================
+    // 3. CYBERPUNK THEME (賽博朋克)
+    // ==========================================
+    &.theme-cyberpunk {
+      background: #0D0E15; // 深黑藍
+      border: 2px solid #00F0FF; // 青色霓虹
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.3), inset 0 0 50px rgba(0,0,0,0.8);
+      padding: 32px;
+      font-family: 'Share Tech Mono', monospace; // 科技字體
+
+      .cyber-content {
+        width: 100%; height: 100%; display: flex; flex-direction: column; gap: 24px;
+
+        // Header (對應 Glass Header)
+        .cyber-header-box {
+          height: 140px;
+          border: 1px solid #D900FF; // 粉色邊框
+          border-radius: 12px;
+          padding: 24px;
+          box-shadow: 0 0 15px rgba(217, 0, 255, 0.15), inset 0 0 20px rgba(217, 0, 255, 0.1);
+          display: flex; flex-direction: column; justify-content: center;
+          
+          .neon-title { color: #00F0FF; font-size: 24px; margin-bottom: 8px; text-shadow: 0 0 5px #00F0FF; letter-spacing: 1px; }
+          .neon-code { color: #D900FF; font-size: 14px; margin-bottom: 5px; }
+          .neon-sub { color: #888; font-size: 14px; }
+        }
+
+        // Terminal (對應 Glass Music Main)
+        .cyber-terminal-box {
+          flex: 1;
+          background: linear-gradient(180deg, rgba(0, 240, 255, 0.05) 0%, rgba(0,0,0,0) 100%);
+          border: 1px solid #00F0FF;
+          border-radius: 8px; overflow: hidden;
+          
+          .terminal-bar {
+            background: rgba(0, 240, 255, 0.15); color: #00F0FF;
+            padding: 8px 15px; font-size: 12px; letter-spacing: 1px;
+            border-bottom: 1px solid #00F0FF;
+          }
+          .terminal-text {
+            padding: 20px; font-size: 14px; line-height: 1.8;
+            .pink { color: #D900FF; } .cyan { color: #00F0FF; }
+            .blink { animation: blink 1s infinite; color: #fff; }
+            .cursor { color: #00F0FF; animation: blink 1s steps(2, start) infinite; }
+          }
+        }
+
+        // Stats (對應 Glass Controls)
+        .cyber-stats-row {
+          display: flex; gap: 20px; height: 150px;
+          .cyber-stat {
+            flex: 1; border-radius: 8px; padding: 20px;
+            background: rgba(255,255,255,0.02);
+            display: flex; flex-direction: column; justify-content: space-between;
+
+            &.pink-glow { border: 1px solid #D900FF; box-shadow: 0 0 10px rgba(217, 0, 255, 0.1); }
+            &.cyan-glow { border: 1px solid #00F0FF; box-shadow: 0 0 10px rgba(0, 240, 255, 0.1); }
+
+            .stat-label { font-size: 12px; color: #fff; opacity: 0.7; letter-spacing: 1px; }
+            .stat-val { font-size: 36px; color: #fff; font-weight: 700; text-shadow: 0 0 5px currentColor; }
+            .stat-bar { 
+              height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; 
+              .fill.pink { height: 100%; background: #D900FF; box-shadow: 0 0 8px #D900FF; }
+              .fill.cyan { height: 100%; background: #00F0FF; box-shadow: 0 0 8px #00F0FF; }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // --- 右側面板 (維持不變) ---
+  .info-panel {
+    position: absolute; top: 291px; left: 855px; width: 420px; z-index: 20;
+    .service-label { display: block; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: #3F3F3F; margin-bottom: 15px; text-transform: uppercase; font-family: 'Inter'; }
+    .info-title { font-family: 'Inter'; font-weight: 700; font-size: 64px; color: #171717; line-height: 1.1; margin-bottom: 20px; }
+    .info-desc { font-family: 'Inter'; font-size: 20px; color: #666; margin-bottom: 40px; }
+    .tags-grid {
+      display: grid; grid-template-columns: repeat(2, auto); gap: 20px 32px;
+      .tech-tag {
+        appearance: none; border: none; font-family: inherit;
+        display: inline-flex; align-items: center; justify-content: center;
+        padding: 0 20px; width: 170px; height: 48px;
+        background: rgba(255, 255, 255, 0.4); 
+        border: 1px solid rgba(0,0,0,0.05); border-radius: 100px;
+        font-weight: 600; font-size: 15px; color: #171717;
+        backdrop-filter: blur(5px); box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        cursor: pointer; transition: all 0.3s;
+        &:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        &.active { background: #3F3F3F; color: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+      }
+    }
+  }
+}
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+// RWD
+@media (max-width: 1024px) {
+  .technology1-container {
+    height: auto;
+    &::before { display: none; }
+    .content-wrapper { padding-bottom: 80px; }
+    .main-title { position: relative; top: auto; left: auto; font-size: 50px; text-align: center; margin: 40px 20px; }
+    .dynamic-card-container { position: relative; top: auto; left: auto; width: 90%; height: auto; min-height: 700px; margin: 0 auto 50px auto; }
+    .info-panel { position: relative; top: auto; left: auto; width: 100%; padding: 0 20px; .tags-grid { display: flex; flex-wrap: wrap; gap: 15px; } }
+  }
+}

@@ -1,1 +1,155 @@
-.Technology2-container { position: relative; width: 100%; }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+// 🌟 定義上下浮動的動畫 (Keyframes)
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); // 向上浮動 20px
+  }
+  100% {
+    transform: translateY(0); // 回到原位
+  }
+}
+
+.technology2-container {
+  width: 100%;
+  height: 1150px; 
+  position: relative;
+  overflow: hidden; 
+  background-color: #FFFFFF; 
+  z-index: 5;
+
+  // --- 1. 文字內容 ---
+  .text-content {
+    position: absolute;
+    top: 71px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 925px;
+    z-index: 30; 
+    p {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      color: #685D5D;
+      margin: 0;
+    }
+  }
+
+  // --- 2. 橢圓形背景 ---
+  .elliptical-bg {
+    position: absolute;
+    top: 488px;
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 2018px; 
+    height: 816px;
+    border-radius: 40% 40% 0 0;
+    overflow: hidden; 
+    z-index: 10; 
+    .bg-image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center top;
+    }
+  }
+
+  // --- 3. 裝置層 ---
+  .devices-layer {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 20; 
+
+    .device-item {
+      position: absolute;
+      img { width: 100%; height: auto; display: block; }
+    }
+
+    // 🌟 針對每個裝置應用動畫，並設置不同的時間和延遲
+
+    // --- Laptop (MacBook) ---
+    .laptop {
+      width: 1314px; 
+      top: 180px; 
+      left: 50%;
+      margin-left: -68px; 
+      // 注意：這裡的 transform 會與動畫的 transform 衝突
+      // 解決方法：將旋轉移到內部的 img 或包一層容器
+      // transform: translateX(-50%) rotate(-4.05deg); 
+      z-index: 2; 
+
+      // 應用動畫 (5秒一個循環，無限播放，平滑來回)
+      animation: floatAnimation 5s ease-in-out infinite;
+      
+      img {
+        // 將旋轉移到這裡
+        transform: translateX(-50%) rotate(-4.05deg);
+      }
+    }
+
+    // --- Tablet (iPad) ---
+    .tablet {
+      width: 974px;
+      top: 200px; 
+      left: 850px; 
+      z-index: 1; 
+
+      // 應用動畫 (6秒一個循環，延遲 0.5秒開始)
+      animation: floatAnimation 6s ease-in-out infinite 0.5s;
+
+      img {
+        transform: rotate(-6.38deg);
+      }
+    }
+
+    // --- Phone (iPhone) ---
+    .phone {
+      width: 583px; 
+      top: 260px; 
+      left: 20px; 
+      z-index: 3; 
+
+      // 應用動畫 (4秒一個循環，延遲 1秒開始)
+      animation: floatAnimation 4s ease-in-out infinite 1s;
+
+      img {
+        transform: rotate(15deg); 
+      }
+    }
+  }
+}
+
+// RWD 手機版
+@media (max-width: 1024px) {
+  .technology2-container {
+    height: 800px;
+    
+    .text-content { top: 50px; width: 90%; p { font-size: 20px; } }
+    .elliptical-bg { width: 180%; top: 300px; }
+
+    .devices-layer {
+      // 手機版如果覺得動畫太亂，可以考慮關閉或減弱
+      .laptop {
+        width: 100%; top: 200px; margin-left: 0; left: 0; 
+        animation: floatAnimation 4s ease-in-out infinite; // 調整動畫參數
+        img { transform: none; } // 手機版不旋轉
+      }
+      .tablet {
+        width: 60%; top: 150px; left: 40%; 
+        animation: floatAnimation 5s ease-in-out infinite 0.5s;
+        img { transform: rotate(5deg); }
+      }
+      .phone {
+        width: 40%; top: 180px; left: 5%; 
+        animation: floatAnimation 3s ease-in-out infinite 1s;
+        img { transform: rotate(-10deg); }
+      }
+    }
+  }
+}
