@@ -1,0 +1,16 @@
+# Blender 4.5.0 MTL File: 'None'
+# www.blender.org
+
+newmtl tripo_mat_d8c5199b-feac-4739-85ac-05f3d114deac
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd pikachumecha3dmodelV2_basecolor.JPEG
+map_Ns pikachumecha3dmodelV2_roughness.JPEG
+map_Pr pikachumecha3dmodelV2_roughness.JPEG
+map_refl pikachumecha3dmodelV2_metallic.JPEG
+map_Pm pikachumecha3dmodelV2_metallic.JPEG
+map_Bump -bm 1.000000 pikachumecha3dmodelV2_normal.JPEG
