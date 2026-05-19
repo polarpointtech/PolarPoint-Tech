@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Construction1.scss';
 
 // 引入圖片
@@ -9,12 +9,48 @@ import stone3 from '../assets/construction1-4.jpg';
 
 export default function Construction1() {
   const scrollRef = useRef(null);
+  const dragState = useRef({ isDragging: false, startX: 0, scrollLeft: 0 });
 
   const materials = [
-    { id: 1, img: stone1, title: 'marble', sub: 'We assist clients' },
-    { id: 2, img: stone2, title: 'granite', sub: 'We assist clients' },
-    { id: 3, img: stone3, title: 'granite', sub: 'We assist clients' },
+    { id: 1, img: stone1, title: 'Natural Marble', sub: 'Custom stone sourcing' },
+    { id: 2, img: stone2, title: 'Premium Granite', sub: 'Interior applications' },
+    { id: 3, img: stone3, title: 'Feature Wall Solutions', sub: 'TV wall & feature design' },
   ];
+
+  const handleDragStart = (event) => {
+    if (!scrollRef.current) return;
+    event.preventDefault();
+
+    dragState.current = {
+      isDragging: true,
+      startX: event.clientX,
+      scrollLeft: scrollRef.current.scrollLeft,
+    };
+  };
+
+  const handleDragMove = (event) => {
+    if (!dragState.current.isDragging || !scrollRef.current) return;
+    event.preventDefault();
+
+    const distance = event.clientX - dragState.current.startX;
+    scrollRef.current.scrollLeft = dragState.current.scrollLeft - distance;
+  };
+
+  const handleDragEnd = () => {
+    dragState.current.isDragging = false;
+  };
+
+  useEffect(() => {
+    window.addEventListener('pointermove', handleDragMove);
+    window.addEventListener('pointerup', handleDragEnd);
+    window.addEventListener('pointercancel', handleDragEnd);
+
+    return () => {
+      window.removeEventListener('pointermove', handleDragMove);
+      window.removeEventListener('pointerup', handleDragEnd);
+      window.removeEventListener('pointercancel', handleDragEnd);
+    };
+  }, []);
 
   return (
     <section className="construction1-container">
@@ -26,16 +62,21 @@ export default function Construction1() {
         {/* 1. 標題區域 */}
         {/* Top: 100px, Left: 345px (置中) */}
         <h2 className="main-title">
-          Construction Material<br />Procurement
+          Stone & Interior<br />Material Solutions
         </h2>
+        <p className="section-subtitle">Marble • Granite • TV Walls • Custom Applications</p>
 
         {/* 2. 可滑動卡片區 */}
         {/* Top: 394px, Left: 265px (Start) */}
-        <div className="materials-carousel" ref={scrollRef}>
+        <div
+          className="materials-carousel"
+          ref={scrollRef}
+          onPointerDown={handleDragStart}
+        >
           {materials.map((item) => (
             <div key={item.id} className="material-card">
               <div className="card-image">
-                <img src={item.img} alt={item.title} />
+                <img src={item.img} alt={item.title} draggable="false" />
               </div>
               <div className="card-info">
                 <h3 className="card-title">{item.title}</h3>

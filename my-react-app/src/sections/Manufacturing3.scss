@@ -54,13 +54,29 @@
     position: absolute;
     top: 58px;
     left: 285px;
+    width: 900px;
     
     font-family: 'Inria Sans', sans-serif;
     font-weight: 700;
-    font-size: 100px;
+    font-size: 88px;
     line-height: 1.1; // 110% 行高
     color: #3F3F3F;
     margin: 0;
+    z-index: 3;
+  }
+
+  .sub-title {
+    position: absolute;
+    top: 380px;
+    left: 285px;
+    width: 760px;
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.25;
+    color: #3F3F3F;
+    margin: 0;
+    white-space: nowrap;
     z-index: 3;
   }
 
@@ -68,7 +84,7 @@
   // Top: 537px, Left: 19px
   .image-block {
     position: absolute;
-    top: 500px;
+    top: 540px;
     left: 19px;
     width: 800px;
     height: 475px;
@@ -85,7 +101,7 @@
   // Top: 781px, Left: 720px
   .description {
     position: absolute;
-    top: 730px;
+    top: 770px;
     left: 720px;
     width: 501px;
     z-index: 3;
@@ -97,6 +113,7 @@
       line-height: 1.5; // 閱讀舒適度
       color: #3F3F3F;
       margin: 0;
+      white-space: pre-line;
     }
   }
 }
@@ -119,6 +136,14 @@
     .main-title {
       position: relative; top: auto; left: auto;
       font-size: 48px; margin-bottom: 40px;
+    }
+
+    .sub-title {
+      position: relative; top: auto; left: auto;
+      width: 100%;
+      font-size: 24px;
+      white-space: normal;
+      margin-bottom: 40px;
     }
 
     .image-block {

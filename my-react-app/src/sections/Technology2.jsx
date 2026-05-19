@@ -1,17 +1,14 @@
 import React from 'react';
 import './Technology2.scss';
 
-// 引入圖片
 import imgPhone from '../assets/technology2-1.png';
 import imgLaptop from '../assets/technology2-2.png';
 import imgTablet from '../assets/technology2-3.png';
-import imgBg from '../assets/technology2-4.png'; // 背景波浪圖
+import homeBg from '../assets/home1-1.png';
 
 export default function Technology2() {
   return (
     <section className="technology2-container">
-      
-      {/* 1. 文字層 (最上層) */}
       <div className="text-content">
         <p>
           We assist clients in sourcing high-quality natural stones and 
@@ -21,34 +18,34 @@ export default function Technology2() {
         </p>
       </div>
 
-      {/* 2. 橢圓形背景層 (位於中間) */}
       <div className="elliptical-bg">
-        <div 
-          className="bg-image" 
-          style={{ backgroundImage: `url(${imgBg})` }}
-        ></div>
+        <div className="bg-viewport">
+          <div
+            className="bg-image"
+            style={{ backgroundImage: `url(${homeBg})` }}
+          />
+        </div>
       </div>
 
-      {/* 3. 裝置層 (絕對定位) */}
       <div className="devices-layer">
-        
-        {/* Laptop (Middle) - 放在最底層或中間 */}
         <div className="device-item laptop">
           <img src={imgLaptop} alt="MacBook" />
         </div>
 
-        {/* Tablet (Right) */}
         <div className="device-item tablet">
           <img src={imgTablet} alt="iPad" />
         </div>
 
-        {/* Phone (Left) */}
         <div className="device-item phone">
+          <div className="phone-screen">
+            <span className="phone-island" />
+            <span className="phone-card card-a" />
+            <span className="phone-card card-b" />
+            <span className="phone-glow" />
+          </div>
           <img src={imgPhone} alt="iPhone" />
         </div>
-
       </div>
-      
     </section>
   );
 }

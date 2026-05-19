@@ -2,21 +2,28 @@
 
 .construction2-container {
   width: 100%;
-  height: 600px;
+  height: 500px;
   position: relative;
   
   // 保持負 margin 蓋住上一區
-  margin-top: -250px; 
+  margin-top: -150px; 
   
   // 🌟 修正：精確計算溢出高度 (810px - 600px = 210px)
   // 從 300px 改為 210px，Footer 就會緊跟著白色背景
-  margin-bottom: 210px; 
+  margin-bottom: 0; 
 
   z-index: 10; 
   
   // 保持 visible 讓中間大球凸出
-  overflow: visible; 
+  overflow: visible;
   pointer-events: none; 
+
+  .ellipse-clip {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: auto;
+  }
 
   // --- 背景層 ---
   .elliptical-bg {
@@ -24,10 +31,10 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 140%; // 2018px
+    width: 140%; // Keep the oversized ellipse and clip the sides.
     
     // 高度是 135% (約 810px)
-    height: 135%; 
+    height: 125%; 
     
     border-radius: 50% 50% 0 0;
     border-top: 6px solid #FFFFFF; 
@@ -38,11 +45,13 @@
 
     .bg-image {
       width: 100%; height: 100%;
-      background-size: cover; background-position: center top;
+      background-size: 178% auto;
+      background-position: right 68%;
+      background-repeat: no-repeat;
     }
 
     .text-content {
-      position: absolute; top: 250px; width: 100%;
+      position: absolute; top: 230px; width: 100%;
       display: flex; justify-content: center;
       p { width: 770px; font-family: 'Inter', sans-serif; font-size: 24px; color: #685D5D; padding: 0 20px; }
     }

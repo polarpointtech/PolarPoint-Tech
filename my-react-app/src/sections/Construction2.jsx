@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Construction2.scss';
 
 // 引入背景圖
-import bgImg from '../assets/construction2-1.png';
+import bgImg from '../assets/home1-1.png';
 
 // SVG Icons
 const ChairIcon = () => (
@@ -38,18 +38,20 @@ export default function Construction2() {
     <section className="construction2-container">
       
       {/* 橢圓形背景容器 */}
-      <div className="elliptical-bg">
-        <div 
-          className="bg-image" 
-          style={{ backgroundImage: `url(${bgImg})` }}
-        ></div>
-        
-        <div className="text-content">
-          <p>
-            We assist clients in sourcing high-quality natural stones and marble 
-            products, including slabs for construction, countertops, stair materials, 
-            and various marble furniture items.
-          </p>
+      <div className="ellipse-clip">
+        <div className="elliptical-bg">
+          <div 
+            className="bg-image" 
+            style={{ backgroundImage: `url(${bgImg})` }}
+          ></div>
+          
+          <div className="text-content">
+            <p>
+              We assist clients in sourcing high-quality natural stones and marble 
+              products, including slabs for construction, countertops, stair materials, 
+              and various marble furniture items.
+            </p>
+          </div>
         </div>
       </div>
 

@@ -12,21 +12,24 @@ export default function Home1() {
       className="home1-container" 
       style={{ backgroundImage: `url(${home1Background})` }}
     >
-      <div className="image-overlay-group">
-        <img src={img2} className="img-1-2" alt="Home 1-2" />
-        <img src={img3} className="img-1-3" alt="Home 1-3" />
-        <img src={img4} className="img-1-4" alt="Home 1-4" />
-        <img src={img5} className="img-1-5" alt="Home 1-5" />
-      </div>
+      <div className="home1-stage">
+        <div className="image-overlay-group">
+          <img src={img2} className="img-1-2" alt="Home 1-2" />
+          <img src={img3} className="img-1-3" alt="Home 1-3" />
+          <img src={img4} className="img-1-4" alt="Home 1-4" />
+          <img src={img5} className="img-1-5" alt="Home 1-5" />
+        </div>
 
-      <div className="text-content">
-        <h1 className="main-title">
-          Headline of Website Will Goes Here <br />
-          in Two Line and Centered
-        </h1>
-        <p className="sub-description">
-          Lorem ipsum dolor sit amet consectetur.
-        </p>
+        <div className="text-content">
+          <h1 className="main-title">
+            Integrated Solutions for Modern <br />
+            Business
+          </h1>
+          <p className="sub-description">
+            From manufacturing and sourcing to digital services, <br />
+            we help businesses build smarter solutions.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -12,8 +12,113 @@
   background-size: cover;       // 確保圖片填滿整個區域
   background-position: center top; // 圖片上方置中對齊 (通常 Hero Section 建議這樣設)
   background-repeat: no-repeat;
+  background:
+    radial-gradient(circle at 20% 78%, rgba(87, 211, 239, 0.25) 0 16%, rgba(87, 211, 239, 0.08) 32%, transparent 54%),
+    radial-gradient(circle at 84% 78%, rgba(255, 151, 40, 0.18) 0 18%, rgba(255, 151, 40, 0.06) 34%, transparent 56%),
+    radial-gradient(circle at 50% 43%, rgba(255, 255, 255, 0.96) 0 18%, rgba(255, 255, 255, 0.74) 37%, transparent 62%),
+    linear-gradient(180deg, #ffffff 0%, #f8fdff 48%, #eefaff 100%);
   
   overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 50% 44%, rgba(255, 255, 255, 0.88) 0 17%, rgba(255, 255, 255, 0.36) 36%, rgba(255, 255, 255, 0) 62%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(219, 246, 255, 0.08) 100%);
+  }
+
+  .data-stream-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    background:
+      linear-gradient(rgba(91, 163, 196, 0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(91, 163, 196, 0.1) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: linear-gradient(180deg, transparent 0%, black 16%, black 88%, transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 16%, black 88%, transparent 100%);
+  }
+
+  .data-column {
+    position: absolute;
+    top: -88%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 24px;
+    color: rgba(230, 141, 26, 0.62);
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 14px rgba(236, 155, 42, 0.2);
+    animation: data-rain 20s linear infinite;
+    opacity: 0.82;
+
+    .stream-set {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      flex: 0 0 auto;
+    }
+
+    i {
+      display: block;
+      height: 18px;
+      font-style: normal;
+      text-align: center;
+    }
+  }
+
+  .column-1 { left: 1%; animation-duration: 21s; animation-delay: -2s; opacity: 0.5; }
+  .column-2 { left: 3.5%; animation-duration: 17s; animation-delay: -7s; }
+  .column-3 { left: 6%; animation-duration: 25s; animation-delay: -12s; opacity: 0.62; }
+  .column-4 { left: 8.5%; animation-duration: 19s; animation-delay: -4s; color: rgba(52, 170, 210, 0.34); }
+  .column-5 { left: 11%; animation-duration: 27s; animation-delay: -16s; opacity: 0.54; }
+  .column-6 { left: 13.5%; animation-duration: 22s; animation-delay: -9s; }
+  .column-7 { left: 16%; animation-duration: 18s; animation-delay: -2s; opacity: 0.46; }
+  .column-8 { left: 18.5%; animation-duration: 26s; animation-delay: -14s; }
+  .column-9 { left: 21%; animation-duration: 20s; animation-delay: -5s; opacity: 0.42; }
+  .column-10 { left: 23.5%; animation-duration: 28s; animation-delay: -19s; }
+  .column-11 { left: 26%; animation-duration: 23s; animation-delay: -8s; opacity: 0.58; }
+  .column-12 { left: 28.5%; animation-duration: 18s; animation-delay: -11s; color: rgba(52, 170, 210, 0.3); }
+  .column-13 { left: 31%; animation-duration: 24s; animation-delay: -6s; }
+  .column-14 { left: 33.5%; animation-duration: 29s; animation-delay: -17s; opacity: 0.52; }
+  .column-15 { left: 36%; animation-duration: 21s; animation-delay: -3s; }
+  .column-16 { left: 38.5%; animation-duration: 26s; animation-delay: -13s; opacity: 0.48; }
+  .column-17 { left: 41%; animation-duration: 31s; animation-delay: -21s; opacity: 0.42; }
+  .column-18 { left: 43.5%; animation-duration: 30s; animation-delay: -24s; opacity: 0.48; }
+  .column-19 { left: 46%; animation-duration: 22s; animation-delay: -15s; }
+  .column-20 { left: 48.5%; animation-duration: 19s; animation-delay: -7s; opacity: 0.64; }
+  .column-21 { left: 51%; animation-duration: 25s; animation-delay: -20s; }
+  .column-22 { left: 53.5%; animation-duration: 28s; animation-delay: -10s; opacity: 0.56; }
+  .column-23 { left: 56%; animation-duration: 18s; animation-delay: -4s; color: rgba(52, 170, 210, 0.3); }
+  .column-24 { left: 58.5%; animation-duration: 27s; animation-delay: -14s; }
+  .column-25 { left: 61%; animation-duration: 20s; animation-delay: -9s; opacity: 0.62; }
+  .column-26 { left: 63.5%; animation-duration: 30s; animation-delay: -22s; }
+  .column-27 { left: 66%; animation-duration: 23s; animation-delay: -6s; opacity: 0.5; }
+  .column-28 { left: 68.5%; animation-duration: 26s; animation-delay: -18s; }
+  .column-29 { left: 71%; animation-duration: 21s; animation-delay: -11s; color: rgba(52, 170, 210, 0.34); }
+  .column-30 { left: 73.5%; animation-duration: 29s; animation-delay: -3s; opacity: 0.5; }
+  .column-31 { left: 76%; animation-duration: 18s; animation-delay: -13s; }
+  .column-32 { left: 78.5%; animation-duration: 24s; animation-delay: -17s; opacity: 0.58; }
+  .column-33 { left: 81%; animation-duration: 31s; animation-delay: -25s; }
+  .column-34 { left: 83.5%; animation-duration: 22s; animation-delay: -8s; opacity: 0.46; }
+  .column-35 { left: 86%; animation-duration: 26s; animation-delay: -19s; color: rgba(52, 170, 210, 0.3); }
+  .column-36 { left: 88.5%; animation-duration: 20s; animation-delay: -5s; }
+  .column-37 { left: 91%; animation-duration: 28s; animation-delay: -16s; opacity: 0.52; }
+  .column-38 { left: 93.5%; animation-duration: 19s; animation-delay: -12s; }
+  .column-39 { left: 96%; animation-duration: 25s; animation-delay: -21s; opacity: 0.48; }
+  .column-40 { left: 98.5%; animation-duration: 30s; animation-delay: -27s; opacity: 0.42; }
 
   // 2. 內容包裝層：負責定位文字
   .content-wrapper {
@@ -26,7 +131,7 @@
     transform: translateX(-50%);
     
     // 鎖定文字區塊寬度 (710px)
-    width: 710px;
+    width: 940px;
     
     // 預防手機版破版
     max-width: 90vw; 
@@ -36,15 +141,21 @@
     align-items: center;
     text-align: center;
     gap: 16px; 
+    z-index: 2;
 
     .main-title {
       margin: 0;
       font-family: 'Inter', sans-serif;
       font-weight: 700;
-      font-size: 56px; 
-      line-height: 1.2;
-      color: #000000;
-      letter-spacing: -0.02em;
+      font-size: 54px; 
+      line-height: 1.16;
+      color: #10232d;
+      letter-spacing: 0;
+      white-space: nowrap;
+
+      span {
+        color: #f27f13;
+      }
     }
 
     .subtitle {
@@ -59,10 +170,59 @@
       
       -webkit-font-smoothing: antialiased;
     }
+
+    .subtitle {
+      margin: 0 0 6px;
+      padding: 9px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 12px 28px rgba(47, 149, 196, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1;
+      color: #24556a;
+      letter-spacing: 0.12em;
+      white-space: normal;
+    }
+
+    .work-copy {
+      width: 640px;
+      max-width: 84vw;
+      margin: 6px 0 0;
+      color: #48616c;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.45;
+    }
   }
 }
 
 // RWD：手機版調整
+@keyframes data-rain {
+  0% {
+    transform: translateY(-34%);
+    filter: blur(0);
+  }
+  50% {
+    filter: blur(0.2px);
+  }
+  100% {
+    transform: translateY(34%);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home5-container .data-column {
+    animation: none;
+  }
+}
+
 @media (max-width: 768px) {
   .home5-container {
     height: 600px; // 手機版高度可稍微縮減

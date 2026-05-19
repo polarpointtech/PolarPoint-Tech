@@ -1,1 +1,273 @@
-.ContactUs-container { position: relative; width: 100%; }
+.contact-page {
+  min-height: 900px;
+  overflow: hidden;
+  background: #fff;
+  color: #242424;
+}
+
+.contact-hero {
+  height: 435px;
+  position: relative;
+  display: block;
+  align-items: initial;
+  justify-content: initial;
+  overflow: hidden;
+  background-size: 214% auto;
+  background-position: right 62%;
+  background-repeat: no-repeat;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0.08) 56%, rgba(255, 255, 255, 0) 100%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+  }
+}
+
+.contact-hero-content {
+  width: 600px;
+  margin-left: calc(50% - 720px + 331px);
+  padding-top: 90px;
+  position: relative;
+  z-index: 1;
+
+  .caption {
+    margin: 0 0 12px;
+    color: #072375;
+    font: 800 15px/1.1 'Inter', sans-serif;
+    letter-spacing: 0.08em;
+  }
+
+  h1 {
+    margin: 0 0 18px;
+    color: #222;
+    font: 800 47px/1.05 'Inter', sans-serif;
+    letter-spacing: 0;
+  }
+
+  .hero-copy {
+    width: 600px;
+    max-width: 100%;
+    margin: 0;
+    color: #232323;
+    font: 400 16px/1.3 'Inter', sans-serif;
+  }
+}
+
+.service-pills {
+  display: flex;
+  gap: 28px;
+  margin-top: 40px;
+
+  button {
+    width: 217px;
+    min-width: 217px;
+    height: 63px;
+    box-sizing: border-box;
+    border: 1px solid rgba(95, 95, 95, 0.18);
+    border-radius: 100px;
+    background: rgba(232, 232, 232, 0.68);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.62),
+      0 12px 32px rgba(60, 64, 68, 0.08);
+    backdrop-filter: blur(10px) saturate(110%);
+    -webkit-backdrop-filter: blur(10px) saturate(110%);
+    color: #171717;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 21px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 590;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+
+    svg {
+      width: 23px;
+      height: 23px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex: 0 0 auto;
+    }
+
+    &.active {
+      border-color: rgba(91, 200, 233, 0.62);
+      background: rgba(220, 246, 255, 0.8);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),
+        0 12px 32px rgba(91, 200, 233, 0.18);
+    }
+  }
+}
+
+.contact-form-section {
+  min-height: auto;
+  display: block;
+  align-items: initial;
+  justify-content: initial;
+  background: #fff;
+  padding: 91px 0 18px;
+}
+
+.figma-contact-form {
+  width: 774px;
+  margin-left: calc(50% - 720px + 324px);
+
+  .form-note {
+    margin: 0 0 24px;
+    color: #ff1414;
+    font: 400 18px/1.25 'Inter', sans-serif;
+    min-height: 23px;
+
+    &.empty {
+      visibility: hidden;
+    }
+  }
+}
+
+.form-row {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 44px;
+
+  &.two {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+.figma-contact-form label {
+  display: block;
+
+  span {
+    display: block;
+    margin: 0 0 -22px 16px;
+    color: #707070;
+    font: 400 10px/1 'Inter', sans-serif;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.figma-contact-form input,
+.figma-contact-form select,
+.figma-contact-form textarea {
+  width: 100%;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #3f3f3f;
+  box-sizing: border-box;
+  outline: none;
+  font: 400 16px/1.25 'Inter', sans-serif;
+}
+
+.figma-contact-form input,
+.figma-contact-form select {
+  height: 59px;
+  padding: 21px 16px 8px;
+}
+
+.figma-contact-form textarea {
+  height: 92px;
+  padding: 34px 16px 12px;
+  resize: none;
+}
+
+.figma-contact-form input::placeholder,
+.figma-contact-form textarea::placeholder {
+  color: #b6b6b6;
+}
+
+.message-field {
+  margin-bottom: 36px;
+}
+
+.consent-row {
+  display: flex;
+  gap: 70px;
+  margin: 0 0 36px;
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #444;
+    font: 400 12px/1.2 'Inter', sans-serif;
+  }
+
+  input {
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+    flex: 0 0 auto;
+    accent-color: #f6a33c;
+  }
+
+  .figma-contact-form & span,
+  span {
+    margin: 0;
+    display: inline;
+    font: inherit;
+    color: inherit;
+  }
+
+  a {
+    color: #ff7a1a;
+    text-decoration: none;
+  }
+}
+
+.submit-btn {
+  width: 774px;
+  height: 59px;
+  border: 0;
+  border-radius: 10px;
+  background: #ff8615;
+  color: #fff;
+  cursor: pointer;
+  font: 500 18px/1 'Inter', sans-serif;
+}
+
+@media (max-width: 1024px) {
+  .contact-hero {
+    height: auto;
+    min-height: 430px;
+    background-size: cover;
+  }
+
+  .contact-hero-content,
+  .figma-contact-form {
+    width: min(88%, 720px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-hero-content {
+    padding: 120px 0 48px;
+  }
+
+  .service-pills,
+  .consent-row {
+    flex-wrap: wrap;
+  }
+
+  .form-row.two,
+  .form-row.contact-row {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}

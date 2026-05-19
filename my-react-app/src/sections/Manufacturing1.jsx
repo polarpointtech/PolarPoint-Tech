@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Stage } from '@react-three/drei';
+import { ContactShadows, OrbitControls, Stage } from '@react-three/drei';
 import './Manufacturing1.scss';
 
 // 圖片引用 (移除原本的 heroImg)
@@ -21,19 +21,20 @@ export default function Manufacturing1() {
         {/* 1. 標題區域 (維持不變) */}
         <div className="title-group">
           <h1 className="main-title">
-            3D Printing<br />Services
+            Precision 3D Printing<br />Built for Industrial Needs
           </h1>
           <h2 className="sub-title">
-            (Resin / UV-Curing / Metal)
+            Rapid Prototyping • Functional Parts • Low-Volume Production
           </h2>
         </div>
 
         {/* 2. 描述文字 (維持不變) */}
         <div className="description-block">
           <p>
-            We offer a wide range of 3D printing processes, including resin printing (SLA/DLP), 
-            UV-curing technologies, and metal printing (SLM/DMLS). Our capabilities support 
-            prototype development, appearance models, functional parts, and small-batch production.
+            From prototyping to low-volume production,
+            we deliver reliable 3D printing solutions
+            for functional parts, industrial applications,
+            and custom manufacturing needs.
           </p>
         </div>
 
@@ -42,13 +43,14 @@ export default function Manufacturing1() {
           <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 10], fov: 45 }}>
             <Suspense fallback={null}>
               {/* Stage 提供專業打光，讓模型看起來更立體 */}
-              <Stage environment="city" intensity={0.5} adjustCamera={false}>
-                <RobotModelObj /> 
+              <Stage environment="city" intensity={0.5} adjustCamera={false} shadows={false}>
+                <RobotModelObj scale={4.5} position={[0.35, -4.75, 0]} /> 
               </Stage>
+              <ContactShadows position={[0.35, -4.87, 0]} opacity={0.34} scale={12.5} blur={2.8} far={4} />
             </Suspense>
 
             {/* 加入控制器：自動旋轉 + 允許縮放 */}
-            <OrbitControls autoRotate autoRotateSpeed={1.0} enableZoom={true} />
+            <OrbitControls autoRotate autoRotateSpeed={1.0} enableZoom={false} enablePan={false} />
           </Canvas>
         </div>
 

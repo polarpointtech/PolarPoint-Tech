@@ -1,202 +1,311 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+$canvas-width: 1440;
+$canvas-height: 900;
+
+@function to-vw($px) {
+  @return ($px / $canvas-width) * 100vw;
+}
+
+@function to-vh($px) {
+  @return ($px / $canvas-height) * 100vh;
+}
+
 .nav-card {
   position: fixed;
-  // 🌟 展開時的座標
-  top: 36px;
-  left: 29px;
+  top: clamp(28px, 7.55vh, 68px);
+  left: clamp(28px, 4.45vw, 64px);
   z-index: 1000;
-
-  // 🌟 展開時的尺寸 (依照之前的 image_71db11.jpg)
-  width: 227px;      
-  height: 754px;     
-  padding: 16px;     
-
-  background: rgba(255, 255, 255, 0.5); 
-  backdrop-filter: blur(20px); 
-  -webkit-backdrop-filter: blur(20px);
-  
-  border-radius: 28px;
-  border: 1px solid rgba(28, 28, 28, 0.1); 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+  width: 227px;
+  height: min(660px, calc(100vh - 150px));
+  padding: 16px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  
   font-family: 'Inter', sans-serif;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: #111111;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 22px;
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.14);
+  backdrop-filter: blur(24px) saturate(135%);
+  -webkit-backdrop-filter: blur(24px) saturate(135%);
+  transition:
+    width 0.32s ease,
+    left 0.32s ease,
+    padding 0.32s ease,
+    background 0.32s ease,
+    border-radius 0.32s ease;
 
-  // ============================================
-  // 🌟 縮小狀態 (Shrunk State) - 嚴格對照截圖數據
-  // ============================================
-  &.shrunk {
-    //
-    width: 88px;
-    height: 624px;
-    
-    // 縮小後的 Padding (Top/Right/Left: 16px)
-    padding: 16px; 
-    
-    // 讓內容水平置中
-    align-items: center;
-
-    // 1. Logo 區域
-    .nav-top {
-      margin-bottom: 20px;
-      padding: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-
-      .logo-area {
-        justify-content: center;
-        .logo-text { display: none; } // 隱藏文字
-        .logo-img {
-            // Logo 圖片維持適當大小
-            width: 40px; 
-            height: 40px;
-        }
-      }
-    }
-
-    // 2. 選單列表調整
-    .nav-menu {
-      width: 100%;
-      align-items: center;
-      gap: 8px; // 按鈕之間的間距
-
-      // 🌟 關鍵間距：根據截圖 Gap 153px
-      // 我們用 margin-bottom 來推開 Contact 按鈕，或者讓 Contact 按鈕有 margin-top
-      margin-bottom: 0; 
-    }
-
-    // 3. 按鈕變形 (統一變成 56x56)
-    .menu-item {
-      padding: 0; 
-      justify-content: center; 
-      width: 56px; 
-      height: 56px; 
-      border-radius: 20px; 
-
-      .label { display: none; } // 隱藏文字
-      .icon { width: 24px; height: 24px; margin: 0; }
-
-      // M, C, D 圓形按鈕
-      &.sub-item {
-        background: #FFFFFF; 
-        .letter-icon {
-          font-size: 16px;
-          font-weight: 600;
-          color: #333;
-        }
-      }
-    }
-
-    // 4. Services 標籤 (變成 56x56 的圖示)
-    .menu-label {
-      width: 56px;
-      height: 56px;
-      justify-content: center;
-      padding: 0;
-      // 確保它跟其他按鈕一樣對齊
-      display: flex; 
-      align-items: center;
-      
-      .label, .arrow { display: none; }
-      .left { justify-content: center; gap: 0; }
-      .icon { width: 24px; height: 24px; margin: 0; }
-    }
-
-    // 5. Contact 按鈕 (56x56 橘色方塊)
-    .contact-btn {
-      width: 56px;
-      height: 56px;
-      padding: 0;
-      justify-content: center;
-      border-radius: 20px;
-      
-      // 🌟 這裡實現截圖中的 Gap 153px
-      // 雖然截圖是 Gap 屬性，但在 CSS Flex 佈局中，用 margin-top 推開是最穩定的做法
-      margin-top: 153px; 
-      
-      .label { display: none; }
-      .icon { margin: 0; width: 24px; height: 24px; }
-    }
+  button {
+    font: inherit;
   }
-  // ========= 縮小狀態結束 =========
 
-
-  // --- 內部元件樣式 (展開狀態) ---
-  
   .nav-top {
-    margin-bottom: 30px;
-    padding: 0 8px;
-    transition: all 0.3s;
-    
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      
-      .logo-img { width: 32px; height: 32px; object-fit: contain; }
-      .logo-text { font-weight: 700; font-size: 14px; line-height: 1.2; color: #1C1C1C; white-space: nowrap; }
-    }
+    margin-bottom: 20px;
+  }
+
+  .logo-area {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .logo-mark {
+    width: 49px;
+    height: 49px;
+    flex: 0 0 49px;
+    border-radius: 50%;
+    border: 3px solid #10232d;
+    background: #6fcfe0;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .logo-img {
+    position: absolute;
+    left: -6px;
+    top: -5px;
+    width: auto;
+    height: 60px;
+    max-width: none;
+    object-fit: contain;
+  }
+
+  .logo-text {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: 0;
+    color: #111111;
+    white-space: nowrap;
   }
 
   .nav-menu {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px; 
+    gap: 10px;
+  }
+
+  .menu-item,
+  .contact-btn {
     width: 100%;
-    transition: all 0.3s;
+    height: 49px;
+    border: 0;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    color: #111111;
+    background: transparent;
+    cursor: pointer;
+    transition:
+      background 0.22s ease,
+      color 0.22s ease,
+      transform 0.22s ease,
+      box-shadow 0.22s ease;
+  }
 
-    .menu-item {
-      width: 100%;
-      height: 48px;
-      border-radius: 20px;
-      border: none;
-      background: transparent;
-      display: flex; align-items: center; padding: 0 16px; gap: 12px;
-      font-size: 14px; font-weight: 500; color: #333;
-      cursor: pointer; transition: all 0.3s ease;
+  .menu-item {
+    justify-content: flex-start;
+    gap: 9px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
 
-      .icon { width: 20px; height: 20px; flex-shrink: 0; }
+    .icon {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+    }
+  }
 
-      &.active {
-        background-color: #5DC9EC; color: #FFFFFF;
-        box-shadow: 0 2px 8px rgba(93, 201, 236, 0.3);
-      }
+  .home-item,
+  .home-item.active {
+    color: #ffffff;
+    background: #5bc8e9;
+    box-shadow: none;
+  }
 
-      &.sub-item {
-        background: #FFFFFF; 
-        &:hover { background-color: #f5f5f5; }
-        .dot { font-size: 12px; margin-right: 4px; color: #666; }
-      }
+  .menu-label {
+    min-height: 45px;
+    padding: 0 18px 0 21px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #111111;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
     }
 
-    .menu-label {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 8px 16px; color: #333; font-weight: 600; font-size: 14px; margin-top: 8px;
-      transition: all 0.3s;
-      
-      .left { display: flex; align-items: center; gap: 10px; }
-      .icon { width: 18px; height: 18px; flex-shrink: 0; }
-      .arrow { width: 14px; height: 14px; opacity: 0.5; }
+    .icon {
+      width: 19px;
+      height: 19px;
+      flex: 0 0 19px;
+    }
+
+    .arrow {
+      width: 15px;
+      height: 15px;
+      flex: 0 0 15px;
+      color: #111111;
+    }
+  }
+
+  .sub-item {
+    height: 49px;
+    padding: 0 20px;
+    color: #111111;
+    background: #ffffff;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
+
+    &.active {
+      background: #ffffff;
+      color: #111111;
+    }
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+
+    .dot {
+      width: 5px;
+      height: 5px;
+      margin-right: 2px;
+      flex: 0 0 5px;
+      border-radius: 50%;
+      background: #8ea4bd;
+    }
+
+    .label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 
   .contact-btn {
-    // 展開時自動推到底部
-    margin-top: auto; 
-    
-    width: 100%; height: 48px; border-radius: 20px; border: none;
-    background-color: #F47A00; color: #FFFFFF;
-    font-size: 14px; font-weight: 600;
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    cursor: pointer; box-shadow: 0 4px 8px rgba(244, 122, 0, 0.25);
-    transition: all 0.3s ease;
+    margin-top: auto;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 18px;
+    color: #ffffff;
+    background: #ff7f11;
+    font-size: 16px;
+    font-weight: 500;
 
-    &:hover { transform: translateY(-2px); }
-    .icon { width: 18px; height: 18px; flex-shrink: 0; }
+    .icon {
+      width: 19px;
+      height: 19px;
+      flex: 0 0 19px;
+    }
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+
+  &.shrunk {
+    top: clamp(28px, 7.55vh, 68px);
+    left: clamp(28px, 4.45vw, 64px);
+    width: 62px;
+    height: min(660px, calc(100vh - 150px));
+    padding: 7px 10px 11px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.34);
+    border-color: rgba(255, 255, 255, 0.48);
+    border-radius: 20px;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.16);
+
+    .nav-top {
+      display: none;
+    }
+
+    .nav-menu {
+      align-items: center;
+      gap: 16px;
+    }
+
+    .menu-item,
+    .menu-label,
+    .contact-btn {
+      width: 42px;
+      height: 42px;
+      min-height: 42px;
+      padding: 0;
+      border-radius: 14px;
+      justify-content: center;
+    }
+
+    .menu-item {
+      .label {
+        display: none;
+      }
+
+      .icon {
+        width: 17px;
+        height: 17px;
+      }
+    }
+
+    .home-item {
+      color: #ffffff;
+      background: #64cbf2;
+    }
+
+    .menu-label {
+      margin: 0;
+      color: #111111;
+
+      .left {
+        justify-content: center;
+        gap: 0;
+      }
+
+      .label,
+      .arrow {
+        display: none;
+      }
+
+      .icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .sub-item {
+      display: none;
+    }
+
+    .contact-btn {
+      margin-top: auto;
+      color: #ffffff;
+      background: #176cff;
+
+      .label {
+        display: none;
+      }
+
+      .icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
 }

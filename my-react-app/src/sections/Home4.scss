@@ -4,7 +4,7 @@
   // max-width: 1440px; // ❌ 移除這行，不要限制最大寬度
   
   // 2. 嚴格鎖定總高度
-  height: 173px; 
+  height: 140px; 
   
   // 3. 佈局歸零與背景
   margin: 0;
@@ -43,7 +43,7 @@
 
     img {
       // 圖片高度維持設計稿比例 (約 40px ~ 50px 較為剛好)
-      height: 40px; 
+      height: 48px; 
       width: auto;
       object-fit: contain;
 

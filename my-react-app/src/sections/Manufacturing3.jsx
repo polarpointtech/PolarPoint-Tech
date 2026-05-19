@@ -15,16 +15,19 @@ export default function Manufacturing3() {
         {/* 右側文字區 */}
         <div className="text-group">
           <h2 className="main-title">
-            General Component<br />
-            Machining<br />
-            & Parts Trading
+            Manufacturing<br />
+            Built for Real-World Applications
           </h2>
+
+          <h3 className="sub-title">
+            Machining • Tooling • OEM/ODM • Industrial Components
+          </h3>
           
           <div className="description">
             <p>
-              We provide complete CNC turning-milling machining capabilities for aluminum alloys, 
-              stainless steel, copper, engineering plastics, and more. OEM/ODM and component 
-              sourcing services are also available.
+              We provide machining, tooling design,
+              OEM/ODM production, and industrial component
+              support for customized manufacturing needs.
             </p>
           </div>
         </div>

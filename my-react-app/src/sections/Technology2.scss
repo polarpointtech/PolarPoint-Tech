@@ -46,16 +46,26 @@
     top: 488px;
     left: 50%; 
     transform: translateX(-50%);
-    width: 2018px; 
+    width: 140%; 
     height: 816px;
-    border-radius: 40% 40% 0 0;
+    border-radius: 50% 50% 0 0;
     overflow: hidden; 
     z-index: 10; 
+
+    .bg-viewport {
+      position: absolute;
+      inset: 0 auto auto 50%;
+      width: 100vw;
+      height: 100%;
+      transform: translateX(-50%);
+    }
+
     .bg-image {
       width: 100%;
       height: 100%;
-      background-size: cover;
-      background-position: center top;
+      background-size: 240% auto;
+      background-position: right 64%;
+      background-repeat: no-repeat;
     }
   }
 
@@ -95,9 +105,9 @@
 
     // --- Tablet (iPad) ---
     .tablet {
-      width: 974px;
+      width: clamp(720px, 52vw, 974px);
       top: 200px; 
-      left: 850px; 
+      right: clamp(24px, 5vw, 120px);
       z-index: 1; 
 
       // 應用動畫 (6秒一個循環，延遲 0.5秒開始)
@@ -119,7 +129,70 @@
       animation: floatAnimation 4s ease-in-out infinite 1s;
 
       img {
+        position: relative;
+        z-index: 2;
         transform: rotate(15deg); 
+      }
+
+      .phone-screen {
+        position: absolute;
+        z-index: 1;
+        left: 171px;
+        top: 42px;
+        width: 188px;
+        height: 320px;
+        border-radius: 32px;
+        transform: rotate(15deg);
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 75% 18%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 22%),
+          linear-gradient(145deg, #f7fbff 0%, #dff7ff 38%, #f6d5ff 66%, #ff8b48 100%);
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 255, 255, 0.7),
+          inset 0 -28px 45px rgba(93, 201, 220, 0.18);
+      }
+
+      .phone-island {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        width: 50px;
+        height: 13px;
+        transform: translateX(-50%);
+        border-radius: 999px;
+        background: rgba(20, 24, 30, 0.86);
+      }
+
+      .phone-card {
+        position: absolute;
+        left: 26px;
+        right: 26px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.56);
+        box-shadow: 0 12px 24px rgba(74, 104, 150, 0.12);
+
+        &.card-a {
+          top: 80px;
+          height: 82px;
+        }
+
+        &.card-b {
+          top: 178px;
+          height: 58px;
+          opacity: 0.76;
+        }
+      }
+
+      .phone-glow {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        right: -34px;
+        bottom: -36px;
+        border-radius: 50%;
+        background: rgba(255, 130, 72, 0.36);
+        filter: blur(4px);
       }
     }
   }

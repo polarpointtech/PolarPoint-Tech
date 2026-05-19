@@ -68,14 +68,14 @@ export default function Home6() {
   return (
     <section className="home6-container">
       <div className="header-content">
-        <div className="tag">They already love our products 😍</div>
+        <div className="tag">TRUSTED BY OUR CLIENTS</div>
         <h2 className="main-title">
-          See what our Clients<br />
-          say about us
+          Built on Trust,<br />
+          <span>Backed by Results</span>
         </h2>
         <p className="subtitle">
-          We are proud to work with amazing clients who have seen real results<br />
-          using our platform.
+          We take pride in delivering reliable solutions that help businesses succeed through long-term
+          partnerships.
         </p>
       </div>
 

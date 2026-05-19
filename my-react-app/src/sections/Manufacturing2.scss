@@ -69,10 +69,11 @@
     .feature-text {
       font-family: 'Inter', sans-serif;
       font-weight: 400; 
-      font-size: 24px;
-      line-height: 1.0; 
+      font-size: 22px;
+      line-height: 1.28; 
       color: #3F3F3F;
-      width: 100%; 
+      width: min(100%, 410px);
+      text-wrap: balance;
     }
   }
 
@@ -114,7 +115,7 @@
       width: 100%;
       padding: 450px 20px 100px 20px;
     }
-    
+
     .feature-item {
       position: relative !important;
       top: auto !important;
