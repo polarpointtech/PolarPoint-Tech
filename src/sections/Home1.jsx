@@ -1,10 +1,10 @@
 import React from 'react';
 import './Home1.scss';
 import home1Background from '../assets/home1-1.png'; 
-import img2 from '../assets/home1-2.JPG';
-import img3 from '../assets/home1-3.JPG';
-import img4 from '../assets/home1-4.JPG';
-import img5 from '../assets/home1-5.JPG';
+import img2 from '../assets/home1-2.jpg';
+import img3 from '../assets/home1-3.jpg';
+import img4 from '../assets/home1-4.jpg';
+import img5 from '../assets/home1-5.jpg';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Home1() {
