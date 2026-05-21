@@ -580,3 +580,14 @@
     .info-panel { position: relative; top: auto; left: auto; width: 100%; padding: 0 20px; .tags-grid { display: flex; flex-wrap: wrap; gap: 15px; } }
   }
 }
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+  .technology1-container {
+    .content-wrapper {
+      width: calc(100% - 112px);
+      max-width: none;
+      margin-left: 112px;
+      margin-right: 0;
+    }
+  }
+}

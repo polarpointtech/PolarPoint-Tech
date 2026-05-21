@@ -227,3 +227,14 @@
     }
   }
 }
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+  .manufacturing1-container {
+    .content-wrapper {
+      width: calc(100% - 112px);
+      max-width: none;
+      margin-left: 112px;
+      margin-right: 0;
+    }
+  }
+}
