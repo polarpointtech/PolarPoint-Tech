@@ -160,7 +160,7 @@ export default function Home3() {
                 aria-label={btn.title}
                 onMouseEnter={() => setActiveCapability(btn)}
                 onFocus={() => setActiveCapability(btn)}
-                onClick={() => setActiveCapability((current) => current?.id === btn.id ? null : btn)}
+                onClick={() => setActiveCapability(btn)}
               >
                 {IconComponent && <IconComponent />}
               </button>

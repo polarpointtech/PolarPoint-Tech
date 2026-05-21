@@ -489,7 +489,7 @@
 
 @media (max-width: 480px) {
   .home3-container {
-    height: 920px;
+    height: 760px;
     margin-top: -1px;
     background:
       radial-gradient(310px 260px at 50% 48%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.22) 58%, rgba(255, 255, 255, 0) 76%),
@@ -510,7 +510,7 @@
       transform: none;
 
       .text-content {
-        top: 56px;
+        top: 42px;
         width: min(286px, calc(100vw - 48px));
 
         .sub-caption {
@@ -542,7 +542,7 @@
       }
 
       .image-container {
-        top: 324px;
+        top: 286px;
         width: min(292px, calc(100vw - 64px));
 
         .arm-art {
@@ -563,16 +563,16 @@
         transform: scale(0.78);
       }
 
-      .floating-wrapper.service-1 { top: 236px !important; left: 78px !important; }
-      .floating-wrapper.service-2 { top: 336px !important; left: 34px !important; }
-      .floating-wrapper.service-3 { top: 444px !important; left: 76px !important; }
-      .floating-wrapper.service-6 { top: 236px !important; left: 252px !important; }
-      .floating-wrapper.service-9 { top: 358px !important; left: 300px !important; }
-      .floating-wrapper.service-4 { top: 598px !important; left: 70px !important; }
-      .floating-wrapper.service-5 { top: 718px !important; left: 152px !important; }
-      .floating-wrapper.service-7 { top: 564px !important; left: 300px !important; }
-      .floating-wrapper.service-8 { top: 690px !important; left: 260px !important; }
-      .floating-wrapper.service-10 { top: 812px !important; left: 302px !important; }
+      .floating-wrapper.service-1 { top: 206px !important; left: 82px !important; }
+      .floating-wrapper.service-2 { top: 296px !important; left: 42px !important; }
+      .floating-wrapper.service-3 { top: 392px !important; left: 78px !important; }
+      .floating-wrapper.service-6 { top: 206px !important; left: 250px !important; }
+      .floating-wrapper.service-9 { top: 298px !important; left: 292px !important; }
+      .floating-wrapper.service-4 { top: 420px !important; left: 254px !important; }
+      .floating-wrapper.service-5 { top: 504px !important; left: 86px !important; }
+      .floating-wrapper.service-7 { top: 504px !important; left: 286px !important; }
+      .floating-wrapper.service-8 { top: 586px !important; left: 134px !important; }
+      .floating-wrapper.service-10 { top: 586px !important; left: 238px !important; }
 
       .capability-glass-card {
         display: block;
@@ -608,17 +608,14 @@
         &.service-1,
         &.service-2,
         &.service-3,
-        &.service-6,
-        &.service-9 {
-          top: 166px;
-        }
-
         &.service-4,
         &.service-5,
+        &.service-6,
         &.service-7,
         &.service-8,
+        &.service-9,
         &.service-10 {
-          top: 418px;
+          top: 314px;
         }
       }
     }
@@ -973,17 +970,14 @@
     &.service-1,
     &.service-2,
     &.service-3,
-    &.service-6,
-    &.service-9 {
-      top: 156px;
-    }
-
     &.service-4,
     &.service-5,
+    &.service-6,
     &.service-7,
     &.service-8,
+    &.service-9,
     &.service-10 {
-      top: 476px;
+      top: 314px;
     }
   }
 }

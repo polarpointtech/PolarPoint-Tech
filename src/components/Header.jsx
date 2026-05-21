@@ -42,7 +42,7 @@ export default function Header() {
   const { language, setLanguage, languageLabel, isChinese } = useLanguage();
   const navigate = useNavigate();
   const location = useLocation();
-  const shouldShrink = isShrunk && !isHovered;
+  const shouldShrink = isShrunk && !isHovered && !isMobileMenuOpen;
 
   useEffect(() => {
     const handleScroll = () => {
