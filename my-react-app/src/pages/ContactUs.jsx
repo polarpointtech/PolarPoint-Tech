@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './ContactUs.scss';
 import contactHero from '../assets/home1-1.png';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -40,8 +41,54 @@ function ServiceIcon() {
 
 export default function ContactUs() {
   const { isChinese } = useLanguage();
+  const formRef = useRef(null);
   const [selectedService, setSelectedService] = useState(null);
+  const [isSending, setIsSending] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
   const selectedServiceName = selectedService?.name.en || '';
+
+  const sendEmail = async (event) => {
+    event.preventDefault();
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      const message = isChinese
+        ? 'EmailJS 環境變數尚未設定完整，請確認 .env 檔案。'
+        : 'EmailJS environment variables are missing. Please check your .env file.';
+      setSubmitMessage(message);
+      alert(message);
+      return;
+    }
+
+    setIsSending(true);
+    setSubmitMessage('');
+
+    try {
+      await emailjs.sendForm(serviceId, templateId, formRef.current, {
+        publicKey,
+      });
+
+      const message = isChinese
+        ? '需求已送出，我們會盡快與您聯繫。'
+        : 'Your inquiry has been sent. We will get in touch shortly.';
+      setSubmitMessage(message);
+      alert(message);
+      formRef.current?.reset();
+      setSelectedService(null);
+    } catch (error) {
+      console.error('EmailJS send failed:', error);
+      const message = isChinese
+        ? '送出失敗，請稍後再試或直接與我們聯繫。'
+        : 'Failed to send your inquiry. Please try again later or contact us directly.';
+      setSubmitMessage(message);
+      alert(message);
+    } finally {
+      setIsSending(false);
+    }
+  };
 
   return (
     <main className={`contact-page ${isChinese ? 'contact-page-zh' : ''}`}>
@@ -72,33 +119,33 @@ export default function ContactUs() {
       </section>
 
       <section className="contact-form-section">
-        <form className="figma-contact-form">
+        <form ref={formRef} className="figma-contact-form" onSubmit={sendEmail}>
           <p className={`form-note ${selectedService ? '' : 'empty'}`}>
             {selectedService
               ? (isChinese ? selectedService.note.zh : selectedService.note.en)
               : 'Inquiry category note'}
           </p>
-          <input type="hidden" name="inquiryType" value={selectedServiceName} />
+          <input type="hidden" name="service_type" value={selectedServiceName} />
 
           <div className="form-row two">
             <label>
               <span>{isChinese ? '聯絡人姓名' : 'Contact Person'}</span>
-              <input type="text" name="contactPerson" placeholder={isChinese ? '請輸入姓名' : 'Your Name'} />
+              <input type="text" name="user_name" placeholder={isChinese ? '請輸入姓名' : 'Your Name'} required />
             </label>
             <label>
               <span>{isChinese ? '公司名稱' : 'Company Name'}</span>
-              <input type="text" name="companyName" placeholder={isChinese ? '請輸入公司名稱' : 'Your Company Name'} />
+              <input type="text" name="company_name" placeholder={isChinese ? '請輸入公司名稱' : 'Your Company Name'} />
             </label>
           </div>
 
           <div className="form-row two">
             <label className="email-field">
               <span>{isChinese ? '電子郵件' : 'Email'}</span>
-              <input type="email" name="email" placeholder={isChinese ? '請輸入 Email' : 'Your Email Address'} />
+              <input type="email" name="user_email" placeholder={isChinese ? '請輸入 Email' : 'Your Email Address'} required />
             </label>
             <label className="phone-field">
               <span>{isChinese ? '聯絡電話' : 'Phone / Mobile'}</span>
-              <input type="tel" name="phone" placeholder={isChinese ? '請輸入手機或市話' : 'Phone or mobile number'} />
+              <input type="tel" name="phone_number" placeholder={isChinese ? '請輸入手機或市話' : 'Phone or mobile number'} />
             </label>
           </div>
 
@@ -110,12 +157,13 @@ export default function ContactUs() {
               placeholder={isChinese
                 ? '請簡單描述您的需求、產品規格或專案內容。'
                 : 'Tell us about your project, product requirements, or service needs.'}
+              required
             />
           </label>
 
           <div className="consent-row">
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" name="privacy_consent" required />
               <span>
                 {isChinese ? (
                   <>我同意隱私權政策，並同意接受聯繫。</>
@@ -125,12 +173,17 @@ export default function ContactUs() {
               </span>
             </label>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" name="business_updates" />
               <span>{isChinese ? '我願意接收服務與商務資訊。' : 'I would like to receive service and business updates.'}</span>
             </label>
           </div>
 
-          <button className="submit-btn" type="button">{isChinese ? '送出需求' : 'Send Inquiry'}</button>
+          <button className="submit-btn" type="submit" disabled={isSending}>
+            {isSending
+              ? (isChinese ? '送出中...' : 'Sending...')
+              : (isChinese ? '送出需求' : 'Send Inquiry')}
+          </button>
+          {submitMessage && <p className="submit-status">{submitMessage}</p>}
           <p className="response-note">
             {isChinese ? '我們通常會於 1-2 個工作天內回覆。' : 'We typically respond within 1-2 business days.'}
           </p>
