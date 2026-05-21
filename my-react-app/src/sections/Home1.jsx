@@ -5,8 +5,11 @@ import img2 from '../assets/home1-2.JPG';
 import img3 from '../assets/home1-3.JPG';
 import img4 from '../assets/home1-4.JPG';
 import img5 from '../assets/home1-5.JPG';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Home1() {
+  const { isChinese } = useLanguage();
+
   return (
     <section 
       className="home1-container" 
@@ -22,12 +25,29 @@ export default function Home1() {
 
         <div className="text-content">
           <h1 className="main-title">
-            Integrated Solutions for Modern <br />
-            Business
+            {isChinese ? (
+              <>
+                整合多元服務，打造現代企業解決方案
+              </>
+            ) : (
+              <>
+                Integrated Solutions for Modern <br />
+                Business
+              </>
+            )}
           </h1>
           <p className="sub-description">
-            From manufacturing and sourcing to digital services, <br />
-            we help businesses build smarter solutions.
+            {isChinese ? (
+              <>
+                從製造加工、採購整合到數位服務，<br />
+                協助企業打造更高效的營運方案。
+              </>
+            ) : (
+              <>
+                From manufacturing and sourcing to digital services, <br />
+                we help businesses build smarter solutions.
+              </>
+            )}
           </p>
         </div>
       </div>

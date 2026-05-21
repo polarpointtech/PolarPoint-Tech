@@ -6,16 +6,24 @@ import bgImg from '../assets/construction1-1.jpg';
 import stone1 from '../assets/construction1-2.jpg'; 
 import stone2 from '../assets/construction1-3.jpg'; 
 import stone3 from '../assets/construction1-4.jpg'; 
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Construction1() {
+  const { isChinese } = useLanguage();
   const scrollRef = useRef(null);
   const dragState = useRef({ isDragging: false, startX: 0, scrollLeft: 0 });
 
-  const materials = [
-    { id: 1, img: stone1, title: 'Natural Marble', sub: 'Custom stone sourcing' },
-    { id: 2, img: stone2, title: 'Premium Granite', sub: 'Interior applications' },
-    { id: 3, img: stone3, title: 'Feature Wall Solutions', sub: 'TV wall & feature design' },
-  ];
+  const materials = isChinese
+    ? [
+      { id: 1, img: stone1, title: '天然大理石', sub: '精選天然石材' },
+      { id: 2, img: stone2, title: '高級花崗岩', sub: '室內空間應用' },
+      { id: 3, img: stone3, title: '電視牆特色牆方案', sub: '空間設計與石材搭配' },
+    ]
+    : [
+      { id: 1, img: stone1, title: 'Natural Marble', sub: 'Custom stone sourcing' },
+      { id: 2, img: stone2, title: 'Premium Granite', sub: 'Interior applications' },
+      { id: 3, img: stone3, title: 'Feature Wall Solutions', sub: 'TV wall & feature design' },
+    ];
 
   const handleDragStart = (event) => {
     if (!scrollRef.current) return;
@@ -53,7 +61,7 @@ export default function Construction1() {
   }, []);
 
   return (
-    <section className="construction1-container">
+    <section className={`construction1-container ${isChinese ? 'construction1-container-zh' : ''}`}>
       {/* 背景層 (獨立模糊) */}
       <div className="bg-layer" style={{ backgroundImage: `url(${bgImg})` }}></div>
 
@@ -62,9 +70,21 @@ export default function Construction1() {
         {/* 1. 標題區域 */}
         {/* Top: 100px, Left: 345px (置中) */}
         <h2 className="main-title">
-          Stone & Interior<br />Material Solutions
+          {isChinese ? (
+            <>
+              石材與室內<br />應用方案
+            </>
+          ) : (
+            <>
+              Stone & Interior<br />Material Solutions
+            </>
+          )}
         </h2>
-        <p className="section-subtitle">Marble • Granite • TV Walls • Custom Applications</p>
+        <p className="section-subtitle">
+          {isChinese
+            ? '大理石・花崗岩・電視牆・客製化應用'
+            : 'Marble • Granite • TV Walls • Custom Applications'}
+        </p>
 
         {/* 2. 可滑動卡片區 */}
         {/* Top: 394px, Left: 265px (Start) */}
@@ -92,9 +112,9 @@ export default function Construction1() {
         {/* Top: 863px */}
         <div className="bottom-description">
           <p>
-            We assist clients in sourcing high-quality natural stones and marble 
-            products, including slabs for construction, countertops, stair materials, 
-            and various marble furniture items.
+            {isChinese
+              ? '協助客戶選配高品質石材，應用於室內空間、電視牆、檯面、特色牆面及各類客製化工程需求。'
+              : 'We help clients source premium stone materials for interiors, TV walls, countertops, feature walls, and customized projects.'}
           </p>
         </div>
 

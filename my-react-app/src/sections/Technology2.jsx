@@ -1,20 +1,31 @@
 import React from 'react';
 import './Technology2.scss';
 
-import imgPhone from '../assets/technology2-1.png';
 import imgLaptop from '../assets/technology2-2.png';
 import imgTablet from '../assets/technology2-3.png';
 import homeBg from '../assets/home1-1.png';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Technology2() {
+  const { isChinese } = useLanguage();
+
   return (
     <section className="technology2-container">
       <div className="text-content">
         <p>
-          We assist clients in sourcing high-quality natural stones and 
-          marble products, including slabs for construction, 
-          countertops, stair materials, and various marble furniture 
-          items.
+          {isChinese ? (
+            <>
+              協助企業打造網站、數位系統與自動化方案，提升營運效率、
+              強化品牌形象，並支持長期成長。
+            </>
+          ) : (
+            <>
+              We help businesses build websites,
+              digital systems, and automation solutions
+              to improve efficiency, strengthen branding,
+              and support long-term growth.
+            </>
+          )}
         </p>
       </div>
 
@@ -43,7 +54,6 @@ export default function Technology2() {
             <span className="phone-card card-b" />
             <span className="phone-glow" />
           </div>
-          <img src={imgPhone} alt="iPhone" />
         </div>
       </div>
     </section>

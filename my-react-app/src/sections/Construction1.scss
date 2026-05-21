@@ -187,6 +187,41 @@
       margin: 0;
     }
   }
+
+  &.construction1-container-zh {
+    .main-title {
+      font-size: 88px;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .section-subtitle {
+      font-size: 25px;
+      letter-spacing: 0.02em;
+    }
+
+    .materials-carousel {
+      .material-card {
+        .card-info {
+          .card-title {
+            font-size: 30px;
+            line-height: 1.12;
+          }
+
+          .card-info-sub {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+
+    .bottom-description {
+      p {
+        font-size: 30px;
+        line-height: 1.35;
+      }
+    }
+  }
 }
 
 // RWD 手機版

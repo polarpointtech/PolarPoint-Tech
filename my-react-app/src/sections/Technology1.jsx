@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Technology1.scss';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const MusicIcon = () => (
   <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -68,11 +69,12 @@ const tags = [
   { id: 'cyberpunk', label: 'Cyberpunk' },
   { id: 'minimal', label: 'Minimalist' },
   { id: 'bento', label: 'Bento' },
-  { id: 'btn1', label: 'Button' },
-  { id: 'btn2', label: 'Button' },
+  { id: 'neumorphism', label: 'Neumorphism' },
+  { id: 'editorial', label: 'Editorial' },
 ];
 
 export default function Technology1() {
+  const { isChinese } = useLanguage();
   const [activeTheme, setActiveTheme] = useState('glass');
   const [activeTrack, setActiveTrack] = useState(0);
   const currentTrack = glassTracks[activeTrack];
@@ -86,7 +88,19 @@ export default function Technology1() {
   return (
     <section className="technology1-container">
       <div className="content-wrapper">
-        <h1 className="main-title">Information Services</h1>
+        <div className={`title-group ${isChinese ? 'title-group-zh' : ''}`}>
+          <h1 className="main-title">
+            {isChinese ? (
+              <>
+                數位服務設計<br />實現你的品牌想像
+              </>
+            ) : (
+              <>
+                Digital Experiences<br />Built for Your Vision
+              </>
+            )}
+          </h1>
+        </div>
 
         <div className={`dynamic-card-container theme-${activeTheme}`}>
           {activeTheme === 'glass' && (
@@ -195,19 +209,128 @@ export default function Technology1() {
               </div>
             </div>
           )}
+
+          {activeTheme === 'minimal' && (
+            <div className="minimal-content">
+              <div className="minimal-header">
+                <span className="minimal-kicker">MINIMALIST</span>
+                <h3>Clarity first interface</h3>
+                <p>Quiet layouts for focused brand communication</p>
+              </div>
+
+              <div className="minimal-showcase">
+                <div className="minimal-image" />
+                <div className="minimal-copy">
+                  <span>01</span>
+                  <strong>Portfolio System</strong>
+                  <p>Refined pages, generous spacing, and readable content blocks.</p>
+                </div>
+              </div>
+
+              <div className="minimal-rows">
+                <span />
+                <span />
+                <span />
+              </div>
+            </div>
+          )}
+
+          {activeTheme === 'bento' && (
+            <div className="bento-content">
+              <div className="bento-card bento-large">
+                <span>Performance</span>
+                <strong>82%</strong>
+                <div className="bento-meter"><i style={{ width: '82%' }} /></div>
+              </div>
+              <div className="bento-card">
+                <span>Pages</span>
+                <strong>12</strong>
+              </div>
+              <div className="bento-card bento-accent">
+                <span>Launch</span>
+                <strong>Ready</strong>
+              </div>
+              <div className="bento-card bento-wide">
+                <span>Experience map</span>
+                <div className="bento-bars">
+                  <i />
+                  <i />
+                  <i />
+                </div>
+              </div>
+              <div className="bento-card bento-dark">
+                <span>Design System</span>
+                <strong>Unified</strong>
+              </div>
+            </div>
+          )}
+
+          {activeTheme === 'neumorphism' && (
+            <div className="neumo-content">
+              <div className="neumo-header">
+                <h3>Soft Control Center</h3>
+                <p>Tactile cards with calm depth and gentle motion</p>
+              </div>
+              <div className="neumo-dial">
+                <span>72</span>
+                <small>FLOW</small>
+              </div>
+              <div className="neumo-controls">
+                <button type="button">ON</button>
+                <button type="button">SYNC</button>
+                <button type="button">CALM</button>
+              </div>
+              <div className="neumo-slider"><i /></div>
+              <div className="neumo-status">
+                <span><i /> Live preview</span>
+                <span><i /> Auto sync</span>
+              </div>
+            </div>
+          )}
+
+          {activeTheme === 'editorial' && (
+            <div className="editorial-content">
+              <div className="editorial-issue">VOL. 04 / DIGITAL DESIGN</div>
+              <h3>Editorial Web<br />Direction</h3>
+              <div className="editorial-image" />
+              <div className="editorial-columns">
+                <p>Brand-led layouts with refined typography and strong visual rhythm.</p>
+                <p>Designed for stories, campaigns, portfolios, and premium services.</p>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="info-panel">
-          <span className="service-label">SERVICES</span>
-          <h2 className="info-title">Professional<br />Web Design</h2>
-          <p className="info-desc">Tell us your website vision and needs</p>
+          <p className="section-subtitle">
+            {isChinese
+              ? '網站設計・UI/UX・系統介面'
+              : 'Web Design・UI/UX・Custom Digital Experiences'}
+          </p>
+          <h2 className="info-title">
+            {isChinese ? (
+              <>網站與介面設計</>
+            ) : (
+              <>Custom Digital<br />Experiences</>
+            )}
+          </h2>
+          <p className="info-desc">
+            {isChinese ? (
+              <>切換不同設計風格，找到最適合你的品牌呈現。</>
+            ) : (
+              <>
+                Choose different design styles<br />
+                to explore customized digital experiences.
+              </>
+            )}
+          </p>
           <div className="tags-grid">
             {tags.map((tag) => (
               <button
                 key={tag.id}
                 className={`tech-tag ${activeTheme === tag.id ? 'active' : ''}`}
                 onClick={() => {
-                  if (['glass', 'retro', 'cyberpunk'].includes(tag.id)) setActiveTheme(tag.id);
+                  setActiveTheme(tag.id);
                 }}
                 type="button"
               >

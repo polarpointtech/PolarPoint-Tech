@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home5.scss';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const streamChars = '01=TVXL33457:.-';
 const dataColumns = Array.from({ length: 40 }, (_, columnIndex) => (
@@ -11,6 +12,8 @@ const dataColumns = Array.from({ length: 40 }, (_, columnIndex) => (
 ));
 
 export default function Home5() {
+  const { isChinese } = useLanguage();
+
   return (
     <section className="home5-container">
       <div className="data-stream-bg" aria-hidden="true">
@@ -31,14 +34,24 @@ export default function Home5() {
       </div>
       <div className="content-wrapper">
         <p className="subtitle">
-          HOW WE WORK
+          {isChinese ? '我們的服務方式' : 'HOW WE WORK'}
         </p>
         <h2 className="main-title">
-          Turning Complex Requirements<br />
-          Into <span>Practical Solutions</span>
+          {isChinese ? (
+            <>
+              將複雜需求，化為可落地的實際方案
+            </>
+          ) : (
+            <>
+              Turning Complex Requirements<br />
+              Into <span>Practical Solutions</span>
+            </>
+          )}
         </h2>
         <p className="work-copy">
-          We clarify needs, align resources, and turn ideas into executable business solutions.
+          {isChinese
+            ? '從需求釐清、資源整合到方案執行，協助企業將想法真正落地。'
+            : 'We clarify needs, align resources, and turn ideas into executable business solutions.'}
         </p>
       </div>
     </section>

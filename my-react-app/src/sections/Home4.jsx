@@ -1,31 +1,49 @@
 import React from 'react';
 import './Home4.scss';
+import { useLanguage } from '../i18n/LanguageContext';
 
-// 導入圖片
-import logoCreality  from '/src/assets/home4-1.png';
-import logoAnycubic  from '/src/assets/home4-2.jpeg';
-import logoElegoo    from '/src/assets/home4-3.png';
-import logoSketchfab from '/src/assets/home4-4.png';
-import logoExtrudr   from '/src/assets/home4-5.png';
-
-const logos = [
-  { id: 1, name: 'Creality',  img: logoCreality },
-  { id: 2, name: 'Anycubic',  img: logoAnycubic },
-  { id: 3, name: 'Elegoo',    img: logoElegoo },
-  { id: 4, name: 'Sketchfab', img: logoSketchfab },
-  { id: 5, name: 'Extrudr',   img: logoExtrudr },
-];
+const keywords = {
+  en: [
+    'CUSTOM MANUFACTURING',
+    'RAPID PROTOTYPING',
+    'INDUSTRIAL SOLUTIONS',
+    'MATERIAL SOURCING',
+    'OEM / ODM SERVICES',
+    'DIGITAL SOLUTIONS',
+    'STONE & INTERIOR MATERIALS',
+    'AUTOMATION SUPPORT',
+    'FUNCTIONAL PARTS',
+    'PRODUCTION SUPPORT',
+  ],
+  zh: [
+    '客製化製造',
+    '快速打樣',
+    '工業解決方案',
+    '材料採購',
+    'OEM / ODM 服務',
+    '數位解決方案',
+    '石材與室內材料',
+    '自動化支援',
+    '功能零件',
+    '製造支援',
+  ],
+};
 
 export default function Home4() {
-  // 複製 4 組，確保足夠長度進行無縫滾動
-  const seamlessLogos = [...logos, ...logos, ...logos, ...logos];
+  const { isChinese } = useLanguage();
+  const items = isChinese ? keywords.zh : keywords.en;
 
   return (
-    <section className="home4-marquee">
+    <section className={`home4-marquee ${isChinese ? 'home4-marquee-zh' : ''}`}>
       <div className="marquee-track">
-        {seamlessLogos.map((brand, index) => (
-          <div className="brand-item" key={`brand-${index}`}>
-            <img src={brand.img} alt={brand.name} />
+        {[0, 1, 2, 3].map((groupIndex) => (
+          <div className="marquee-group" key={`group-${groupIndex}`} aria-hidden={groupIndex === 1}>
+            {items.map((item) => (
+              <React.Fragment key={`${groupIndex}-${item}`}>
+                <span className="keyword-item">{item}</span>
+                <span className="keyword-separator">•</span>
+              </React.Fragment>
+            ))}
           </div>
         ))}
       </div>

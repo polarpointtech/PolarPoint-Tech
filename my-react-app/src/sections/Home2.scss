@@ -1,150 +1,129 @@
-// src/sections/Home2.scss
-
 .home2-container {
   display: grid;
-  // 強制切成三等份，確保寬度一致
-  grid-template-columns: repeat(3, 1fr); 
-  
-  // 間距維持細邊 4px
-  gap: 4px; 
-  
-  // 左右不留白
-  padding: 0; 
-  
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 0;
   width: 100%;
-  height: 457px; 
-  background-color: #ffffff; 
+  height: 457px;
+  background-color: #ffffff;
   overflow: hidden;
 
   .category-card {
     position: relative;
-    height: 100%;
     width: 100%;
+    height: 100%;
     overflow: hidden;
     cursor: pointer;
 
-    // --- 1. 背景圖片層 ---
     .card-bg {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
-      
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      
-      // 預設模糊
       filter: blur(5px);
-      transform: scale(1.05); 
+      transform: scale(1.05);
       transition: all 0.5s ease;
     }
 
-    // --- 2. 遮罩層 ---
     .overlay {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
-      
-      background: rgba(0, 0, 0, 0.6); 
-      
+      background: rgba(0, 0, 0, 0.6);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      
       transition: all 0.5s ease;
     }
 
-    // --- 3. 滑鼠懸停效果 (Hover) ---
     &:hover {
       .card-bg {
-        filter: blur(0px);
-        transform: scale(1); 
+        filter: blur(0);
+        transform: scale(1);
       }
+
       .overlay {
-        background: rgba(0, 0, 0, 0.2); 
+        background: rgba(0, 0, 0, 0.2);
       }
     }
 
-    // --- 4. 標題樣式 ---
     .category-title {
+      margin: 0 0 60px;
       color: #ffffff;
-      font-size: 2.5rem; 
+      font-size: 2.5rem;
       font-weight: 600;
-      margin-bottom: 60px;
       text-align: center;
       letter-spacing: 1px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
       pointer-events: none;
     }
 
-    // --- 5. 按鈕樣式 (根據截圖 image_716650 & 716618 修改) ---
     .category-button {
-      // 🌟 尺寸設定 (Fixed 163x63)
-      width: 163px;
+      width: 220px;
       height: 63px;
-      
-      // 🌟 形狀 (Radius 100)
       border-radius: 100px;
-      
-      // 🌟 背景顏色 (#8C8C8C 25%)
       background: rgba(140, 140, 140, 0.25);
-      
-      // 🌟 模糊特效 (Blur 12)
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      
-      // 🌟 邊框 (截圖視覺上有細邊框，這裡設為淡淡的白)
       border: 1px solid rgba(255, 255, 255, 0.2);
-      
-      // 🌟 陰影 (Y:1 Blur:8 Black 10%)
-      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
-      
-      // 🌟 文字樣式 (#FF8C6B, 17px, Semibold)
-      color: #FF8C6B;
-      font-family: 'Inter', sans-serif; // 優先使用系統字體或 Inter
-      font-size: 17px;
-      font-weight: 600;
-      letter-spacing: -0.1px;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+      color: #ff8c6b;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0;
       line-height: 20px;
-      
-      // 排版置中
+      text-decoration: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px; // Icon 與文字的間距
-      padding: 0; // 尺寸固定了，所以不需要 padding 撐開
-      
+      gap: 9px;
+      padding: 0;
       cursor: pointer;
       transition: all 0.3s ease;
 
-      // 按鈕懸停效果 (微調背景與文字顏色)
       &:hover {
-        background: rgba(140, 140, 140, 0.5); // 變深一點
-        color: #ffffff; // 文字變白
-        border-color: #FF8C6B; // 邊框變橘
+        background: rgba(140, 140, 140, 0.5);
+        color: #ffffff;
+        border-color: #ff8c6b;
       }
-      
-      .icon {
-        font-size: 1.2rem;
+
+      .button-mark {
+        width: 30px;
+        height: 23px;
+        color: #ff8c6b;
+        flex: 0 0 auto;
+        filter: drop-shadow(0 2px 5px rgba(255, 140, 107, 0.22));
+        transform: translateY(1px);
+        transition: color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+      }
+
+      &:hover .button-mark {
+        color: #ffffff;
+        filter: drop-shadow(0 2px 7px rgba(255, 255, 255, 0.18));
+        transform: translate(2px, 1px);
       }
     }
   }
 }
 
-// RWD
 @media (max-width: 768px) {
   .home2-container {
-    grid-template-columns: 1fr; 
-    height: auto; 
+    grid-template-columns: 1fr;
+    height: auto;
     gap: 4px;
-    
+
     .category-card {
-      height: 300px; 
+      height: 300px;
+    }
+
+    .category-button {
+      width: 220px;
     }
   }
 }

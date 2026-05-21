@@ -1,19 +1,32 @@
 import React, { useState } from 'react';
 import './ContactUs.scss';
 import contactHero from '../assets/home1-1.png';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const services = [
   {
-    name: 'Manufacturing',
-    note: 'Tell us about your machining, OEM production, fabrication, or industrial supply needs.',
+    id: 'manufacturing',
+    name: { en: 'Manufacturing', zh: '製造服務' },
+    note: {
+      en: 'Tell us about your machining, OEM production, fabrication, or industrial supply needs.',
+      zh: '請簡單說明您的製造加工、零件、治具或 OEM/ODM 需求。',
+    },
   },
   {
-    name: 'Construction',
-    note: 'Tell us about your construction project, sourcing needs, or site support requirements.',
+    id: 'digital',
+    name: { en: 'Digital Services', zh: '數位服務' },
+    note: {
+      en: 'Tell us about your website, digital workflow, or custom system requirements.',
+      zh: '請簡單說明您的網站、數位工具或自動化系統需求。',
+    },
   },
   {
-    name: 'Technology',
-    note: 'Tell us about your website, digital workflow, or custom system requirements.',
+    id: 'construction',
+    name: { en: 'Construction', zh: '建材工程' },
+    note: {
+      en: 'Tell us about your construction project, material sourcing, or site support requirements.',
+      zh: '請簡單說明您的建材工程、石材採購或專案需求。',
+    },
   },
 ];
 
@@ -26,31 +39,32 @@ function ServiceIcon() {
 }
 
 export default function ContactUs() {
+  const { isChinese } = useLanguage();
   const [selectedService, setSelectedService] = useState(null);
-  const selectedServiceName = selectedService?.name || '';
+  const selectedServiceName = selectedService?.name.en || '';
 
   return (
-    <main className="contact-page">
+    <main className={`contact-page ${isChinese ? 'contact-page-zh' : ''}`}>
       <section className="contact-hero" style={{ backgroundImage: `url(${contactHero})` }}>
         <div className="contact-hero-content">
-          <p className="caption">CAPTION</p>
-          <h1>Contact us</h1>
+          <p className="caption">{isChinese ? '商務洽詢' : 'GET IN TOUCH'}</p>
+          <h1>{isChinese ? '讓我們了解您的需求' : 'Contact Us'}</h1>
           <p className="hero-copy">
-            Pellentesque convallis accumsan suscipit aliquet eu diam quis nulla turpis.
-            In mus massa lectus laoreet sed semper bibendum id. Iaculis purus
-            malesuada porttitor aliquam pulvinar.
+            {isChinese
+              ? '無論您需要製造加工、材料採購、建築石材，或數位服務，我們都能協助您將需求落地。歡迎留下需求資訊，我們將盡快與您聯繫。'
+              : 'Whether you need manufacturing, sourcing, construction materials, or digital solutions, our team is ready to help bring your ideas into reality. Share your requirements with us and we will get in touch shortly.'}
           </p>
 
           <div className="service-pills" aria-label="Contact service categories">
             {services.map((service) => (
               <button
-                className={selectedServiceName === service.name ? 'active' : ''}
+                className={selectedService?.id === service.id ? 'active' : ''}
                 type="button"
-                key={service.name}
-                onClick={() => setSelectedService(selectedServiceName === service.name ? null : service)}
+                key={service.id}
+                onClick={() => setSelectedService(selectedService?.id === service.id ? null : service)}
               >
-                <ServiceIcon />
-                {service.name}
+                {!isChinese && <ServiceIcon />}
+                {isChinese ? service.name.zh : service.name.en}
               </button>
             ))}
           </div>
@@ -60,53 +74,66 @@ export default function ContactUs() {
       <section className="contact-form-section">
         <form className="figma-contact-form">
           <p className={`form-note ${selectedService ? '' : 'empty'}`}>
-            {selectedService?.note || 'Inquiry category note'}
+            {selectedService
+              ? (isChinese ? selectedService.note.zh : selectedService.note.en)
+              : 'Inquiry category note'}
           </p>
           <input type="hidden" name="inquiryType" value={selectedServiceName} />
 
           <div className="form-row two">
             <label>
-              <span>Contact Person</span>
-              <input type="text" name="contactPerson" placeholder="Your Name" />
+              <span>{isChinese ? '聯絡人姓名' : 'Contact Person'}</span>
+              <input type="text" name="contactPerson" placeholder={isChinese ? '請輸入姓名' : 'Your Name'} />
             </label>
             <label>
-              <span>Company Name</span>
-              <input type="text" name="companyName" placeholder="Your Company Name" />
+              <span>{isChinese ? '公司名稱' : 'Company Name'}</span>
+              <input type="text" name="companyName" placeholder={isChinese ? '請輸入公司名稱' : 'Your Company Name'} />
             </label>
           </div>
 
           <div className="form-row two">
             <label className="email-field">
-              <span>Email</span>
-              <input type="email" name="email" placeholder="Your Email Address" />
+              <span>{isChinese ? '電子郵件' : 'Email'}</span>
+              <input type="email" name="email" placeholder={isChinese ? '請輸入 Email' : 'Your Email Address'} />
             </label>
             <label className="phone-field">
-              <span>Phone / Mobile</span>
-              <input type="tel" name="phone" placeholder="02-1234-5678 / 0912-345-678" />
+              <span>{isChinese ? '聯絡電話' : 'Phone / Mobile'}</span>
+              <input type="tel" name="phone" placeholder={isChinese ? '請輸入手機或市話' : 'Phone or mobile number'} />
             </label>
           </div>
 
           <label className="message-field">
-            <span>Message</span>
+            <span>{isChinese ? '需求說明' : 'Message'}</span>
             <textarea
               name="message"
               rows="4"
-              placeholder="We will collect and process your personal contact information in accordance with our Privacy Policy. With your consent, we may also send you marketing-related content."
+              placeholder={isChinese
+                ? '請簡單描述您的需求、產品規格或專案內容。'
+                : 'Tell us about your project, product requirements, or service needs.'}
             />
           </label>
 
           <div className="consent-row">
             <label>
               <input type="checkbox" />
-              <span>I agree to the <a href="#">Privacy Policy</a> and consent to being contacted.</span>
+              <span>
+                {isChinese ? (
+                  <>我同意隱私權政策，並同意接受聯繫。</>
+                ) : (
+                  <>I agree to the <a href="#">Privacy Policy</a> and consent to being contacted.</>
+                )}
+              </span>
             </label>
             <label>
               <input type="checkbox" />
-              <span>I would like to receive service and business updates.</span>
+              <span>{isChinese ? '我願意接收服務與商務資訊。' : 'I would like to receive service and business updates.'}</span>
             </label>
           </div>
 
-          <button className="submit-btn" type="button">Submit</button>
+          <button className="submit-btn" type="button">{isChinese ? '送出需求' : 'Send Inquiry'}</button>
+          <p className="response-note">
+            {isChinese ? '我們通常會於 1-2 個工作天內回覆。' : 'We typically respond within 1-2 business days.'}
+          </p>
         </form>
       </section>
     </main>

@@ -71,6 +71,9 @@
       cursor: pointer;
       pointer-events: auto; 
       display: flex; justify-content: center; align-items: center;
+      border: 0;
+      background: transparent;
+      padding: 0;
 
       .icon-circle {
         border-radius: 50%; background: #fff;
@@ -124,6 +127,49 @@
       }
     }
   }
+
+  .service-content {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(760px, calc(100% - 80px));
+    text-align: center;
+    pointer-events: auto;
+    z-index: 15;
+
+    h3 {
+      margin: 0 0 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #3f3f3f;
+    }
+
+    p {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      line-height: 1.5;
+      color: #685D5D;
+    }
+  }
+
+  &.construction2-container-zh {
+    .service-content {
+      width: min(820px, calc(100% - 80px));
+
+      h3 {
+        font-size: 34px;
+        letter-spacing: 0;
+      }
+
+      p {
+        font-size: 22px;
+        line-height: 1.65;
+      }
+    }
+  }
 }
 
 // RWD
@@ -136,6 +182,14 @@
     margin-bottom: 210px;
 
     .elliptical-bg { width: 180%; .text-content { top: 180px; p { width: 90%; font-size: 18px; } } }
+
+    .service-content {
+      top: 310px;
+      width: calc(100% - 40px);
+
+      h3 { font-size: 26px; }
+      p { font-size: 18px; }
+    }
     
     .orbit-item {
       &.pos-center { 

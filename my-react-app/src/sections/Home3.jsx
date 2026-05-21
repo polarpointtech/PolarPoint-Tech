@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Home3.scss';
 import roboticArm from '/src/assets/home3-2.jpg';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const IconBase = ({ children }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -102,41 +103,26 @@ const Icons = {
   ),
 };
 
-const CalloutLineRight = () => (
-  <svg width="250" height="35" viewBox="0 0 250 35" fill="none" className="callout-line-svg">
-    <circle cx="2" cy="2" r="2.5" fill="#555555" />
-    <path d="M2 2 L20 33 L250 33" stroke="#555555" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>
-);
-
-const CalloutLineLeft = () => (
-  <svg width="250" height="35" viewBox="0 0 250 35" fill="none" className="callout-line-svg">
-    <circle cx="248" cy="2" r="2.5" fill="#555555" />
-    <path d="M0 33 L230 33 L248 2" stroke="#555555" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>
-);
-
 export default function Home3() {
-  const [activeCluster, setActiveCluster] = useState(null);
+  const [activeCapability, setActiveCapability] = useState(null);
+  const { isChinese } = useLanguage();
 
   const buttons = [
-    { id: 1, icon: 'Cog', type: 'brand', top: 309, left: 122, title: 'CNC Machining', desc: 'Precision machining and custom manufacturing tailored to project requirements.', clusterPanel: true, infoTitle: 'CNC Machining', infoPlacement: 'right', infoText: 'Precision machining and custom manufacturing tailored to project requirements.' },
-    { id: 2, icon: 'Factory', type: 'brand', top: 329, left: 206, title: 'OEM Production', desc: 'Flexible OEM and contract manufacturing support for business partners.', clusterPanel: true, infoTitle: 'OEM Production', infoPlacement: 'right', infoText: 'Flexible OEM and contract manufacturing support for business partners.' },
-    { id: 3, icon: 'Hammer', type: 'brand', top: 389, left: 300, title: 'Metal Fabrication', desc: 'Custom metal processing and fabrication for industrial applications.', clusterPanel: true, infoTitle: 'Metal Fabrication', infoPlacement: 'right', infoText: 'Custom metal processing and fabrication for industrial applications.' },
-    { id: 4, icon: 'Wrench', type: 'brand', top: 624, left: 155, title: 'Jig & Fixture Design', desc: 'Custom jig and fixture solutions to improve productivity and precision.', infoTitle: 'Jig & Fixture Design', infoPlacement: 'right', infoText: 'Custom jig and fixture solutions to improve productivity and precision.' },
-    { id: 5, icon: 'Machine', type: 'brand', top: 660, left: 248, title: 'Machine Solutions', desc: 'Industrial machinery development and customized equipment integration.', infoTitle: 'Machine Solutions', infoPlacement: 'right', infoText: 'Industrial machinery development and customized equipment integration.' },
-    { id: 6, icon: 'Consultation', type: 'brand', top: 329, left: 1065, title: 'Technical Consultation', desc: 'Engineering consultation for manufacturing feasibility and project planning.', infoTitle: 'Technical Consultation', infoPlacement: 'left', infoText: 'Engineering consultation for manufacturing feasibility and project planning.' },
+    { id: 1, icon: 'Cog', type: 'brand', top: 309, left: 122, title: isChinese ? 'CNC 加工' : 'CNC Machining', desc: isChinese ? '依照專案需求提供精密加工與客製化製造支援。' : 'Precision machining and custom manufacturing tailored to project requirements.', category: isChinese ? '製造服務' : 'Manufacturing' },
+    { id: 2, icon: 'Factory', type: 'brand', top: 329, left: 206, title: isChinese ? 'OEM 生產' : 'OEM Production', desc: isChinese ? '協助品牌與企業進行彈性的 OEM 與委託製造合作。' : 'Flexible OEM and contract manufacturing support for business partners.', category: isChinese ? '生產支援' : 'Production' },
+    { id: 3, icon: 'Hammer', type: 'brand', top: 389, left: 300, title: isChinese ? '金屬加工' : 'Metal Fabrication', desc: isChinese ? '提供工業應用所需的金屬加工、零件製作與製程協調。' : 'Custom metal processing and fabrication for industrial applications.', category: isChinese ? '製造服務' : 'Manufacturing' },
+    { id: 4, icon: 'Wrench', type: 'brand', top: 624, left: 155, title: isChinese ? '治具設計' : 'Jig & Fixture Design', desc: isChinese ? '規劃客製治具與夾具，協助提升生產效率與加工精度。' : 'Custom jig and fixture solutions to improve productivity and precision.', category: isChinese ? '工裝治具' : 'Tooling' },
+    { id: 5, icon: 'Machine', type: 'brand', top: 660, left: 248, title: isChinese ? '設備方案' : 'Machine Solutions', desc: isChinese ? '整合工業設備、機構設計與客製化機台應用需求。' : 'Industrial machinery development and customized equipment integration.', category: isChinese ? '自動化' : 'Automation' },
+    { id: 6, icon: 'Consultation', type: 'brand', top: 329, left: 1065, title: isChinese ? '技術諮詢' : 'Technical Consultation', desc: isChinese ? '針對製造可行性、材料選擇與專案規劃提供技術建議。' : 'Engineering consultation for manufacturing feasibility and project planning.', category: isChinese ? '工程支援' : 'Engineering' },
     {
       id: 7,
       icon: 'Nut',
       type: 'brand',
       top: 565,
       left: 1328,
-      title: 'Hardware Components',
-      desc: 'Supplying industrial hardware and mechanical components.',
-      infoTitle: 'Hardware Components',
-      infoPlacement: 'left',
-      infoText: 'Supplying industrial hardware and mechanical components.',
+      title: isChinese ? '五金零件' : 'Hardware Components',
+      desc: isChinese ? '協助採購工業五金、機構零件與客製化配件。' : 'Supplying industrial hardware and mechanical components.',
+      category: isChinese ? '採購供應' : 'Supply',
     },
     {
       id: 8,
@@ -144,14 +130,12 @@ export default function Home3() {
       type: 'brand',
       top: 660,
       left: 1096,
-      title: 'Electronic Parts',
-      desc: 'Reliable sourcing of electronic and customized components.',
-      infoTitle: 'Electronic Parts',
-      infoPlacement: 'right',
-      infoText: 'Reliable sourcing of electronic and customized components.',
+      title: isChinese ? '電子零件' : 'Electronic Parts',
+      desc: isChinese ? '提供電子元件與客製零件的可靠採購與供應協調。' : 'Reliable sourcing of electronic and customized components.',
+      category: isChinese ? '採購供應' : 'Supply',
     },
-    { id: 9, icon: 'Code', type: 'brand', top: 292, left: 1181, title: 'Website Development', desc: 'Professional website solutions for modern business needs.', infoTitle: 'Website Development', infoPlacement: 'left', infoText: 'Professional website solutions for modern business needs.' },
-    { id: 10, icon: 'Network', type: 'brand', top: 493, left: 1272, title: 'Custom Systems', desc: 'Tailored digital tools and systems to support business operations.', infoTitle: 'Custom Systems', infoPlacement: 'left', infoText: 'Tailored digital tools and systems to support business operations.' },
+    { id: 9, icon: 'Code', type: 'brand', top: 292, left: 1181, title: isChinese ? '網站開發' : 'Website Development', desc: isChinese ? '依照企業形象與服務內容打造專業網站與數位呈現。' : 'Professional website solutions for modern business needs.', category: isChinese ? '數位服務' : 'Digital' },
+    { id: 10, icon: 'Network', type: 'brand', top: 493, left: 1272, title: isChinese ? '客製系統' : 'Custom Systems', desc: isChinese ? '建立符合營運流程的數位工具與客製化系統。' : 'Tailored digital tools and systems to support business operations.', category: isChinese ? '數位服務' : 'Digital' },
   ];
 
   return (
@@ -161,56 +145,31 @@ export default function Home3() {
         {buttons.map((btn) => {
           const IconComponent = Icons[btn.icon];
           const isRightSide = btn.left > 720;
-          const usesClusterPanel = btn.clusterPanel;
 
           return (
             <div
               key={btn.id}
-              className={`floating-wrapper service-${btn.id} ${isRightSide ? 'right-side' : 'left-side'} ${btn.infoTitle && !usesClusterPanel ? 'has-info' : ''} ${btn.infoPlacement === 'left' ? 'info-left' : 'info-right'}`}
+              className={`floating-wrapper service-${btn.id} ${isRightSide ? 'right-side' : 'left-side'} ${activeCapability?.id === btn.id ? 'is-active' : ''}`}
               style={{ top: `${btn.top}px`, left: `${btn.left}px` }}
-              onMouseEnter={() => {
-                if (usesClusterPanel) setActiveCluster(btn);
-              }}
-              onMouseLeave={() => {
-                if (usesClusterPanel) setActiveCluster(null);
-              }}
+              onMouseEnter={() => setActiveCapability(btn)}
+              onMouseLeave={() => setActiveCapability(null)}
             >
               <button
                 className={`icon-btn ${btn.type === 'brand' ? 'brand-shadow' : ''}`}
                 type="button"
-                aria-label={btn.infoTitle || btn.title}
+                aria-label={btn.title}
               >
                 {IconComponent && <IconComponent />}
               </button>
-
-              {!usesClusterPanel && (
-                <div className="hover-info">
-                  <h3 className="info-title">{btn.infoTitle}</h3>
-                  <div className="line-container">
-                    {btn.infoPlacement === 'left' ? <CalloutLineLeft /> : <CalloutLineRight />}
-                  </div>
-                  <p className="info-desc">{btn.infoText}</p>
-                </div>
-              )}
             </div>
           );
         })}
-        {activeCluster && (
-          <div className="cluster-callout">
-            <svg className="cluster-callout-line" viewBox="0 0 1440 900" aria-hidden="true">
-              <circle
-                cx={activeCluster.left + 28}
-                cy={activeCluster.top + 58}
-                r="3"
-              />
-              <path
-                d={`M ${activeCluster.left + 28} ${activeCluster.top + 58} L ${activeCluster.left + 28} 468 L 188 504`}
-              />
-            </svg>
-            <div className="cluster-panel">
-              <h3>{activeCluster.infoTitle}</h3>
-              <span />
-              <p>{activeCluster.infoText}</p>
+        {activeCapability && (
+          <div className="capability-glass-card" key={activeCapability.id}>
+            <div className="card-content">
+              <span className="category-badge">{activeCapability.category}</span>
+              <h3>{activeCapability.title}</h3>
+              <p>{activeCapability.desc}</p>
             </div>
           </div>
         )}
@@ -218,9 +177,19 @@ export default function Home3() {
 
       <div className="content-wrapper">
         <div className="text-content">
-          <p className="sub-caption">OUR CAPABILITIES</p>
+          <p className="sub-caption">{isChinese ? '核心服務能力' : 'OUR CAPABILITIES'}</p>
           <div className="deco-line"></div>
-          <h2 className="main-title">Solutions Designed Around<br />Your Business Needs</h2>
+          <h2 className="main-title">
+            {isChinese ? (
+              <>
+                依據您的需求，打造專屬解決方案
+              </>
+            ) : (
+              <>
+                Solutions Designed Around<br />Your Business Needs
+              </>
+            )}
+          </h2>
         </div>
         <div className="image-container">
           <svg className="arm-art" viewBox="0 0 702 422" role="img" aria-label="Robotic Arm">

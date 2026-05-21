@@ -17,7 +17,32 @@
   }
 
   .content-wrapper { width: 100%; max-width: 1440px; height: 100%; margin: 0 auto; position: relative; }
-  .main-title { position: absolute; top: 88px; left: 371px; font-family: 'Inria Sans', sans-serif; font-weight: 700; font-size: 96px; color: #3F3F3F; line-height: 1.1; margin: 0; z-index: 3; }
+  .title-group {
+    position: absolute;
+    top: 88px;
+    left: 371px;
+    width: 820px;
+    z-index: 3;
+
+    .main-title {
+      font-family: 'Inria Sans', sans-serif;
+      font-weight: 700;
+      font-size: 74px;
+      color: #3F3F3F;
+      line-height: 1.1;
+      margin: 0 0 22px;
+    }
+
+    &.title-group-zh {
+      width: 780px;
+
+      .main-title {
+        font-size: 72px;
+        line-height: 1.12;
+        letter-spacing: 0;
+      }
+    }
+  }
 
   // 🌟 動態容器：位置尺寸鎖定 (參考您的 Glass 參數)
   .dynamic-card-container {
@@ -289,16 +314,197 @@
         }
       }
     }
+
+    &.theme-minimal {
+      background: #F8FAF9;
+      border: 1px solid rgba(24, 38, 44, 0.12);
+      border-radius: 18px;
+      box-shadow: 0 28px 54px rgba(26, 48, 55, 0.12);
+      padding: 34px;
+
+      .minimal-content {
+        width: 100%; height: 100%; display: flex; flex-direction: column; gap: 26px;
+        font-family: 'Inter', sans-serif; color: #18262C;
+      }
+
+      .minimal-header {
+        border-bottom: 1px solid rgba(24, 38, 44, 0.16);
+        padding-bottom: 26px;
+        .minimal-kicker { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #7B8A8D; margin-bottom: 18px; }
+        h3 { margin: 0 0 12px; font-size: 42px; line-height: 1.02; font-weight: 700; letter-spacing: 0; }
+        p { margin: 0; max-width: 350px; font-size: 16px; line-height: 1.6; color: #6B7578; }
+      }
+
+      .minimal-showcase {
+        display: grid; grid-template-columns: 1fr 0.9fr; gap: 24px; align-items: stretch; flex: 1;
+      }
+
+      .minimal-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        background:
+          linear-gradient(135deg, rgba(255,255,255,0) 45%, rgba(24,38,44,0.08) 45%, rgba(24,38,44,0.08) 55%, rgba(255,255,255,0) 55%),
+          linear-gradient(180deg, #E8EFF1 0%, #FFFFFF 100%);
+        border: 1px solid rgba(24, 38, 44, 0.1);
+
+        &::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(115deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.72) 48%, rgba(255,255,255,0) 66%);
+          transform: translateX(-110%);
+          animation: minimalSweep 5.4s ease-in-out infinite;
+        }
+      }
+
+      .minimal-copy {
+        display: flex; flex-direction: column; justify-content: flex-end;
+        span { color: #9AA4A7; font-size: 13px; margin-bottom: 18px; }
+        strong { font-size: 22px; line-height: 1.15; margin-bottom: 14px; }
+        p { margin: 0; font-size: 15px; line-height: 1.55; color: #657174; }
+      }
+
+      .minimal-rows { display: grid; gap: 12px; span { height: 1px; background: rgba(24, 38, 44, 0.16); } }
+    }
+
+    &.theme-bento {
+      background: #F5F7FB;
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 30px 60px rgba(54, 76, 120, 0.18);
+      font-family: 'Inter', sans-serif;
+
+      .bento-content {
+        width: 100%; height: 100%;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-rows: 1.35fr 1fr 1fr;
+        gap: 18px;
+      }
+
+      .bento-card {
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid rgba(88, 113, 154, 0.12);
+        box-shadow: 0 18px 34px rgba(54, 76, 120, 0.1);
+        padding: 22px;
+        display: flex; flex-direction: column; justify-content: space-between;
+        color: #243141;
+        span { font-size: 13px; font-weight: 700; color: #718096; }
+        strong { font-size: 34px; line-height: 1; }
+      }
+
+      .bento-large {
+        grid-row: span 2;
+        background: linear-gradient(160deg, #FFFFFF 0%, #DFF8FF 100%);
+        strong { font-size: 72px; letter-spacing: 0; color: #1D4254; }
+      }
+
+      .bento-meter { height: 10px; border-radius: 999px; background: rgba(36,49,65,0.08); overflow: hidden; i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #56CBE7, #FF8C6B); animation: bentoMeter 3.2s ease-in-out infinite; } }
+      .bento-accent { background: linear-gradient(160deg, #FF8C6B 0%, #FFD66B 100%); color: #231F20; span { color: rgba(35,31,32,0.7); } }
+      .bento-wide { grid-column: span 1; }
+      .bento-bars { display: grid; gap: 10px; i { display: block; height: 12px; border-radius: 999px; background: #D9E5F0; transform-origin: left center; animation: bentoBars 2.8s ease-in-out infinite; &:nth-child(1){ width: 86%; } &:nth-child(2){ width: 62%; animation-delay: 0.24s; } &:nth-child(3){ width: 74%; animation-delay: 0.48s; } } }
+      .bento-dark { background: #243141; color: #fff; span { color: rgba(255,255,255,0.64); } }
+    }
+
+    &.theme-neumorphism {
+      background: #E8F1F7;
+      border-radius: 44px;
+      padding: 34px;
+      box-shadow:
+        18px 18px 36px rgba(140, 163, 180, 0.42),
+        -18px -18px 36px rgba(255, 255, 255, 0.86);
+      font-family: 'Inter', sans-serif;
+
+      .neumo-content { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; gap: 28px; color: #385366; }
+      .neumo-header {
+        width: 100%;
+        padding: 28px;
+        border-radius: 30px;
+        box-shadow: inset 8px 8px 18px rgba(150, 171, 188, 0.34), inset -8px -8px 18px rgba(255, 255, 255, 0.88);
+        h3 { margin: 0 0 10px; font-size: 30px; color: #2E4658; }
+        p { margin: 0; font-size: 15px; line-height: 1.5; color: #6F8290; }
+      }
+
+      .neumo-dial {
+        width: 245px; height: 245px; border-radius: 50%;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        box-shadow: 16px 16px 32px rgba(140, 163, 180, 0.42), -16px -16px 32px rgba(255,255,255,0.9), inset -8px -8px 18px rgba(255,255,255,0.64);
+        animation: neumoPulse 4s ease-in-out infinite;
+        span { font-size: 64px; font-weight: 700; color: #2E4658; }
+        small { font-size: 13px; font-weight: 700; letter-spacing: 0.16em; color: #7A91A0; }
+      }
+
+      .neumo-controls { display: flex; gap: 18px; button { width: 108px; height: 52px; border: 0; border-radius: 18px; color: #385366; font-weight: 700; background: #E8F1F7; box-shadow: 8px 8px 18px rgba(140,163,180,0.4), -8px -8px 18px rgba(255,255,255,0.9); &:nth-child(2) { color: #2185A0; box-shadow: inset 5px 5px 12px rgba(140,163,180,0.34), inset -5px -5px 12px rgba(255,255,255,0.86); } } }
+      .neumo-slider { width: 84%; height: 18px; border-radius: 999px; padding: 5px; overflow: hidden; box-shadow: inset 6px 6px 12px rgba(140,163,180,0.38), inset -6px -6px 12px rgba(255,255,255,0.86); i { display: block; width: 100%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, rgba(111, 208, 232, 0.28) 0%, #6FD0E8 24%, #A8EEF8 38%, #6FD0E8 52%, rgba(111, 208, 232, 0.28) 76%, #6FD0E8 100%); background-size: 200% 100%; animation: neumoFlow 2.8s linear infinite; } }
+      .neumo-status { width: 84%; display: flex; justify-content: space-between; margin-top: 2px; span { display: inline-flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 700; color: #607786; } i { width: 9px; height: 9px; border-radius: 50%; background: #6FD0E8; box-shadow: 0 0 14px rgba(111, 208, 232, 0.9); animation: statusGlow 1.8s ease-in-out infinite; } span:nth-child(2) i { animation-delay: 0.5s; } }
+    }
+
+    &.theme-editorial {
+      background: #F7F1E8;
+      border-radius: 0;
+      padding: 38px;
+      box-shadow: 0 30px 60px rgba(73, 56, 42, 0.18);
+      font-family: 'Inter', sans-serif;
+      color: #241D19;
+
+      .editorial-content { width: 100%; height: 100%; display: flex; flex-direction: column; }
+      .editorial-issue { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; border-bottom: 1px solid rgba(36,29,25,0.22); padding-bottom: 18px; margin-bottom: 26px; }
+      h3 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 58px; line-height: 0.98; font-weight: 400; letter-spacing: 0; }
+      .editorial-image {
+        flex: 1;
+        margin: 34px 0;
+        background:
+          linear-gradient(120deg, rgba(36,29,25,0.08) 0%, rgba(36,29,25,0) 50%),
+          linear-gradient(135deg, #D8BFA5 0%, #EFE1CF 48%, #27313A 48%, #27313A 100%);
+      }
+      .editorial-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; border-top: 1px solid rgba(36,29,25,0.22); padding-top: 22px; p { margin: 0; font-size: 15px; line-height: 1.6; } }
+    }
   }
 
   // --- 右側面板 (維持不變) ---
   .info-panel {
-    position: absolute; top: 291px; left: 855px; width: 420px; z-index: 20;
+    position: absolute; top: 365px; left: 855px; width: 520px; z-index: 20; display: flex; flex-direction: column;
+    .section-subtitle {
+      order: 2;
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      font-family: 'Inria Sans', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.25;
+      color: #31586A;
+      margin: 0 0 18px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.62);
+      box-shadow:
+        inset 0 0 0 1px rgba(91, 200, 233, 0.28),
+        0 12px 28px rgba(50, 106, 130, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+    }
     .service-label { display: block; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: #3F3F3F; margin-bottom: 15px; text-transform: uppercase; font-family: 'Inter'; }
-    .info-title { font-family: 'Inter'; font-weight: 700; font-size: 64px; color: #171717; line-height: 1.1; margin-bottom: 20px; }
-    .info-desc { font-family: 'Inter'; font-size: 20px; color: #666; margin-bottom: 40px; }
+    .info-title {
+      order: 1;
+      position: relative;
+      font-family: 'Inter';
+      font-weight: 700;
+      font-size: 48px;
+      color: #263F4D;
+      line-height: 1.08;
+      margin: 0 0 18px;
+      letter-spacing: 0;
+      text-shadow: 0 12px 28px rgba(42, 126, 158, 0.12);
+    }
+    .info-desc { order: 3; max-width: 390px; font-family: 'Inter'; font-size: 18px; line-height: 1.45; color: #65717A; margin-bottom: 34px; }
     .tags-grid {
-      display: grid; grid-template-columns: repeat(2, auto); gap: 20px 32px;
+      order: 4;
+      display: grid; grid-template-columns: repeat(2, auto); gap: 20px 22px;
       .tech-tag {
         appearance: none; border: none; font-family: inherit;
         display: inline-flex; align-items: center; justify-content: center;
@@ -317,13 +523,59 @@
 
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
+@keyframes neumoPulse {
+  0%, 100% { transform: scale(1); box-shadow: 16px 16px 32px rgba(140, 163, 180, 0.42), -16px -16px 32px rgba(255,255,255,0.9), inset -8px -8px 18px rgba(255,255,255,0.64); }
+  50% { transform: scale(1.025); box-shadow: 20px 20px 40px rgba(140, 163, 180, 0.36), -20px -20px 40px rgba(255,255,255,0.92), inset -8px -8px 18px rgba(255,255,255,0.72); }
+}
+
+@keyframes neumoFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes statusGlow {
+  0%, 100% { opacity: 0.45; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.18); }
+}
+
+@keyframes minimalSweep {
+  0%, 28% { transform: translateX(-110%); }
+  58%, 100% { transform: translateX(110%); }
+}
+
+@keyframes bentoMeter {
+  0%, 100% { width: 58%; }
+  50% { width: 88%; }
+}
+
+@keyframes bentoBars {
+  0%, 100% { transform: scaleX(0.62); opacity: 0.58; }
+  50% { transform: scaleX(1); opacity: 1; }
+}
+
 // RWD
 @media (max-width: 1024px) {
   .technology1-container {
     height: auto;
     &::before { display: none; }
     .content-wrapper { padding-bottom: 80px; }
-    .main-title { position: relative; top: auto; left: auto; font-size: 50px; text-align: center; margin: 40px 20px; }
+    .title-group {
+      position: relative;
+      top: auto;
+      left: auto;
+      text-align: center;
+      margin: 40px 20px;
+
+      .main-title {
+        font-size: 46px;
+        margin-bottom: 16px;
+      }
+
+      .section-subtitle {
+        font-size: 18px;
+        white-space: normal;
+      }
+    }
     .dynamic-card-container { position: relative; top: auto; left: auto; width: 90%; height: auto; min-height: 700px; margin: 0 auto 50px auto; }
     .info-panel { position: relative; top: auto; left: auto; width: 100%; padding: 0 20px; .tags-grid { display: flex; flex-wrap: wrap; gap: 15px; } }
   }

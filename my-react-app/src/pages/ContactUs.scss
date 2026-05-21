@@ -124,9 +124,13 @@
 
   .form-note {
     margin: 0 0 24px;
-    color: #ff1414;
-    font: 400 18px/1.25 'Inter', sans-serif;
+    color: #3f5663;
+    font: 500 16px/1.45 'Inter', sans-serif;
     min-height: 23px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: rgba(220, 246, 255, 0.56);
+    border: 1px solid rgba(91, 200, 233, 0.22);
 
     &.empty {
       visibility: hidden;
@@ -237,6 +241,46 @@
   color: #fff;
   cursor: pointer;
   font: 500 18px/1 'Inter', sans-serif;
+}
+
+.response-note {
+  margin: 16px 0 0;
+  color: #6a7178;
+  font: 500 13px/1.4 'Inter', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.contact-page-zh {
+  .contact-hero-content {
+    .caption {
+      color: #183544;
+      font: 700 16px/1.15 -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+      letter-spacing: 0.02em;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    h1 {
+      line-height: 1.12;
+    }
+
+    .hero-copy {
+      line-height: 1.55;
+    }
+  }
+
+  .service-pills button {
+    justify-content: center;
+    font-weight: 700;
+    padding-left: 21px;
+    gap: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', sans-serif;
+    letter-spacing: 0;
+  }
+
+  .figma-contact-form label span {
+    font-weight: 500;
+  }
 }
 
 @media (max-width: 1024px) {

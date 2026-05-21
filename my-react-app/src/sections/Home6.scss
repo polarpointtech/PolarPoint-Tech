@@ -103,6 +103,18 @@
     &.scroll-right .track {
       animation: scrollRight 80s linear infinite;
     }
+
+    &.row-one .track {
+      animation-duration: 92s;
+    }
+
+    &.row-two .track {
+      animation-duration: 104s;
+    }
+
+    &.row-three .track {
+      animation-duration: 86s;
+    }
   }
 
   .testimonial-card {
@@ -132,9 +144,44 @@
     }
 
     .stars {
+      display: flex;
+      gap: 3px;
       font-size: 14px;
       margin-bottom: 12px;
-      letter-spacing: 2px;
+      color: #f27f13;
+
+      .star {
+        position: relative;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+
+        &::before,
+        &::after {
+          content: '★';
+          position: absolute;
+          inset: 0;
+          line-height: 15px;
+        }
+
+        &::before {
+          color: rgba(16, 35, 45, 0.16);
+        }
+
+        &::after {
+          width: 0;
+          overflow: hidden;
+          color: #f27f13;
+        }
+
+        &.full::after {
+          width: 100%;
+        }
+
+        &.half::after {
+          width: 50%;
+        }
+      }
     }
 
     .review-text {

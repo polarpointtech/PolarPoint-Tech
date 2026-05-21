@@ -59,10 +59,10 @@
     position: absolute; 
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 26px;
     
     // RWD 寬度比例 (513.65 / 1440)
-    width: 35.67%; 
+    width: 39%; 
     height: 147px;
 
     // 圓圈樣式
@@ -91,7 +91,8 @@
       font-size: 22px;
       line-height: 1.28; 
       color: #3F3F3F;
-      width: min(100%, 410px); 
+      width: min(100%, 450px);
+      white-space: nowrap;
     }
   }
 
@@ -105,7 +106,8 @@
   // 2. 右上
   .item-2 {
     top: 421px; 
-    left: 52.22%; // 752px
+    left: 49.5%; // 713px
+    width: 44%;
   }
 
   // 3. 左下
@@ -117,7 +119,8 @@
   // 4. 右下
   .item-4 {
     top: 633px; 
-    left: 52.22%;
+    left: 49.5%;
+    width: 44%;
   }
 }
 
