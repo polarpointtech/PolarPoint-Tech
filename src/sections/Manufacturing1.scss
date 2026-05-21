@@ -140,15 +140,25 @@
 
   // --- 4. 製程卡片區 ---
   .process-cards-container {
+    position: absolute;
+    top: 994px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    z-index: 20;
+
     .process-card {
-      position: absolute;
-      top: 994px; 
+      position: relative;
       background-size: cover;
       background-position: center;
       overflow: hidden;
       box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
       border-radius: 56px; 
-      z-index: 20;
+      z-index: 1;
 
       &::after {
         content: '';
@@ -174,22 +184,18 @@
 
     // 卡片 B: UV-Curing (中間)
     .card-uv {
-      left: 50%;
-      transform: translateX(-50%); 
       width: 397px; 
       height: 380px; 
     }
 
     // 卡片 A: Resin (左邊)
     .card-resin {
-      left: calc(50% - 198.5px - 66px - 381px);
       width: 381px; 
       height: 380px; 
     }
 
     // 卡片 C: Metal (右邊)
     .card-metal {
-      left: calc(50% + 198.5px + 51px);
       width: 381px; 
       height: 380px; 
     }
@@ -219,7 +225,16 @@
     }
 
     .process-cards-container {
-      position: relative; display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 50px;
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-top: 50px;
       .process-card { 
         position: relative; top: auto; left: auto !important; transform: none !important;
         width: 90% !important; height: 350px !important; 
@@ -241,5 +256,6 @@
       transform: translate(var(--desktop-stage-left, 112px), var(--desktop-stage-top, 52px)) scale(var(--desktop-stage-scale, 1));
       transform-origin: top left;
     }
+
   }
 }

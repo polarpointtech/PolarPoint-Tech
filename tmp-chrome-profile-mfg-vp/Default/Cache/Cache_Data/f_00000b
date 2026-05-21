@@ -1,0 +1,1499 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/sections/Home3.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=6b69b0b0"; const _jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"]; const _Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"];
+var _s = $RefreshSig$();
+import __vite__cjsImport1_react from "/node_modules/.vite/deps/react.js?v=83a14ab1"; const React = __vite__cjsImport1_react.__esModule ? __vite__cjsImport1_react.default : __vite__cjsImport1_react; const useState = __vite__cjsImport1_react["useState"];
+import "/src/sections/Home3.scss";
+import roboticArm from "/src/assets/home3-2.jpg?import";
+import { useLanguage } from "/src/i18n/LanguageContext.jsx";
+const IconBase = ({ children })=>/*#__PURE__*/ _jsxDEV("svg", {
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "1.75",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        "aria-hidden": "true",
+        children: children
+    }, void 0, false, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+        lineNumber: 7,
+        columnNumber: 3
+    }, this);
+_c = IconBase;
+const Icons = {
+    Cog: ()=>/*#__PURE__*/ _jsxDEV(IconBase, {
+            children: [
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M5 17.5h14"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 15,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M7 17.5V8.8h10v8.7"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 16,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M9.5 8.8V6.5h5v2.3"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 17,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("circle", {
+                    cx: "12",
+                    cy: "13.2",
+                    r: "2.2"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 18,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M12 10.1v-1.4M12 17.7v-1.4M15.1 13.2h1.4M7.5 13.2h1.4",
+                    stroke: "#ff8c6b"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 19,
+                    columnNumber: 7
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+            lineNumber: 14,
+            columnNumber: 5
+        }, this),
+    Factory: ()=>/*#__PURE__*/ _jsxDEV(IconBase, {
+            children: [
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M4.5 18.8h15"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 24,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M6 18.8V8.7l4.2 2.5V8.7l4.2 2.5V6h3.6v12.8"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 25,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M8.2 15.1h1.6M12 15.1h1.6M15.8 15.1h1.6"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 26,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M7.2 6.3h3.6",
+                    stroke: "#ff8c6b"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 27,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("circle", {
+                    cx: "18",
+                    cy: "4.5",
+                    r: "1",
+                    fill: "#ff8c6b",
+                    stroke: "none"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 28,
+                    columnNumber: 7
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+            lineNumber: 23,
+            columnNumber: 5
+        }, this),
+    Hammer: ()=>/*#__PURE__*/ _jsxDEV(IconBase, {
+            children: [
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M5 17.5h10.2"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 33,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M7.2 14.2h8.6l2.2 3.3"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 34,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M8.8 10.8h6.8"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 35,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M16.7 8.5 19 6.2"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 36,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M14.7 10.8 18 7.5"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 37,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M6.8 14.2 5 17.5",
+                    stroke: "#ff8c6b"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 38,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("circle", {
+                    cx: "17.8",
+                    cy: "7.4",
+                    r: "1.1",
+                    fill: "#ff8c6b",
+                    stroke: "none"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 39,
+                    columnNumber: 7
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+            lineNumber: 32,
+            columnNumber: 5
+        }, this),
+    Wrench: ()=>/*#__PURE__*/ _jsxDEV(IconBase, {
+            children: [
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M7.1 18.2h9.8"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 44,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M8.8 18.2V8.4h6.4v9.8"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 45,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M6.6 11.2h2.2M15.2 11.2h2.2"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 46,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M6.6 15.2h2.2M15.2 15.2h2.2"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 47,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M12 6.1v12.1",
+                    stroke: "#ff8c6b"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 48,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("circle", {
+                    cx: "12",
+                    cy: "6.1",
+                    r: "1.2",
+                    fill: "#ff8c6b",
+                    stroke: "none"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 49,
+                    columnNumber: 7
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+            lineNumber: 43,
+            columnNumber: 5
+        }, this),
+    Machine: ()=>/*#__PURE__*/ _jsxDEV(IconBase, {
+            children: [
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M4.5 18.5h15"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 54,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M7.5 18.5v-5l3.2-3.2"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 55,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "m10.7 10.3 3.1 3.1 3.2-3.2"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 56,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("circle", {
+                    cx: "10.7",
+                    cy: "10.3",
+                    r: "1.5"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 57,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("circle", {
+                    cx: "17",
+                    cy: "10.2",
+                    r: "1.5"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 58,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "m14.4 13.9-2.4 4.6",
+                    stroke: "#ff8c6b"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 59,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("circle", {
+                    cx: "14.4",
+                    cy: "13.9",
+                    r: "1.1",
+                    fill: "#ff8c6b",
+                    stroke: "none"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 60,
+                    columnNumber: 7
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+            lineNumber: 53,
+            columnNumber: 5
+        }, this),
+    Consultation: ()=>/*#__PURE__*/ _jsxDEV(IconBase, {
+            children: [
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M5 6.5h14v8.2H9.5L5 18V6.5Z"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 65,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M8.5 9.6h5.8M8.5 12h3.6"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 66,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M16.2 10.8h2.3",
+                    stroke: "#ff8c6b"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 67,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("circle", {
+                    cx: "18.8",
+                    cy: "10.8",
+                    r: "1",
+                    fill: "#ff8c6b",
+                    stroke: "none"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 68,
+                    columnNumber: 7
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+            lineNumber: 64,
+            columnNumber: 5
+        }, this),
+    Nut: ()=>/*#__PURE__*/ _jsxDEV(IconBase, {
+            children: [
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "m12 4.2 6.8 3.9v7.8L12 19.8l-6.8-3.9V8.1L12 4.2Z"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 73,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("circle", {
+                    cx: "12",
+                    cy: "12",
+                    r: "2.8"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 74,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M12 4.2v2.3M18.8 8.1l-2 1.1M5.2 15.9l2-1.1",
+                    stroke: "#ff8c6b"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 75,
+                    columnNumber: 7
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+            lineNumber: 72,
+            columnNumber: 5
+        }, this),
+    Cpu: ()=>/*#__PURE__*/ _jsxDEV(IconBase, {
+            children: [
+                /*#__PURE__*/ _jsxDEV("rect", {
+                    x: "7.1",
+                    y: "7.1",
+                    width: "9.8",
+                    height: "9.8",
+                    rx: "2"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 80,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("rect", {
+                    x: "10.2",
+                    y: "10.2",
+                    width: "3.6",
+                    height: "3.6",
+                    rx: "0.8"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 81,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M9.2 3.6v2.1M14.8 3.6v2.1M9.2 18.3v2.1M14.8 18.3v2.1M3.6 9.2h2.1M3.6 14.8h2.1M18.3 9.2h2.1M18.3 14.8h2.1"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 82,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M12 10.2v3.6M10.2 12h3.6",
+                    stroke: "#ff8c6b"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 83,
+                    columnNumber: 7
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+            lineNumber: 79,
+            columnNumber: 5
+        }, this),
+    Code: ()=>/*#__PURE__*/ _jsxDEV(IconBase, {
+            children: [
+                /*#__PURE__*/ _jsxDEV("rect", {
+                    x: "4",
+                    y: "5.4",
+                    width: "16",
+                    height: "13.2",
+                    rx: "2"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 88,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M4 9h16"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 89,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "m9.2 12-1.8 1.8 1.8 1.8M14.8 12l1.8 1.8-1.8 1.8"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 90,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M12.8 11.5 11.2 16",
+                    stroke: "#ff8c6b"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 91,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("circle", {
+                    cx: "7.1",
+                    cy: "7.2",
+                    r: "0.7",
+                    fill: "#ff8c6b",
+                    stroke: "none"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 92,
+                    columnNumber: 7
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+            lineNumber: 87,
+            columnNumber: 5
+        }, this),
+    Network: ()=>/*#__PURE__*/ _jsxDEV(IconBase, {
+            children: [
+                /*#__PURE__*/ _jsxDEV("rect", {
+                    x: "4.5",
+                    y: "5",
+                    width: "5",
+                    height: "5",
+                    rx: "1.2"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 97,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("rect", {
+                    x: "14.5",
+                    y: "5",
+                    width: "5",
+                    height: "5",
+                    rx: "1.2"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 98,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("rect", {
+                    x: "9.5",
+                    y: "14",
+                    width: "5",
+                    height: "5",
+                    rx: "1.2"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 99,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("path", {
+                    d: "M9.5 7.5h5M7 10v2.8l2.5 2.4M17 10v2.8l-2.5 2.4"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 100,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ _jsxDEV("circle", {
+                    cx: "12",
+                    cy: "16.5",
+                    r: "0.8",
+                    fill: "#ff8c6b",
+                    stroke: "none"
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                    lineNumber: 101,
+                    columnNumber: 7
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+            lineNumber: 96,
+            columnNumber: 5
+        }, this)
+};
+export default function Home3() {
+    _s();
+    const [activeCapability, setActiveCapability] = useState(null);
+    const { isChinese } = useLanguage();
+    const buttons = [
+        {
+            id: 1,
+            icon: 'Cog',
+            type: 'brand',
+            top: 309,
+            left: 122,
+            title: isChinese ? 'CNC 加工' : 'CNC Machining',
+            desc: isChinese ? '依照專案需求提供精密加工與客製化製造支援。' : 'Precision machining and custom manufacturing tailored to project requirements.',
+            category: isChinese ? '製造服務' : 'Manufacturing'
+        },
+        {
+            id: 2,
+            icon: 'Factory',
+            type: 'brand',
+            top: 329,
+            left: 206,
+            title: isChinese ? 'OEM 生產' : 'OEM Production',
+            desc: isChinese ? '協助品牌與企業進行彈性的 OEM 與委託製造合作。' : 'Flexible OEM and contract manufacturing support for business partners.',
+            category: isChinese ? '生產支援' : 'Production'
+        },
+        {
+            id: 3,
+            icon: 'Hammer',
+            type: 'brand',
+            top: 389,
+            left: 300,
+            title: isChinese ? '金屬加工' : 'Metal Fabrication',
+            desc: isChinese ? '提供工業應用所需的金屬加工、零件製作與製程協調。' : 'Custom metal processing and fabrication for industrial applications.',
+            category: isChinese ? '製造服務' : 'Manufacturing'
+        },
+        {
+            id: 4,
+            icon: 'Wrench',
+            type: 'brand',
+            top: 624,
+            left: 155,
+            title: isChinese ? '治具設計' : 'Jig & Fixture Design',
+            desc: isChinese ? '規劃客製治具與夾具，協助提升生產效率與加工精度。' : 'Custom jig and fixture solutions to improve productivity and precision.',
+            category: isChinese ? '工裝治具' : 'Tooling'
+        },
+        {
+            id: 5,
+            icon: 'Machine',
+            type: 'brand',
+            top: 660,
+            left: 248,
+            title: isChinese ? '設備方案' : 'Machine Solutions',
+            desc: isChinese ? '整合工業設備、機構設計與客製化機台應用需求。' : 'Industrial machinery development and customized equipment integration.',
+            category: isChinese ? '自動化' : 'Automation'
+        },
+        {
+            id: 6,
+            icon: 'Consultation',
+            type: 'brand',
+            top: 329,
+            left: 1065,
+            title: isChinese ? '技術諮詢' : 'Technical Consultation',
+            desc: isChinese ? '針對製造可行性、材料選擇與專案規劃提供技術建議。' : 'Engineering consultation for manufacturing feasibility and project planning.',
+            category: isChinese ? '工程支援' : 'Engineering'
+        },
+        {
+            id: 7,
+            icon: 'Nut',
+            type: 'brand',
+            top: 565,
+            left: 1328,
+            title: isChinese ? '五金零件' : 'Hardware Components',
+            desc: isChinese ? '協助採購工業五金、機構零件與客製化配件。' : 'Supplying industrial hardware and mechanical components.',
+            category: isChinese ? '採購供應' : 'Supply'
+        },
+        {
+            id: 8,
+            icon: 'Cpu',
+            type: 'brand',
+            top: 660,
+            left: 1096,
+            title: isChinese ? '電子零件' : 'Electronic Parts',
+            desc: isChinese ? '提供電子元件與客製零件的可靠採購與供應協調。' : 'Reliable sourcing of electronic and customized components.',
+            category: isChinese ? '採購供應' : 'Supply'
+        },
+        {
+            id: 9,
+            icon: 'Code',
+            type: 'brand',
+            top: 292,
+            left: 1181,
+            title: isChinese ? '網站開發' : 'Website Development',
+            desc: isChinese ? '依照企業形象與服務內容打造專業網站與數位呈現。' : 'Professional website solutions for modern business needs.',
+            category: isChinese ? '數位服務' : 'Digital'
+        },
+        {
+            id: 10,
+            icon: 'Network',
+            type: 'brand',
+            top: 493,
+            left: 1272,
+            title: isChinese ? '客製系統' : 'Custom Systems',
+            desc: isChinese ? '建立符合營運流程的數位工具與客製化系統。' : 'Tailored digital tools and systems to support business operations.',
+            category: isChinese ? '數位服務' : 'Digital'
+        }
+    ];
+    return /*#__PURE__*/ _jsxDEV("section", {
+        className: "home3-container",
+        children: [
+            /*#__PURE__*/ _jsxDEV("div", {
+                className: "grid-overlay"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                lineNumber: 143,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDEV("div", {
+                className: "floating-icons-layer",
+                children: [
+                    buttons.map((btn)=>{
+                        const IconComponent = Icons[btn.icon];
+                        const isRightSide = btn.left > 720;
+                        return /*#__PURE__*/ _jsxDEV("div", {
+                            className: `floating-wrapper service-${btn.id} ${isRightSide ? 'right-side' : 'left-side'} ${activeCapability?.id === btn.id ? 'is-active' : ''}`,
+                            style: {
+                                top: `${btn.top}px`,
+                                left: `${btn.left}px`
+                            },
+                            onMouseEnter: ()=>setActiveCapability(btn),
+                            onMouseLeave: ()=>setActiveCapability(null),
+                            children: /*#__PURE__*/ _jsxDEV("button", {
+                                className: `icon-btn ${btn.type === 'brand' ? 'brand-shadow' : ''}`,
+                                type: "button",
+                                "aria-label": btn.title,
+                                children: IconComponent && /*#__PURE__*/ _jsxDEV(IconComponent, {}, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                    lineNumber: 162,
+                                    columnNumber: 35
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                lineNumber: 157,
+                                columnNumber: 15
+                            }, this)
+                        }, btn.id, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                            lineNumber: 150,
+                            columnNumber: 13
+                        }, this);
+                    }),
+                    activeCapability && /*#__PURE__*/ _jsxDEV("div", {
+                        className: "capability-glass-card",
+                        children: /*#__PURE__*/ _jsxDEV("div", {
+                            className: "card-content",
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    className: "category-badge",
+                                    children: activeCapability.category
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                    lineNumber: 170,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("h3", {
+                                    children: activeCapability.title
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                    lineNumber: 171,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("p", {
+                                    children: activeCapability.desc
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                    lineNumber: 172,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                            lineNumber: 169,
+                            columnNumber: 13
+                        }, this)
+                    }, activeCapability.id, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                        lineNumber: 168,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                lineNumber: 144,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDEV("div", {
+                className: "content-wrapper",
+                children: [
+                    /*#__PURE__*/ _jsxDEV("div", {
+                        className: "text-content",
+                        children: [
+                            /*#__PURE__*/ _jsxDEV("p", {
+                                className: "sub-caption",
+                                children: isChinese ? '核心服務能力' : 'OUR CAPABILITIES'
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                lineNumber: 180,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("div", {
+                                className: "deco-line"
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                lineNumber: 181,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("h2", {
+                                className: "main-title",
+                                children: isChinese ? /*#__PURE__*/ _jsxDEV(_Fragment, {
+                                    children: "依據您的需求，打造專屬解決方案"
+                                }, void 0, false) : /*#__PURE__*/ _jsxDEV(_Fragment, {
+                                    children: [
+                                        "Solutions Designed Around",
+                                        /*#__PURE__*/ _jsxDEV("br", {}, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                            lineNumber: 189,
+                                            columnNumber: 42
+                                        }, this),
+                                        "Your Business Needs"
+                                    ]
+                                }, void 0, true)
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                lineNumber: 182,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                        lineNumber: 179,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("div", {
+                        className: "image-container",
+                        children: /*#__PURE__*/ _jsxDEV("svg", {
+                            className: "arm-art",
+                            viewBox: "0 0 702 422",
+                            role: "img",
+                            "aria-label": "Robotic Arm",
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("defs", {
+                                    children: [
+                                        /*#__PURE__*/ _jsxDEV("clipPath", {
+                                            id: "home3DissolveField",
+                                            children: /*#__PURE__*/ _jsxDEV("ellipse", {
+                                                cx: "351",
+                                                cy: "221",
+                                                rx: "314",
+                                                ry: "183"
+                                            }, void 0, false, {
+                                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                lineNumber: 198,
+                                                columnNumber: 17
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                            lineNumber: 197,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("filter", {
+                                            id: "home3DissolveNoise",
+                                            x: "-25%",
+                                            y: "-35%",
+                                            width: "150%",
+                                            height: "170%",
+                                            children: [
+                                                /*#__PURE__*/ _jsxDEV("feTurbulence", {
+                                                    type: "fractalNoise",
+                                                    baseFrequency: "0.075 0.12",
+                                                    numOctaves: "6",
+                                                    seed: "43",
+                                                    result: "noise"
+                                                }, void 0, false, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 201,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("feComponentTransfer", {
+                                                    in: "noise",
+                                                    result: "crunch",
+                                                    children: [
+                                                        /*#__PURE__*/ _jsxDEV("feFuncR", {
+                                                            type: "table",
+                                                            tableValues: "0 0 0 0 0.38 0.88 1 1"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 203,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("feFuncG", {
+                                                            type: "table",
+                                                            tableValues: "0 0 0 0 0.36 0.86 1 1"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 204,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("feFuncB", {
+                                                            type: "table",
+                                                            tableValues: "0 0 0 0 0.4 0.9 1 1"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 205,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 202,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("feColorMatrix", {
+                                                    in: "crunch",
+                                                    type: "saturate",
+                                                    values: "0",
+                                                    result: "mono"
+                                                }, void 0, false, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 207,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("feDisplacementMap", {
+                                                    in: "mono",
+                                                    in2: "noise",
+                                                    scale: "18",
+                                                    xChannelSelector: "R",
+                                                    yChannelSelector: "G"
+                                                }, void 0, false, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 208,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                            lineNumber: 200,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("filter", {
+                                            id: "home3EdgeWarp",
+                                            x: "-25%",
+                                            y: "-35%",
+                                            width: "150%",
+                                            height: "170%",
+                                            children: [
+                                                /*#__PURE__*/ _jsxDEV("feTurbulence", {
+                                                    type: "fractalNoise",
+                                                    baseFrequency: "0.032 0.066",
+                                                    numOctaves: "5",
+                                                    seed: "19",
+                                                    result: "warpNoise"
+                                                }, void 0, false, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 211,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("feDisplacementMap", {
+                                                    in: "SourceGraphic",
+                                                    in2: "warpNoise",
+                                                    scale: "34",
+                                                    xChannelSelector: "R",
+                                                    yChannelSelector: "G"
+                                                }, void 0, false, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 212,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                            lineNumber: 210,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("mask", {
+                                            id: "home3ArmMask",
+                                            maskUnits: "userSpaceOnUse",
+                                            children: [
+                                                /*#__PURE__*/ _jsxDEV("rect", {
+                                                    width: "702",
+                                                    height: "422",
+                                                    fill: "black"
+                                                }, void 0, false, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 215,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("g", {
+                                                    clipPath: "url(#home3DissolveField)",
+                                                    children: [
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "34",
+                                                            y: "38",
+                                                            width: "634",
+                                                            height: "356",
+                                                            fill: "#b2b2b2",
+                                                            filter: "url(#home3DissolveNoise)",
+                                                            opacity: "0.96"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 217,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("ellipse", {
+                                                            cx: "351",
+                                                            cy: "221",
+                                                            rx: "292",
+                                                            ry: "166",
+                                                            fill: "#d4d4d4",
+                                                            filter: "url(#home3EdgeWarp)",
+                                                            opacity: "0.74"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 218,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 216,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("ellipse", {
+                                                    cx: "351",
+                                                    cy: "220",
+                                                    rx: "254",
+                                                    ry: "138",
+                                                    fill: "white"
+                                                }, void 0, false, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 220,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("g", {
+                                                    fill: "white",
+                                                    opacity: "0.78",
+                                                    children: [
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "54",
+                                                            y: "198",
+                                                            width: "94",
+                                                            height: "10",
+                                                            rx: "3",
+                                                            transform: "rotate(-7 101 203)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 222,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "93",
+                                                            y: "144",
+                                                            width: "60",
+                                                            height: "9",
+                                                            rx: "3",
+                                                            transform: "rotate(10 123 148)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 223,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "129",
+                                                            y: "296",
+                                                            width: "84",
+                                                            height: "10",
+                                                            rx: "3",
+                                                            transform: "rotate(12 171 301)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 224,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "210",
+                                                            y: "73",
+                                                            width: "74",
+                                                            height: "9",
+                                                            rx: "3",
+                                                            transform: "rotate(-8 247 78)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 225,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "383",
+                                                            y: "69",
+                                                            width: "82",
+                                                            height: "9",
+                                                            rx: "3",
+                                                            transform: "rotate(8 424 74)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 226,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "512",
+                                                            y: "116",
+                                                            width: "84",
+                                                            height: "10",
+                                                            rx: "3",
+                                                            transform: "rotate(-9 554 121)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 227,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "576",
+                                                            y: "204",
+                                                            width: "86",
+                                                            height: "10",
+                                                            rx: "3",
+                                                            transform: "rotate(5 619 209)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 228,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "498",
+                                                            y: "322",
+                                                            width: "88",
+                                                            height: "10",
+                                                            rx: "3",
+                                                            transform: "rotate(12 542 327)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 229,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "335",
+                                                            y: "365",
+                                                            width: "108",
+                                                            height: "9",
+                                                            rx: "3",
+                                                            transform: "rotate(-4 389 370)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 230,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "203",
+                                                            y: "341",
+                                                            width: "88",
+                                                            height: "9",
+                                                            rx: "3",
+                                                            transform: "rotate(10 247 346)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 231,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 221,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("g", {
+                                                    fill: "white",
+                                                    opacity: "0.52",
+                                                    children: [
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "83",
+                                                            cy: "181",
+                                                            r: "5"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 234,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "119",
+                                                            cy: "251",
+                                                            r: "4"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 235,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "163",
+                                                            cy: "111",
+                                                            r: "4"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 236,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "288",
+                                                            cy: "63",
+                                                            r: "3"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 237,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "496",
+                                                            cy: "88",
+                                                            r: "4"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 238,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "621",
+                                                            cy: "162",
+                                                            r: "5"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 239,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "627",
+                                                            cy: "266",
+                                                            r: "5"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 240,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "463",
+                                                            cy: "362",
+                                                            r: "5"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 241,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "277",
+                                                            cy: "364",
+                                                            r: "4"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 242,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "142",
+                                                            cy: "322",
+                                                            r: "4"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 243,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 233,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("g", {
+                                                    fill: "black",
+                                                    opacity: "0.62",
+                                                    children: [
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "38",
+                                                            y: "208",
+                                                            width: "74",
+                                                            height: "13",
+                                                            rx: "3",
+                                                            transform: "rotate(8 75 214)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 246,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "92",
+                                                            y: "142",
+                                                            width: "58",
+                                                            height: "10",
+                                                            rx: "3",
+                                                            transform: "rotate(-12 121 147)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 247,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "128",
+                                                            y: "317",
+                                                            width: "70",
+                                                            height: "12",
+                                                            rx: "3",
+                                                            transform: "rotate(11 163 323)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 248,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "205",
+                                                            y: "78",
+                                                            width: "60",
+                                                            height: "10",
+                                                            rx: "3",
+                                                            transform: "rotate(9 235 83)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 249,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "437",
+                                                            y: "76",
+                                                            width: "66",
+                                                            height: "10",
+                                                            rx: "3",
+                                                            transform: "rotate(-10 470 81)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 250,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "548",
+                                                            y: "119",
+                                                            width: "70",
+                                                            height: "12",
+                                                            rx: "3",
+                                                            transform: "rotate(13 583 125)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 251,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "595",
+                                                            y: "214",
+                                                            width: "78",
+                                                            height: "13",
+                                                            rx: "3",
+                                                            transform: "rotate(-6 634 220)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 252,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "524",
+                                                            y: "315",
+                                                            width: "76",
+                                                            height: "13",
+                                                            rx: "3",
+                                                            transform: "rotate(-12 562 321)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 253,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "321",
+                                                            y: "365",
+                                                            width: "88",
+                                                            height: "12",
+                                                            rx: "3",
+                                                            transform: "rotate(5 365 371)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 254,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("rect", {
+                                                            x: "197",
+                                                            y: "348",
+                                                            width: "68",
+                                                            height: "10",
+                                                            rx: "3",
+                                                            transform: "rotate(-8 231 353)"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 255,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "74",
+                                                            cy: "252",
+                                                            r: "7"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 256,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "626",
+                                                            cy: "178",
+                                                            r: "8"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 257,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "575",
+                                                            cy: "292",
+                                                            r: "7"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 258,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ _jsxDEV("circle", {
+                                                            cx: "286",
+                                                            cy: "367",
+                                                            r: "6"
+                                                        }, void 0, false, {
+                                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                            lineNumber: 259,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 245,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                            lineNumber: 214,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("linearGradient", {
+                                            id: "home3EdgeGlow",
+                                            x1: "0%",
+                                            y1: "0%",
+                                            x2: "100%",
+                                            y2: "100%",
+                                            children: [
+                                                /*#__PURE__*/ _jsxDEV("stop", {
+                                                    offset: "0%",
+                                                    stopColor: "#8be6f3",
+                                                    stopOpacity: "0.16"
+                                                }, void 0, false, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 263,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("stop", {
+                                                    offset: "58%",
+                                                    stopColor: "#ffffff",
+                                                    stopOpacity: "0"
+                                                }, void 0, false, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 264,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ _jsxDEV("stop", {
+                                                    offset: "100%",
+                                                    stopColor: "#7ecbd8",
+                                                    stopOpacity: "0.12"
+                                                }, void 0, false, {
+                                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                                    lineNumber: 265,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                            lineNumber: 262,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                    lineNumber: 196,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("image", {
+                                    className: "arm-photo",
+                                    href: roboticArm,
+                                    width: "702",
+                                    height: "422",
+                                    preserveAspectRatio: "xMidYMid slice",
+                                    mask: "url(#home3ArmMask)"
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                    lineNumber: 268,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("ellipse", {
+                                    cx: "351",
+                                    cy: "221",
+                                    rx: "292",
+                                    ry: "166",
+                                    fill: "url(#home3EdgeGlow)",
+                                    mask: "url(#home3ArmMask)"
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                                    lineNumber: 276,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                            lineNumber: 195,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                        lineNumber: 194,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+                lineNumber: 178,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx",
+        lineNumber: 142,
+        columnNumber: 5
+    }, this);
+}
+_s(Home3, "JkauwHmV4TIV+Jl7dS9OE4Nmg8k=", false, function() {
+    return [
+        useLanguage
+    ];
+});
+_c1 = Home3;
+var _c, _c1;
+$RefreshReg$(_c, "IconBase");
+$RefreshReg$(_c1, "Home3");
+
+
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react-swc can't detect preamble. Something is wrong."
+    );
+  }
+
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) { return RefreshRuntime.register(type, "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home3.jsx" + ' ' + id) }
+function $RefreshSig$() { return RefreshRuntime.createSignatureFunctionForTransform(); }
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkhvbWUzLmpzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgJy4vSG9tZTMuc2Nzcyc7XG5pbXBvcnQgcm9ib3RpY0FybSBmcm9tICcvc3JjL2Fzc2V0cy9ob21lMy0yLmpwZyc7XG5pbXBvcnQgeyB1c2VMYW5ndWFnZSB9IGZyb20gJy4uL2kxOG4vTGFuZ3VhZ2VDb250ZXh0JztcblxuY29uc3QgSWNvbkJhc2UgPSAoeyBjaGlsZHJlbiB9KSA9PiAoXG4gIDxzdmcgdmlld0JveD1cIjAgMCAyNCAyNFwiIGZpbGw9XCJub25lXCIgc3Ryb2tlPVwiY3VycmVudENvbG9yXCIgc3Ryb2tlV2lkdGg9XCIxLjc1XCIgc3Ryb2tlTGluZWNhcD1cInJvdW5kXCIgc3Ryb2tlTGluZWpvaW49XCJyb3VuZFwiIGFyaWEtaGlkZGVuPVwidHJ1ZVwiPlxuICAgIHtjaGlsZHJlbn1cbiAgPC9zdmc+XG4pO1xuXG5jb25zdCBJY29ucyA9IHtcbiAgQ29nOiAoKSA9PiAoXG4gICAgPEljb25CYXNlPlxuICAgICAgPHBhdGggZD1cIk01IDE3LjVoMTRcIiAvPlxuICAgICAgPHBhdGggZD1cIk03IDE3LjVWOC44aDEwdjguN1wiIC8+XG4gICAgICA8cGF0aCBkPVwiTTkuNSA4LjhWNi41aDV2Mi4zXCIgLz5cbiAgICAgIDxjaXJjbGUgY3g9XCIxMlwiIGN5PVwiMTMuMlwiIHI9XCIyLjJcIiAvPlxuICAgICAgPHBhdGggZD1cIk0xMiAxMC4xdi0xLjRNMTIgMTcuN3YtMS40TTE1LjEgMTMuMmgxLjRNNy41IDEzLjJoMS40XCIgc3Ryb2tlPVwiI2ZmOGM2YlwiIC8+XG4gICAgPC9JY29uQmFzZT5cbiAgKSxcbiAgRmFjdG9yeTogKCkgPT4gKFxuICAgIDxJY29uQmFzZT5cbiAgICAgIDxwYXRoIGQ9XCJNNC41IDE4LjhoMTVcIiAvPlxuICAgICAgPHBhdGggZD1cIk02IDE4LjhWOC43bDQuMiAyLjVWOC43bDQuMiAyLjVWNmgzLjZ2MTIuOFwiIC8+XG4gICAgICA8cGF0aCBkPVwiTTguMiAxNS4xaDEuNk0xMiAxNS4xaDEuNk0xNS44IDE1LjFoMS42XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNNy4yIDYuM2gzLjZcIiBzdHJva2U9XCIjZmY4YzZiXCIgLz5cbiAgICAgIDxjaXJjbGUgY3g9XCIxOFwiIGN5PVwiNC41XCIgcj1cIjFcIiBmaWxsPVwiI2ZmOGM2YlwiIHN0cm9rZT1cIm5vbmVcIiAvPlxuICAgIDwvSWNvbkJhc2U+XG4gICksXG4gIEhhbW1lcjogKCkgPT4gKFxuICAgIDxJY29uQmFzZT5cbiAgICAgIDxwYXRoIGQ9XCJNNSAxNy41aDEwLjJcIiAvPlxuICAgICAgPHBhdGggZD1cIk03LjIgMTQuMmg4LjZsMi4yIDMuM1wiIC8+XG4gICAgICA8cGF0aCBkPVwiTTguOCAxMC44aDYuOFwiIC8+XG4gICAgICA8cGF0aCBkPVwiTTE2LjcgOC41IDE5IDYuMlwiIC8+XG4gICAgICA8cGF0aCBkPVwiTTE0LjcgMTAuOCAxOCA3LjVcIiAvPlxuICAgICAgPHBhdGggZD1cIk02LjggMTQuMiA1IDE3LjVcIiBzdHJva2U9XCIjZmY4YzZiXCIgLz5cbiAgICAgIDxjaXJjbGUgY3g9XCIxNy44XCIgY3k9XCI3LjRcIiByPVwiMS4xXCIgZmlsbD1cIiNmZjhjNmJcIiBzdHJva2U9XCJub25lXCIgLz5cbiAgICA8L0ljb25CYXNlPlxuICApLFxuICBXcmVuY2g6ICgpID0+IChcbiAgICA8SWNvbkJhc2U+XG4gICAgICA8cGF0aCBkPVwiTTcuMSAxOC4yaDkuOFwiIC8+XG4gICAgICA8cGF0aCBkPVwiTTguOCAxOC4yVjguNGg2LjR2OS44XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNNi42IDExLjJoMi4yTTE1LjIgMTEuMmgyLjJcIiAvPlxuICAgICAgPHBhdGggZD1cIk02LjYgMTUuMmgyLjJNMTUuMiAxNS4yaDIuMlwiIC8+XG4gICAgICA8cGF0aCBkPVwiTTEyIDYuMXYxMi4xXCIgc3Ryb2tlPVwiI2ZmOGM2YlwiIC8+XG4gICAgICA8Y2lyY2xlIGN4PVwiMTJcIiBjeT1cIjYuMVwiIHI9XCIxLjJcIiBmaWxsPVwiI2ZmOGM2YlwiIHN0cm9rZT1cIm5vbmVcIiAvPlxuICAgIDwvSWNvbkJhc2U+XG4gICksXG4gIE1hY2hpbmU6ICgpID0+IChcbiAgICA8SWNvbkJhc2U+XG4gICAgICA8cGF0aCBkPVwiTTQuNSAxOC41aDE1XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNNy41IDE4LjV2LTVsMy4yLTMuMlwiIC8+XG4gICAgICA8cGF0aCBkPVwibTEwLjcgMTAuMyAzLjEgMy4xIDMuMi0zLjJcIiAvPlxuICAgICAgPGNpcmNsZSBjeD1cIjEwLjdcIiBjeT1cIjEwLjNcIiByPVwiMS41XCIgLz5cbiAgICAgIDxjaXJjbGUgY3g9XCIxN1wiIGN5PVwiMTAuMlwiIHI9XCIxLjVcIiAvPlxuICAgICAgPHBhdGggZD1cIm0xNC40IDEzLjktMi40IDQuNlwiIHN0cm9rZT1cIiNmZjhjNmJcIiAvPlxuICAgICAgPGNpcmNsZSBjeD1cIjE0LjRcIiBjeT1cIjEzLjlcIiByPVwiMS4xXCIgZmlsbD1cIiNmZjhjNmJcIiBzdHJva2U9XCJub25lXCIgLz5cbiAgICA8L0ljb25CYXNlPlxuICApLFxuICBDb25zdWx0YXRpb246ICgpID0+IChcbiAgICA8SWNvbkJhc2U+XG4gICAgICA8cGF0aCBkPVwiTTUgNi41aDE0djguMkg5LjVMNSAxOFY2LjVaXCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNOC41IDkuNmg1LjhNOC41IDEyaDMuNlwiIC8+XG4gICAgICA8cGF0aCBkPVwiTTE2LjIgMTAuOGgyLjNcIiBzdHJva2U9XCIjZmY4YzZiXCIgLz5cbiAgICAgIDxjaXJjbGUgY3g9XCIxOC44XCIgY3k9XCIxMC44XCIgcj1cIjFcIiBmaWxsPVwiI2ZmOGM2YlwiIHN0cm9rZT1cIm5vbmVcIiAvPlxuICAgIDwvSWNvbkJhc2U+XG4gICksXG4gIE51dDogKCkgPT4gKFxuICAgIDxJY29uQmFzZT5cbiAgICAgIDxwYXRoIGQ9XCJtMTIgNC4yIDYuOCAzLjl2Ny44TDEyIDE5LjhsLTYuOC0zLjlWOC4xTDEyIDQuMlpcIiAvPlxuICAgICAgPGNpcmNsZSBjeD1cIjEyXCIgY3k9XCIxMlwiIHI9XCIyLjhcIiAvPlxuICAgICAgPHBhdGggZD1cIk0xMiA0LjJ2Mi4zTTE4LjggOC4xbC0yIDEuMU01LjIgMTUuOWwyLTEuMVwiIHN0cm9rZT1cIiNmZjhjNmJcIiAvPlxuICAgIDwvSWNvbkJhc2U+XG4gICksXG4gIENwdTogKCkgPT4gKFxuICAgIDxJY29uQmFzZT5cbiAgICAgIDxyZWN0IHg9XCI3LjFcIiB5PVwiNy4xXCIgd2lkdGg9XCI5LjhcIiBoZWlnaHQ9XCI5LjhcIiByeD1cIjJcIiAvPlxuICAgICAgPHJlY3QgeD1cIjEwLjJcIiB5PVwiMTAuMlwiIHdpZHRoPVwiMy42XCIgaGVpZ2h0PVwiMy42XCIgcng9XCIwLjhcIiAvPlxuICAgICAgPHBhdGggZD1cIk05LjIgMy42djIuMU0xNC44IDMuNnYyLjFNOS4yIDE4LjN2Mi4xTTE0LjggMTguM3YyLjFNMy42IDkuMmgyLjFNMy42IDE0LjhoMi4xTTE4LjMgOS4yaDIuMU0xOC4zIDE0LjhoMi4xXCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNMTIgMTAuMnYzLjZNMTAuMiAxMmgzLjZcIiBzdHJva2U9XCIjZmY4YzZiXCIgLz5cbiAgICA8L0ljb25CYXNlPlxuICApLFxuICBDb2RlOiAoKSA9PiAoXG4gICAgPEljb25CYXNlPlxuICAgICAgPHJlY3QgeD1cIjRcIiB5PVwiNS40XCIgd2lkdGg9XCIxNlwiIGhlaWdodD1cIjEzLjJcIiByeD1cIjJcIiAvPlxuICAgICAgPHBhdGggZD1cIk00IDloMTZcIiAvPlxuICAgICAgPHBhdGggZD1cIm05LjIgMTItMS44IDEuOCAxLjggMS44TTE0LjggMTJsMS44IDEuOC0xLjggMS44XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNMTIuOCAxMS41IDExLjIgMTZcIiBzdHJva2U9XCIjZmY4YzZiXCIgLz5cbiAgICAgIDxjaXJjbGUgY3g9XCI3LjFcIiBjeT1cIjcuMlwiIHI9XCIwLjdcIiBmaWxsPVwiI2ZmOGM2YlwiIHN0cm9rZT1cIm5vbmVcIiAvPlxuICAgIDwvSWNvbkJhc2U+XG4gICksXG4gIE5ldHdvcms6ICgpID0+IChcbiAgICA8SWNvbkJhc2U+XG4gICAgICA8cmVjdCB4PVwiNC41XCIgeT1cIjVcIiB3aWR0aD1cIjVcIiBoZWlnaHQ9XCI1XCIgcng9XCIxLjJcIiAvPlxuICAgICAgPHJlY3QgeD1cIjE0LjVcIiB5PVwiNVwiIHdpZHRoPVwiNVwiIGhlaWdodD1cIjVcIiByeD1cIjEuMlwiIC8+XG4gICAgICA8cmVjdCB4PVwiOS41XCIgeT1cIjE0XCIgd2lkdGg9XCI1XCIgaGVpZ2h0PVwiNVwiIHJ4PVwiMS4yXCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNOS41IDcuNWg1TTcgMTB2Mi44bDIuNSAyLjRNMTcgMTB2Mi44bC0yLjUgMi40XCIgLz5cbiAgICAgIDxjaXJjbGUgY3g9XCIxMlwiIGN5PVwiMTYuNVwiIHI9XCIwLjhcIiBmaWxsPVwiI2ZmOGM2YlwiIHN0cm9rZT1cIm5vbmVcIiAvPlxuICAgIDwvSWNvbkJhc2U+XG4gICksXG59O1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBIb21lMygpIHtcbiAgY29uc3QgW2FjdGl2ZUNhcGFiaWxpdHksIHNldEFjdGl2ZUNhcGFiaWxpdHldID0gdXNlU3RhdGUobnVsbCk7XG4gIGNvbnN0IHsgaXNDaGluZXNlIH0gPSB1c2VMYW5ndWFnZSgpO1xuXG4gIGNvbnN0IGJ1dHRvbnMgPSBbXG4gICAgeyBpZDogMSwgaWNvbjogJ0NvZycsIHR5cGU6ICdicmFuZCcsIHRvcDogMzA5LCBsZWZ0OiAxMjIsIHRpdGxlOiBpc0NoaW5lc2UgPyAnQ05DIOWKoOW3pScgOiAnQ05DIE1hY2hpbmluZycsIGRlc2M6IGlzQ2hpbmVzZSA/ICfkvp3nhaflsIjmoYjpnIDmsYLmj5Dkvpvnsr7lr4bliqDlt6XoiIflrqLoo73ljJboo73pgKDmlK/mj7TjgIInIDogJ1ByZWNpc2lvbiBtYWNoaW5pbmcgYW5kIGN1c3RvbSBtYW51ZmFjdHVyaW5nIHRhaWxvcmVkIHRvIHByb2plY3QgcmVxdWlyZW1lbnRzLicsIGNhdGVnb3J5OiBpc0NoaW5lc2UgPyAn6KO96YCg5pyN5YuZJyA6ICdNYW51ZmFjdHVyaW5nJyB9LFxuICAgIHsgaWQ6IDIsIGljb246ICdGYWN0b3J5JywgdHlwZTogJ2JyYW5kJywgdG9wOiAzMjksIGxlZnQ6IDIwNiwgdGl0bGU6IGlzQ2hpbmVzZSA/ICdPRU0g55Sf55SiJyA6ICdPRU0gUHJvZHVjdGlvbicsIGRlc2M6IGlzQ2hpbmVzZSA/ICfljZTliqnlk4HniYzoiIfkvIHmpa3pgLLooYzlvYjmgKfnmoQgT0VNIOiIh+WnlOiol+ijvemAoOWQiOS9nOOAgicgOiAnRmxleGlibGUgT0VNIGFuZCBjb250cmFjdCBtYW51ZmFjdHVyaW5nIHN1cHBvcnQgZm9yIGJ1c2luZXNzIHBhcnRuZXJzLicsIGNhdGVnb3J5OiBpc0NoaW5lc2UgPyAn55Sf55Si5pSv5o+0JyA6ICdQcm9kdWN0aW9uJyB9LFxuICAgIHsgaWQ6IDMsIGljb246ICdIYW1tZXInLCB0eXBlOiAnYnJhbmQnLCB0b3A6IDM4OSwgbGVmdDogMzAwLCB0aXRsZTogaXNDaGluZXNlID8gJ+mHkeWxrOWKoOW3pScgOiAnTWV0YWwgRmFicmljYXRpb24nLCBkZXNjOiBpc0NoaW5lc2UgPyAn5o+Q5L6b5bel5qWt5oeJ55So5omA6ZyA55qE6YeR5bGs5Yqg5bel44CB6Zu25Lu26KO95L2c6IiH6KO956iL5Y2U6Kq/44CCJyA6ICdDdXN0b20gbWV0YWwgcHJvY2Vzc2luZyBhbmQgZmFicmljYXRpb24gZm9yIGluZHVzdHJpYWwgYXBwbGljYXRpb25zLicsIGNhdGVnb3J5OiBpc0NoaW5lc2UgPyAn6KO96YCg5pyN5YuZJyA6ICdNYW51ZmFjdHVyaW5nJyB9LFxuICAgIHsgaWQ6IDQsIGljb246ICdXcmVuY2gnLCB0eXBlOiAnYnJhbmQnLCB0b3A6IDYyNCwgbGVmdDogMTU1LCB0aXRsZTogaXNDaGluZXNlID8gJ+ayu+WFt+ioreioiCcgOiAnSmlnICYgRml4dHVyZSBEZXNpZ24nLCBkZXNjOiBpc0NoaW5lc2UgPyAn6KaP5YqD5a6i6KO95rK75YW36IiH5aS+5YW377yM5Y2U5Yqp5o+Q5Y2H55Sf55Si5pWI546H6IiH5Yqg5bel57K+5bqm44CCJyA6ICdDdXN0b20gamlnIGFuZCBmaXh0dXJlIHNvbHV0aW9ucyB0byBpbXByb3ZlIHByb2R1Y3Rpdml0eSBhbmQgcHJlY2lzaW9uLicsIGNhdGVnb3J5OiBpc0NoaW5lc2UgPyAn5bel6KOd5rK75YW3JyA6ICdUb29saW5nJyB9LFxuICAgIHsgaWQ6IDUsIGljb246ICdNYWNoaW5lJywgdHlwZTogJ2JyYW5kJywgdG9wOiA2NjAsIGxlZnQ6IDI0OCwgdGl0bGU6IGlzQ2hpbmVzZSA/ICfoqK3lgpnmlrnmoYgnIDogJ01hY2hpbmUgU29sdXRpb25zJywgZGVzYzogaXNDaGluZXNlID8gJ+aVtOWQiOW3pealreioreWCmeOAgeapn+ani+ioreioiOiIh+WuouijveWMluapn+WPsOaHieeUqOmcgOaxguOAgicgOiAnSW5kdXN0cmlhbCBtYWNoaW5lcnkgZGV2ZWxvcG1lbnQgYW5kIGN1c3RvbWl6ZWQgZXF1aXBtZW50IGludGVncmF0aW9uLicsIGNhdGVnb3J5OiBpc0NoaW5lc2UgPyAn6Ieq5YuV5YyWJyA6ICdBdXRvbWF0aW9uJyB9LFxuICAgIHsgaWQ6IDYsIGljb246ICdDb25zdWx0YXRpb24nLCB0eXBlOiAnYnJhbmQnLCB0b3A6IDMyOSwgbGVmdDogMTA2NSwgdGl0bGU6IGlzQ2hpbmVzZSA/ICfmioDooZPoq67oqaInIDogJ1RlY2huaWNhbCBDb25zdWx0YXRpb24nLCBkZXNjOiBpc0NoaW5lc2UgPyAn6Yed5bCN6KO96YCg5Y+v6KGM5oCn44CB5p2Q5paZ6YG45pOH6IiH5bCI5qGI6KaP5YqD5o+Q5L6b5oqA6KGT5bu66K2w44CCJyA6ICdFbmdpbmVlcmluZyBjb25zdWx0YXRpb24gZm9yIG1hbnVmYWN0dXJpbmcgZmVhc2liaWxpdHkgYW5kIHByb2plY3QgcGxhbm5pbmcuJywgY2F0ZWdvcnk6IGlzQ2hpbmVzZSA/ICflt6XnqIvmlK/mj7QnIDogJ0VuZ2luZWVyaW5nJyB9LFxuICAgIHtcbiAgICAgIGlkOiA3LFxuICAgICAgaWNvbjogJ051dCcsXG4gICAgICB0eXBlOiAnYnJhbmQnLFxuICAgICAgdG9wOiA1NjUsXG4gICAgICBsZWZ0OiAxMzI4LFxuICAgICAgdGl0bGU6IGlzQ2hpbmVzZSA/ICfkupTph5Hpm7bku7YnIDogJ0hhcmR3YXJlIENvbXBvbmVudHMnLFxuICAgICAgZGVzYzogaXNDaGluZXNlID8gJ+WNlOWKqeaOoeizvOW3pealreS6lOmHkeOAgeapn+ani+mbtuS7tuiIh+WuouijveWMlumFjeS7tuOAgicgOiAnU3VwcGx5aW5nIGluZHVzdHJpYWwgaGFyZHdhcmUgYW5kIG1lY2hhbmljYWwgY29tcG9uZW50cy4nLFxuICAgICAgY2F0ZWdvcnk6IGlzQ2hpbmVzZSA/ICfmjqHos7zkvpvmh4knIDogJ1N1cHBseScsXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogOCxcbiAgICAgIGljb246ICdDcHUnLFxuICAgICAgdHlwZTogJ2JyYW5kJyxcbiAgICAgIHRvcDogNjYwLFxuICAgICAgbGVmdDogMTA5NixcbiAgICAgIHRpdGxlOiBpc0NoaW5lc2UgPyAn6Zu75a2Q6Zu25Lu2JyA6ICdFbGVjdHJvbmljIFBhcnRzJyxcbiAgICAgIGRlc2M6IGlzQ2hpbmVzZSA/ICfmj5Dkvpvpm7vlrZDlhYPku7boiIflrqLoo73pm7bku7bnmoTlj6/pnaDmjqHos7zoiIfkvpvmh4nljZToqr/jgIInIDogJ1JlbGlhYmxlIHNvdXJjaW5nIG9mIGVsZWN0cm9uaWMgYW5kIGN1c3RvbWl6ZWQgY29tcG9uZW50cy4nLFxuICAgICAgY2F0ZWdvcnk6IGlzQ2hpbmVzZSA/ICfmjqHos7zkvpvmh4knIDogJ1N1cHBseScsXG4gICAgfSxcbiAgICB7IGlkOiA5LCBpY29uOiAnQ29kZScsIHR5cGU6ICdicmFuZCcsIHRvcDogMjkyLCBsZWZ0OiAxMTgxLCB0aXRsZTogaXNDaGluZXNlID8gJ+e2suermemWi+eZvCcgOiAnV2Vic2l0ZSBEZXZlbG9wbWVudCcsIGRlc2M6IGlzQ2hpbmVzZSA/ICfkvp3nhafkvIHmpa3lvaLosaHoiIfmnI3li5nlhaflrrnmiZPpgKDlsIjmpa3ntrLnq5noiIfmlbjkvY3lkYjnj77jgIInIDogJ1Byb2Zlc3Npb25hbCB3ZWJzaXRlIHNvbHV0aW9ucyBmb3IgbW9kZXJuIGJ1c2luZXNzIG5lZWRzLicsIGNhdGVnb3J5OiBpc0NoaW5lc2UgPyAn5pW45L2N5pyN5YuZJyA6ICdEaWdpdGFsJyB9LFxuICAgIHsgaWQ6IDEwLCBpY29uOiAnTmV0d29yaycsIHR5cGU6ICdicmFuZCcsIHRvcDogNDkzLCBsZWZ0OiAxMjcyLCB0aXRsZTogaXNDaGluZXNlID8gJ+Wuouijveezu+e1sScgOiAnQ3VzdG9tIFN5c3RlbXMnLCBkZXNjOiBpc0NoaW5lc2UgPyAn5bu656uL56ym5ZCI54ef6YGL5rWB56iL55qE5pW45L2N5bel5YW36IiH5a6i6KO95YyW57O757Wx44CCJyA6ICdUYWlsb3JlZCBkaWdpdGFsIHRvb2xzIGFuZCBzeXN0ZW1zIHRvIHN1cHBvcnQgYnVzaW5lc3Mgb3BlcmF0aW9ucy4nLCBjYXRlZ29yeTogaXNDaGluZXNlID8gJ+aVuOS9jeacjeWLmScgOiAnRGlnaXRhbCcgfSxcbiAgXTtcblxuICByZXR1cm4gKFxuICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cImhvbWUzLWNvbnRhaW5lclwiPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkLW92ZXJsYXlcIj48L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxvYXRpbmctaWNvbnMtbGF5ZXJcIj5cbiAgICAgICAge2J1dHRvbnMubWFwKChidG4pID0+IHtcbiAgICAgICAgICBjb25zdCBJY29uQ29tcG9uZW50ID0gSWNvbnNbYnRuLmljb25dO1xuICAgICAgICAgIGNvbnN0IGlzUmlnaHRTaWRlID0gYnRuLmxlZnQgPiA3MjA7XG5cbiAgICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdlxuICAgICAgICAgICAgICBrZXk9e2J0bi5pZH1cbiAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgZmxvYXRpbmctd3JhcHBlciBzZXJ2aWNlLSR7YnRuLmlkfSAke2lzUmlnaHRTaWRlID8gJ3JpZ2h0LXNpZGUnIDogJ2xlZnQtc2lkZSd9ICR7YWN0aXZlQ2FwYWJpbGl0eT8uaWQgPT09IGJ0bi5pZCA/ICdpcy1hY3RpdmUnIDogJyd9YH1cbiAgICAgICAgICAgICAgc3R5bGU9e3sgdG9wOiBgJHtidG4udG9wfXB4YCwgbGVmdDogYCR7YnRuLmxlZnR9cHhgIH19XG4gICAgICAgICAgICAgIG9uTW91c2VFbnRlcj17KCkgPT4gc2V0QWN0aXZlQ2FwYWJpbGl0eShidG4pfVxuICAgICAgICAgICAgICBvbk1vdXNlTGVhdmU9eygpID0+IHNldEFjdGl2ZUNhcGFiaWxpdHkobnVsbCl9XG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgIDxidXR0b25cbiAgICAgICAgICAgICAgICBjbGFzc05hbWU9e2BpY29uLWJ0biAke2J0bi50eXBlID09PSAnYnJhbmQnID8gJ2JyYW5kLXNoYWRvdycgOiAnJ31gfVxuICAgICAgICAgICAgICAgIHR5cGU9XCJidXR0b25cIlxuICAgICAgICAgICAgICAgIGFyaWEtbGFiZWw9e2J0bi50aXRsZX1cbiAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgIHtJY29uQ29tcG9uZW50ICYmIDxJY29uQ29tcG9uZW50IC8+fVxuICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICk7XG4gICAgICAgIH0pfVxuICAgICAgICB7YWN0aXZlQ2FwYWJpbGl0eSAmJiAoXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjYXBhYmlsaXR5LWdsYXNzLWNhcmRcIiBrZXk9e2FjdGl2ZUNhcGFiaWxpdHkuaWR9PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjYXJkLWNvbnRlbnRcIj5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiY2F0ZWdvcnktYmFkZ2VcIj57YWN0aXZlQ2FwYWJpbGl0eS5jYXRlZ29yeX08L3NwYW4+XG4gICAgICAgICAgICAgIDxoMz57YWN0aXZlQ2FwYWJpbGl0eS50aXRsZX08L2gzPlxuICAgICAgICAgICAgICA8cD57YWN0aXZlQ2FwYWJpbGl0eS5kZXNjfTwvcD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICApfVxuICAgICAgPC9kaXY+XG5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGVudC13cmFwcGVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jb250ZW50XCI+XG4gICAgICAgICAgPHAgY2xhc3NOYW1lPVwic3ViLWNhcHRpb25cIj57aXNDaGluZXNlID8gJ+aguOW/g+acjeWLmeiDveWKmycgOiAnT1VSIENBUEFCSUxJVElFUyd9PC9wPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZGVjby1saW5lXCI+PC9kaXY+XG4gICAgICAgICAgPGgyIGNsYXNzTmFtZT1cIm1haW4tdGl0bGVcIj5cbiAgICAgICAgICAgIHtpc0NoaW5lc2UgPyAoXG4gICAgICAgICAgICAgIDw+XG4gICAgICAgICAgICAgICAg5L6d5pOa5oKo55qE6ZyA5rGC77yM5omT6YCg5bCI5bGs6Kej5rG65pa55qGIXG4gICAgICAgICAgICAgIDwvPlxuICAgICAgICAgICAgKSA6IChcbiAgICAgICAgICAgICAgPD5cbiAgICAgICAgICAgICAgICBTb2x1dGlvbnMgRGVzaWduZWQgQXJvdW5kPGJyIC8+WW91ciBCdXNpbmVzcyBOZWVkc1xuICAgICAgICAgICAgICA8Lz5cbiAgICAgICAgICAgICl9XG4gICAgICAgICAgPC9oMj5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaW1hZ2UtY29udGFpbmVyXCI+XG4gICAgICAgICAgPHN2ZyBjbGFzc05hbWU9XCJhcm0tYXJ0XCIgdmlld0JveD1cIjAgMCA3MDIgNDIyXCIgcm9sZT1cImltZ1wiIGFyaWEtbGFiZWw9XCJSb2JvdGljIEFybVwiPlxuICAgICAgICAgICAgPGRlZnM+XG4gICAgICAgICAgICAgIDxjbGlwUGF0aCBpZD1cImhvbWUzRGlzc29sdmVGaWVsZFwiPlxuICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PVwiMzUxXCIgY3k9XCIyMjFcIiByeD1cIjMxNFwiIHJ5PVwiMTgzXCIgLz5cbiAgICAgICAgICAgICAgPC9jbGlwUGF0aD5cbiAgICAgICAgICAgICAgPGZpbHRlciBpZD1cImhvbWUzRGlzc29sdmVOb2lzZVwiIHg9XCItMjUlXCIgeT1cIi0zNSVcIiB3aWR0aD1cIjE1MCVcIiBoZWlnaHQ9XCIxNzAlXCI+XG4gICAgICAgICAgICAgICAgPGZlVHVyYnVsZW5jZSB0eXBlPVwiZnJhY3RhbE5vaXNlXCIgYmFzZUZyZXF1ZW5jeT1cIjAuMDc1IDAuMTJcIiBudW1PY3RhdmVzPVwiNlwiIHNlZWQ9XCI0M1wiIHJlc3VsdD1cIm5vaXNlXCIgLz5cbiAgICAgICAgICAgICAgICA8ZmVDb21wb25lbnRUcmFuc2ZlciBpbj1cIm5vaXNlXCIgcmVzdWx0PVwiY3J1bmNoXCI+XG4gICAgICAgICAgICAgICAgICA8ZmVGdW5jUiB0eXBlPVwidGFibGVcIiB0YWJsZVZhbHVlcz1cIjAgMCAwIDAgMC4zOCAwLjg4IDEgMVwiIC8+XG4gICAgICAgICAgICAgICAgICA8ZmVGdW5jRyB0eXBlPVwidGFibGVcIiB0YWJsZVZhbHVlcz1cIjAgMCAwIDAgMC4zNiAwLjg2IDEgMVwiIC8+XG4gICAgICAgICAgICAgICAgICA8ZmVGdW5jQiB0eXBlPVwidGFibGVcIiB0YWJsZVZhbHVlcz1cIjAgMCAwIDAgMC40IDAuOSAxIDFcIiAvPlxuICAgICAgICAgICAgICAgIDwvZmVDb21wb25lbnRUcmFuc2Zlcj5cbiAgICAgICAgICAgICAgICA8ZmVDb2xvck1hdHJpeCBpbj1cImNydW5jaFwiIHR5cGU9XCJzYXR1cmF0ZVwiIHZhbHVlcz1cIjBcIiByZXN1bHQ9XCJtb25vXCIgLz5cbiAgICAgICAgICAgICAgICA8ZmVEaXNwbGFjZW1lbnRNYXAgaW49XCJtb25vXCIgaW4yPVwibm9pc2VcIiBzY2FsZT1cIjE4XCIgeENoYW5uZWxTZWxlY3Rvcj1cIlJcIiB5Q2hhbm5lbFNlbGVjdG9yPVwiR1wiIC8+XG4gICAgICAgICAgICAgIDwvZmlsdGVyPlxuICAgICAgICAgICAgICA8ZmlsdGVyIGlkPVwiaG9tZTNFZGdlV2FycFwiIHg9XCItMjUlXCIgeT1cIi0zNSVcIiB3aWR0aD1cIjE1MCVcIiBoZWlnaHQ9XCIxNzAlXCI+XG4gICAgICAgICAgICAgICAgPGZlVHVyYnVsZW5jZSB0eXBlPVwiZnJhY3RhbE5vaXNlXCIgYmFzZUZyZXF1ZW5jeT1cIjAuMDMyIDAuMDY2XCIgbnVtT2N0YXZlcz1cIjVcIiBzZWVkPVwiMTlcIiByZXN1bHQ9XCJ3YXJwTm9pc2VcIiAvPlxuICAgICAgICAgICAgICAgIDxmZURpc3BsYWNlbWVudE1hcCBpbj1cIlNvdXJjZUdyYXBoaWNcIiBpbjI9XCJ3YXJwTm9pc2VcIiBzY2FsZT1cIjM0XCIgeENoYW5uZWxTZWxlY3Rvcj1cIlJcIiB5Q2hhbm5lbFNlbGVjdG9yPVwiR1wiIC8+XG4gICAgICAgICAgICAgIDwvZmlsdGVyPlxuICAgICAgICAgICAgICA8bWFzayBpZD1cImhvbWUzQXJtTWFza1wiIG1hc2tVbml0cz1cInVzZXJTcGFjZU9uVXNlXCI+XG4gICAgICAgICAgICAgICAgPHJlY3Qgd2lkdGg9XCI3MDJcIiBoZWlnaHQ9XCI0MjJcIiBmaWxsPVwiYmxhY2tcIiAvPlxuICAgICAgICAgICAgICAgIDxnIGNsaXBQYXRoPVwidXJsKCNob21lM0Rpc3NvbHZlRmllbGQpXCI+XG4gICAgICAgICAgICAgICAgICA8cmVjdCB4PVwiMzRcIiB5PVwiMzhcIiB3aWR0aD1cIjYzNFwiIGhlaWdodD1cIjM1NlwiIGZpbGw9XCIjYjJiMmIyXCIgZmlsdGVyPVwidXJsKCNob21lM0Rpc3NvbHZlTm9pc2UpXCIgb3BhY2l0eT1cIjAuOTZcIiAvPlxuICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9XCIzNTFcIiBjeT1cIjIyMVwiIHJ4PVwiMjkyXCIgcnk9XCIxNjZcIiBmaWxsPVwiI2Q0ZDRkNFwiIGZpbHRlcj1cInVybCgjaG9tZTNFZGdlV2FycClcIiBvcGFjaXR5PVwiMC43NFwiIC8+XG4gICAgICAgICAgICAgICAgPC9nPlxuICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PVwiMzUxXCIgY3k9XCIyMjBcIiByeD1cIjI1NFwiIHJ5PVwiMTM4XCIgZmlsbD1cIndoaXRlXCIgLz5cbiAgICAgICAgICAgICAgICA8ZyBmaWxsPVwid2hpdGVcIiBvcGFjaXR5PVwiMC43OFwiPlxuICAgICAgICAgICAgICAgICAgPHJlY3QgeD1cIjU0XCIgeT1cIjE5OFwiIHdpZHRoPVwiOTRcIiBoZWlnaHQ9XCIxMFwiIHJ4PVwiM1wiIHRyYW5zZm9ybT1cInJvdGF0ZSgtNyAxMDEgMjAzKVwiIC8+XG4gICAgICAgICAgICAgICAgICA8cmVjdCB4PVwiOTNcIiB5PVwiMTQ0XCIgd2lkdGg9XCI2MFwiIGhlaWdodD1cIjlcIiByeD1cIjNcIiB0cmFuc2Zvcm09XCJyb3RhdGUoMTAgMTIzIDE0OClcIiAvPlxuICAgICAgICAgICAgICAgICAgPHJlY3QgeD1cIjEyOVwiIHk9XCIyOTZcIiB3aWR0aD1cIjg0XCIgaGVpZ2h0PVwiMTBcIiByeD1cIjNcIiB0cmFuc2Zvcm09XCJyb3RhdGUoMTIgMTcxIDMwMSlcIiAvPlxuICAgICAgICAgICAgICAgICAgPHJlY3QgeD1cIjIxMFwiIHk9XCI3M1wiIHdpZHRoPVwiNzRcIiBoZWlnaHQ9XCI5XCIgcng9XCIzXCIgdHJhbnNmb3JtPVwicm90YXRlKC04IDI0NyA3OClcIiAvPlxuICAgICAgICAgICAgICAgICAgPHJlY3QgeD1cIjM4M1wiIHk9XCI2OVwiIHdpZHRoPVwiODJcIiBoZWlnaHQ9XCI5XCIgcng9XCIzXCIgdHJhbnNmb3JtPVwicm90YXRlKDggNDI0IDc0KVwiIC8+XG4gICAgICAgICAgICAgICAgICA8cmVjdCB4PVwiNTEyXCIgeT1cIjExNlwiIHdpZHRoPVwiODRcIiBoZWlnaHQ9XCIxMFwiIHJ4PVwiM1wiIHRyYW5zZm9ybT1cInJvdGF0ZSgtOSA1NTQgMTIxKVwiIC8+XG4gICAgICAgICAgICAgICAgICA8cmVjdCB4PVwiNTc2XCIgeT1cIjIwNFwiIHdpZHRoPVwiODZcIiBoZWlnaHQ9XCIxMFwiIHJ4PVwiM1wiIHRyYW5zZm9ybT1cInJvdGF0ZSg1IDYxOSAyMDkpXCIgLz5cbiAgICAgICAgICAgICAgICAgIDxyZWN0IHg9XCI0OThcIiB5PVwiMzIyXCIgd2lkdGg9XCI4OFwiIGhlaWdodD1cIjEwXCIgcng9XCIzXCIgdHJhbnNmb3JtPVwicm90YXRlKDEyIDU0MiAzMjcpXCIgLz5cbiAgICAgICAgICAgICAgICAgIDxyZWN0IHg9XCIzMzVcIiB5PVwiMzY1XCIgd2lkdGg9XCIxMDhcIiBoZWlnaHQ9XCI5XCIgcng9XCIzXCIgdHJhbnNmb3JtPVwicm90YXRlKC00IDM4OSAzNzApXCIgLz5cbiAgICAgICAgICAgICAgICAgIDxyZWN0IHg9XCIyMDNcIiB5PVwiMzQxXCIgd2lkdGg9XCI4OFwiIGhlaWdodD1cIjlcIiByeD1cIjNcIiB0cmFuc2Zvcm09XCJyb3RhdGUoMTAgMjQ3IDM0NilcIiAvPlxuICAgICAgICAgICAgICAgIDwvZz5cbiAgICAgICAgICAgICAgICA8ZyBmaWxsPVwid2hpdGVcIiBvcGFjaXR5PVwiMC41MlwiPlxuICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD1cIjgzXCIgY3k9XCIxODFcIiByPVwiNVwiIC8+XG4gICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PVwiMTE5XCIgY3k9XCIyNTFcIiByPVwiNFwiIC8+XG4gICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PVwiMTYzXCIgY3k9XCIxMTFcIiByPVwiNFwiIC8+XG4gICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PVwiMjg4XCIgY3k9XCI2M1wiIHI9XCIzXCIgLz5cbiAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9XCI0OTZcIiBjeT1cIjg4XCIgcj1cIjRcIiAvPlxuICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD1cIjYyMVwiIGN5PVwiMTYyXCIgcj1cIjVcIiAvPlxuICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD1cIjYyN1wiIGN5PVwiMjY2XCIgcj1cIjVcIiAvPlxuICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD1cIjQ2M1wiIGN5PVwiMzYyXCIgcj1cIjVcIiAvPlxuICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD1cIjI3N1wiIGN5PVwiMzY0XCIgcj1cIjRcIiAvPlxuICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD1cIjE0MlwiIGN5PVwiMzIyXCIgcj1cIjRcIiAvPlxuICAgICAgICAgICAgICAgIDwvZz5cbiAgICAgICAgICAgICAgICA8ZyBmaWxsPVwiYmxhY2tcIiBvcGFjaXR5PVwiMC42MlwiPlxuICAgICAgICAgICAgICAgICAgPHJlY3QgeD1cIjM4XCIgeT1cIjIwOFwiIHdpZHRoPVwiNzRcIiBoZWlnaHQ9XCIxM1wiIHJ4PVwiM1wiIHRyYW5zZm9ybT1cInJvdGF0ZSg4IDc1IDIxNClcIiAvPlxuICAgICAgICAgICAgICAgICAgPHJlY3QgeD1cIjkyXCIgeT1cIjE0MlwiIHdpZHRoPVwiNThcIiBoZWlnaHQ9XCIxMFwiIHJ4PVwiM1wiIHRyYW5zZm9ybT1cInJvdGF0ZSgtMTIgMTIxIDE0NylcIiAvPlxuICAgICAgICAgICAgICAgICAgPHJlY3QgeD1cIjEyOFwiIHk9XCIzMTdcIiB3aWR0aD1cIjcwXCIgaGVpZ2h0PVwiMTJcIiByeD1cIjNcIiB0cmFuc2Zvcm09XCJyb3RhdGUoMTEgMTYzIDMyMylcIiAvPlxuICAgICAgICAgICAgICAgICAgPHJlY3QgeD1cIjIwNVwiIHk9XCI3OFwiIHdpZHRoPVwiNjBcIiBoZWlnaHQ9XCIxMFwiIHJ4PVwiM1wiIHRyYW5zZm9ybT1cInJvdGF0ZSg5IDIzNSA4MylcIiAvPlxuICAgICAgICAgICAgICAgICAgPHJlY3QgeD1cIjQzN1wiIHk9XCI3NlwiIHdpZHRoPVwiNjZcIiBoZWlnaHQ9XCIxMFwiIHJ4PVwiM1wiIHRyYW5zZm9ybT1cInJvdGF0ZSgtMTAgNDcwIDgxKVwiIC8+XG4gICAgICAgICAgICAgICAgICA8cmVjdCB4PVwiNTQ4XCIgeT1cIjExOVwiIHdpZHRoPVwiNzBcIiBoZWlnaHQ9XCIxMlwiIHJ4PVwiM1wiIHRyYW5zZm9ybT1cInJvdGF0ZSgxMyA1ODMgMTI1KVwiIC8+XG4gICAgICAgICAgICAgICAgICA8cmVjdCB4PVwiNTk1XCIgeT1cIjIxNFwiIHdpZHRoPVwiNzhcIiBoZWlnaHQ9XCIxM1wiIHJ4PVwiM1wiIHRyYW5zZm9ybT1cInJvdGF0ZSgtNiA2MzQgMjIwKVwiIC8+XG4gICAgICAgICAgICAgICAgICA8cmVjdCB4PVwiNTI0XCIgeT1cIjMxNVwiIHdpZHRoPVwiNzZcIiBoZWlnaHQ9XCIxM1wiIHJ4PVwiM1wiIHRyYW5zZm9ybT1cInJvdGF0ZSgtMTIgNTYyIDMyMSlcIiAvPlxuICAgICAgICAgICAgICAgICAgPHJlY3QgeD1cIjMyMVwiIHk9XCIzNjVcIiB3aWR0aD1cIjg4XCIgaGVpZ2h0PVwiMTJcIiByeD1cIjNcIiB0cmFuc2Zvcm09XCJyb3RhdGUoNSAzNjUgMzcxKVwiIC8+XG4gICAgICAgICAgICAgICAgICA8cmVjdCB4PVwiMTk3XCIgeT1cIjM0OFwiIHdpZHRoPVwiNjhcIiBoZWlnaHQ9XCIxMFwiIHJ4PVwiM1wiIHRyYW5zZm9ybT1cInJvdGF0ZSgtOCAyMzEgMzUzKVwiIC8+XG4gICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PVwiNzRcIiBjeT1cIjI1MlwiIHI9XCI3XCIgLz5cbiAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9XCI2MjZcIiBjeT1cIjE3OFwiIHI9XCI4XCIgLz5cbiAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9XCI1NzVcIiBjeT1cIjI5MlwiIHI9XCI3XCIgLz5cbiAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9XCIyODZcIiBjeT1cIjM2N1wiIHI9XCI2XCIgLz5cbiAgICAgICAgICAgICAgICA8L2c+XG4gICAgICAgICAgICAgIDwvbWFzaz5cbiAgICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPVwiaG9tZTNFZGdlR2xvd1wiIHgxPVwiMCVcIiB5MT1cIjAlXCIgeDI9XCIxMDAlXCIgeTI9XCIxMDAlXCI+XG4gICAgICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PVwiMCVcIiBzdG9wQ29sb3I9XCIjOGJlNmYzXCIgc3RvcE9wYWNpdHk9XCIwLjE2XCIgLz5cbiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9XCI1OCVcIiBzdG9wQ29sb3I9XCIjZmZmZmZmXCIgc3RvcE9wYWNpdHk9XCIwXCIgLz5cbiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9XCIxMDAlXCIgc3RvcENvbG9yPVwiIzdlY2JkOFwiIHN0b3BPcGFjaXR5PVwiMC4xMlwiIC8+XG4gICAgICAgICAgICAgIDwvbGluZWFyR3JhZGllbnQ+XG4gICAgICAgICAgICA8L2RlZnM+XG4gICAgICAgICAgICA8aW1hZ2VcbiAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiYXJtLXBob3RvXCJcbiAgICAgICAgICAgICAgaHJlZj17cm9ib3RpY0FybX1cbiAgICAgICAgICAgICAgd2lkdGg9XCI3MDJcIlxuICAgICAgICAgICAgICBoZWlnaHQ9XCI0MjJcIlxuICAgICAgICAgICAgICBwcmVzZXJ2ZUFzcGVjdFJhdGlvPVwieE1pZFlNaWQgc2xpY2VcIlxuICAgICAgICAgICAgICBtYXNrPVwidXJsKCNob21lM0FybU1hc2spXCJcbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgICA8ZWxsaXBzZVxuICAgICAgICAgICAgICBjeD1cIjM1MVwiXG4gICAgICAgICAgICAgIGN5PVwiMjIxXCJcbiAgICAgICAgICAgICAgcng9XCIyOTJcIlxuICAgICAgICAgICAgICByeT1cIjE2NlwiXG4gICAgICAgICAgICAgIGZpbGw9XCJ1cmwoI2hvbWUzRWRnZUdsb3cpXCJcbiAgICAgICAgICAgICAgbWFzaz1cInVybCgjaG9tZTNBcm1NYXNrKVwiXG4gICAgICAgICAgICAvPlxuICAgICAgICAgIDwvc3ZnPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgIDwvc2VjdGlvbj5cbiAgKTtcbn1cbiJdLCJuYW1lcyI6WyJSZWFjdCIsInVzZVN0YXRlIiwicm9ib3RpY0FybSIsInVzZUxhbmd1YWdlIiwiSWNvbkJhc2UiLCJjaGlsZHJlbiIsInN2ZyIsInZpZXdCb3giLCJmaWxsIiwic3Ryb2tlIiwic3Ryb2tlV2lkdGgiLCJzdHJva2VMaW5lY2FwIiwic3Ryb2tlTGluZWpvaW4iLCJhcmlhLWhpZGRlbiIsIkljb25zIiwiQ29nIiwicGF0aCIsImQiLCJjaXJjbGUiLCJjeCIsImN5IiwiciIsIkZhY3RvcnkiLCJIYW1tZXIiLCJXcmVuY2giLCJNYWNoaW5lIiwiQ29uc3VsdGF0aW9uIiwiTnV0IiwiQ3B1IiwicmVjdCIsIngiLCJ5Iiwid2lkdGgiLCJoZWlnaHQiLCJyeCIsIkNvZGUiLCJOZXR3b3JrIiwiSG9tZTMiLCJhY3RpdmVDYXBhYmlsaXR5Iiwic2V0QWN0aXZlQ2FwYWJpbGl0eSIsImlzQ2hpbmVzZSIsImJ1dHRvbnMiLCJpZCIsImljb24iLCJ0eXBlIiwidG9wIiwibGVmdCIsInRpdGxlIiwiZGVzYyIsImNhdGVnb3J5Iiwic2VjdGlvbiIsImNsYXNzTmFtZSIsImRpdiIsIm1hcCIsImJ0biIsIkljb25Db21wb25lbnQiLCJpc1JpZ2h0U2lkZSIsInN0eWxlIiwib25Nb3VzZUVudGVyIiwib25Nb3VzZUxlYXZlIiwiYnV0dG9uIiwiYXJpYS1sYWJlbCIsInNwYW4iLCJoMyIsInAiLCJoMiIsImJyIiwicm9sZSIsImRlZnMiLCJjbGlwUGF0aCIsImVsbGlwc2UiLCJyeSIsImZpbHRlciIsImZlVHVyYnVsZW5jZSIsImJhc2VGcmVxdWVuY3kiLCJudW1PY3RhdmVzIiwic2VlZCIsInJlc3VsdCIsImZlQ29tcG9uZW50VHJhbnNmZXIiLCJpbiIsImZlRnVuY1IiLCJ0YWJsZVZhbHVlcyIsImZlRnVuY0ciLCJmZUZ1bmNCIiwiZmVDb2xvck1hdHJpeCIsInZhbHVlcyIsImZlRGlzcGxhY2VtZW50TWFwIiwiaW4yIiwic2NhbGUiLCJ4Q2hhbm5lbFNlbGVjdG9yIiwieUNoYW5uZWxTZWxlY3RvciIsIm1hc2siLCJtYXNrVW5pdHMiLCJnIiwib3BhY2l0eSIsInRyYW5zZm9ybSIsImxpbmVhckdyYWRpZW50IiwieDEiLCJ5MSIsIngyIiwieTIiLCJzdG9wIiwib2Zmc2V0Iiwic3RvcENvbG9yIiwic3RvcE9wYWNpdHkiLCJpbWFnZSIsImhyZWYiLCJwcmVzZXJ2ZUFzcGVjdFJhdGlvIl0sIm1hcHBpbmdzIjoiOztBQUFBLE9BQU9BLFNBQVNDLFFBQVEsUUFBUSxRQUFRO0FBQ3hDLE9BQU8sZUFBZTtBQUN0QixPQUFPQyxnQkFBZ0IsMEJBQTBCO0FBQ2pELFNBQVNDLFdBQVcsUUFBUSwwQkFBMEI7QUFFdEQsTUFBTUMsV0FBVyxDQUFDLEVBQUVDLFFBQVEsRUFBRSxpQkFDNUIsUUFBQ0M7UUFBSUMsU0FBUTtRQUFZQyxNQUFLO1FBQU9DLFFBQU87UUFBZUMsYUFBWTtRQUFPQyxlQUFjO1FBQVFDLGdCQUFlO1FBQVFDLGVBQVk7a0JBQ3BJUjs7Ozs7O0tBRkNEO0FBTU4sTUFBTVUsUUFBUTtJQUNaQyxLQUFLLGtCQUNILFFBQUNYOzs4QkFDQyxRQUFDWTtvQkFBS0MsR0FBRTs7Ozs7OzhCQUNSLFFBQUNEO29CQUFLQyxHQUFFOzs7Ozs7OEJBQ1IsUUFBQ0Q7b0JBQUtDLEdBQUU7Ozs7Ozs4QkFDUixRQUFDQztvQkFBT0MsSUFBRztvQkFBS0MsSUFBRztvQkFBT0MsR0FBRTs7Ozs7OzhCQUM1QixRQUFDTDtvQkFBS0MsR0FBRTtvQkFBd0RSLFFBQU87Ozs7Ozs7Ozs7OztJQUczRWEsU0FBUyxrQkFDUCxRQUFDbEI7OzhCQUNDLFFBQUNZO29CQUFLQyxHQUFFOzs7Ozs7OEJBQ1IsUUFBQ0Q7b0JBQUtDLEdBQUU7Ozs7Ozs4QkFDUixRQUFDRDtvQkFBS0MsR0FBRTs7Ozs7OzhCQUNSLFFBQUNE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RCxRQUFDbEU7NERBQUtDLEdBQUU7NERBQU1DLEdBQUU7NERBQU1DLE9BQU07NERBQUtDLFFBQU87NERBQUtDLElBQUc7NERBQUk2RCxXQUFVOzs7Ozs7c0VBQzlELFFBQUNsRTs0REFBS0MsR0FBRTs0REFBTUMsR0FBRTs0REFBS0MsT0FBTTs0REFBS0MsUUFBTzs0REFBS0MsSUFBRzs0REFBSTZELFdBQVU7Ozs7OztzRUFDN0QsUUFBQ2xFOzREQUFLQyxHQUFFOzREQUFNQyxHQUFFOzREQUFLQyxPQUFNOzREQUFLQyxRQUFPOzREQUFLQyxJQUFHOzREQUFJNkQsV0FBVTs7Ozs7O3NFQUM3RCxRQUFDbEU7NERBQUtDLEdBQUU7NERBQU1DLEdBQUU7NERBQU1DLE9BQU07NERBQUtDLFFBQU87NERBQUtDLElBQUc7NERBQUk2RCxXQUFVOzs7Ozs7c0VBQzlELFFBQUNsRTs0REFBS0MsR0FBRTs0REFBTUMsR0FBRTs0REFBTUMsT0FBTTs0REFBS0MsUUFBTzs0REFBS0MsSUFBRzs0REFBSTZELFdBQVU7Ozs7OztzRUFDOUQsUUFBQ2xFOzREQUFLQyxHQUFFOzREQUFNQyxHQUFFOzREQUFNQyxPQUFNOzREQUFLQyxRQUFPOzREQUFLQyxJQUFHOzREQUFJNkQsV0FBVTs7Ozs7O3NFQUM5RCxRQUFDbEU7NERBQUtDLEdBQUU7NERBQU1DLEdBQUU7NERBQU1DLE9BQU07NERBQUtDLFFBQU87NERBQUtDLElBQUc7NERBQUk2RCxXQUFVOzs7Ozs7c0VBQzlELFFBQUNsRTs0REFBS0MsR0FBRTs0REFBTUMsR0FBRTs0REFBTUMsT0FBTTs0REFBS0MsUUFBTzs0REFBS0MsSUFBRzs0REFBSTZELFdBQVU7Ozs7OztzRUFDOUQsUUFBQzdFOzREQUFPQyxJQUFHOzREQUFLQyxJQUFHOzREQUFNQyxHQUFFOzs7Ozs7c0VBQzNCLFFBQUNIOzREQUFPQyxJQUFHOzREQUFNQyxJQUFHOzREQUFNQyxHQUFFOzs7Ozs7c0VBQzVCLFFBQUNIOzREQUFPQyxJQUFHOzREQUFNQyxJQUFHOzREQUFNQyxHQUFFOzs7Ozs7c0VBQzVCLFFBQUNIOzREQUFPQyxJQUFHOzREQUFNQyxJQUFHOzREQUFNQyxHQUFFOzs7Ozs7Ozs7Ozs7Ozs7Ozs7c0RBR2hDLFFBQUMyRTs0Q0FBZXRELElBQUc7NENBQWdCdUQsSUFBRzs0Q0FBS0MsSUFBRzs0Q0FBS0MsSUFBRzs0Q0FBT0MsSUFBRzs7OERBQzlELFFBQUNDO29EQUFLQyxRQUFPO29EQUFLQyxXQUFVO29EQUFVQyxhQUFZOzs7Ozs7OERBQ2xELFFBQUNIO29EQUFLQyxRQUFPO29EQUFNQyxXQUFVO29EQUFVQyxhQUFZOzs7Ozs7OERBQ25ELFFBQUNIO29EQUFLQyxRQUFPO29EQUFPQyxXQUFVO29EQUFVQyxhQUFZOzs7Ozs7Ozs7Ozs7Ozs7Ozs7OENBR3hELFFBQUNDO29DQUNDdEQsV0FBVTtvQ0FDVnVELE1BQU14RztvQ0FDTjhCLE9BQU07b0NBQ05DLFFBQU87b0NBQ1AwRSxxQkFBb0I7b0NBQ3BCaEIsTUFBSzs7Ozs7OzhDQUVQLFFBQUNyQjtvQ0FDQ25ELElBQUc7b0NBQ0hDLElBQUc7b0NBQ0hjLElBQUc7b0NBQ0hxQyxJQUFHO29DQUNIL0QsTUFBSztvQ0FDTG1GLE1BQUs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBT25CO0dBdkx3QnREOztRQUVBbEM7OztNQUZBa0MifQ==

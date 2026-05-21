@@ -1,0 +1,485 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/pages/ContactUs.jsx");import.meta.env = {"BASE_URL": "/", "DEV": true, "MODE": "development", "PROD": false, "SSR": false};import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=6b69b0b0"; const _jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"]; const _Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"];
+var _s = $RefreshSig$();
+import __vite__cjsImport1_react from "/node_modules/.vite/deps/react.js?v=83a14ab1"; const React = __vite__cjsImport1_react.__esModule ? __vite__cjsImport1_react.default : __vite__cjsImport1_react; const useRef = __vite__cjsImport1_react["useRef"]; const useState = __vite__cjsImport1_react["useState"];
+import emailjs from "/node_modules/.vite/deps/@emailjs_browser.js?v=0c5fd5e7";
+import "/src/pages/ContactUs.scss";
+import contactHero from "/src/assets/home1-1.png?import";
+import { useLanguage } from "/src/i18n/LanguageContext.jsx";
+const services = [
+    {
+        id: 'manufacturing',
+        name: {
+            en: 'Manufacturing',
+            zh: '製造服務'
+        },
+        note: {
+            en: 'Tell us about your machining, OEM production, fabrication, or industrial supply needs.',
+            zh: '請簡單說明您的製造加工、零件、治具或 OEM/ODM 需求。'
+        }
+    },
+    {
+        id: 'digital',
+        name: {
+            en: 'Digital Services',
+            zh: '數位服務'
+        },
+        note: {
+            en: 'Tell us about your website, digital workflow, or custom system requirements.',
+            zh: '請簡單說明您的網站、數位工具或自動化系統需求。'
+        }
+    },
+    {
+        id: 'construction',
+        name: {
+            en: 'Construction',
+            zh: '建材工程'
+        },
+        note: {
+            en: 'Tell us about your construction project, material sourcing, or site support requirements.',
+            zh: '請簡單說明您的建材工程、石材採購或專案需求。'
+        }
+    }
+];
+function ServiceIcon() {
+    return /*#__PURE__*/ _jsxDEV("svg", {
+        viewBox: "0 0 24 24",
+        "aria-hidden": "true",
+        children: /*#__PURE__*/ _jsxDEV("path", {
+            d: "M6.4 16.5c1.7-3.1 3.7-6.5 5.1-8.1.7-.8 1.5-.3 1.1.7l-2.3 6.1c-.3.9.5 1.4 1.2.8l2.6-2.5c.7-.6 1.6-.2 1.3.7l-.4 1.2c-.3.8.4 1.4 1.1.8l1.5-1.2"
+        }, void 0, false, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+            lineNumber: 37,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+        lineNumber: 36,
+        columnNumber: 5
+    }, this);
+}
+_c = ServiceIcon;
+export default function ContactUs() {
+    _s();
+    const { isChinese } = useLanguage();
+    const formRef = useRef(null);
+    const [selectedService, setSelectedService] = useState(null);
+    const [isSending, setIsSending] = useState(false);
+    const [submitMessage, setSubmitMessage] = useState('');
+    const selectedServiceName = selectedService?.name.en || '';
+    const sendEmail = async (event)=>{
+        event.preventDefault();
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+        if (!serviceId || !templateId || !publicKey) {
+            const message = isChinese ? 'EmailJS 環境變數尚未設定完整，請確認 .env 檔案。' : 'EmailJS environment variables are missing. Please check your .env file.';
+            setSubmitMessage(message);
+            alert(message);
+            return;
+        }
+        setIsSending(true);
+        setSubmitMessage('');
+        try {
+            await emailjs.sendForm(serviceId, templateId, formRef.current, {
+                publicKey
+            });
+            const message = isChinese ? '需求已送出，我們會盡快與您聯繫。' : 'Your inquiry has been sent. We will get in touch shortly.';
+            setSubmitMessage(message);
+            alert(message);
+            formRef.current?.reset();
+            setSelectedService(null);
+        } catch (error) {
+            console.error('EmailJS send failed:', error);
+            const message = isChinese ? '送出失敗，請稍後再試或直接與我們聯繫。' : 'Failed to send your inquiry. Please try again later or contact us directly.';
+            setSubmitMessage(message);
+            alert(message);
+        } finally{
+            setIsSending(false);
+        }
+    };
+    return /*#__PURE__*/ _jsxDEV("main", {
+        className: `contact-page ${isChinese ? 'contact-page-zh' : ''}`,
+        children: [
+            /*#__PURE__*/ _jsxDEV("section", {
+                className: "contact-hero",
+                style: {
+                    backgroundImage: `url(${contactHero})`
+                },
+                children: /*#__PURE__*/ _jsxDEV("div", {
+                    className: "contact-hero-content",
+                    children: [
+                        /*#__PURE__*/ _jsxDEV("p", {
+                            className: "caption",
+                            children: isChinese ? '商務洽詢' : 'GET IN TOUCH'
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 97,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("h1", {
+                            children: isChinese ? '讓我們了解您的需求' : 'Contact Us'
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 98,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("p", {
+                            className: "hero-copy",
+                            children: isChinese ? '無論您需要製造加工、材料採購、建築石材，或數位服務，我們都能協助您將需求落地。歡迎留下需求資訊，我們將盡快與您聯繫。' : 'Whether you need manufacturing, sourcing, construction materials, or digital solutions, our team is ready to help bring your ideas into reality. Share your requirements with us and we will get in touch shortly.'
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 99,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "service-pills",
+                            "aria-label": "Contact service categories",
+                            children: services.map((service)=>/*#__PURE__*/ _jsxDEV("button", {
+                                    className: selectedService?.id === service.id ? 'active' : '',
+                                    type: "button",
+                                    onClick: ()=>setSelectedService(selectedService?.id === service.id ? null : service),
+                                    children: [
+                                        !isChinese && /*#__PURE__*/ _jsxDEV(ServiceIcon, {}, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 113,
+                                            columnNumber: 32
+                                        }, this),
+                                        isChinese ? service.name.zh : service.name.en
+                                    ]
+                                }, service.id, true, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                    lineNumber: 107,
+                                    columnNumber: 15
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 105,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                    lineNumber: 96,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                lineNumber: 95,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDEV("section", {
+                className: "contact-form-section",
+                children: /*#__PURE__*/ _jsxDEV("form", {
+                    ref: formRef,
+                    className: "figma-contact-form",
+                    onSubmit: sendEmail,
+                    children: [
+                        /*#__PURE__*/ _jsxDEV("p", {
+                            className: `form-note ${selectedService ? '' : 'empty'}`,
+                            children: selectedService ? isChinese ? selectedService.note.zh : selectedService.note.en : 'Inquiry category note'
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 123,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("input", {
+                            type: "hidden",
+                            name: "service_type",
+                            value: selectedServiceName
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 128,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "form-row two",
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("label", {
+                                    children: [
+                                        /*#__PURE__*/ _jsxDEV("span", {
+                                            children: isChinese ? '聯絡人姓名' : 'Contact Person'
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 132,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("input", {
+                                            type: "text",
+                                            name: "user_name",
+                                            placeholder: isChinese ? '請輸入姓名' : 'Your Name',
+                                            required: true
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 133,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                    lineNumber: 131,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("label", {
+                                    children: [
+                                        /*#__PURE__*/ _jsxDEV("span", {
+                                            children: isChinese ? '公司名稱' : 'Company Name'
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 136,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("input", {
+                                            type: "text",
+                                            name: "company_name",
+                                            placeholder: isChinese ? '請輸入公司名稱' : 'Your Company Name'
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 137,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                    lineNumber: 135,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 130,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "form-row two",
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("label", {
+                                    className: "email-field",
+                                    children: [
+                                        /*#__PURE__*/ _jsxDEV("span", {
+                                            children: isChinese ? '電子郵件' : 'Email'
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 143,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("input", {
+                                            type: "email",
+                                            name: "user_email",
+                                            placeholder: isChinese ? '請輸入 Email' : 'Your Email Address',
+                                            required: true
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 144,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                    lineNumber: 142,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("label", {
+                                    className: "phone-field",
+                                    children: [
+                                        /*#__PURE__*/ _jsxDEV("span", {
+                                            children: isChinese ? '聯絡電話' : 'Phone / Mobile'
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 147,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("input", {
+                                            type: "tel",
+                                            name: "phone_number",
+                                            placeholder: isChinese ? '請輸入手機或市話' : 'Phone or mobile number'
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 148,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                    lineNumber: 146,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 141,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("label", {
+                            className: "message-field",
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    children: isChinese ? '需求說明' : 'Message'
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                    lineNumber: 153,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("textarea", {
+                                    name: "message",
+                                    rows: "4",
+                                    placeholder: isChinese ? '請簡單描述您的需求、產品規格或專案內容。' : 'Tell us about your project, product requirements, or service needs.',
+                                    required: true
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                    lineNumber: 154,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 152,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "consent-row",
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("label", {
+                                    children: [
+                                        /*#__PURE__*/ _jsxDEV("input", {
+                                            type: "checkbox",
+                                            name: "privacy_consent",
+                                            required: true
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 166,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("span", {
+                                            children: isChinese ? /*#__PURE__*/ _jsxDEV(_Fragment, {
+                                                children: "我同意隱私權政策，並同意接受聯繫。"
+                                            }, void 0, false) : /*#__PURE__*/ _jsxDEV(_Fragment, {
+                                                children: [
+                                                    "I agree to the ",
+                                                    /*#__PURE__*/ _jsxDEV("a", {
+                                                        href: "#",
+                                                        children: "Privacy Policy"
+                                                    }, void 0, false, {
+                                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                                        lineNumber: 171,
+                                                        columnNumber: 36
+                                                    }, this),
+                                                    " and consent to being contacted."
+                                                ]
+                                            }, void 0, true)
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 167,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                    lineNumber: 165,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("label", {
+                                    children: [
+                                        /*#__PURE__*/ _jsxDEV("input", {
+                                            type: "checkbox",
+                                            name: "business_updates"
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 176,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ _jsxDEV("span", {
+                                            children: isChinese ? '我願意接收服務與商務資訊。' : 'I would like to receive service and business updates.'
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                            lineNumber: 177,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                                    lineNumber: 175,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 164,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("button", {
+                            className: "submit-btn",
+                            type: "submit",
+                            disabled: isSending,
+                            children: isSending ? isChinese ? '送出中...' : 'Sending...' : isChinese ? '送出需求' : 'Send Inquiry'
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 181,
+                            columnNumber: 11
+                        }, this),
+                        submitMessage && /*#__PURE__*/ _jsxDEV("p", {
+                            className: "submit-status",
+                            children: submitMessage
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 186,
+                            columnNumber: 29
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("p", {
+                            className: "response-note",
+                            children: isChinese ? '我們通常會於 1-2 個工作天內回覆。' : 'We typically respond within 1-2 business days.'
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                            lineNumber: 187,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                    lineNumber: 122,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+                lineNumber: 121,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx",
+        lineNumber: 94,
+        columnNumber: 5
+    }, this);
+}
+_s(ContactUs, "qRD1y8oF2Rv6RvFAJag//GRJfus=", false, function() {
+    return [
+        useLanguage
+    ];
+});
+_c1 = ContactUs;
+var _c, _c1;
+$RefreshReg$(_c, "ServiceIcon");
+$RefreshReg$(_c1, "ContactUs");
+
+
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react-swc can't detect preamble. Something is wrong."
+    );
+  }
+
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) { return RefreshRuntime.register(type, "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/pages/ContactUs.jsx" + ' ' + id) }
+function $RefreshSig$() { return RefreshRuntime.createSignatureFunctionForTransform(); }
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNvbnRhY3RVcy5qc3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZVJlZiwgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgZW1haWxqcyBmcm9tICdAZW1haWxqcy9icm93c2VyJztcbmltcG9ydCAnLi9Db250YWN0VXMuc2Nzcyc7XG5pbXBvcnQgY29udGFjdEhlcm8gZnJvbSAnLi4vYXNzZXRzL2hvbWUxLTEucG5nJztcbmltcG9ydCB7IHVzZUxhbmd1YWdlIH0gZnJvbSAnLi4vaTE4bi9MYW5ndWFnZUNvbnRleHQnO1xuXG5jb25zdCBzZXJ2aWNlcyA9IFtcbiAge1xuICAgIGlkOiAnbWFudWZhY3R1cmluZycsXG4gICAgbmFtZTogeyBlbjogJ01hbnVmYWN0dXJpbmcnLCB6aDogJ+ijvemAoOacjeWLmScgfSxcbiAgICBub3RlOiB7XG4gICAgICBlbjogJ1RlbGwgdXMgYWJvdXQgeW91ciBtYWNoaW5pbmcsIE9FTSBwcm9kdWN0aW9uLCBmYWJyaWNhdGlvbiwgb3IgaW5kdXN0cmlhbCBzdXBwbHkgbmVlZHMuJyxcbiAgICAgIHpoOiAn6KuL57Ch5Zau6Kqq5piO5oKo55qE6KO96YCg5Yqg5bel44CB6Zu25Lu244CB5rK75YW35oiWIE9FTS9PRE0g6ZyA5rGC44CCJyxcbiAgICB9LFxuICB9LFxuICB7XG4gICAgaWQ6ICdkaWdpdGFsJyxcbiAgICBuYW1lOiB7IGVuOiAnRGlnaXRhbCBTZXJ2aWNlcycsIHpoOiAn5pW45L2N5pyN5YuZJyB9LFxuICAgIG5vdGU6IHtcbiAgICAgIGVuOiAnVGVsbCB1cyBhYm91dCB5b3VyIHdlYnNpdGUsIGRpZ2l0YWwgd29ya2Zsb3csIG9yIGN1c3RvbSBzeXN0ZW0gcmVxdWlyZW1lbnRzLicsXG4gICAgICB6aDogJ+iri+ewoeWWruiqquaYjuaCqOeahOe2suermeOAgeaVuOS9jeW3peWFt+aIluiHquWLleWMluezu+e1semcgOaxguOAgicsXG4gICAgfSxcbiAgfSxcbiAge1xuICAgIGlkOiAnY29uc3RydWN0aW9uJyxcbiAgICBuYW1lOiB7IGVuOiAnQ29uc3RydWN0aW9uJywgemg6ICflu7rmnZDlt6XnqIsnIH0sXG4gICAgbm90ZToge1xuICAgICAgZW46ICdUZWxsIHVzIGFib3V0IHlvdXIgY29uc3RydWN0aW9uIHByb2plY3QsIG1hdGVyaWFsIHNvdXJjaW5nLCBvciBzaXRlIHN1cHBvcnQgcmVxdWlyZW1lbnRzLicsXG4gICAgICB6aDogJ+iri+ewoeWWruiqquaYjuaCqOeahOW7uuadkOW3peeoi+OAgeefs+adkOaOoeizvOaIluWwiOahiOmcgOaxguOAgicsXG4gICAgfSxcbiAgfSxcbl07XG5cbmZ1bmN0aW9uIFNlcnZpY2VJY29uKCkge1xuICByZXR1cm4gKFxuICAgIDxzdmcgdmlld0JveD1cIjAgMCAyNCAyNFwiIGFyaWEtaGlkZGVuPVwidHJ1ZVwiPlxuICAgICAgPHBhdGggZD1cIk02LjQgMTYuNWMxLjctMy4xIDMuNy02LjUgNS4xLTguMS43LS44IDEuNS0uMyAxLjEuN2wtMi4zIDYuMWMtLjMuOS41IDEuNCAxLjIuOGwyLjYtMi41Yy43LS42IDEuNi0uMiAxLjMuN2wtLjQgMS4yYy0uMy44LjQgMS40IDEuMS44bDEuNS0xLjJcIiAvPlxuICAgIDwvc3ZnPlxuICApO1xufVxuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBDb250YWN0VXMoKSB7XG4gIGNvbnN0IHsgaXNDaGluZXNlIH0gPSB1c2VMYW5ndWFnZSgpO1xuICBjb25zdCBmb3JtUmVmID0gdXNlUmVmKG51bGwpO1xuICBjb25zdCBbc2VsZWN0ZWRTZXJ2aWNlLCBzZXRTZWxlY3RlZFNlcnZpY2VdID0gdXNlU3RhdGUobnVsbCk7XG4gIGNvbnN0IFtpc1NlbmRpbmcsIHNldElzU2VuZGluZ10gPSB1c2VTdGF0ZShmYWxzZSk7XG4gIGNvbnN0IFtzdWJtaXRNZXNzYWdlLCBzZXRTdWJtaXRNZXNzYWdlXSA9IHVzZVN0YXRlKCcnKTtcbiAgY29uc3Qgc2VsZWN0ZWRTZXJ2aWNlTmFtZSA9IHNlbGVjdGVkU2VydmljZT8ubmFtZS5lbiB8fCAnJztcblxuICBjb25zdCBzZW5kRW1haWwgPSBhc3luYyAoZXZlbnQpID0+IHtcbiAgICBldmVudC5wcmV2ZW50RGVmYXVsdCgpO1xuXG4gICAgY29uc3Qgc2VydmljZUlkID0gaW1wb3J0Lm1ldGEuZW52LlZJVEVfRU1BSUxKU19TRVJWSUNFX0lEO1xuICAgIGNvbnN0IHRlbXBsYXRlSWQgPSBpbXBvcnQubWV0YS5lbnYuVklURV9FTUFJTEpTX1RFTVBMQVRFX0lEO1xuICAgIGNvbnN0IHB1YmxpY0tleSA9IGltcG9ydC5tZXRhLmVudi5WSVRFX0VNQUlMSlNfUFVCTElDX0tFWTtcblxuICAgIGlmICghc2VydmljZUlkIHx8ICF0ZW1wbGF0ZUlkIHx8ICFwdWJsaWNLZXkpIHtcbiAgICAgIGNvbnN0IG1lc3NhZ2UgPSBpc0NoaW5lc2VcbiAgICAgICAgPyAnRW1haWxKUyDnkrDlooPorormlbjlsJrmnKroqK3lrprlrozmlbTvvIzoq4vnorroqo0gLmVudiDmqpTmoYjjgIInXG4gICAgICAgIDogJ0VtYWlsSlMgZW52aXJvbm1lbnQgdmFyaWFibGVzIGFyZSBtaXNzaW5nLiBQbGVhc2UgY2hlY2sgeW91ciAuZW52IGZpbGUuJztcbiAgICAgIHNldFN1Ym1pdE1lc3NhZ2UobWVzc2FnZSk7XG4gICAgICBhbGVydChtZXNzYWdlKTtcbiAgICAgIHJldHVybjtcbiAgICB9XG5cbiAgICBzZXRJc1NlbmRpbmcodHJ1ZSk7XG4gICAgc2V0U3VibWl0TWVzc2FnZSgnJyk7XG5cbiAgICB0cnkge1xuICAgICAgYXdhaXQgZW1haWxqcy5zZW5kRm9ybShzZXJ2aWNlSWQsIHRlbXBsYXRlSWQsIGZvcm1SZWYuY3VycmVudCwge1xuICAgICAgICBwdWJsaWNLZXksXG4gICAgICB9KTtcblxuICAgICAgY29uc3QgbWVzc2FnZSA9IGlzQ2hpbmVzZVxuICAgICAgICA/ICfpnIDmsYLlt7LpgIHlh7rvvIzmiJHlgJHmnIPnm6Hlv6voiIfmgqjoga/nuavjgIInXG4gICAgICAgIDogJ1lvdXIgaW5xdWlyeSBoYXMgYmVlbiBzZW50LiBXZSB3aWxsIGdldCBpbiB0b3VjaCBzaG9ydGx5Lic7XG4gICAgICBzZXRTdWJtaXRNZXNzYWdlKG1lc3NhZ2UpO1xuICAgICAgYWxlcnQobWVzc2FnZSk7XG4gICAgICBmb3JtUmVmLmN1cnJlbnQ/LnJlc2V0KCk7XG4gICAgICBzZXRTZWxlY3RlZFNlcnZpY2UobnVsbCk7XG4gICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgIGNvbnNvbGUuZXJyb3IoJ0VtYWlsSlMgc2VuZCBmYWlsZWQ6JywgZXJyb3IpO1xuICAgICAgY29uc3QgbWVzc2FnZSA9IGlzQ2hpbmVzZVxuICAgICAgICA/ICfpgIHlh7rlpLHmlZfvvIzoq4vnqI3lvozlho3oqabmiJbnm7TmjqXoiIfmiJHlgJHoga/nuavjgIInXG4gICAgICAgIDogJ0ZhaWxlZCB0byBzZW5kIHlvdXIgaW5xdWlyeS4gUGxlYXNlIHRyeSBhZ2FpbiBsYXRlciBvciBjb250YWN0IHVzIGRpcmVjdGx5Lic7XG4gICAgICBzZXRTdWJtaXRNZXNzYWdlKG1lc3NhZ2UpO1xuICAgICAgYWxlcnQobWVzc2FnZSk7XG4gICAgfSBmaW5hbGx5IHtcbiAgICAgIHNldElzU2VuZGluZyhmYWxzZSk7XG4gICAgfVxuICB9O1xuXG4gIHJldHVybiAoXG4gICAgPG1haW4gY2xhc3NOYW1lPXtgY29udGFjdC1wYWdlICR7aXNDaGluZXNlID8gJ2NvbnRhY3QtcGFnZS16aCcgOiAnJ31gfT5cbiAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cImNvbnRhY3QtaGVyb1wiIHN0eWxlPXt7IGJhY2tncm91bmRJbWFnZTogYHVybCgke2NvbnRhY3RIZXJvfSlgIH19PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhY3QtaGVyby1jb250ZW50XCI+XG4gICAgICAgICAgPHAgY2xhc3NOYW1lPVwiY2FwdGlvblwiPntpc0NoaW5lc2UgPyAn5ZWG5YuZ5rS96KmiJyA6ICdHRVQgSU4gVE9VQ0gnfTwvcD5cbiAgICAgICAgICA8aDE+e2lzQ2hpbmVzZSA/ICforpPmiJHlgJHkuobop6PmgqjnmoTpnIDmsYInIDogJ0NvbnRhY3QgVXMnfTwvaDE+XG4gICAgICAgICAgPHAgY2xhc3NOYW1lPVwiaGVyby1jb3B5XCI+XG4gICAgICAgICAgICB7aXNDaGluZXNlXG4gICAgICAgICAgICAgID8gJ+eEoeirluaCqOmcgOimgeijvemAoOWKoOW3peOAgeadkOaWmeaOoeizvOOAgeW7uuevieefs+adkO+8jOaIluaVuOS9jeacjeWLme+8jOaIkeWAkemDveiDveWNlOWKqeaCqOWwh+mcgOaxguiQveWcsOOAguatoei/jueVmeS4i+mcgOaxguizh+ioiu+8jOaIkeWAkeWwh+eboeW/q+iIh+aCqOiBr+e5q+OAgidcbiAgICAgICAgICAgICAgOiAnV2hldGhlciB5b3UgbmVlZCBtYW51ZmFjdHVyaW5nLCBzb3VyY2luZywgY29uc3RydWN0aW9uIG1hdGVyaWFscywgb3IgZGlnaXRhbCBzb2x1dGlvbnMsIG91ciB0ZWFtIGlzIHJlYWR5IHRvIGhlbHAgYnJpbmcgeW91ciBpZGVhcyBpbnRvIHJlYWxpdHkuIFNoYXJlIHlvdXIgcmVxdWlyZW1lbnRzIHdpdGggdXMgYW5kIHdlIHdpbGwgZ2V0IGluIHRvdWNoIHNob3J0bHkuJ31cbiAgICAgICAgICA8L3A+XG5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNlcnZpY2UtcGlsbHNcIiBhcmlhLWxhYmVsPVwiQ29udGFjdCBzZXJ2aWNlIGNhdGVnb3JpZXNcIj5cbiAgICAgICAgICAgIHtzZXJ2aWNlcy5tYXAoKHNlcnZpY2UpID0+IChcbiAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17c2VsZWN0ZWRTZXJ2aWNlPy5pZCA9PT0gc2VydmljZS5pZCA/ICdhY3RpdmUnIDogJyd9XG4gICAgICAgICAgICAgICAgdHlwZT1cImJ1dHRvblwiXG4gICAgICAgICAgICAgICAga2V5PXtzZXJ2aWNlLmlkfVxuICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldFNlbGVjdGVkU2VydmljZShzZWxlY3RlZFNlcnZpY2U/LmlkID09PSBzZXJ2aWNlLmlkID8gbnVsbCA6IHNlcnZpY2UpfVxuICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgeyFpc0NoaW5lc2UgJiYgPFNlcnZpY2VJY29uIC8+fVxuICAgICAgICAgICAgICAgIHtpc0NoaW5lc2UgPyBzZXJ2aWNlLm5hbWUuemggOiBzZXJ2aWNlLm5hbWUuZW59XG4gICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgKSl9XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9zZWN0aW9uPlxuXG4gICAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJjb250YWN0LWZvcm0tc2VjdGlvblwiPlxuICAgICAgICA8Zm9ybSByZWY9e2Zvcm1SZWZ9IGNsYXNzTmFtZT1cImZpZ21hLWNvbnRhY3QtZm9ybVwiIG9uU3VibWl0PXtzZW5kRW1haWx9PlxuICAgICAgICAgIDxwIGNsYXNzTmFtZT17YGZvcm0tbm90ZSAke3NlbGVjdGVkU2VydmljZSA/ICcnIDogJ2VtcHR5J31gfT5cbiAgICAgICAgICAgIHtzZWxlY3RlZFNlcnZpY2VcbiAgICAgICAgICAgICAgPyAoaXNDaGluZXNlID8gc2VsZWN0ZWRTZXJ2aWNlLm5vdGUuemggOiBzZWxlY3RlZFNlcnZpY2Uubm90ZS5lbilcbiAgICAgICAgICAgICAgOiAnSW5xdWlyeSBjYXRlZ29yeSBub3RlJ31cbiAgICAgICAgICA8L3A+XG4gICAgICAgICAgPGlucHV0IHR5cGU9XCJoaWRkZW5cIiBuYW1lPVwic2VydmljZV90eXBlXCIgdmFsdWU9e3NlbGVjdGVkU2VydmljZU5hbWV9IC8+XG5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZvcm0tcm93IHR3b1wiPlxuICAgICAgICAgICAgPGxhYmVsPlxuICAgICAgICAgICAgICA8c3Bhbj57aXNDaGluZXNlID8gJ+iBr+e1oeS6uuWnk+WQjScgOiAnQ29udGFjdCBQZXJzb24nfTwvc3Bhbj5cbiAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgbmFtZT1cInVzZXJfbmFtZVwiIHBsYWNlaG9sZGVyPXtpc0NoaW5lc2UgPyAn6KuL6Ly45YWl5aeT5ZCNJyA6ICdZb3VyIE5hbWUnfSByZXF1aXJlZCAvPlxuICAgICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICAgIDxsYWJlbD5cbiAgICAgICAgICAgICAgPHNwYW4+e2lzQ2hpbmVzZSA/ICflhazlj7jlkI3nqLEnIDogJ0NvbXBhbnkgTmFtZSd9PC9zcGFuPlxuICAgICAgICAgICAgICA8aW5wdXQgdHlwZT1cInRleHRcIiBuYW1lPVwiY29tcGFueV9uYW1lXCIgcGxhY2Vob2xkZXI9e2lzQ2hpbmVzZSA/ICfoq4vovLjlhaXlhazlj7jlkI3nqLEnIDogJ1lvdXIgQ29tcGFueSBOYW1lJ30gLz5cbiAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZvcm0tcm93IHR3b1wiPlxuICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cImVtYWlsLWZpZWxkXCI+XG4gICAgICAgICAgICAgIDxzcGFuPntpc0NoaW5lc2UgPyAn6Zu75a2Q6YO15Lu2JyA6ICdFbWFpbCd9PC9zcGFuPlxuICAgICAgICAgICAgICA8aW5wdXQgdHlwZT1cImVtYWlsXCIgbmFtZT1cInVzZXJfZW1haWxcIiBwbGFjZWhvbGRlcj17aXNDaGluZXNlID8gJ+iri+i8uOWFpSBFbWFpbCcgOiAnWW91ciBFbWFpbCBBZGRyZXNzJ30gcmVxdWlyZWQgLz5cbiAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwicGhvbmUtZmllbGRcIj5cbiAgICAgICAgICAgICAgPHNwYW4+e2lzQ2hpbmVzZSA/ICfoga/ntaHpm7voqbEnIDogJ1Bob25lIC8gTW9iaWxlJ308L3NwYW4+XG4gICAgICAgICAgICAgIDxpbnB1dCB0eXBlPVwidGVsXCIgbmFtZT1cInBob25lX251bWJlclwiIHBsYWNlaG9sZGVyPXtpc0NoaW5lc2UgPyAn6KuL6Ly45YWl5omL5qmf5oiW5biC6KmxJyA6ICdQaG9uZSBvciBtb2JpbGUgbnVtYmVyJ30gLz5cbiAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwibWVzc2FnZS1maWVsZFwiPlxuICAgICAgICAgICAgPHNwYW4+e2lzQ2hpbmVzZSA/ICfpnIDmsYLoqqrmmI4nIDogJ01lc3NhZ2UnfTwvc3Bhbj5cbiAgICAgICAgICAgIDx0ZXh0YXJlYVxuICAgICAgICAgICAgICBuYW1lPVwibWVzc2FnZVwiXG4gICAgICAgICAgICAgIHJvd3M9XCI0XCJcbiAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9e2lzQ2hpbmVzZVxuICAgICAgICAgICAgICAgID8gJ+iri+ewoeWWruaPj+i/sOaCqOeahOmcgOaxguOAgeeUouWTgeimj+agvOaIluWwiOahiOWFp+WuueOAgidcbiAgICAgICAgICAgICAgICA6ICdUZWxsIHVzIGFib3V0IHlvdXIgcHJvamVjdCwgcHJvZHVjdCByZXF1aXJlbWVudHMsIG9yIHNlcnZpY2UgbmVlZHMuJ31cbiAgICAgICAgICAgICAgcmVxdWlyZWRcbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgPC9sYWJlbD5cblxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29uc2VudC1yb3dcIj5cbiAgICAgICAgICAgIDxsYWJlbD5cbiAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJjaGVja2JveFwiIG5hbWU9XCJwcml2YWN5X2NvbnNlbnRcIiByZXF1aXJlZCAvPlxuICAgICAgICAgICAgICA8c3Bhbj5cbiAgICAgICAgICAgICAgICB7aXNDaGluZXNlID8gKFxuICAgICAgICAgICAgICAgICAgPD7miJHlkIzmhI/pmrHnp4HmrIrmlL/nrZbvvIzkuKblkIzmhI/mjqXlj5foga/nuavjgII8Lz5cbiAgICAgICAgICAgICAgICApIDogKFxuICAgICAgICAgICAgICAgICAgPD5JIGFncmVlIHRvIHRoZSA8YSBocmVmPVwiI1wiPlByaXZhY3kgUG9saWN5PC9hPiBhbmQgY29uc2VudCB0byBiZWluZyBjb250YWN0ZWQuPC8+XG4gICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICAgIDxsYWJlbD5cbiAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJjaGVja2JveFwiIG5hbWU9XCJidXNpbmVzc191cGRhdGVzXCIgLz5cbiAgICAgICAgICAgICAgPHNwYW4+e2lzQ2hpbmVzZSA/ICfmiJHpoZjmhI/mjqXmlLbmnI3li5noiIfllYbli5nos4foqIrjgIInIDogJ0kgd291bGQgbGlrZSB0byByZWNlaXZlIHNlcnZpY2UgYW5kIGJ1c2luZXNzIHVwZGF0ZXMuJ308L3NwYW4+XG4gICAgICAgICAgICA8L2xhYmVsPlxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJzdWJtaXQtYnRuXCIgdHlwZT1cInN1Ym1pdFwiIGRpc2FibGVkPXtpc1NlbmRpbmd9PlxuICAgICAgICAgICAge2lzU2VuZGluZ1xuICAgICAgICAgICAgICA/IChpc0NoaW5lc2UgPyAn6YCB5Ye65LitLi4uJyA6ICdTZW5kaW5nLi4uJylcbiAgICAgICAgICAgICAgOiAoaXNDaGluZXNlID8gJ+mAgeWHuumcgOaxgicgOiAnU2VuZCBJbnF1aXJ5Jyl9XG4gICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAge3N1Ym1pdE1lc3NhZ2UgJiYgPHAgY2xhc3NOYW1lPVwic3VibWl0LXN0YXR1c1wiPntzdWJtaXRNZXNzYWdlfTwvcD59XG4gICAgICAgICAgPHAgY2xhc3NOYW1lPVwicmVzcG9uc2Utbm90ZVwiPlxuICAgICAgICAgICAge2lzQ2hpbmVzZSA/ICfmiJHlgJHpgJrluLjmnIPmlrwgMS0yIOWAi+W3peS9nOWkqeWFp+WbnuimhuOAgicgOiAnV2UgdHlwaWNhbGx5IHJlc3BvbmQgd2l0aGluIDEtMiBidXNpbmVzcyBkYXlzLid9XG4gICAgICAgICAgPC9wPlxuICAgICAgICA8L2Zvcm0+XG4gICAgICA8L3NlY3Rpb24+XG4gICAgPC9tYWluPlxuICApO1xufVxuIl0sIm5hbWVzIjpbIlJlYWN0IiwidXNlUmVmIiwidXNlU3RhdGUiLCJlbWFpbGpzIiwiY29udGFjdEhlcm8iLCJ1c2VMYW5ndWFnZSIsInNlcnZpY2VzIiwiaWQiLCJuYW1lIiwiZW4iLCJ6aCIsIm5vdGUiLCJTZXJ2aWNlSWNvbiIsInN2ZyIsInZpZXdCb3giLCJhcmlhLWhpZGRlbiIsInBhdGgiLCJkIiwiQ29udGFjdFVzIiwiaXNDaGluZXNlIiwiZm9ybVJlZiIsInNlbGVjdGVkU2VydmljZSIsInNldFNlbGVjdGVkU2VydmljZSIsImlzU2VuZGluZyIsInNldElzU2VuZGluZyIsInN1Ym1pdE1lc3NhZ2UiLCJzZXRTdWJtaXRNZXNzYWdlIiwic2VsZWN0ZWRTZXJ2aWNlTmFtZSIsInNlbmRFbWFpbCIsImV2ZW50IiwicHJldmVudERlZmF1bHQiLCJzZXJ2aWNlSWQiLCJlbnYiLCJWSVRFX0VNQUlMSlNfU0VSVklDRV9JRCIsInRlbXBsYXRlSWQiLCJWSVRFX0VNQUlMSlNfVEVNUExBVEVfSUQiLCJwdWJsaWNLZXkiLCJWSVRFX0VNQUlMSlNfUFVCTElDX0tFWSIsIm1lc3NhZ2UiLCJhbGVydCIsInNlbmRGb3JtIiwiY3VycmVudCIsInJlc2V0IiwiZXJyb3IiLCJjb25zb2xlIiwibWFpbiIsImNsYXNzTmFtZSIsInNlY3Rpb24iLCJzdHlsZSIsImJhY2tncm91bmRJbWFnZSIsImRpdiIsInAiLCJoMSIsImFyaWEtbGFiZWwiLCJtYXAiLCJzZXJ2aWNlIiwiYnV0dG9uIiwidHlwZSIsIm9uQ2xpY2siLCJmb3JtIiwicmVmIiwib25TdWJtaXQiLCJpbnB1dCIsInZhbHVlIiwibGFiZWwiLCJzcGFuIiwicGxhY2Vob2xkZXIiLCJyZXF1aXJlZCIsInRleHRhcmVhIiwicm93cyIsImEiLCJocmVmIiwiZGlzYWJsZWQiXSwibWFwcGluZ3MiOiI7O0FBQUEsT0FBT0EsU0FBU0MsTUFBTSxFQUFFQyxRQUFRLFFBQVEsUUFBUTtBQUNoRCxPQUFPQyxhQUFhLG1CQUFtQjtBQUN2QyxPQUFPLG1CQUFtQjtBQUMxQixPQUFPQyxpQkFBaUIsd0JBQXdCO0FBQ2hELFNBQVNDLFdBQVcsUUFBUSwwQkFBMEI7QUFFdEQsTUFBTUMsV0FBVztJQUNmO1FBQ0VDLElBQUk7UUFDSkMsTUFBTTtZQUFFQyxJQUFJO1lBQWlCQyxJQUFJO1FBQU87UUFDeENDLE1BQU07WUFDSkYsSUFBSTtZQUNKQyxJQUFJO1FBQ047SUFDRjtJQUNBO1FBQ0VILElBQUk7UUFDSkMsTUFBTTtZQUFFQyxJQUFJO1lBQW9CQyxJQUFJO1FBQU87UUFDM0NDLE1BQU07WUFDSkYsSUFBSTtZQUNKQyxJQUFJO1FBQ047SUFDRjtJQUNBO1FBQ0VILElBQUk7UUFDSkMsTUFBTTtZQUFFQyxJQUFJO1lBQWdCQyxJQUFJO1FBQU87UUFDdkNDLE1BQU07WUFDSkYsSUFBSTtZQUNKQyxJQUFJO1FBQ047SUFDRjtDQUNEO0FBRUQsU0FBU0U7SUFDUCxxQkFDRSxRQUFDQztRQUFJQyxTQUFRO1FBQVlDLGVBQVk7a0JBQ25DLGNBQUEsUUFBQ0M7WUFBS0MsR0FBRTs7Ozs7Ozs7Ozs7QUFHZDtLQU5TTDtBQVFULGVBQWUsU0FBU007O0lBQ3RCLE1BQU0sRUFBRUMsU0FBUyxFQUFFLEdBQUdkO0lBQ3RCLE1BQU1lLFVBQVVuQixPQUFPO0lBQ3ZCLE1BQU0sQ0FBQ29CLGlCQUFpQkMsbUJBQW1CLEdBQUdwQixTQUFTO0lBQ3ZELE1BQU0sQ0FBQ3FCLFdBQVdDLGFBQWEsR0FBR3RCLFNBQVM7SUFDM0MsTUFBTSxDQUFDdUIsZUFBZUMsaUJBQWlCLEdBQUd4QixTQUFTO0lBQ25ELE1BQU15QixzQkFBc0JOLGlCQUFpQmIsS0FBS0MsTUFBTTtJQUV4RCxNQUFNbUIsWUFBWSxPQUFPQztRQUN2QkEsTUFBTUMsY0FBYztRQUVwQixNQUFNQyxZQUFZLFlBQVlDLEdBQUcsQ0FBQ0MsdUJBQXVCO1FBQ3pELE1BQU1DLGFBQWEsWUFBWUYsR0FBRyxDQUFDRyx3QkFBd0I7UUFDM0QsTUFBTUMsWUFBWSxZQUFZSixHQUFHLENBQUNLLHVCQUF1QjtRQUV6RCxJQUFJLENBQUNOLGFBQWEsQ0FBQ0csY0FBYyxDQUFDRSxXQUFXO1lBQzNDLE1BQU1FLFVBQVVuQixZQUNaLG9DQUNBO1lBQ0pPLGlCQUFpQlk7WUFDakJDLE1BQU1EO1lBQ047UUFDRjtRQUVBZCxhQUFhO1FBQ2JFLGlCQUFpQjtRQUVqQixJQUFJO1lBQ0YsTUFBTXZCLFFBQVFxQyxRQUFRLENBQUNULFdBQVdHLFlBQVlkLFFBQVFxQixPQUFPLEVBQUU7Z0JBQzdETDtZQUNGO1lBRUEsTUFBTUUsVUFBVW5CLFlBQ1oscUJBQ0E7WUFDSk8saUJBQWlCWTtZQUNqQkMsTUFBTUQ7WUFDTmxCLFFBQVFxQixPQUFPLEVBQUVDO1lBQ2pCcEIsbUJBQW1CO1FBQ3JCLEVBQUUsT0FBT3FCLE9BQU87WUFDZEMsUUFBUUQsS0FBSyxDQUFDLHdCQUF3QkE7WUFDdEMsTUFBTUwsVUFBVW5CLFlBQ1osd0JBQ0E7WUFDSk8saUJBQWlCWTtZQUNqQkMsTUFBTUQ7UUFDUixTQUFVO1lBQ1JkLGFBQWE7UUFDZjtJQUNGO0lBRUEscUJBQ0UsUUFBQ3FCO1FBQUtDLFdBQVcsQ0FBQyxhQUFhLEVBQUUzQixZQUFZLG9CQUFvQixJQUFJOzswQkFDbkUsUUFBQzRCO2dCQUFRRCxXQUFVO2dCQUFlRSxPQUFPO29CQUFFQyxpQkFBaUIsQ0FBQyxJQUFJLEVBQUU3QyxZQUFZLENBQUMsQ0FBQztnQkFBQzswQkFDaEYsY0FBQSxRQUFDOEM7b0JBQUlKLFdBQVU7O3NDQUNiLFFBQUNLOzRCQUFFTCxXQUFVO3NDQUFXM0IsWUFBWSxTQUFTOzs7Ozs7c0NBQzdDLFFBQUNpQztzQ0FBSWpDLFlBQVksY0FBYzs7Ozs7O3NDQUMvQixRQUFDZ0M7NEJBQUVMLFdBQVU7c0NBQ1YzQixZQUNHLCtEQUNBOzs7Ozs7c0NBR04sUUFBQytCOzRCQUFJSixXQUFVOzRCQUFnQk8sY0FBVztzQ0FDdkMvQyxTQUFTZ0QsR0FBRyxDQUFDLENBQUNDLHdCQUNiLFFBQUNDO29DQUNDVixXQUFXekIsaUJBQWlCZCxPQUFPZ0QsUUFBUWhELEVBQUUsR0FBRyxXQUFXO29DQUMzRGtELE1BQUs7b0NBRUxDLFNBQVMsSUFBTXBDLG1CQUFtQkQsaUJBQWlCZCxPQUFPZ0QsUUFBUWhELEVBQUUsR0FBRyxPQUFPZ0Q7O3dDQUU3RSxDQUFDcEMsMkJBQWEsUUFBQ1A7Ozs7O3dDQUNmTyxZQUFZb0MsUUFBUS9DLElBQUksQ0FBQ0UsRUFBRSxHQUFHNkMsUUFBUS9DLElBQUksQ0FBQ0MsRUFBRTs7bUNBSnpDOEMsUUFBUWhELEVBQUU7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzswQkFXekIsUUFBQ3dDO2dCQUFRRCxXQUFVOzBCQUNqQixjQUFBLFFBQUNhO29CQUFLQyxLQUFLeEM7b0JBQVMwQixXQUFVO29CQUFxQmUsVUFBVWpDOztzQ0FDM0QsUUFBQ3VCOzRCQUFFTCxXQUFXLENBQUMsVUFBVSxFQUFFekIsa0JBQWtCLEtBQUssU0FBUztzQ0FDeERBLGtCQUNJRixZQUFZRSxnQkFBZ0JWLElBQUksQ0FBQ0QsRUFBRSxHQUFHVyxnQkFBZ0JWLElBQUksQ0FBQ0YsRUFBRSxHQUM5RDs7Ozs7O3NDQUVOLFFBQUNxRDs0QkFBTUwsTUFBSzs0QkFBU2pELE1BQUs7NEJBQWV1RCxPQUFPcEM7Ozs7OztzQ0FFaEQsUUFBQ3VCOzRCQUFJSixXQUFVOzs4Q0FDYixRQUFDa0I7O3NEQUNDLFFBQUNDO3NEQUFNOUMsWUFBWSxVQUFVOzs7Ozs7c0RBQzdCLFFBQUMyQzs0Q0FBTUwsTUFBSzs0Q0FBT2pELE1BQUs7NENBQVkwRCxhQUFhL0MsWUFBWSxVQUFVOzRDQUFhZ0QsUUFBUTs7Ozs7Ozs7Ozs7OzhDQUU5RixRQUFDSDs7c0RBQ0MsUUFBQ0M7c0RBQU05QyxZQUFZLFNBQVM7Ozs7OztzREFDNUIsUUFBQzJDOzRDQUFNTCxNQUFLOzRDQUFPakQsTUFBSzs0Q0FBZTBELGFBQWEvQyxZQUFZLFlBQVk7Ozs7Ozs7Ozs7Ozs7Ozs7OztzQ0FJaEYsUUFBQytCOzRCQUFJSixXQUFVOzs4Q0FDYixRQUFDa0I7b0NBQU1sQixXQUFVOztzREFDZixRQUFDbUI7c0RBQU05QyxZQUFZLFNBQVM7Ozs7OztzREFDNUIsUUFBQzJDOzRDQUFNTCxNQUFLOzRDQUFRakQsTUFBSzs0Q0FBYTBELGFBQWEvQyxZQUFZLGNBQWM7NENBQXNCZ0QsUUFBUTs7Ozs7Ozs7Ozs7OzhDQUU3RyxRQUFDSDtvQ0FBTWxCLFdBQVU7O3NEQUNmLFFBQUNtQjtzREFBTTlDLFlBQVksU0FBUzs7Ozs7O3NEQUM1QixRQUFDMkM7NENBQU1MLE1BQUs7NENBQU1qRCxNQUFLOzRDQUFlMEQsYUFBYS9DLFlBQVksYUFBYTs7Ozs7Ozs7Ozs7Ozs7Ozs7O3NDQUloRixRQUFDNkM7NEJBQU1sQixXQUFVOzs4Q0FDZixRQUFDbUI7OENBQU05QyxZQUFZLFNBQVM7Ozs7Ozs4Q0FDNUIsUUFBQ2lEO29DQUNDNUQsTUFBSztvQ0FDTDZELE1BQUs7b0NBQ0xILGFBQWEvQyxZQUNULHlCQUNBO29DQUNKZ0QsUUFBUTs7Ozs7Ozs7Ozs7O3NDQUlaLFFBQUNqQjs0QkFBSUosV0FBVTs7OENBQ2IsUUFBQ2tCOztzREFDQyxRQUFDRjs0Q0FBTUwsTUFBSzs0Q0FBV2pELE1BQUs7NENBQWtCMkQsUUFBUTs7Ozs7O3NEQUN0RCxRQUFDRjtzREFDRTlDLDBCQUNDOzBEQUFFOzhFQUVGOztvREFBRTtrRUFBZSxRQUFDbUQ7d0RBQUVDLE1BQUs7a0VBQUk7Ozs7OztvREFBa0I7Ozs7Ozs7Ozs7Ozs7OzhDQUlyRCxRQUFDUDs7c0RBQ0MsUUFBQ0Y7NENBQU1MLE1BQUs7NENBQVdqRCxNQUFLOzs7Ozs7c0RBQzVCLFFBQUN5RDtzREFBTTlDLFlBQVksa0JBQWtCOzs7Ozs7Ozs7Ozs7Ozs7Ozs7c0NBSXpDLFFBQUNxQzs0QkFBT1YsV0FBVTs0QkFBYVcsTUFBSzs0QkFBU2UsVUFBVWpEO3NDQUNwREEsWUFDSUosWUFBWSxXQUFXLGVBQ3ZCQSxZQUFZLFNBQVM7Ozs7Ozt3QkFFM0JNLCtCQUFpQixRQUFDMEI7NEJBQUVMLFdBQVU7c0NBQWlCckI7Ozs7OztzQ0FDaEQsUUFBQzBCOzRCQUFFTCxXQUFVO3NDQUNWM0IsWUFBWSx3QkFBd0I7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBTWpEO0dBeEp3QkQ7O1FBQ0FiOzs7TUFEQWEifQ==

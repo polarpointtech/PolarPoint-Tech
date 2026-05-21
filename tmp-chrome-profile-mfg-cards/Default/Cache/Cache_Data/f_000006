@@ -1,0 +1,667 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/Header.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=6b69b0b0"; const _jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"]; const _Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"];
+var _s = $RefreshSig$();
+import __vite__cjsImport1_react from "/node_modules/.vite/deps/react.js?v=83a14ab1"; const React = __vite__cjsImport1_react.__esModule ? __vite__cjsImport1_react.default : __vite__cjsImport1_react; const useEffect = __vite__cjsImport1_react["useEffect"]; const useState = __vite__cjsImport1_react["useState"];
+import { useLocation, useNavigate } from "/node_modules/.vite/deps/react-router-dom.js?v=74293bea";
+import "/src/components/Header.scss";
+import logo from "/src/assets/header1-1.png?import";
+import { useLanguage } from "/src/i18n/LanguageContext.jsx";
+const EarthIcon = ()=>/*#__PURE__*/ _jsxDEV("svg", {
+        className: "earth-icon",
+        viewBox: "0 0 32 32",
+        "aria-hidden": "true",
+        children: [
+            /*#__PURE__*/ _jsxDEV("defs", {
+                children: [
+                    /*#__PURE__*/ _jsxDEV("linearGradient", {
+                        id: "earthOcean",
+                        x1: "6",
+                        y1: "4",
+                        x2: "26",
+                        y2: "28",
+                        gradientUnits: "userSpaceOnUse",
+                        children: [
+                            /*#__PURE__*/ _jsxDEV("stop", {
+                                stopColor: "#5EDAF2"
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 11,
+                                columnNumber: 9
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("stop", {
+                                offset: "0.55",
+                                stopColor: "#1E90DD"
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 12,
+                                columnNumber: 9
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("stop", {
+                                offset: "1",
+                                stopColor: "#1357A8"
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 13,
+                                columnNumber: 9
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                        lineNumber: 10,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("linearGradient", {
+                        id: "earthLand",
+                        x1: "8",
+                        y1: "7",
+                        x2: "24",
+                        y2: "24",
+                        gradientUnits: "userSpaceOnUse",
+                        children: [
+                            /*#__PURE__*/ _jsxDEV("stop", {
+                                stopColor: "#9DE27D"
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 16,
+                                columnNumber: 9
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("stop", {
+                                offset: "1",
+                                stopColor: "#2D9C6B"
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 17,
+                                columnNumber: 9
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                        lineNumber: 15,
+                        columnNumber: 7
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                lineNumber: 9,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ _jsxDEV("circle", {
+                cx: "16",
+                cy: "16",
+                r: "13",
+                fill: "url(#earthOcean)"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                lineNumber: 20,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M8.4 10.6c1.2-2.2 3.7-3.8 6.4-4.1 1.5-.2 2.7.3 3.4 1.1.8.9.3 2-1.1 2.3l-2.2.5c-1.4.3-1.8 1.5-.8 2.4l1.5 1.4c.8.8.6 2.1-.4 2.6l-2.3 1.2c-1.2.6-1.6 1.7-.9 2.8l1.1 1.8c.5.9-.4 1.9-1.4 1.5-3.7-1.4-6.3-4.9-6.3-9 0-1.6.4-3.1 1-4.5Z",
+                fill: "url(#earthLand)"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                lineNumber: 21,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M20.5 8.1c3.8 1.5 6.4 5.2 6.4 9.4 0 3.4-1.7 6.4-4.4 8.2-.9.6-1.9-.2-1.7-1.3l.5-2.2c.2-.9-.2-1.8-1-2.2l-2.2-1.1c-1.1-.6-1.1-2.1-.1-2.8l2.4-1.5c.9-.6 1.2-1.7.6-2.6l-1.5-2.4c-.5-.8.1-1.8 1-1.5Z",
+                fill: "url(#earthLand)",
+                opacity: "0.92"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                lineNumber: 25,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M16 3c-3.1 3.4-4.7 7.7-4.7 13S12.9 25.6 16 29",
+                fill: "none",
+                stroke: "rgba(255,255,255,.38)",
+                strokeWidth: "1"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                lineNumber: 30,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M16 3c3.1 3.4 4.7 7.7 4.7 13S19.1 25.6 16 29",
+                fill: "none",
+                stroke: "rgba(255,255,255,.32)",
+                strokeWidth: "1"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                lineNumber: 31,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M4.4 16h23.2",
+                fill: "none",
+                stroke: "rgba(255,255,255,.34)",
+                strokeWidth: "1"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                lineNumber: 32,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M16 3a13 13 0 1 1 0 26 13 13 0 0 1 0-26Z",
+                fill: "none",
+                stroke: "rgba(255,255,255,.62)",
+                strokeWidth: "1.4"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                lineNumber: 33,
+                columnNumber: 5
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+        lineNumber: 8,
+        columnNumber: 3
+    }, this);
+_c = EarthIcon;
+export default function Header() {
+    _s();
+    const [isShrunk, setIsShrunk] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
+    const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+    const { language, setLanguage, languageLabel, isChinese } = useLanguage();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const shouldShrink = isShrunk && !isHovered;
+    useEffect(()=>{
+        const handleScroll = ()=>{
+            setIsShrunk(window.scrollY > 200);
+        };
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+        return ()=>window.removeEventListener('scroll', handleScroll);
+    }, []);
+    const handleNavigation = (path)=>{
+        navigate(path);
+        window.scrollTo({
+            top: 0,
+            behavior: 'auto'
+        });
+        setIsLanguageOpen(false);
+    };
+    const handleLanguageChange = (nextLanguage)=>{
+        setLanguage(nextLanguage);
+        setIsLanguageOpen(false);
+    };
+    const navText = isChinese ? {
+        home: '首頁',
+        services: '服務項目',
+        manufacturing: '製造服務',
+        digital: '數位服務',
+        construction: '建材工程',
+        contact: '聯絡我們'
+    } : {
+        home: 'Home',
+        services: 'Services',
+        manufacturing: 'Manufacturing',
+        digital: 'Digital',
+        construction: 'Construction',
+        contact: 'Contact Us'
+    };
+    return /*#__PURE__*/ _jsxDEV("aside", {
+        className: `nav-card ${shouldShrink ? 'shrunk' : ''}`,
+        "aria-label": "Main navigation",
+        onMouseEnter: ()=>setIsHovered(true),
+        onMouseLeave: ()=>setIsHovered(false),
+        children: [
+            /*#__PURE__*/ _jsxDEV("div", {
+                className: "nav-top",
+                children: /*#__PURE__*/ _jsxDEV("button", {
+                    className: "logo-area",
+                    onClick: ()=>handleNavigation('/'),
+                    type: "button",
+                    children: [
+                        /*#__PURE__*/ _jsxDEV("span", {
+                            className: "logo-mark",
+                            children: /*#__PURE__*/ _jsxDEV("img", {
+                                src: logo,
+                                alt: "PolarPoint",
+                                className: "logo-img"
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 95,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                            lineNumber: 94,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("span", {
+                            className: "logo-text",
+                            children: [
+                                "PolarPoint",
+                                /*#__PURE__*/ _jsxDEV("br", {}, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                    lineNumber: 99,
+                                    columnNumber: 13
+                                }, this),
+                                "Tech"
+                            ]
+                        }, void 0, true, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                            lineNumber: 97,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                    lineNumber: 93,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                lineNumber: 92,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDEV("nav", {
+                className: "nav-menu",
+                children: [
+                    /*#__PURE__*/ _jsxDEV("button", {
+                        className: `menu-item home-item ${location.pathname === '/' ? 'active' : ''}`,
+                        title: "Home",
+                        onClick: ()=>handleNavigation('/'),
+                        type: "button",
+                        children: [
+                            /*#__PURE__*/ _jsxDEV("svg", {
+                                className: "icon",
+                                viewBox: "0 0 24 24",
+                                fill: "none",
+                                stroke: "currentColor",
+                                strokeWidth: "2",
+                                children: /*#__PURE__*/ _jsxDEV("path", {
+                                    d: "M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5Z"
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                    lineNumber: 113,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 112,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("span", {
+                                className: "label",
+                                children: navText.home
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 115,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                        lineNumber: 106,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("div", {
+                        className: "menu-label",
+                        title: "Services",
+                        children: [
+                            /*#__PURE__*/ _jsxDEV("div", {
+                                className: "left",
+                                children: [
+                                    /*#__PURE__*/ _jsxDEV("svg", {
+                                        className: "icon",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDEV("circle", {
+                                                cx: "12",
+                                                cy: "12",
+                                                r: "9"
+                                            }, void 0, false, {
+                                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                                lineNumber: 121,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDEV("path", {
+                                                d: "m15.5 8.5-2.2 6.1-5.8 1.9 2.2-6.1 5.8-1.9Z"
+                                            }, void 0, false, {
+                                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                                lineNumber: 122,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                        lineNumber: 120,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDEV("span", {
+                                        className: "label",
+                                        children: navText.services
+                                    }, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                        lineNumber: 124,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 119,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("svg", {
+                                className: "arrow",
+                                viewBox: "0 0 24 24",
+                                fill: "none",
+                                stroke: "currentColor",
+                                strokeWidth: "2",
+                                children: /*#__PURE__*/ _jsxDEV("polyline", {
+                                    points: "6 9 12 15 18 9"
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                    lineNumber: 127,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 126,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                        lineNumber: 118,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("button", {
+                        className: `menu-item sub-item ${location.pathname === '/manufacturing' ? 'active' : ''}`,
+                        title: "Manufacturing",
+                        onClick: ()=>handleNavigation('/manufacturing'),
+                        type: "button",
+                        children: shouldShrink ? /*#__PURE__*/ _jsxDEV("span", {
+                            className: "letter-icon",
+                            children: "M"
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                            lineNumber: 138,
+                            columnNumber: 13
+                        }, this) : /*#__PURE__*/ _jsxDEV(_Fragment, {
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    className: "dot",
+                                    "aria-hidden": "true"
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                    lineNumber: 141,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    className: "label",
+                                    children: navText.manufacturing
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                    lineNumber: 142,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true)
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                        lineNumber: 131,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("button", {
+                        className: `menu-item sub-item ${location.pathname === '/technology' ? 'active' : ''}`,
+                        title: "Digital",
+                        onClick: ()=>handleNavigation('/technology'),
+                        type: "button",
+                        children: shouldShrink ? /*#__PURE__*/ _jsxDEV("span", {
+                            className: "letter-icon",
+                            children: "D"
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                            lineNumber: 154,
+                            columnNumber: 13
+                        }, this) : /*#__PURE__*/ _jsxDEV(_Fragment, {
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    className: "dot",
+                                    "aria-hidden": "true"
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                    lineNumber: 157,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    className: "label",
+                                    children: navText.digital
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                    lineNumber: 158,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true)
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                        lineNumber: 147,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("button", {
+                        className: `menu-item sub-item ${location.pathname === '/construction' ? 'active' : ''}`,
+                        title: "Construction",
+                        onClick: ()=>handleNavigation('/construction'),
+                        type: "button",
+                        children: shouldShrink ? /*#__PURE__*/ _jsxDEV("span", {
+                            className: "letter-icon",
+                            children: "C"
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                            lineNumber: 170,
+                            columnNumber: 13
+                        }, this) : /*#__PURE__*/ _jsxDEV(_Fragment, {
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    className: "dot",
+                                    "aria-hidden": "true"
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                    lineNumber: 173,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    className: "label",
+                                    children: navText.construction
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                    lineNumber: 174,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true)
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                        lineNumber: 163,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                lineNumber: 105,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDEV("div", {
+                className: `language-switcher ${isLanguageOpen ? 'open' : ''}`,
+                children: [
+                    /*#__PURE__*/ _jsxDEV("button", {
+                        className: "language-trigger",
+                        type: "button",
+                        title: "Language",
+                        "aria-label": "Change language",
+                        "aria-expanded": isLanguageOpen,
+                        onClick: ()=>setIsLanguageOpen((isOpen)=>!isOpen),
+                        children: [
+                            /*#__PURE__*/ _jsxDEV(EarthIcon, {}, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 189,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("span", {
+                                className: "label",
+                                children: languageLabel
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 190,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                        lineNumber: 181,
+                        columnNumber: 9
+                    }, this),
+                    isLanguageOpen && /*#__PURE__*/ _jsxDEV("div", {
+                        className: "language-menu",
+                        children: [
+                            /*#__PURE__*/ _jsxDEV("button", {
+                                className: language === 'en' ? 'active' : '',
+                                type: "button",
+                                onClick: ()=>handleLanguageChange('en'),
+                                children: [
+                                    /*#__PURE__*/ _jsxDEV("span", {
+                                        children: "English"
+                                    }, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                        lineNumber: 200,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDEV("small", {
+                                        children: "EN"
+                                    }, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                        lineNumber: 201,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 195,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("button", {
+                                className: language === 'zh' ? 'active' : '',
+                                type: "button",
+                                onClick: ()=>handleLanguageChange('zh'),
+                                children: [
+                                    /*#__PURE__*/ _jsxDEV("span", {
+                                        children: "繁體中文"
+                                    }, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                        lineNumber: 208,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDEV("small", {
+                                        children: "中文"
+                                    }, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                        lineNumber: 209,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                                lineNumber: 203,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                        lineNumber: 194,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                lineNumber: 180,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDEV("button", {
+                className: `contact-btn ${location.pathname === '/contact' ? 'active' : ''}`,
+                title: "Contact Us",
+                onClick: ()=>handleNavigation('/contact'),
+                type: "button",
+                children: [
+                    /*#__PURE__*/ _jsxDEV("svg", {
+                        className: "icon",
+                        viewBox: "0 0 24 24",
+                        fill: "none",
+                        stroke: "currentColor",
+                        strokeWidth: "2",
+                        children: /*#__PURE__*/ _jsxDEV("path", {
+                            d: "M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z"
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                            lineNumber: 222,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                        lineNumber: 221,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("span", {
+                        className: "label",
+                        children: navText.contact
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                        lineNumber: 224,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+                lineNumber: 215,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx",
+        lineNumber: 86,
+        columnNumber: 5
+    }, this);
+}
+_s(Header, "3eC9AwTyFGt9Rt+nQmSgOP8u5Yw=", false, function() {
+    return [
+        useLanguage,
+        useNavigate,
+        useLocation
+    ];
+});
+_c1 = Header;
+var _c, _c1;
+$RefreshReg$(_c, "EarthIcon");
+$RefreshReg$(_c1, "Header");
+
+
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react-swc can't detect preamble. Something is wrong."
+    );
+  }
+
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) { return RefreshRuntime.register(type, "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Header.jsx" + ' ' + id) }
+function $RefreshSig$() { return RefreshRuntime.createSignatureFunctionForTransform(); }
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkhlYWRlci5qc3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyB1c2VMb2NhdGlvbiwgdXNlTmF2aWdhdGUgfSBmcm9tICdyZWFjdC1yb3V0ZXItZG9tJztcbmltcG9ydCAnLi9IZWFkZXIuc2Nzcyc7XG5pbXBvcnQgbG9nbyBmcm9tICcuLi9hc3NldHMvaGVhZGVyMS0xLnBuZyc7XG5pbXBvcnQgeyB1c2VMYW5ndWFnZSB9IGZyb20gJy4uL2kxOG4vTGFuZ3VhZ2VDb250ZXh0JztcblxuY29uc3QgRWFydGhJY29uID0gKCkgPT4gKFxuICA8c3ZnIGNsYXNzTmFtZT1cImVhcnRoLWljb25cIiB2aWV3Qm94PVwiMCAwIDMyIDMyXCIgYXJpYS1oaWRkZW49XCJ0cnVlXCI+XG4gICAgPGRlZnM+XG4gICAgICA8bGluZWFyR3JhZGllbnQgaWQ9XCJlYXJ0aE9jZWFuXCIgeDE9XCI2XCIgeTE9XCI0XCIgeDI9XCIyNlwiIHkyPVwiMjhcIiBncmFkaWVudFVuaXRzPVwidXNlclNwYWNlT25Vc2VcIj5cbiAgICAgICAgPHN0b3Agc3RvcENvbG9yPVwiIzVFREFGMlwiIC8+XG4gICAgICAgIDxzdG9wIG9mZnNldD1cIjAuNTVcIiBzdG9wQ29sb3I9XCIjMUU5MEREXCIgLz5cbiAgICAgICAgPHN0b3Agb2Zmc2V0PVwiMVwiIHN0b3BDb2xvcj1cIiMxMzU3QThcIiAvPlxuICAgICAgPC9saW5lYXJHcmFkaWVudD5cbiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD1cImVhcnRoTGFuZFwiIHgxPVwiOFwiIHkxPVwiN1wiIHgyPVwiMjRcIiB5Mj1cIjI0XCIgZ3JhZGllbnRVbml0cz1cInVzZXJTcGFjZU9uVXNlXCI+XG4gICAgICAgIDxzdG9wIHN0b3BDb2xvcj1cIiM5REUyN0RcIiAvPlxuICAgICAgICA8c3RvcCBvZmZzZXQ9XCIxXCIgc3RvcENvbG9yPVwiIzJEOUM2QlwiIC8+XG4gICAgICA8L2xpbmVhckdyYWRpZW50PlxuICAgIDwvZGVmcz5cbiAgICA8Y2lyY2xlIGN4PVwiMTZcIiBjeT1cIjE2XCIgcj1cIjEzXCIgZmlsbD1cInVybCgjZWFydGhPY2VhbilcIiAvPlxuICAgIDxwYXRoXG4gICAgICBkPVwiTTguNCAxMC42YzEuMi0yLjIgMy43LTMuOCA2LjQtNC4xIDEuNS0uMiAyLjcuMyAzLjQgMS4xLjguOS4zIDItMS4xIDIuM2wtMi4yLjVjLTEuNC4zLTEuOCAxLjUtLjggMi40bDEuNSAxLjRjLjguOC42IDIuMS0uNCAyLjZsLTIuMyAxLjJjLTEuMi42LTEuNiAxLjctLjkgMi44bDEuMSAxLjhjLjUuOS0uNCAxLjktMS40IDEuNS0zLjctMS40LTYuMy00LjktNi4zLTkgMC0xLjYuNC0zLjEgMS00LjVaXCJcbiAgICAgIGZpbGw9XCJ1cmwoI2VhcnRoTGFuZClcIlxuICAgIC8+XG4gICAgPHBhdGhcbiAgICAgIGQ9XCJNMjAuNSA4LjFjMy44IDEuNSA2LjQgNS4yIDYuNCA5LjQgMCAzLjQtMS43IDYuNC00LjQgOC4yLS45LjYtMS45LS4yLTEuNy0xLjNsLjUtMi4yYy4yLS45LS4yLTEuOC0xLTIuMmwtMi4yLTEuMWMtMS4xLS42LTEuMS0yLjEtLjEtMi44bDIuNC0xLjVjLjktLjYgMS4yLTEuNy42LTIuNmwtMS41LTIuNGMtLjUtLjguMS0xLjggMS0xLjVaXCJcbiAgICAgIGZpbGw9XCJ1cmwoI2VhcnRoTGFuZClcIlxuICAgICAgb3BhY2l0eT1cIjAuOTJcIlxuICAgIC8+XG4gICAgPHBhdGggZD1cIk0xNiAzYy0zLjEgMy40LTQuNyA3LjctNC43IDEzUzEyLjkgMjUuNiAxNiAyOVwiIGZpbGw9XCJub25lXCIgc3Ryb2tlPVwicmdiYSgyNTUsMjU1LDI1NSwuMzgpXCIgc3Ryb2tlV2lkdGg9XCIxXCIgLz5cbiAgICA8cGF0aCBkPVwiTTE2IDNjMy4xIDMuNCA0LjcgNy43IDQuNyAxM1MxOS4xIDI1LjYgMTYgMjlcIiBmaWxsPVwibm9uZVwiIHN0cm9rZT1cInJnYmEoMjU1LDI1NSwyNTUsLjMyKVwiIHN0cm9rZVdpZHRoPVwiMVwiIC8+XG4gICAgPHBhdGggZD1cIk00LjQgMTZoMjMuMlwiIGZpbGw9XCJub25lXCIgc3Ryb2tlPVwicmdiYSgyNTUsMjU1LDI1NSwuMzQpXCIgc3Ryb2tlV2lkdGg9XCIxXCIgLz5cbiAgICA8cGF0aCBkPVwiTTE2IDNhMTMgMTMgMCAxIDEgMCAyNiAxMyAxMyAwIDAgMSAwLTI2WlwiIGZpbGw9XCJub25lXCIgc3Ryb2tlPVwicmdiYSgyNTUsMjU1LDI1NSwuNjIpXCIgc3Ryb2tlV2lkdGg9XCIxLjRcIiAvPlxuICA8L3N2Zz5cbik7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEhlYWRlcigpIHtcbiAgY29uc3QgW2lzU2hydW5rLCBzZXRJc1NocnVua10gPSB1c2VTdGF0ZShmYWxzZSk7XG4gIGNvbnN0IFtpc0hvdmVyZWQsIHNldElzSG92ZXJlZF0gPSB1c2VTdGF0ZShmYWxzZSk7XG4gIGNvbnN0IFtpc0xhbmd1YWdlT3Blbiwgc2V0SXNMYW5ndWFnZU9wZW5dID0gdXNlU3RhdGUoZmFsc2UpO1xuICBjb25zdCB7IGxhbmd1YWdlLCBzZXRMYW5ndWFnZSwgbGFuZ3VhZ2VMYWJlbCwgaXNDaGluZXNlIH0gPSB1c2VMYW5ndWFnZSgpO1xuICBjb25zdCBuYXZpZ2F0ZSA9IHVzZU5hdmlnYXRlKCk7XG4gIGNvbnN0IGxvY2F0aW9uID0gdXNlTG9jYXRpb24oKTtcbiAgY29uc3Qgc2hvdWxkU2hyaW5rID0gaXNTaHJ1bmsgJiYgIWlzSG92ZXJlZDtcblxuICB1c2VFZmZlY3QoKCkgPT4ge1xuICAgIGNvbnN0IGhhbmRsZVNjcm9sbCA9ICgpID0+IHtcbiAgICAgIHNldElzU2hydW5rKHdpbmRvdy5zY3JvbGxZID4gMjAwKTtcbiAgICB9O1xuXG4gICAgaGFuZGxlU2Nyb2xsKCk7XG4gICAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ3Njcm9sbCcsIGhhbmRsZVNjcm9sbCk7XG4gICAgcmV0dXJuICgpID0+IHdpbmRvdy5yZW1vdmVFdmVudExpc3RlbmVyKCdzY3JvbGwnLCBoYW5kbGVTY3JvbGwpO1xuICB9LCBbXSk7XG5cbiAgY29uc3QgaGFuZGxlTmF2aWdhdGlvbiA9IChwYXRoKSA9PiB7XG4gICAgbmF2aWdhdGUocGF0aCk7XG4gICAgd2luZG93LnNjcm9sbFRvKHsgdG9wOiAwLCBiZWhhdmlvcjogJ2F1dG8nIH0pO1xuICAgIHNldElzTGFuZ3VhZ2VPcGVuKGZhbHNlKTtcbiAgfTtcblxuICBjb25zdCBoYW5kbGVMYW5ndWFnZUNoYW5nZSA9IChuZXh0TGFuZ3VhZ2UpID0+IHtcbiAgICBzZXRMYW5ndWFnZShuZXh0TGFuZ3VhZ2UpO1xuICAgIHNldElzTGFuZ3VhZ2VPcGVuKGZhbHNlKTtcbiAgfTtcblxuICBjb25zdCBuYXZUZXh0ID0gaXNDaGluZXNlXG4gICAgPyB7XG4gICAgICBob21lOiAn6aaW6aCBJyxcbiAgICAgIHNlcnZpY2VzOiAn5pyN5YuZ6aCF55uuJyxcbiAgICAgIG1hbnVmYWN0dXJpbmc6ICfoo73pgKDmnI3li5knLFxuICAgICAgZGlnaXRhbDogJ+aVuOS9jeacjeWLmScsXG4gICAgICBjb25zdHJ1Y3Rpb246ICflu7rmnZDlt6XnqIsnLFxuICAgICAgY29udGFjdDogJ+iBr+e1oeaIkeWAkScsXG4gICAgfVxuICAgIDoge1xuICAgICAgaG9tZTogJ0hvbWUnLFxuICAgICAgc2VydmljZXM6ICdTZXJ2aWNlcycsXG4gICAgICBtYW51ZmFjdHVyaW5nOiAnTWFudWZhY3R1cmluZycsXG4gICAgICBkaWdpdGFsOiAnRGlnaXRhbCcsXG4gICAgICBjb25zdHJ1Y3Rpb246ICdDb25zdHJ1Y3Rpb24nLFxuICAgICAgY29udGFjdDogJ0NvbnRhY3QgVXMnLFxuICAgIH07XG5cbiAgcmV0dXJuIChcbiAgICA8YXNpZGVcbiAgICAgIGNsYXNzTmFtZT17YG5hdi1jYXJkICR7c2hvdWxkU2hyaW5rID8gJ3NocnVuaycgOiAnJ31gfVxuICAgICAgYXJpYS1sYWJlbD1cIk1haW4gbmF2aWdhdGlvblwiXG4gICAgICBvbk1vdXNlRW50ZXI9eygpID0+IHNldElzSG92ZXJlZCh0cnVlKX1cbiAgICAgIG9uTW91c2VMZWF2ZT17KCkgPT4gc2V0SXNIb3ZlcmVkKGZhbHNlKX1cbiAgICA+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cIm5hdi10b3BcIj5cbiAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJsb2dvLWFyZWFcIiBvbkNsaWNrPXsoKSA9PiBoYW5kbGVOYXZpZ2F0aW9uKCcvJyl9IHR5cGU9XCJidXR0b25cIj5cbiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJsb2dvLW1hcmtcIj5cbiAgICAgICAgICAgIDxpbWcgc3JjPXtsb2dvfSBhbHQ9XCJQb2xhclBvaW50XCIgY2xhc3NOYW1lPVwibG9nby1pbWdcIiAvPlxuICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJsb2dvLXRleHRcIj5cbiAgICAgICAgICAgIFBvbGFyUG9pbnRcbiAgICAgICAgICAgIDxiciAvPlxuICAgICAgICAgICAgVGVjaFxuICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgPC9idXR0b24+XG4gICAgICA8L2Rpdj5cblxuICAgICAgPG5hdiBjbGFzc05hbWU9XCJuYXYtbWVudVwiPlxuICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgY2xhc3NOYW1lPXtgbWVudS1pdGVtIGhvbWUtaXRlbSAke2xvY2F0aW9uLnBhdGhuYW1lID09PSAnLycgPyAnYWN0aXZlJyA6ICcnfWB9XG4gICAgICAgICAgdGl0bGU9XCJIb21lXCJcbiAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBoYW5kbGVOYXZpZ2F0aW9uKCcvJyl9XG4gICAgICAgICAgdHlwZT1cImJ1dHRvblwiXG4gICAgICAgID5cbiAgICAgICAgICA8c3ZnIGNsYXNzTmFtZT1cImljb25cIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgZmlsbD1cIm5vbmVcIiBzdHJva2U9XCJjdXJyZW50Q29sb3JcIiBzdHJva2VXaWR0aD1cIjJcIj5cbiAgICAgICAgICAgIDxwYXRoIGQ9XCJNMyAxMC41TDEyIDNsOSA3LjVWMjFhMSAxIDAgMCAxLTEgMWgtNXYtNkg5djZINGExIDEgMCAwIDEtMS0xVjEwLjVaXCIgLz5cbiAgICAgICAgICA8L3N2Zz5cbiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJsYWJlbFwiPntuYXZUZXh0LmhvbWV9PC9zcGFuPlxuICAgICAgICA8L2J1dHRvbj5cblxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1lbnUtbGFiZWxcIiB0aXRsZT1cIlNlcnZpY2VzXCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJsZWZ0XCI+XG4gICAgICAgICAgICA8c3ZnIGNsYXNzTmFtZT1cImljb25cIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgZmlsbD1cIm5vbmVcIiBzdHJva2U9XCJjdXJyZW50Q29sb3JcIiBzdHJva2VXaWR0aD1cIjJcIj5cbiAgICAgICAgICAgICAgPGNpcmNsZSBjeD1cIjEyXCIgY3k9XCIxMlwiIHI9XCI5XCIgLz5cbiAgICAgICAgICAgICAgPHBhdGggZD1cIm0xNS41IDguNS0yLjIgNi4xLTUuOCAxLjkgMi4yLTYuMSA1LjgtMS45WlwiIC8+XG4gICAgICAgICAgICA8L3N2Zz5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImxhYmVsXCI+e25hdlRleHQuc2VydmljZXN9PC9zcGFuPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxzdmcgY2xhc3NOYW1lPVwiYXJyb3dcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgZmlsbD1cIm5vbmVcIiBzdHJva2U9XCJjdXJyZW50Q29sb3JcIiBzdHJva2VXaWR0aD1cIjJcIj5cbiAgICAgICAgICAgIDxwb2x5bGluZSBwb2ludHM9XCI2IDkgMTIgMTUgMTggOVwiIC8+XG4gICAgICAgICAgPC9zdmc+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxidXR0b25cbiAgICAgICAgICBjbGFzc05hbWU9e2BtZW51LWl0ZW0gc3ViLWl0ZW0gJHtsb2NhdGlvbi5wYXRobmFtZSA9PT0gJy9tYW51ZmFjdHVyaW5nJyA/ICdhY3RpdmUnIDogJyd9YH1cbiAgICAgICAgICB0aXRsZT1cIk1hbnVmYWN0dXJpbmdcIlxuICAgICAgICAgIG9uQ2xpY2s9eygpID0+IGhhbmRsZU5hdmlnYXRpb24oJy9tYW51ZmFjdHVyaW5nJyl9XG4gICAgICAgICAgdHlwZT1cImJ1dHRvblwiXG4gICAgICAgID5cbiAgICAgICAgICB7c2hvdWxkU2hyaW5rID8gKFxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwibGV0dGVyLWljb25cIj5NPC9zcGFuPlxuICAgICAgICAgICkgOiAoXG4gICAgICAgICAgICA8PlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJkb3RcIiBhcmlhLWhpZGRlbj1cInRydWVcIj48L3NwYW4+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImxhYmVsXCI+e25hdlRleHQubWFudWZhY3R1cmluZ308L3NwYW4+XG4gICAgICAgICAgICA8Lz5cbiAgICAgICAgICApfVxuICAgICAgICA8L2J1dHRvbj5cblxuICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgY2xhc3NOYW1lPXtgbWVudS1pdGVtIHN1Yi1pdGVtICR7bG9jYXRpb24ucGF0aG5hbWUgPT09ICcvdGVjaG5vbG9neScgPyAnYWN0aXZlJyA6ICcnfWB9XG4gICAgICAgICAgdGl0bGU9XCJEaWdpdGFsXCJcbiAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBoYW5kbGVOYXZpZ2F0aW9uKCcvdGVjaG5vbG9neScpfVxuICAgICAgICAgIHR5cGU9XCJidXR0b25cIlxuICAgICAgICA+XG4gICAgICAgICAge3Nob3VsZFNocmluayA/IChcbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImxldHRlci1pY29uXCI+RDwvc3Bhbj5cbiAgICAgICAgICApIDogKFxuICAgICAgICAgICAgPD5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiZG90XCIgYXJpYS1oaWRkZW49XCJ0cnVlXCI+PC9zcGFuPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJsYWJlbFwiPntuYXZUZXh0LmRpZ2l0YWx9PC9zcGFuPlxuICAgICAgICAgICAgPC8+XG4gICAgICAgICAgKX1cbiAgICAgICAgPC9idXR0b24+XG5cbiAgICAgICAgPGJ1dHRvblxuICAgICAgICAgIGNsYXNzTmFtZT17YG1lbnUtaXRlbSBzdWItaXRlbSAke2xvY2F0aW9uLnBhdGhuYW1lID09PSAnL2NvbnN0cnVjdGlvbicgPyAnYWN0aXZlJyA6ICcnfWB9XG4gICAgICAgICAgdGl0bGU9XCJDb25zdHJ1Y3Rpb25cIlxuICAgICAgICAgIG9uQ2xpY2s9eygpID0+IGhhbmRsZU5hdmlnYXRpb24oJy9jb25zdHJ1Y3Rpb24nKX1cbiAgICAgICAgICB0eXBlPVwiYnV0dG9uXCJcbiAgICAgICAgPlxuICAgICAgICAgIHtzaG91bGRTaHJpbmsgPyAoXG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJsZXR0ZXItaWNvblwiPkM8L3NwYW4+XG4gICAgICAgICAgKSA6IChcbiAgICAgICAgICAgIDw+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImRvdFwiIGFyaWEtaGlkZGVuPVwidHJ1ZVwiPjwvc3Bhbj5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwibGFiZWxcIj57bmF2VGV4dC5jb25zdHJ1Y3Rpb259PC9zcGFuPlxuICAgICAgICAgICAgPC8+XG4gICAgICAgICAgKX1cbiAgICAgICAgPC9idXR0b24+XG4gICAgICA8L25hdj5cblxuICAgICAgPGRpdiBjbGFzc05hbWU9e2BsYW5ndWFnZS1zd2l0Y2hlciAke2lzTGFuZ3VhZ2VPcGVuID8gJ29wZW4nIDogJyd9YH0+XG4gICAgICAgIDxidXR0b25cbiAgICAgICAgICBjbGFzc05hbWU9XCJsYW5ndWFnZS10cmlnZ2VyXCJcbiAgICAgICAgICB0eXBlPVwiYnV0dG9uXCJcbiAgICAgICAgICB0aXRsZT1cIkxhbmd1YWdlXCJcbiAgICAgICAgICBhcmlhLWxhYmVsPVwiQ2hhbmdlIGxhbmd1YWdlXCJcbiAgICAgICAgICBhcmlhLWV4cGFuZGVkPXtpc0xhbmd1YWdlT3Blbn1cbiAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRJc0xhbmd1YWdlT3BlbigoaXNPcGVuKSA9PiAhaXNPcGVuKX1cbiAgICAgICAgPlxuICAgICAgICAgIDxFYXJ0aEljb24gLz5cbiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJsYWJlbFwiPntsYW5ndWFnZUxhYmVsfTwvc3Bhbj5cbiAgICAgICAgPC9idXR0b24+XG5cbiAgICAgICAge2lzTGFuZ3VhZ2VPcGVuICYmIChcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxhbmd1YWdlLW1lbnVcIj5cbiAgICAgICAgICAgIDxidXR0b25cbiAgICAgICAgICAgICAgY2xhc3NOYW1lPXtsYW5ndWFnZSA9PT0gJ2VuJyA/ICdhY3RpdmUnIDogJyd9XG4gICAgICAgICAgICAgIHR5cGU9XCJidXR0b25cIlxuICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBoYW5kbGVMYW5ndWFnZUNoYW5nZSgnZW4nKX1cbiAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgPHNwYW4+RW5nbGlzaDwvc3Bhbj5cbiAgICAgICAgICAgICAgPHNtYWxsPkVOPC9zbWFsbD5cbiAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICBjbGFzc05hbWU9e2xhbmd1YWdlID09PSAnemgnID8gJ2FjdGl2ZScgOiAnJ31cbiAgICAgICAgICAgICAgdHlwZT1cImJ1dHRvblwiXG4gICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IGhhbmRsZUxhbmd1YWdlQ2hhbmdlKCd6aCcpfVxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICA8c3Bhbj7nuYHpq5TkuK3mloc8L3NwYW4+XG4gICAgICAgICAgICAgIDxzbWFsbD7kuK3mloc8L3NtYWxsPlxuICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICl9XG4gICAgICA8L2Rpdj5cblxuICAgICAgPGJ1dHRvblxuICAgICAgICBjbGFzc05hbWU9e2Bjb250YWN0LWJ0biAke2xvY2F0aW9uLnBhdGhuYW1lID09PSAnL2NvbnRhY3QnID8gJ2FjdGl2ZScgOiAnJ31gfVxuICAgICAgICB0aXRsZT1cIkNvbnRhY3QgVXNcIlxuICAgICAgICBvbkNsaWNrPXsoKSA9PiBoYW5kbGVOYXZpZ2F0aW9uKCcvY29udGFjdCcpfVxuICAgICAgICB0eXBlPVwiYnV0dG9uXCJcbiAgICAgID5cbiAgICAgICAgPHN2ZyBjbGFzc05hbWU9XCJpY29uXCIgdmlld0JveD1cIjAgMCAyNCAyNFwiIGZpbGw9XCJub25lXCIgc3Ryb2tlPVwiY3VycmVudENvbG9yXCIgc3Ryb2tlV2lkdGg9XCIyXCI+XG4gICAgICAgICAgPHBhdGggZD1cIk0yMSAxNWEyIDIgMCAwIDEtMiAySDhsLTUgNFY1YTIgMiAwIDAgMSAyLTJoMTRhMiAyIDAgMCAxIDIgMnYxMFpcIiAvPlxuICAgICAgICA8L3N2Zz5cbiAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwibGFiZWxcIj57bmF2VGV4dC5jb250YWN0fTwvc3Bhbj5cbiAgICAgIDwvYnV0dG9uPlxuICAgIDwvYXNpZGU+XG4gICk7XG59XG4iXSwibmFtZXMiOlsiUmVhY3QiLCJ1c2VFZmZlY3QiLCJ1c2VTdGF0ZSIsInVzZUxvY2F0aW9uIiwidXNlTmF2aWdhdGUiLCJsb2dvIiwidXNlTGFuZ3VhZ2UiLCJFYXJ0aEljb24iLCJzdmciLCJjbGFzc05hbWUiLCJ2aWV3Qm94IiwiYXJpYS1oaWRkZW4iLCJkZWZzIiwibGluZWFyR3JhZGllbnQiLCJpZCIsIngxIiwieTEiLCJ4MiIsInkyIiwiZ3JhZGllbnRVbml0cyIsInN0b3AiLCJzdG9wQ29sb3IiLCJvZmZzZXQiLCJjaXJjbGUiLCJjeCIsImN5IiwiciIsImZpbGwiLCJwYXRoIiwiZCIsIm9wYWNpdHkiLCJzdHJva2UiLCJzdHJva2VXaWR0aCIsIkhlYWRlciIsImlzU2hydW5rIiwic2V0SXNTaHJ1bmsiLCJpc0hvdmVyZWQiLCJzZXRJc0hvdmVyZWQiLCJpc0xhbmd1YWdlT3BlbiIsInNldElzTGFuZ3VhZ2VPcGVuIiwibGFuZ3VhZ2UiLCJzZXRMYW5ndWFnZSIsImxhbmd1YWdlTGFiZWwiLCJpc0NoaW5lc2UiLCJuYXZpZ2F0ZSIsImxvY2F0aW9uIiwic2hvdWxkU2hyaW5rIiwiaGFuZGxlU2Nyb2xsIiwid2luZG93Iiwic2Nyb2xsWSIsImFkZEV2ZW50TGlzdGVuZXIiLCJyZW1vdmVFdmVudExpc3RlbmVyIiwiaGFuZGxlTmF2aWdhdGlvbiIsInNjcm9sbFRvIiwidG9wIiwiYmVoYXZpb3IiLCJoYW5kbGVMYW5ndWFnZUNoYW5nZSIsIm5leHRMYW5ndWFnZSIsIm5hdlRleHQiLCJob21lIiwic2VydmljZXMiLCJtYW51ZmFjdHVyaW5nIiwiZGlnaXRhbCIsImNvbnN0cnVjdGlvbiIsImNvbnRhY3QiLCJhc2lkZSIsImFyaWEtbGFiZWwiLCJvbk1vdXNlRW50ZXIiLCJvbk1vdXNlTGVhdmUiLCJkaXYiLCJidXR0b24iLCJvbkNsaWNrIiwidHlwZSIsInNwYW4iLCJpbWciLCJzcmMiLCJhbHQiLCJiciIsIm5hdiIsInBhdGhuYW1lIiwidGl0bGUiLCJwb2x5bGluZSIsInBvaW50cyIsImFyaWEtZXhwYW5kZWQiLCJpc09wZW4iLCJzbWFsbCJdLCJtYXBwaW5ncyI6Ijs7QUFBQSxPQUFPQSxTQUFTQyxTQUFTLEVBQUVDLFFBQVEsUUFBUSxRQUFRO0FBQ25ELFNBQVNDLFdBQVcsRUFBRUMsV0FBVyxRQUFRLG1CQUFtQjtBQUM1RCxPQUFPLGdCQUFnQjtBQUN2QixPQUFPQyxVQUFVLDBCQUEwQjtBQUMzQyxTQUFTQyxXQUFXLFFBQVEsMEJBQTBCO0FBRXRELE1BQU1DLFlBQVksa0JBQ2hCLFFBQUNDO1FBQUlDLFdBQVU7UUFBYUMsU0FBUTtRQUFZQyxlQUFZOzswQkFDMUQsUUFBQ0M7O2tDQUNDLFFBQUNDO3dCQUFlQyxJQUFHO3dC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

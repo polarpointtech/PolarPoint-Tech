@@ -1,0 +1,299 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/sections/Construction2.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=6b69b0b0"; const _jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+var _s = $RefreshSig$();
+import __vite__cjsImport1_react from "/node_modules/.vite/deps/react.js?v=83a14ab1"; const React = __vite__cjsImport1_react.__esModule ? __vite__cjsImport1_react.default : __vite__cjsImport1_react; const useState = __vite__cjsImport1_react["useState"];
+import "/src/sections/Construction2.scss";
+import { useLanguage } from "/src/i18n/LanguageContext.jsx";
+import bgImg from "/src/assets/home1-1.png?import";
+const ChairIcon = ()=>/*#__PURE__*/ _jsxDEV("svg", {
+        width: "40",
+        height: "40",
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "2",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        children: [
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 8,
+                columnNumber: 146
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H7v-2a2 2 0 0 0-4 0v5Z"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 8,
+                columnNumber: 197
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M5 18v2"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 8,
+                columnNumber: 286
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M19 18v2"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 8,
+                columnNumber: 305
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+        lineNumber: 8,
+        columnNumber: 3
+    }, this);
+_c = ChairIcon;
+const StoneIcon = ()=>/*#__PURE__*/ _jsxDEV("svg", {
+        width: "60",
+        height: "60",
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "1.5",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        children: /*#__PURE__*/ _jsxDEV("path", {
+            d: "M2 12h5l2 5 3-10 4 8 3-5h3"
+        }, void 0, false, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+            lineNumber: 12,
+            columnNumber: 148
+        }, this)
+    }, void 0, false, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+        lineNumber: 12,
+        columnNumber: 3
+    }, this);
+_c1 = StoneIcon;
+const CaliperIcon = ()=>/*#__PURE__*/ _jsxDEV("svg", {
+        width: "40",
+        height: "40",
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "2",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        children: [
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M3 4h18"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 16,
+                columnNumber: 146
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M5 4v16"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 16,
+                columnNumber: 165
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M19 4v16"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 16,
+                columnNumber: 184
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M5 8h14"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 16,
+                columnNumber: 204
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M5 16h3"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 16,
+                columnNumber: 223
+            }, this),
+            /*#__PURE__*/ _jsxDEV("path", {
+                d: "M19 16h-3"
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 16,
+                columnNumber: 242
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+        lineNumber: 16,
+        columnNumber: 3
+    }, this);
+_c2 = CaliperIcon;
+export default function Construction2() {
+    _s();
+    const { isChinese } = useLanguage();
+    const [activeIndex, setActiveIndex] = useState(0);
+    const items = [
+        {
+            id: 0,
+            icon: /*#__PURE__*/ _jsxDEV(ChairIcon, {}, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 25,
+                columnNumber: 13
+            }, this),
+            label: isChinese ? '室內空間應用' : 'Interior Applications',
+            description: isChinese ? '適用於住宅與商業空間的石材應用，包括檯面、樓梯、牆面板材與空間細節設計。' : 'Interior stone applications for residential and commercial spaces, including countertops, stair materials, wall panels, and furniture details.'
+        },
+        {
+            id: 1,
+            icon: /*#__PURE__*/ _jsxDEV(StoneIcon, {}, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 33,
+                columnNumber: 13
+            }, this),
+            label: isChinese ? '電視牆與特色牆設計' : 'Feature Wall Projects',
+            description: isChinese ? '運用大理石、花崗岩與精選石材，打造具質感與視覺焦點的空間牆面設計。' : 'TV walls and feature wall solutions using marble, granite, and selected stone materials to create premium interior focal points.'
+        },
+        {
+            id: 2,
+            icon: /*#__PURE__*/ _jsxDEV(CaliperIcon, {}, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 41,
+                columnNumber: 13
+            }, this),
+            label: isChinese ? '客製化石材方案' : 'Custom Stone Solutions',
+            description: isChinese ? '依據專案需求、設計風格、尺寸、表面處理與應用情境，提供適合的石材搭配建議。' : 'Customized stone sourcing and material selection based on project requirements, design style, size, finish, and application needs.'
+        }
+    ];
+    const getPositionClass = (index)=>{
+        if (index === activeIndex) return 'pos-center';
+        const diff = (index - activeIndex + 3) % 3;
+        return diff === 2 ? 'pos-left' : 'pos-right';
+    };
+    return /*#__PURE__*/ _jsxDEV("section", {
+        className: `construction2-container ${isChinese ? 'construction2-container-zh' : ''}`,
+        children: [
+            /*#__PURE__*/ _jsxDEV("div", {
+                className: "ellipse-clip",
+                children: /*#__PURE__*/ _jsxDEV("div", {
+                    className: "elliptical-bg",
+                    children: /*#__PURE__*/ _jsxDEV("div", {
+                        className: "bg-image",
+                        style: {
+                            backgroundImage: `url(${bgImg})`
+                        }
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                        lineNumber: 59,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                    lineNumber: 58,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 57,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDEV("div", {
+                className: "content-wrapper",
+                children: [
+                    /*#__PURE__*/ _jsxDEV("div", {
+                        className: "icons-orbit",
+                        children: items.map((item, index)=>/*#__PURE__*/ _jsxDEV("button", {
+                                className: `orbit-item ${getPositionClass(index)}`,
+                                onClick: ()=>setActiveIndex(index),
+                                "aria-label": item.label,
+                                type: "button",
+                                children: /*#__PURE__*/ _jsxDEV("span", {
+                                    className: "icon-circle",
+                                    children: item.icon
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                                    lineNumber: 77,
+                                    columnNumber: 15
+                                }, this)
+                            }, item.id, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                                lineNumber: 70,
+                                columnNumber: 13
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                        lineNumber: 68,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("div", {
+                        className: "service-content",
+                        children: [
+                            /*#__PURE__*/ _jsxDEV("h3", {
+                                children: items[activeIndex].label
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                                lineNumber: 83,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("p", {
+                                children: items[activeIndex].description
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                                lineNumber: 84,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                        lineNumber: 82,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+                lineNumber: 67,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx",
+        lineNumber: 56,
+        columnNumber: 5
+    }, this);
+}
+_s(Construction2, "t6umsTrUGI7FTEQaHu/cDd0kh3o=", false, function() {
+    return [
+        useLanguage
+    ];
+});
+_c3 = Construction2;
+var _c, _c1, _c2, _c3;
+$RefreshReg$(_c, "ChairIcon");
+$RefreshReg$(_c1, "StoneIcon");
+$RefreshReg$(_c2, "CaliperIcon");
+$RefreshReg$(_c3, "Construction2");
+
+
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react-swc can't detect preamble. Something is wrong."
+    );
+  }
+
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) { return RefreshRuntime.register(type, "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Construction2.jsx" + ' ' + id) }
+function $RefreshSig$() { return RefreshRuntime.createSignatureFunctionForTransform(); }
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNvbnN0cnVjdGlvbjIuanN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyB1c2VTdGF0ZSB9IGZyb20gJ3JlYWN0JztcbmltcG9ydCAnLi9Db25zdHJ1Y3Rpb24yLnNjc3MnO1xuaW1wb3J0IHsgdXNlTGFuZ3VhZ2UgfSBmcm9tICcuLi9pMThuL0xhbmd1YWdlQ29udGV4dCc7XG5cbmltcG9ydCBiZ0ltZyBmcm9tICcuLi9hc3NldHMvaG9tZTEtMS5wbmcnO1xuXG5jb25zdCBDaGFpckljb24gPSAoKSA9PiAoXG4gIDxzdmcgd2lkdGg9XCI0MFwiIGhlaWdodD1cIjQwXCIgdmlld0JveD1cIjAgMCAyNCAyNFwiIGZpbGw9XCJub25lXCIgc3Ryb2tlPVwiY3VycmVudENvbG9yXCIgc3Ryb2tlV2lkdGg9XCIyXCIgc3Ryb2tlTGluZWNhcD1cInJvdW5kXCIgc3Ryb2tlTGluZWpvaW49XCJyb3VuZFwiPjxwYXRoIGQ9XCJNMTkgOVY2YTIgMiAwIDAgMC0yLTJIN2EyIDIgMCAwIDAtMiAydjNcIi8+PHBhdGggZD1cIk0zIDE2YTIgMiAwIDAgMCAyIDJoMTRhMiAyIDAgMCAwIDItMnYtNWEyIDIgMCAwIDAtNCAwdjJIN3YtMmEyIDIgMCAwIDAtNCAwdjVaXCIvPjxwYXRoIGQ9XCJNNSAxOHYyXCIvPjxwYXRoIGQ9XCJNMTkgMTh2MlwiLz48L3N2Zz5cbik7XG5cbmNvbnN0IFN0b25lSWNvbiA9ICgpID0+IChcbiAgPHN2ZyB3aWR0aD1cIjYwXCIgaGVpZ2h0PVwiNjBcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgZmlsbD1cIm5vbmVcIiBzdHJva2U9XCJjdXJyZW50Q29sb3JcIiBzdHJva2VXaWR0aD1cIjEuNVwiIHN0cm9rZUxpbmVjYXA9XCJyb3VuZFwiIHN0cm9rZUxpbmVqb2luPVwicm91bmRcIj48cGF0aCBkPVwiTTIgMTJoNWwyIDUgMy0xMCA0IDggMy01aDNcIi8+PC9zdmc+XG4pO1xuXG5jb25zdCBDYWxpcGVySWNvbiA9ICgpID0+IChcbiAgPHN2ZyB3aWR0aD1cIjQwXCIgaGVpZ2h0PVwiNDBcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgZmlsbD1cIm5vbmVcIiBzdHJva2U9XCJjdXJyZW50Q29sb3JcIiBzdHJva2VXaWR0aD1cIjJcIiBzdHJva2VMaW5lY2FwPVwicm91bmRcIiBzdHJva2VMaW5lam9pbj1cInJvdW5kXCI+PHBhdGggZD1cIk0zIDRoMThcIi8+PHBhdGggZD1cIk01IDR2MTZcIi8+PHBhdGggZD1cIk0xOSA0djE2XCIvPjxwYXRoIGQ9XCJNNSA4aDE0XCIvPjxwYXRoIGQ9XCJNNSAxNmgzXCIvPjxwYXRoIGQ9XCJNMTkgMTZoLTNcIi8+PC9zdmc+XG4pO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBDb25zdHJ1Y3Rpb24yKCkge1xuICBjb25zdCB7IGlzQ2hpbmVzZSB9ID0gdXNlTGFuZ3VhZ2UoKTtcbiAgY29uc3QgW2FjdGl2ZUluZGV4LCBzZXRBY3RpdmVJbmRleF0gPSB1c2VTdGF0ZSgwKTtcbiAgY29uc3QgaXRlbXMgPSBbXG4gICAge1xuICAgICAgaWQ6IDAsXG4gICAgICBpY29uOiA8Q2hhaXJJY29uIC8+LFxuICAgICAgbGFiZWw6IGlzQ2hpbmVzZSA/ICflrqTlhafnqbrplpPmh4nnlKgnIDogJ0ludGVyaW9yIEFwcGxpY2F0aW9ucycsXG4gICAgICBkZXNjcmlwdGlvbjogaXNDaGluZXNlXG4gICAgICAgID8gJ+mBqeeUqOaWvOS9j+WuheiIh+WVhualreepuumWk+eahOefs+adkOaHieeUqO+8jOWMheaLrOaqr+mdouOAgeaok+air+OAgeeJhumdouadv+adkOiIh+epuumWk+e0sOevgOioreioiOOAgidcbiAgICAgICAgOiAnSW50ZXJpb3Igc3RvbmUgYXBwbGljYXRpb25zIGZvciByZXNpZGVudGlhbCBhbmQgY29tbWVyY2lhbCBzcGFjZXMsIGluY2x1ZGluZyBjb3VudGVydG9wcywgc3RhaXIgbWF0ZXJpYWxzLCB3YWxsIHBhbmVscywgYW5kIGZ1cm5pdHVyZSBkZXRhaWxzLicsXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogMSxcbiAgICAgIGljb246IDxTdG9uZUljb24gLz4sXG4gICAgICBsYWJlbDogaXNDaGluZXNlID8gJ+mbu+imlueJhuiIh+eJueiJsueJhuioreioiCcgOiAnRmVhdHVyZSBXYWxsIFByb2plY3RzJyxcbiAgICAgIGRlc2NyaXB0aW9uOiBpc0NoaW5lc2VcbiAgICAgICAgPyAn6YGL55So5aSn55CG55+z44CB6Iqx5bSX5bKp6IiH57K+6YG455+z5p2Q77yM5omT6YCg5YW36LOq5oSf6IiH6KaW6Ka654Sm6bue55qE56m66ZaT54mG6Z2i6Kit6KiI44CCJ1xuICAgICAgICA6ICdUViB3YWxscyBhbmQgZmVhdHVyZSB3YWxsIHNvbHV0aW9ucyB1c2luZyBtYXJibGUsIGdyYW5pdGUsIGFuZCBzZWxlY3RlZCBzdG9uZSBtYXRlcmlhbHMgdG8gY3JlYXRlIHByZW1pdW0gaW50ZXJpb3IgZm9jYWwgcG9pbnRzLicsXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogMixcbiAgICAgIGljb246IDxDYWxpcGVySWNvbiAvPixcbiAgICAgIGxhYmVsOiBpc0NoaW5lc2UgPyAn5a6i6KO95YyW55+z5p2Q5pa55qGIJyA6ICdDdXN0b20gU3RvbmUgU29sdXRpb25zJyxcbiAgICAgIGRlc2NyaXB0aW9uOiBpc0NoaW5lc2VcbiAgICAgICAgPyAn5L6d5pOa5bCI5qGI6ZyA5rGC44CB6Kit6KiI6aKo5qC844CB5bC65a+444CB6KGo6Z2i6JmV55CG6IiH5oeJ55So5oOF5aKD77yM5o+Q5L6b6YGp5ZCI55qE55+z5p2Q5pCt6YWN5bu66K2w44CCJ1xuICAgICAgICA6ICdDdXN0b21pemVkIHN0b25lIHNvdXJjaW5nIGFuZCBtYXRlcmlhbCBzZWxlY3Rpb24gYmFzZWQgb24gcHJvamVjdCByZXF1aXJlbWVudHMsIGRlc2lnbiBzdHlsZSwgc2l6ZSwgZmluaXNoLCBhbmQgYXBwbGljYXRpb24gbmVlZHMuJyxcbiAgICB9LFxuICBdO1xuXG4gIGNvbnN0IGdldFBvc2l0aW9uQ2xhc3MgPSAoaW5kZXgpID0+IHtcbiAgICBpZiAoaW5kZXggPT09IGFjdGl2ZUluZGV4KSByZXR1cm4gJ3Bvcy1jZW50ZXInO1xuICAgIGNvbnN0IGRpZmYgPSAoaW5kZXggLSBhY3RpdmVJbmRleCArIDMpICUgMztcbiAgICByZXR1cm4gZGlmZiA9PT0gMiA/ICdwb3MtbGVmdCcgOiAncG9zLXJpZ2h0JztcbiAgfTtcblxuICByZXR1cm4gKFxuICAgIDxzZWN0aW9uIGNsYXNzTmFtZT17YGNvbnN0cnVjdGlvbjItY29udGFpbmVyICR7aXNDaGluZXNlID8gJ2NvbnN0cnVjdGlvbjItY29udGFpbmVyLXpoJyA6ICcnfWB9PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJlbGxpcHNlLWNsaXBcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJlbGxpcHRpY2FsLWJnXCI+XG4gICAgICAgICAgPGRpdlxuICAgICAgICAgICAgY2xhc3NOYW1lPVwiYmctaW1hZ2VcIlxuICAgICAgICAgICAgc3R5bGU9e3sgYmFja2dyb3VuZEltYWdlOiBgdXJsKCR7YmdJbWd9KWAgfX1cbiAgICAgICAgICA+PC9kaXY+XG5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cblxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250ZW50LXdyYXBwZXJcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpY29ucy1vcmJpdFwiPlxuICAgICAgICAgIHtpdGVtcy5tYXAoKGl0ZW0sIGluZGV4KSA9PiAoXG4gICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgIGtleT17aXRlbS5pZH1cbiAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgb3JiaXQtaXRlbSAke2dldFBvc2l0aW9uQ2xhc3MoaW5kZXgpfWB9XG4gICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldEFjdGl2ZUluZGV4KGluZGV4KX1cbiAgICAgICAgICAgICAgYXJpYS1sYWJlbD17aXRlbS5sYWJlbH1cbiAgICAgICAgICAgICAgdHlwZT1cImJ1dHRvblwiXG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImljb24tY2lyY2xlXCI+e2l0ZW0uaWNvbn08L3NwYW4+XG4gICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICApKX1cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzZXJ2aWNlLWNvbnRlbnRcIj5cbiAgICAgICAgICA8aDM+e2l0ZW1zW2FjdGl2ZUluZGV4XS5sYWJlbH08L2gzPlxuICAgICAgICAgIDxwPntpdGVtc1thY3RpdmVJbmRleF0uZGVzY3JpcHRpb259PC9wPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgIDwvc2VjdGlvbj5cbiAgKTtcbn1cbiJdLCJuYW1lcyI6WyJSZWFjdCIsInVzZVN0YXRlIiwidXNlTGFuZ3VhZ2UiLCJiZ0ltZyIsIkNoYWlySWNvbiIsInN2ZyIsIndpZHRoIiwiaGVpZ2h0Iiwidmlld0JveCIsImZpbGwiLCJzdHJva2UiLCJzdHJva2VXaWR0aCIsInN0cm9rZUxpbmVjYXAiLCJzdHJva2VMaW5lam9pbiIsInBhdGgiLCJkIiwiU3RvbmVJY29uIiwiQ2FsaXBlckljb24iLCJDb25zdHJ1Y3Rpb24yIiwiaXNDaGluZXNlIiwiYWN0aXZlSW5kZXgiLCJzZXRBY3RpdmVJbmRleCIsIml0ZW1zIiwiaWQiLCJpY29uIiwibGFiZWwiLCJkZXNjcmlwdGlvbiIsImdldFBvc2l0aW9uQ2xhc3MiLCJpbmRleCIsImRpZmYiLCJzZWN0aW9uIiwiY2xhc3NOYW1lIiwiZGl2Iiwic3R5bGUiLCJiYWNrZ3JvdW5kSW1hZ2UiLCJtYXAiLCJpdGVtIiwiYnV0dG9uIiwib25DbGljayIsImFyaWEtbGFiZWwiLCJ0eXBlIiwic3BhbiIsImgzIiwicCJdLCJtYXBwaW5ncyI6Ijs7QUFBQSxPQUFPQSxTQUFTQyxRQUFRLFFBQVEsUUFBUTtBQUN4QyxPQUFPLHVCQUF1QjtBQUM5QixTQUFTQyxXQUFXLFFBQVEsMEJBQTBCO0FBRXRELE9BQU9DLFdB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

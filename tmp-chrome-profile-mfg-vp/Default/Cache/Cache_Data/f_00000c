@@ -1,0 +1,695 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/sections/Home6.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=6b69b0b0"; const _jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"]; const _Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"];
+var _s = $RefreshSig$();
+import __vite__cjsImport1_react from "/node_modules/.vite/deps/react.js?v=83a14ab1"; const React = __vite__cjsImport1_react.__esModule ? __vite__cjsImport1_react.default : __vite__cjsImport1_react;
+import "/src/sections/Home6.scss";
+import { useLanguage } from "/src/i18n/LanguageContext.jsx";
+const avatarUrl = (id)=>`https://i.pravatar.cc/150?img=${id}`;
+const testimonialRows = [
+    [
+        {
+            id: 'r1-01',
+            type: 'long',
+            rating: 5,
+            text: 'Their team helped us source the right mechanical components quickly and kept every detail organized from quote to delivery.',
+            textZh: '他們協助我們快速找到合適的機構零件，從報價到交付都整理得很清楚。',
+            name: 'Sophie Moore',
+            role: 'Operations Director',
+            roleZh: '營運總監',
+            avatar: avatarUrl(1)
+        },
+        {
+            id: 'r1-02',
+            type: 'short',
+            rating: 4.5,
+            text: 'Reliable communication, clear timelines, and solid production support throughout the entire project.',
+            textZh: '溝通穩定、時程清楚，整個專案的生產支援都很扎實。',
+            name: 'Adam Carter',
+            role: 'Founder',
+            roleZh: '創辦人',
+            avatar: avatarUrl(2)
+        },
+        {
+            id: 'r1-03',
+            type: 'long',
+            rating: 4,
+            text: 'We needed custom fabrication with tight tolerances, and the final parts matched our expectations without unnecessary back and forth.',
+            textZh: '我們需要高精度客製加工，最後成品符合預期，也省下很多反覆確認的時間。',
+            name: "Michel O'Neil",
+            role: 'Procurement Lead',
+            roleZh: '採購主管',
+            avatar: avatarUrl(3)
+        },
+        {
+            id: 'r1-04',
+            type: 'short',
+            rating: 5,
+            text: 'A practical partner for OEM work. The process felt structured, responsive, and professional.',
+            textZh: '很適合 OEM 合作，流程有條理，回覆也很專業。',
+            name: 'Annie Daway',
+            role: 'Product Designer',
+            roleZh: '產品設計師',
+            avatar: avatarUrl(4)
+        },
+        {
+            id: 'r1-05',
+            type: 'long',
+            rating: 4.5,
+            text: 'They helped compare material options, clarify supplier details, and keep our purchasing decisions aligned with budget and lead time.',
+            textZh: '他們協助比較材料選項與供應細節，讓採購決策能兼顧預算與交期。',
+            name: 'John Carter',
+            role: 'Project Manager',
+            roleZh: '專案經理',
+            avatar: avatarUrl(5)
+        },
+        {
+            id: 'r1-06',
+            type: 'short',
+            rating: 3.5,
+            text: 'Good support and steady follow-up. A few details took longer, but the final result was dependable.',
+            textZh: '支援和追蹤都穩定，部分細節花了較多時間，但結果可靠。',
+            name: 'Jane Smith',
+            role: 'Retail Owner',
+            roleZh: '零售業主',
+            avatar: avatarUrl(6)
+        },
+        {
+            id: 'r1-07',
+            type: 'long',
+            rating: 5,
+            text: 'The tooling advice helped us avoid a production issue before it became expensive to fix.',
+            textZh: '治具方面的建議幫我們提前避開生產問題，避免後續成本變高。',
+            name: 'Victor Chen',
+            role: 'Plant Supervisor',
+            roleZh: '廠務主管',
+            avatar: avatarUrl(19)
+        },
+        {
+            id: 'r1-08',
+            type: 'short',
+            rating: 4,
+            text: 'They were direct about feasibility and gave us a realistic production path.',
+            textZh: '他們會直接說明可行性，也提供很實際的製作方向。',
+            name: 'Elaine Roberts',
+            role: 'Product Lead',
+            roleZh: '產品主管',
+            avatar: avatarUrl(20)
+        },
+        {
+            id: 'r1-09',
+            type: 'long',
+            rating: 4.5,
+            text: 'The sample review was detailed, and the team explained every material tradeoff before we committed.',
+            textZh: '樣品評估很仔細，在確認前也把材料取捨說明得很完整。',
+            name: 'Marco Lin',
+            role: 'Hardware Buyer',
+            roleZh: '五金採購',
+            avatar: avatarUrl(21)
+        },
+        {
+            id: 'r1-10',
+            type: 'short',
+            rating: 5,
+            text: 'Clear quotes, practical suggestions, and no unnecessary complexity.',
+            textZh: '報價清楚、建議實用，不會把流程弄得太複雜。',
+            name: 'Alicia Ford',
+            role: 'Office Manager',
+            roleZh: '辦公室經理',
+            avatar: avatarUrl(22)
+        },
+        {
+            id: 'r1-11',
+            type: 'long',
+            rating: 4,
+            text: 'Their manufacturing coordination helped us keep multiple suppliers aligned on one schedule.',
+            textZh: '他們的製造協調讓多家供應商能跟上同一個時程。',
+            name: 'Derek Wang',
+            role: 'Supply Planner',
+            roleZh: '供應規劃',
+            avatar: avatarUrl(23)
+        },
+        {
+            id: 'r1-12',
+            type: 'short',
+            rating: 4.5,
+            text: 'Professional handling of revisions and very clean documentation.',
+            textZh: '修改處理專業，文件也整理得很乾淨。',
+            name: 'Sarah Miller',
+            role: 'Account Manager',
+            roleZh: '客戶經理',
+            avatar: avatarUrl(24)
+        }
+    ],
+    [
+        {
+            id: 'r2-01',
+            type: 'long',
+            rating: 5,
+            text: 'The website redesign gave our brand a cleaner presentation and made it much easier for customers to understand our services.',
+            textZh: '網站改版後品牌呈現更清楚，客戶也更容易理解我們的服務。',
+            name: 'Lucas Chen',
+            role: 'General Manager',
+            roleZh: '總經理',
+            avatar: avatarUrl(7)
+        },
+        {
+            id: 'r2-02',
+            type: 'short',
+            rating: 4,
+            text: 'Fast sourcing, fair recommendations, and no overcomplicated process.',
+            textZh: '採購速度快，建議也中肯，流程不會過度複雜。',
+            name: 'Rachel Lin',
+            role: 'Purchasing Manager',
+            roleZh: '採購經理',
+            avatar: avatarUrl(8)
+        },
+        {
+            id: 'r2-03',
+            type: 'long',
+            rating: 4.5,
+            text: 'For our stone feature wall project, they understood the look we wanted and helped us narrow down materials with confidence.',
+            textZh: '石材造型牆專案中，他們很快掌握我們要的風格，也協助篩選材料。',
+            name: 'Ethan Brooks',
+            role: 'Interior Contractor',
+            roleZh: '室內工程承包商',
+            avatar: avatarUrl(9)
+        },
+        {
+            id: 'r2-04',
+            type: 'short',
+            rating: 5,
+            text: 'Clear, direct, and easy to work with. The delivery matched the approved specifications.',
+            textZh: '清楚、直接、很好合作，交付內容符合確認規格。',
+            name: 'Nora Williams',
+            role: 'Studio Lead',
+            roleZh: '設計工作室負責人',
+            avatar: avatarUrl(10)
+        },
+        {
+            id: 'r2-05',
+            type: 'long',
+            rating: 4,
+            text: 'Their technical suggestions helped us simplify the fixture design while keeping the production goal intact.',
+            textZh: '技術建議幫我們簡化治具設計，同時保留原本的生產目標。',
+            name: 'Ryan Patel',
+            role: 'Manufacturing Engineer',
+            roleZh: '製造工程師',
+            avatar: avatarUrl(11)
+        },
+        {
+            id: 'r2-06',
+            type: 'short',
+            rating: 4.5,
+            text: 'The automation workflow saved our team time on repeated manual tasks.',
+            textZh: '自動化流程節省了團隊處理重複作業的時間。',
+            name: 'Mia Johnson',
+            role: 'Admin Manager',
+            roleZh: '行政經理',
+            avatar: avatarUrl(12)
+        },
+        {
+            id: 'r2-07',
+            type: 'long',
+            rating: 5,
+            text: 'They translated a messy internal process into a simple digital workflow our team actually uses.',
+            textZh: '他們把混亂的內部流程整理成簡單的數位工具，團隊真的有在使用。',
+            name: 'Ivan Brooks',
+            role: 'Business Analyst',
+            roleZh: '商務分析師',
+            avatar: avatarUrl(25)
+        },
+        {
+            id: 'r2-08',
+            type: 'short',
+            rating: 3.5,
+            text: 'The process took some patience, but the final system solved the main issue.',
+            textZh: '過程需要一點耐心，但最後系統確實解決了主要問題。',
+            name: 'Tina Morgan',
+            role: 'Clinic Owner',
+            roleZh: '診所負責人',
+            avatar: avatarUrl(26)
+        },
+        {
+            id: 'r2-09',
+            type: 'long',
+            rating: 4.5,
+            text: 'Their UI direction made the service flow easier to explain during client meetings.',
+            textZh: '介面規劃讓我們在客戶會議中更容易說明服務流程。',
+            name: 'Ben Hsu',
+            role: 'Sales Director',
+            roleZh: '業務總監',
+            avatar: avatarUrl(27)
+        },
+        {
+            id: 'r2-10',
+            type: 'short',
+            rating: 4,
+            text: 'Good balance between visual design and practical business needs.',
+            textZh: '視覺設計和商務需求之間拿捏得不錯。',
+            name: 'Olivia Grant',
+            role: 'Design Consultant',
+            roleZh: '設計顧問',
+            avatar: avatarUrl(28)
+        },
+        {
+            id: 'r2-11',
+            type: 'long',
+            rating: 5,
+            text: 'They kept the site professional without making it feel like a generic template.',
+            textZh: '網站保有專業感，但不會像套版頁面，這點很加分。',
+            name: 'Howard Lee',
+            role: 'Managing Partner',
+            roleZh: '合夥人',
+            avatar: avatarUrl(29)
+        },
+        {
+            id: 'r2-12',
+            type: 'short',
+            rating: 4.5,
+            text: 'Smooth communication from the first meeting to launch.',
+            textZh: '從第一次會議到上線，溝通都很順。',
+            name: 'Grace Turner',
+            role: 'Project Coordinator',
+            roleZh: '專案協調',
+            avatar: avatarUrl(30)
+        }
+    ],
+    [
+        {
+            id: 'r3-01',
+            type: 'long',
+            rating: 5,
+            text: 'From samples to final coordination, the team stayed detail-focused and made the whole sourcing process feel controlled.',
+            textZh: '從樣品到最後協調，團隊都很重視細節，整個採購流程讓人安心。',
+            name: 'Daniel Wu',
+            role: 'Business Owner',
+            roleZh: '企業負責人',
+            avatar: avatarUrl(13)
+        },
+        {
+            id: 'r3-02',
+            type: 'short',
+            rating: 3.5,
+            text: 'Helpful team and good final quality. The best part was how clearly they explained tradeoffs.',
+            textZh: '團隊很願意協助，成品品質也不錯，最加分的是取捨說明清楚。',
+            name: 'Chloe Martin',
+            role: 'Design Consultant',
+            roleZh: '設計顧問',
+            avatar: avatarUrl(14)
+        },
+        {
+            id: 'r3-03',
+            type: 'long',
+            rating: 4.5,
+            text: 'They connected our digital needs with practical business operations instead of just making something that looked nice.',
+            textZh: '他們不是只做漂亮畫面，而是把數位需求和實際營運連在一起。',
+            name: 'Kevin Huang',
+            role: 'Managing Partner',
+            roleZh: '管理合夥人',
+            avatar: avatarUrl(15)
+        },
+        {
+            id: 'r3-04',
+            type: 'short',
+            rating: 4,
+            text: 'Professional revisions and clean documentation made approvals easier.',
+            textZh: '修改專業、文件清楚，內部審核容易很多。',
+            name: 'Lena Walker',
+            role: 'Account Manager',
+            roleZh: '客戶經理',
+            avatar: avatarUrl(16)
+        },
+        {
+            id: 'r3-05',
+            type: 'long',
+            rating: 5,
+            text: 'We appreciated their ability to coordinate manufacturing details, supplier options, and project communication in one place.',
+            textZh: '他們能把製造細節、供應商選項和專案溝通整合在一起，這點很有幫助。',
+            name: 'Marcus Lee',
+            role: 'Supply Chain Manager',
+            roleZh: '供應鏈經理',
+            avatar: avatarUrl(17)
+        },
+        {
+            id: 'r3-06',
+            type: 'short',
+            rating: 4.5,
+            text: 'A smooth experience from the first consultation to final delivery.',
+            textZh: '從初步諮詢到最後交付，整體都很順。',
+            name: 'Emily Stone',
+            role: 'Project Coordinator',
+            roleZh: '專案協調',
+            avatar: avatarUrl(18)
+        },
+        {
+            id: 'r3-07',
+            type: 'long',
+            rating: 4,
+            text: 'The stone selection process was much easier with their guidance on finish, size, and installation concerns.',
+            textZh: '有他們協助判斷表面處理、尺寸和施工注意事項，選材變得簡單很多。',
+            name: 'Hannah Park',
+            role: 'Interior Designer',
+            roleZh: '室內設計師',
+            avatar: avatarUrl(31)
+        },
+        {
+            id: 'r3-08',
+            type: 'short',
+            rating: 5,
+            text: 'They understood the premium look we wanted without overcomplicating the project.',
+            textZh: '他們理解我們要的高級感，也沒有把專案弄得太複雜。',
+            name: 'Noah Spencer',
+            role: 'Developer',
+            roleZh: '建案開發',
+            avatar: avatarUrl(32)
+        },
+        {
+            id: 'r3-09',
+            type: 'long',
+            rating: 4.5,
+            text: 'Their construction material recommendations were practical and matched the budget better than our first plan.',
+            textZh: '建材建議很務實，也比我們原本方案更符合預算。',
+            name: 'Irene Chang',
+            role: 'Project Owner',
+            roleZh: '專案業主',
+            avatar: avatarUrl(33)
+        },
+        {
+            id: 'r3-10',
+            type: 'short',
+            rating: 4,
+            text: 'Good eye for material matching and reliable follow-up after selection.',
+            textZh: '材料搭配眼光不錯，選定後的追蹤也可靠。',
+            name: 'Peter Young',
+            role: 'Contractor',
+            roleZh: '工程承包商',
+            avatar: avatarUrl(34)
+        },
+        {
+            id: 'r3-11',
+            type: 'long',
+            rating: 5,
+            text: 'They helped us compare stone options without pushing the most expensive choice.',
+            textZh: '他們協助比較石材選項，不會一味推薦最貴的材料。',
+            name: 'Vera Scott',
+            role: 'Architect',
+            roleZh: '建築師',
+            avatar: avatarUrl(35)
+        },
+        {
+            id: 'r3-12',
+            type: 'short',
+            rating: 4.5,
+            text: 'The final wall material looked refined and matched the space perfectly.',
+            textZh: '最後牆面材料質感很好，和空間搭配得很完整。',
+            name: 'Oscar Tan',
+            role: 'Hotel Manager',
+            roleZh: '飯店經理',
+            avatar: avatarUrl(36)
+        }
+    ]
+];
+const renderStars = (rating)=>Array.from({
+        length: 5
+    }, (_, index)=>{
+        const value = index + 1;
+        const state = rating >= value ? 'full' : rating >= value - 0.5 ? 'half' : 'empty';
+        return /*#__PURE__*/ _jsxDEV("span", {
+            className: `star ${state}`,
+            "aria-hidden": "true"
+        }, value, false, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+            lineNumber: 237,
+            columnNumber: 12
+        }, this);
+    });
+const TestimonialCard = ({ data })=>/*#__PURE__*/ _jsxDEV("div", {
+        className: `testimonial-card ${data.type === 'long' ? 'card-long' : 'card-short'}`,
+        children: [
+            /*#__PURE__*/ _jsxDEV("div", {
+                className: "stars",
+                "aria-label": `${data.rating} out of 5 stars`,
+                children: renderStars(data.rating)
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                lineNumber: 243,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ _jsxDEV("p", {
+                className: "review-text",
+                children: data.text
+            }, void 0, false, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                lineNumber: 246,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ _jsxDEV("div", {
+                className: "user-info",
+                children: [
+                    /*#__PURE__*/ _jsxDEV("div", {
+                        className: "left",
+                        children: [
+                            /*#__PURE__*/ _jsxDEV("img", {
+                                src: data.avatar,
+                                alt: data.name,
+                                className: "avatar"
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                                lineNumber: 249,
+                                columnNumber: 9
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV("span", {
+                                className: "name",
+                                children: data.name
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                                lineNumber: 250,
+                                columnNumber: 9
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                        lineNumber: 248,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("span", {
+                        className: "role",
+                        children: data.role
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                        lineNumber: 252,
+                        columnNumber: 7
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                lineNumber: 247,
+                columnNumber: 5
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+        lineNumber: 242,
+        columnNumber: 3
+    }, this);
+_c = TestimonialCard;
+const localizeRows = (rows, isChinese)=>rows.map((row)=>row.map((item)=>({
+                ...item,
+                text: isChinese ? item.textZh : item.text,
+                role: isChinese ? item.roleZh : item.role
+            })));
+export default function Home6() {
+    _s();
+    const { isChinese } = useLanguage();
+    const [rowOneBase, rowTwoBase, rowThreeBase] = localizeRows(testimonialRows, isChinese);
+    const rowOne = [
+        ...rowOneBase,
+        ...rowOneBase
+    ];
+    const rowTwo = [
+        ...rowTwoBase,
+        ...rowTwoBase
+    ];
+    const rowThree = [
+        ...rowThreeBase,
+        ...rowThreeBase
+    ];
+    return /*#__PURE__*/ _jsxDEV("section", {
+        className: "home6-container",
+        children: [
+            /*#__PURE__*/ _jsxDEV("div", {
+                className: "header-content",
+                children: [
+                    /*#__PURE__*/ _jsxDEV("div", {
+                        className: "tag",
+                        children: isChinese ? '客戶長期信賴' : 'TRUSTED BY OUR CLIENTS'
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                        lineNumber: 275,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("h2", {
+                        className: "main-title",
+                        children: isChinese ? /*#__PURE__*/ _jsxDEV(_Fragment, {
+                            children: [
+                                "以信任為基礎，",
+                                /*#__PURE__*/ _jsxDEV("br", {}, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                                    lineNumber: 279,
+                                    columnNumber: 22
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    children: "以成果建立口碑"
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                                    lineNumber: 280,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true) : /*#__PURE__*/ _jsxDEV(_Fragment, {
+                            children: [
+                                "Built on Trust,",
+                                /*#__PURE__*/ _jsxDEV("br", {}, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                                    lineNumber: 284,
+                                    columnNumber: 30
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    children: "Backed by Results"
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                                    lineNumber: 285,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true)
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                        lineNumber: 276,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("p", {
+                        className: "subtitle",
+                        children: isChinese ? '透過穩定可靠的服務與長期合作，協助企業持續成長與成功。' : 'We take pride in delivering reliable solutions that help businesses succeed through long-term partnerships.'
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                        lineNumber: 289,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                lineNumber: 274,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDEV("div", {
+                className: "marquee-wrapper",
+                children: [
+                    /*#__PURE__*/ _jsxDEV("div", {
+                        className: "marquee-row scroll-left row-one",
+                        children: /*#__PURE__*/ _jsxDEV("div", {
+                            className: "track",
+                            children: rowOne.map((item, idx)=>/*#__PURE__*/ _jsxDEV(TestimonialCard, {
+                                    data: item
+                                }, `r1-${item.id}-${idx}`, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                                    lineNumber: 300,
+                                    columnNumber: 15
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                            lineNumber: 298,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                        lineNumber: 297,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("div", {
+                        className: "marquee-row scroll-right row-two",
+                        children: /*#__PURE__*/ _jsxDEV("div", {
+                            className: "track",
+                            children: rowTwo.map((item, idx)=>/*#__PURE__*/ _jsxDEV(TestimonialCard, {
+                                    data: item
+                                }, `r2-${item.id}-${idx}`, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                                    lineNumber: 308,
+                                    columnNumber: 15
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                            lineNumber: 306,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                        lineNumber: 305,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDEV("div", {
+                        className: "marquee-row scroll-left row-three",
+                        children: /*#__PURE__*/ _jsxDEV("div", {
+                            className: "track",
+                            children: rowThree.map((item, idx)=>/*#__PURE__*/ _jsxDEV(TestimonialCard, {
+                                    data: item
+                                }, `r3-${item.id}-${idx}`, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                                    lineNumber: 316,
+                                    columnNumber: 15
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                            lineNumber: 314,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                        lineNumber: 313,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+                lineNumber: 296,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx",
+        lineNumber: 273,
+        columnNumber: 5
+    }, this);
+}
+_s(Home6, "KVVXrx5Kazv1hD9Q89m5FnPwYgg=", false, function() {
+    return [
+        useLanguage
+    ];
+});
+_c1 = Home6;
+var _c, _c1;
+$RefreshReg$(_c, "TestimonialCard");
+$RefreshReg$(_c1, "Home6");
+
+
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react-swc can't detect preamble. Something is wrong."
+    );
+  }
+
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) { return RefreshRuntime.register(type, "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Home6.jsx" + ' ' + id) }
+function $RefreshSig$() { return RefreshRuntime.createSignatureFunctionForTransform(); }
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkhvbWU2LmpzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0ICcuL0hvbWU2LnNjc3MnO1xuaW1wb3J0IHsgdXNlTGFuZ3VhZ2UgfSBmcm9tICcuLi9pMThuL0xhbmd1YWdlQ29udGV4dCc7XG5cbmNvbnN0IGF2YXRhclVybCA9IChpZCkgPT4gYGh0dHBzOi8vaS5wcmF2YXRhci5jYy8xNTA/aW1nPSR7aWR9YDtcblxuY29uc3QgdGVzdGltb25pYWxSb3dzID0gW1xuICBbXG4gICAge1xuICAgICAgaWQ6ICdyMS0wMScsIHR5cGU6ICdsb25nJywgcmF0aW5nOiA1LFxuICAgICAgdGV4dDogJ1RoZWlyIHRlYW0gaGVscGVkIHVzIHNvdXJjZSB0aGUgcmlnaHQgbWVjaGFuaWNhbCBjb21wb25lbnRzIHF1aWNrbHkgYW5kIGtlcHQgZXZlcnkgZGV0YWlsIG9yZ2FuaXplZCBmcm9tIHF1b3RlIHRvIGRlbGl2ZXJ5LicsXG4gICAgICB0ZXh0Wmg6ICfku5blgJHljZTliqnmiJHlgJHlv6vpgJ/mib7liLDlkIjpgannmoTmqZ/mp4vpm7bku7bvvIzlvp7loLHlg7nliLDkuqTku5jpg73mlbTnkIblvpflvojmuIXmpZrjgIInLFxuICAgICAgbmFtZTogJ1NvcGhpZSBNb29yZScsIHJvbGU6ICdPcGVyYXRpb25zIERpcmVjdG9yJywgcm9sZVpoOiAn54ef6YGL57i955ujJywgYXZhdGFyOiBhdmF0YXJVcmwoMSksXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogJ3IxLTAyJywgdHlwZTogJ3Nob3J0JywgcmF0aW5nOiA0LjUsXG4gICAgICB0ZXh0OiAnUmVsaWFibGUgY29tbXVuaWNhdGlvbiwgY2xlYXIgdGltZWxpbmVzLCBhbmQgc29saWQgcHJvZHVjdGlvbiBzdXBwb3J0IHRocm91Z2hvdXQgdGhlIGVudGlyZSBwcm9qZWN0LicsXG4gICAgICB0ZXh0Wmg6ICfmup3pgJrnqanlrprjgIHmmYLnqIvmuIXmpZrvvIzmlbTlgIvlsIjmoYjnmoTnlJ/nlKLmlK/mj7Tpg73lvojmiY7lr6bjgIInLFxuICAgICAgbmFtZTogJ0FkYW0gQ2FydGVyJywgcm9sZTogJ0ZvdW5kZXInLCByb2xlWmg6ICflibXovqbkuronLCBhdmF0YXI6IGF2YXRhclVybCgyKSxcbiAgICB9LFxuICAgIHtcbiAgICAgIGlkOiAncjEtMDMnLCB0eXBlOiAnbG9uZycsIHJhdGluZzogNCxcbiAgICAgIHRleHQ6ICdXZSBuZWVkZWQgY3VzdG9tIGZhYnJpY2F0aW9uIHdpdGggdGlnaHQgdG9sZXJhbmNlcywgYW5kIHRoZSBmaW5hbCBwYXJ0cyBtYXRjaGVkIG91ciBleHBlY3RhdGlvbnMgd2l0aG91dCB1bm5lY2Vzc2FyeSBiYWNrIGFuZCBmb3J0aC4nLFxuICAgICAgdGV4dFpoOiAn5oiR5YCR6ZyA6KaB6auY57K+5bqm5a6i6KO95Yqg5bel77yM5pyA5b6M5oiQ5ZOB56ym5ZCI6aCQ5pyf77yM5Lmf55yB5LiL5b6I5aSa5Y+N6KaG56K66KqN55qE5pmC6ZaT44CCJyxcbiAgICAgIG5hbWU6IFwiTWljaGVsIE8nTmVpbFwiLCByb2xlOiAnUHJvY3VyZW1lbnQgTGVhZCcsIHJvbGVaaDogJ+aOoeizvOS4u+euoScsIGF2YXRhcjogYXZhdGFyVXJsKDMpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMS0wNCcsIHR5cGU6ICdzaG9ydCcsIHJhdGluZzogNSxcbiAgICAgIHRleHQ6ICdBIHByYWN0aWNhbCBwYXJ0bmVyIGZvciBPRU0gd29yay4gVGhlIHByb2Nlc3MgZmVsdCBzdHJ1Y3R1cmVkLCByZXNwb25zaXZlLCBhbmQgcHJvZmVzc2lvbmFsLicsXG4gICAgICB0ZXh0Wmg6ICflvojpganlkIggT0VNIOWQiOS9nO+8jOa1geeoi+acieaineeQhu+8jOWbnuimhuS5n+W+iOWwiOalreOAgicsXG4gICAgICBuYW1lOiAnQW5uaWUgRGF3YXknLCByb2xlOiAnUHJvZHVjdCBEZXNpZ25lcicsIHJvbGVaaDogJ+eUouWTgeioreioiOW4qycsIGF2YXRhcjogYXZhdGFyVXJsKDQpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMS0wNScsIHR5cGU6ICdsb25nJywgcmF0aW5nOiA0LjUsXG4gICAgICB0ZXh0OiAnVGhleSBoZWxwZWQgY29tcGFyZSBtYXRlcmlhbCBvcHRpb25zLCBjbGFyaWZ5IHN1cHBsaWVyIGRldGFpbHMsIGFuZCBrZWVwIG91ciBwdXJjaGFzaW5nIGRlY2lzaW9ucyBhbGlnbmVkIHdpdGggYnVkZ2V0IGFuZCBsZWFkIHRpbWUuJyxcbiAgICAgIHRleHRaaDogJ+S7luWAkeWNlOWKqeavlOi8g+adkOaWmemBuOmgheiIh+S+m+aHiee0sOevgO+8jOiuk+aOoeizvOaxuuetluiDveWFvOmhp+mgkOeul+iIh+S6pOacn+OAgicsXG4gICAgICBuYW1lOiAnSm9obiBDYXJ0ZXInLCByb2xlOiAnUHJvamVjdCBNYW5hZ2VyJywgcm9sZVpoOiAn5bCI5qGI57aT55CGJywgYXZhdGFyOiBhdmF0YXJVcmwoNSksXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogJ3IxLTA2JywgdHlwZTogJ3Nob3J0JywgcmF0aW5nOiAzLjUsXG4gICAgICB0ZXh0OiAnR29vZCBzdXBwb3J0IGFuZCBzdGVhZHkgZm9sbG93LXVwLiBBIGZldyBkZXRhaWxzIHRvb2sgbG9uZ2VyLCBidXQgdGhlIGZpbmFsIHJlc3VsdCB3YXMgZGVwZW5kYWJsZS4nLFxuICAgICAgdGV4dFpoOiAn5pSv5o+05ZKM6L+96Lmk6YO956mp5a6a77yM6YOo5YiG57Sw56+A6Iqx5LqG6LyD5aSa5pmC6ZaT77yM5L2G57WQ5p6c5Y+v6Z2g44CCJyxcbiAgICAgIG5hbWU6ICdKYW5lIFNtaXRoJywgcm9sZTogJ1JldGFpbCBPd25lcicsIHJvbGVaaDogJ+mbtuWUrualreS4uycsIGF2YXRhcjogYXZhdGFyVXJsKDYpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMS0wNycsIHR5cGU6ICdsb25nJywgcmF0aW5nOiA1LFxuICAgICAgdGV4dDogJ1RoZSB0b29saW5nIGFkdmljZSBoZWxwZWQgdXMgYXZvaWQgYSBwcm9kdWN0aW9uIGlzc3VlIGJlZm9yZSBpdCBiZWNhbWUgZXhwZW5zaXZlIHRvIGZpeC4nLFxuICAgICAgdGV4dFpoOiAn5rK75YW35pa56Z2i55qE5bu66K2w5bmr5oiR5YCR5o+Q5YmN6YG/6ZaL55Sf55Si5ZWP6aGM77yM6YG/5YWN5b6M57qM5oiQ5pys6K6K6auY44CCJyxcbiAgICAgIG5hbWU6ICdWaWN0b3IgQ2hlbicsIHJvbGU6ICdQbGFudCBTdXBlcnZpc29yJywgcm9sZVpoOiAn5bug5YuZ5Li7566hJywgYXZhdGFyOiBhdmF0YXJVcmwoMTkpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMS0wOCcsIHR5cGU6ICdzaG9ydCcsIHJhdGluZzogNCxcbiAgICAgIHRleHQ6ICdUaGV5IHdlcmUgZGlyZWN0IGFib3V0IGZlYXNpYmlsaXR5IGFuZCBnYXZlIHVzIGEgcmVhbGlzdGljIHByb2R1Y3Rpb24gcGF0aC4nLFxuICAgICAgdGV4dFpoOiAn5LuW5YCR5pyD55u05o6l6Kqq5piO5Y+v6KGM5oCn77yM5Lmf5o+Q5L6b5b6I5a+m6Zqb55qE6KO95L2c5pa55ZCR44CCJyxcbiAgICAgIG5hbWU6ICdFbGFpbmUgUm9iZXJ0cycsIHJvbGU6ICdQcm9kdWN0IExlYWQnLCByb2xlWmg6ICfnlKLlk4HkuLvnrqEnLCBhdmF0YXI6IGF2YXRhclVybCgyMCksXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogJ3IxLTA5JywgdHlwZTogJ2xvbmcnLCByYXRpbmc6IDQuNSxcbiAgICAgIHRleHQ6ICdUaGUgc2FtcGxlIHJldmlldyB3YXMgZGV0YWlsZWQsIGFuZCB0aGUgdGVhbSBleHBsYWluZWQgZXZlcnkgbWF0ZXJpYWwgdHJhZGVvZmYgYmVmb3JlIHdlIGNvbW1pdHRlZC4nLFxuICAgICAgdGV4dFpoOiAn5qij5ZOB6KmV5Lyw5b6I5LuU57Sw77yM5Zyo56K66KqN5YmN5Lmf5oqK5p2Q5paZ5Y+W5o2o6Kqq5piO5b6X5b6I5a6M5pW044CCJyxcbiAgICAgIG5hbWU6ICdNYXJjbyBMaW4nLCByb2xlOiAnSGFyZHdhcmUgQnV5ZXInLCByb2xlWmg6ICfkupTph5HmjqHos7wnLCBhdmF0YXI6IGF2YXRhclVybCgyMSksXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogJ3IxLTEwJywgdHlwZTogJ3Nob3J0JywgcmF0aW5nOiA1LFxuICAgICAgdGV4dDogJ0NsZWFyIHF1b3RlcywgcHJhY3RpY2FsIHN1Z2dlc3Rpb25zLCBhbmQgbm8gdW5uZWNlc3NhcnkgY29tcGxleGl0eS4nLFxuICAgICAgdGV4dFpoOiAn5aCx5YO55riF5qWa44CB5bu66K2w5a+m55So77yM5LiN5pyD5oqK5rWB56iL5byE5b6X5aSq6KSH6Zuc44CCJyxcbiAgICAgIG5hbWU6ICdBbGljaWEgRm9yZCcsIHJvbGU6ICdPZmZpY2UgTWFuYWdlcicsIHJvbGVaaDogJ+i+puWFrOWupOe2k+eQhicsIGF2YXRhcjogYXZhdGFyVXJsKDIyKSxcbiAgICB9LFxuICAgIHtcbiAgICAgIGlkOiAncjEtMTEnLCB0eXBlOiAnbG9uZycsIHJhdGluZzogNCxcbiAgICAgIHRleHQ6ICdUaGVpciBtYW51ZmFjdHVyaW5nIGNvb3JkaW5hdGlvbiBoZWxwZWQgdXMga2VlcCBtdWx0aXBsZSBzdXBwbGllcnMgYWxpZ25lZCBvbiBvbmUgc2NoZWR1bGUuJyxcbiAgICAgIHRleHRaaDogJ+S7luWAkeeahOijvemAoOWNlOiqv+iuk+WkmuWutuS+m+aHieWVhuiDvei3n+S4iuWQjOS4gOWAi+aZgueoi+OAgicsXG4gICAgICBuYW1lOiAnRGVyZWsgV2FuZycsIHJvbGU6ICdTdXBwbHkgUGxhbm5lcicsIHJvbGVaaDogJ+S+m+aHieimj+WKgycsIGF2YXRhcjogYXZhdGFyVXJsKDIzKSxcbiAgICB9LFxuICAgIHtcbiAgICAgIGlkOiAncjEtMTInLCB0eXBlOiAnc2hvcnQnLCByYXRpbmc6IDQuNSxcbiAgICAgIHRleHQ6ICdQcm9mZXNzaW9uYWwgaGFuZGxpbmcgb2YgcmV2aXNpb25zIGFuZCB2ZXJ5IGNsZWFuIGRvY3VtZW50YXRpb24uJyxcbiAgICAgIHRleHRaaDogJ+S/ruaUueiZleeQhuWwiOalre+8jOaWh+S7tuS5n+aVtOeQhuW+l+W+iOS5vua3qOOAgicsXG4gICAgICBuYW1lOiAnU2FyYWggTWlsbGVyJywgcm9sZTogJ0FjY291bnQgTWFuYWdlcicsIHJvbGVaaDogJ+WuouaItue2k+eQhicsIGF2YXRhcjogYXZhdGFyVXJsKDI0KSxcbiAgICB9LFxuICBdLFxuICBbXG4gICAge1xuICAgICAgaWQ6ICdyMi0wMScsIHR5cGU6ICdsb25nJywgcmF0aW5nOiA1LFxuICAgICAgdGV4dDogJ1RoZSB3ZWJzaXRlIHJlZGVzaWduIGdhdmUgb3VyIGJyYW5kIGEgY2xlYW5lciBwcmVzZW50YXRpb24gYW5kIG1hZGUgaXQgbXVjaCBlYXNpZXIgZm9yIGN1c3RvbWVycyB0byB1bmRlcnN0YW5kIG91ciBzZXJ2aWNlcy4nLFxuICAgICAgdGV4dFpoOiAn57ay56uZ5pS554mI5b6M5ZOB54mM5ZGI54++5pu05riF5qWa77yM5a6i5oi25Lmf5pu05a655piT55CG6Kej5oiR5YCR55qE5pyN5YuZ44CCJyxcbiAgICAgIG5hbWU6ICdMdWNhcyBDaGVuJywgcm9sZTogJ0dlbmVyYWwgTWFuYWdlcicsIHJvbGVaaDogJ+e4vee2k+eQhicsIGF2YXRhcjogYXZhdGFyVXJsKDcpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMi0wMicsIHR5cGU6ICdzaG9ydCcsIHJhdGluZzogNCxcbiAgICAgIHRleHQ6ICdGYXN0IHNvdXJjaW5nLCBmYWlyIHJlY29tbWVuZGF0aW9ucywgYW5kIG5vIG92ZXJjb21wbGljYXRlZCBwcm9jZXNzLicsXG4gICAgICB0ZXh0Wmg6ICfmjqHos7zpgJ/luqblv6vvvIzlu7rorbDkuZ/kuK3ogq/vvIzmtYHnqIvkuI3mnIPpgY7luqbopIfpm5zjgIInLFxuICAgICAgbmFtZTogJ1JhY2hlbCBMaW4nLCByb2xlOiAnUHVyY2hhc2luZyBNYW5hZ2VyJywgcm9sZVpoOiAn5o6h6LO857aT55CGJywgYXZhdGFyOiBhdmF0YXJVcmwoOCksXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogJ3IyLTAzJywgdHlwZTogJ2xvbmcnLCByYXRpbmc6IDQuNSxcbiAgICAgIHRleHQ6ICdGb3Igb3VyIHN0b25lIGZlYXR1cmUgd2FsbCBwcm9qZWN0LCB0aGV5IHVuZGVyc3Rvb2QgdGhlIGxvb2sgd2Ugd2FudGVkIGFuZCBoZWxwZWQgdXMgbmFycm93IGRvd24gbWF0ZXJpYWxzIHdpdGggY29uZmlkZW5jZS4nLFxuICAgICAgdGV4dFpoOiAn55+z5p2Q6YCg5Z6L54mG5bCI5qGI5Lit77yM5LuW5YCR5b6I5b+r5o6M5o+h5oiR5YCR6KaB55qE6aKo5qC877yM5Lmf5Y2U5Yqp56+p6YG45p2Q5paZ44CCJyxcbiAgICAgIG5hbWU6ICdFdGhhbiBCcm9va3MnLCByb2xlOiAnSW50ZXJpb3IgQ29udHJhY3RvcicsIHJvbGVaaDogJ+WupOWFp+W3peeoi+aJv+WMheWVhicsIGF2YXRhcjogYXZhdGFyVXJsKDkpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMi0wNCcsIHR5cGU6ICdzaG9ydCcsIHJhdGluZzogNSxcbiAgICAgIHRleHQ6ICdDbGVhciwgZGlyZWN0LCBhbmQgZWFzeSB0byB3b3JrIHdpdGguIFRoZSBkZWxpdmVyeSBtYXRjaGVkIHRoZSBhcHByb3ZlZCBzcGVjaWZpY2F0aW9ucy4nLFxuICAgICAgdGV4dFpoOiAn5riF5qWa44CB55u05o6l44CB5b6I5aW95ZCI5L2c77yM5Lqk5LuY5YWn5a6556ym5ZCI56K66KqN6KaP5qC844CCJyxcbiAgICAgIG5hbWU6ICdOb3JhIFdpbGxpYW1zJywgcm9sZTogJ1N0dWRpbyBMZWFkJywgcm9sZVpoOiAn6Kit6KiI5bel5L2c5a6k6LKg6LKs5Lq6JywgYXZhdGFyOiBhdmF0YXJVcmwoMTApLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMi0wNScsIHR5cGU6ICdsb25nJywgcmF0aW5nOiA0LFxuICAgICAgdGV4dDogJ1RoZWlyIHRlY2huaWNhbCBzdWdnZXN0aW9ucyBoZWxwZWQgdXMgc2ltcGxpZnkgdGhlIGZpeHR1cmUgZGVzaWduIHdoaWxlIGtlZXBpbmcgdGhlIHByb2R1Y3Rpb24gZ29hbCBpbnRhY3QuJyxcbiAgICAgIHRleHRaaDogJ+aKgOihk+W7uuitsOW5q+aIkeWAkeewoeWMluayu+WFt+ioreioiO+8jOWQjOaZguS/neeVmeWOn+acrOeahOeUn+eUouebruaomeOAgicsXG4gICAgICBuYW1lOiAnUnlhbiBQYXRlbCcsIHJvbGU6ICdNYW51ZmFjdHVyaW5nIEVuZ2luZWVyJywgcm9sZVpoOiAn6KO96YCg5bel56iL5birJywgYXZhdGFyOiBhdmF0YXJVcmwoMTEpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMi0wNicsIHR5cGU6ICdzaG9ydCcsIHJhdGluZzogNC41LFxuICAgICAgdGV4dDogJ1RoZSBhdXRvbWF0aW9uIHdvcmtmbG93IHNhdmVkIG91ciB0ZWFtIHRpbWUgb24gcmVwZWF0ZWQgbWFudWFsIHRhc2tzLicsXG4gICAgICB0ZXh0Wmg6ICfoh6rli5XljJbmtYHnqIvnr4DnnIHkuoblnJjpmoromZXnkIbph43opIfkvZzmpa3nmoTmmYLplpPjgIInLFxuICAgICAgbmFtZTogJ01pYSBKb2huc29uJywgcm9sZTogJ0FkbWluIE1hbmFnZXInLCByb2xlWmg6ICfooYzmlL/ntpPnkIYnLCBhdmF0YXI6IGF2YXRhclVybCgxMiksXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogJ3IyLTA3JywgdHlwZTogJ2xvbmcnLCByYXRpbmc6IDUsXG4gICAgICB0ZXh0OiAnVGhleSB0cmFuc2xhdGVkIGEgbWVzc3kgaW50ZXJuYWwgcHJvY2VzcyBpbnRvIGEgc2ltcGxlIGRpZ2l0YWwgd29ya2Zsb3cgb3VyIHRlYW0gYWN0dWFsbHkgdXNlcy4nLFxuICAgICAgdGV4dFpoOiAn5LuW5YCR5oqK5re35LqC55qE5YWn6YOo5rWB56iL5pW055CG5oiQ57Ch5Zau55qE5pW45L2N5bel5YW377yM5ZyY6ZqK55yf55qE5pyJ5Zyo5L2/55So44CCJyxcbiAgICAgIG5hbWU6ICdJdmFuIEJyb29rcycsIHJvbGU6ICdCdXNpbmVzcyBBbmFseXN0Jywgcm9sZVpoOiAn5ZWG5YuZ5YiG5p6Q5birJywgYXZhdGFyOiBhdmF0YXJVcmwoMjUpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMi0wOCcsIHR5cGU6ICdzaG9ydCcsIHJhdGluZzogMy41LFxuICAgICAgdGV4dDogJ1RoZSBwcm9jZXNzIHRvb2sgc29tZSBwYXRpZW5jZSwgYnV0IHRoZSBmaW5hbCBzeXN0ZW0gc29sdmVkIHRoZSBtYWluIGlzc3VlLicsXG4gICAgICB0ZXh0Wmg6ICfpgY7nqIvpnIDopoHkuIDpu57ogJDlv4PvvIzkvYbmnIDlvozns7vntbHnorrlr6bop6PmsbrkuobkuLvopoHllY/poYzjgIInLFxuICAgICAgbmFtZTogJ1RpbmEgTW9yZ2FuJywgcm9sZTogJ0NsaW5pYyBPd25lcicsIHJvbGVaaDogJ+iouuaJgOiyoOiyrOS6uicsIGF2YXRhcjogYXZhdGFyVXJsKDI2KSxcbiAgICB9LFxuICAgIHtcbiAgICAgIGlkOiAncjItMDknLCB0eXBlOiAnbG9uZycsIHJhdGluZzogNC41LFxuICAgICAgdGV4dDogJ1RoZWlyIFVJIGRpcmVjdGlvbiBtYWRlIHRoZSBzZXJ2aWNlIGZsb3cgZWFzaWVyIHRvIGV4cGxhaW4gZHVyaW5nIGNsaWVudCBtZWV0aW5ncy4nLFxuICAgICAgdGV4dFpoOiAn5LuL6Z2i6KaP5YqD6K6T5oiR5YCR5Zyo5a6i5oi25pyD6K2w5Lit5pu05a655piT6Kqq5piO5pyN5YuZ5rWB56iL44CCJyxcbiAgICAgIG5hbWU6ICdCZW4gSHN1Jywgcm9sZTogJ1NhbGVzIERpcmVjdG9yJywgcm9sZVpoOiAn5qWt5YuZ57i955ujJywgYXZhdGFyOiBhdmF0YXJVcmwoMjcpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMi0xMCcsIHR5cGU6ICdzaG9ydCcsIHJhdGluZzogNCxcbiAgICAgIHRleHQ6ICdHb29kIGJhbGFuY2UgYmV0d2VlbiB2aXN1YWwgZGVzaWduIGFuZCBwcmFjdGljYWwgYnVzaW5lc3MgbmVlZHMuJyxcbiAgICAgIHRleHRaaDogJ+imluimuuioreioiOWSjOWVhuWLmemcgOaxguS5i+mWk+aLv+aNj+W+l+S4jemMr+OAgicsXG4gICAgICBuYW1lOiAnT2xpdmlhIEdyYW50Jywgcm9sZTogJ0Rlc2lnbiBDb25zdWx0YW50Jywgcm9sZVpoOiAn6Kit6KiI6aGn5ZWPJywgYXZhdGFyOiBhdmF0YXJVcmwoMjgpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMi0xMScsIHR5cGU6ICdsb25nJywgcmF0aW5nOiA1LFxuICAgICAgdGV4dDogJ1RoZXkga2VwdCB0aGUgc2l0ZSBwcm9mZXNzaW9uYWwgd2l0aG91dCBtYWtpbmcgaXQgZmVlbCBsaWtlIGEgZ2VuZXJpYyB0ZW1wbGF0ZS4nLFxuICAgICAgdGV4dFpoOiAn57ay56uZ5L+d5pyJ5bCI5qWt5oSf77yM5L2G5LiN5pyD5YOP5aWX54mI6aCB6Z2i77yM6YCZ6bue5b6I5Yqg5YiG44CCJyxcbiAgICAgIG5hbWU6ICdIb3dhcmQgTGVlJywgcm9sZTogJ01hbmFnaW5nIFBhcnRuZXInLCByb2xlWmg6ICflkIjlpKXkuronLCBhdmF0YXI6IGF2YXRhclVybCgyOSksXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogJ3IyLTEyJywgdHlwZTogJ3Nob3J0JywgcmF0aW5nOiA0LjUsXG4gICAgICB0ZXh0OiAnU21vb3RoIGNvbW11bmljYXRpb24gZnJvbSB0aGUgZmlyc3QgbWVldGluZyB0byBsYXVuY2guJyxcbiAgICAgIHRleHRaaDogJ+W+nuesrOS4gOasoeacg+itsOWIsOS4iue3mu+8jOa6nemAmumDveW+iOmghuOAgicsXG4gICAgICBuYW1lOiAnR3JhY2UgVHVybmVyJywgcm9sZTogJ1Byb2plY3QgQ29vcmRpbmF0b3InLCByb2xlWmg6ICflsIjmoYjljZToqr8nLCBhdmF0YXI6IGF2YXRhclVybCgzMCksXG4gICAgfSxcbiAgXSxcbiAgW1xuICAgIHtcbiAgICAgIGlkOiAncjMtMDEnLCB0eXBlOiAnbG9uZycsIHJhdGluZzogNSxcbiAgICAgIHRleHQ6ICdGcm9tIHNhbXBsZXMgdG8gZmluYWwgY29vcmRpbmF0aW9uLCB0aGUgdGVhbSBzdGF5ZWQgZGV0YWlsLWZvY3VzZWQgYW5kIG1hZGUgdGhlIHdob2xlIHNvdXJjaW5nIHByb2Nlc3MgZmVlbCBjb250cm9sbGVkLicsXG4gICAgICB0ZXh0Wmg6ICflvp7mqKPlk4HliLDmnIDlvozljZToqr/vvIzlnJjpmorpg73lvojph43oppbntLDnr4DvvIzmlbTlgIvmjqHos7zmtYHnqIvorpPkurrlronlv4PjgIInLFxuICAgICAgbmFtZTogJ0RhbmllbCBXdScsIHJvbGU6ICdCdXNpbmVzcyBPd25lcicsIHJvbGVaaDogJ+S8gealreiyoOiyrOS6uicsIGF2YXRhcjogYXZhdGFyVXJsKDEzKSxcbiAgICB9LFxuICAgIHtcbiAgICAgIGlkOiAncjMtMDInLCB0eXBlOiAnc2hvcnQnLCByYXRpbmc6IDMuNSxcbiAgICAgIHRleHQ6ICdIZWxwZnVsIHRlYW0gYW5kIGdvb2QgZmluYWwgcXVhbGl0eS4gVGhlIGJlc3QgcGFydCB3YXMgaG93IGNsZWFybHkgdGhleSBleHBsYWluZWQgdHJhZGVvZmZzLicsXG4gICAgICB0ZXh0Wmg6ICflnJjpmorlvojpoZjmhI/ljZTliqnvvIzmiJDlk4Hlk4Hos6rkuZ/kuI3pjK/vvIzmnIDliqDliIbnmoTmmK/lj5bmjajoqqrmmI7muIXmpZrjgIInLFxuICAgICAgbmFtZTogJ0NobG9lIE1hcnRpbicsIHJvbGU6ICdEZXNpZ24gQ29uc3VsdGFudCcsIHJvbGVaaDogJ+ioreioiOmhp+WVjycsIGF2YXRhcjogYXZhdGFyVXJsKDE0KSxcbiAgICB9LFxuICAgIHtcbiAgICAgIGlkOiAncjMtMDMnLCB0eXBlOiAnbG9uZycsIHJhdGluZzogNC41LFxuICAgICAgdGV4dDogJ1RoZXkgY29ubmVjdGVkIG91ciBkaWdpdGFsIG5lZWRzIHdpdGggcHJhY3RpY2FsIGJ1c2luZXNzIG9wZXJhdGlvbnMgaW5zdGVhZCBvZiBqdXN0IG1ha2luZyBzb21ldGhpbmcgdGhhdCBsb29rZWQgbmljZS4nLFxuICAgICAgdGV4dFpoOiAn5LuW5YCR5LiN5piv5Y+q5YGa5ryC5Lqu55Wr6Z2i77yM6ICM5piv5oqK5pW45L2N6ZyA5rGC5ZKM5a+m6Zqb54ef6YGL6YCj5Zyo5LiA6LW344CCJyxcbiAgICAgIG5hbWU6ICdLZXZpbiBIdWFuZycsIHJvbGU6ICdNYW5hZ2luZyBQYXJ0bmVyJywgcm9sZVpoOiAn566h55CG5ZCI5aSl5Lq6JywgYXZhdGFyOiBhdmF0YXJVcmwoMTUpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMy0wNCcsIHR5cGU6ICdzaG9ydCcsIHJhdGluZzogNCxcbiAgICAgIHRleHQ6ICdQcm9mZXNzaW9uYWwgcmV2aXNpb25zIGFuZCBjbGVhbiBkb2N1bWVudGF0aW9uIG1hZGUgYXBwcm92YWxzIGVhc2llci4nLFxuICAgICAgdGV4dFpoOiAn5L+u5pS55bCI5qWt44CB5paH5Lu25riF5qWa77yM5YWn6YOo5a+p5qC45a655piT5b6I5aSa44CCJyxcbiAgICAgIG5hbWU6ICdMZW5hIFdhbGtlcicsIHJvbGU6ICdBY2NvdW50IE1hbmFnZXInLCByb2xlWmg6ICflrqLmiLbntpPnkIYnLCBhdmF0YXI6IGF2YXRhclVybCgxNiksXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogJ3IzLTA1JywgdHlwZTogJ2xvbmcnLCByYXRpbmc6IDUsXG4gICAgICB0ZXh0OiAnV2UgYXBwcmVjaWF0ZWQgdGhlaXIgYWJpbGl0eSB0byBjb29yZGluYXRlIG1hbnVmYWN0dXJpbmcgZGV0YWlscywgc3VwcGxpZXIgb3B0aW9ucywgYW5kIHByb2plY3QgY29tbXVuaWNhdGlvbiBpbiBvbmUgcGxhY2UuJyxcbiAgICAgIHRleHRaaDogJ+S7luWAkeiDveaKiuijvemAoOe0sOevgOOAgeS+m+aHieWVhumBuOmgheWSjOWwiOahiOa6nemAmuaVtOWQiOWcqOS4gOi1t++8jOmAmem7nuW+iOacieW5q+WKqeOAgicsXG4gICAgICBuYW1lOiAnTWFyY3VzIExlZScsIHJvbGU6ICdTdXBwbHkgQ2hhaW4gTWFuYWdlcicsIHJvbGVaaDogJ+S+m+aHiemPiOe2k+eQhicsIGF2YXRhcjogYXZhdGFyVXJsKDE3KSxcbiAgICB9LFxuICAgIHtcbiAgICAgIGlkOiAncjMtMDYnLCB0eXBlOiAnc2hvcnQnLCByYXRpbmc6IDQuNSxcbiAgICAgIHRleHQ6ICdBIHNtb290aCBleHBlcmllbmNlIGZyb20gdGhlIGZpcnN0IGNvbnN1bHRhdGlvbiB0byBmaW5hbCBkZWxpdmVyeS4nLFxuICAgICAgdGV4dFpoOiAn5b6e5Yid5q2l6Kuu6Kmi5Yiw5pyA5b6M5Lqk5LuY77yM5pW06auU6YO95b6I6aCG44CCJyxcbiAgICAgIG5hbWU6ICdFbWlseSBTdG9uZScsIHJvbGU6ICdQcm9qZWN0IENvb3JkaW5hdG9yJywgcm9sZVpoOiAn5bCI5qGI5Y2U6Kq/JywgYXZhdGFyOiBhdmF0YXJVcmwoMTgpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMy0wNycsIHR5cGU6ICdsb25nJywgcmF0aW5nOiA0LFxuICAgICAgdGV4dDogJ1RoZSBzdG9uZSBzZWxlY3Rpb24gcHJvY2VzcyB3YXMgbXVjaCBlYXNpZXIgd2l0aCB0aGVpciBndWlkYW5jZSBvbiBmaW5pc2gsIHNpemUsIGFuZCBpbnN0YWxsYXRpb24gY29uY2VybnMuJyxcbiAgICAgIHRleHRaaDogJ+acieS7luWAkeWNlOWKqeWIpOaWt+ihqOmdouiZleeQhuOAgeWwuuWvuOWSjOaWveW3peazqOaEj+S6i+mghe+8jOmBuOadkOiuiuW+l+ewoeWWruW+iOWkmuOAgicsXG4gICAgICBuYW1lOiAnSGFubmFoIFBhcmsnLCByb2xlOiAnSW50ZXJpb3IgRGVzaWduZXInLCByb2xlWmg6ICflrqTlhafoqK3oqIjluKsnLCBhdmF0YXI6IGF2YXRhclVybCgzMSksXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogJ3IzLTA4JywgdHlwZTogJ3Nob3J0JywgcmF0aW5nOiA1LFxuICAgICAgdGV4dDogJ1RoZXkgdW5kZXJzdG9vZCB0aGUgcHJlbWl1bSBsb29rIHdlIHdhbnRlZCB3aXRob3V0IG92ZXJjb21wbGljYXRpbmcgdGhlIHByb2plY3QuJyxcbiAgICAgIHRleHRaaDogJ+S7luWAkeeQhuino+aIkeWAkeimgeeahOmrmOe0muaEn++8jOS5n+aykuacieaKiuWwiOahiOW8hOW+l+Wkquikh+mbnOOAgicsXG4gICAgICBuYW1lOiAnTm9haCBTcGVuY2VyJywgcm9sZTogJ0RldmVsb3BlcicsIHJvbGVaaDogJ+W7uuahiOmWi+eZvCcsIGF2YXRhcjogYXZhdGFyVXJsKDMyKSxcbiAgICB9LFxuICAgIHtcbiAgICAgIGlkOiAncjMtMDknLCB0eXBlOiAnbG9uZycsIHJhdGluZzogNC41LFxuICAgICAgdGV4dDogJ1RoZWlyIGNvbnN0cnVjdGlvbiBtYXRlcmlhbCByZWNvbW1lbmRhdGlvbnMgd2VyZSBwcmFjdGljYWwgYW5kIG1hdGNoZWQgdGhlIGJ1ZGdldCBiZXR0ZXIgdGhhbiBvdXIgZmlyc3QgcGxhbi4nLFxuICAgICAgdGV4dFpoOiAn5bu65p2Q5bu66K2w5b6I5YuZ5a+m77yM5Lmf5q+U5oiR5YCR5Y6f5pys5pa55qGI5pu056ym5ZCI6aCQ566X44CCJyxcbiAgICAgIG5hbWU6ICdJcmVuZSBDaGFuZycsIHJvbGU6ICdQcm9qZWN0IE93bmVyJywgcm9sZVpoOiAn5bCI5qGI5qWt5Li7JywgYXZhdGFyOiBhdmF0YXJVcmwoMzMpLFxuICAgIH0sXG4gICAge1xuICAgICAgaWQ6ICdyMy0xMCcsIHR5cGU6ICdzaG9ydCcsIHJhdGluZzogNCxcbiAgICAgIHRleHQ6ICdHb29kIGV5ZSBmb3IgbWF0ZXJpYWwgbWF0Y2hpbmcgYW5kIHJlbGlhYmxlIGZvbGxvdy11cCBhZnRlciBzZWxlY3Rpb24uJyxcbiAgICAgIHRleHRaaDogJ+adkOaWmeaQremFjeecvOWFieS4jemMr++8jOmBuOWumuW+jOeahOi/vei5pOS5n+WPr+mdoOOAgicsXG4gICAgICBuYW1lOiAnUGV0ZXIgWW91bmcnLCByb2xlOiAnQ29udHJhY3RvcicsIHJvbGVaaDogJ+W3peeoi+aJv+WMheWVhicsIGF2YXRhcjogYXZhdGFyVXJsKDM0KSxcbiAgICB9LFxuICAgIHtcbiAgICAgIGlkOiAncjMtMTEnLCB0eXBlOiAnbG9uZycsIHJhdGluZzogNSxcbiAgICAgIHRleHQ6ICdUaGV5IGhlbHBlZCB1cyBjb21wYXJlIHN0b25lIG9wdGlvbnMgd2l0aG91dCBwdXNoaW5nIHRoZSBtb3N0IGV4cGVuc2l2ZSBjaG9pY2UuJyxcbiAgICAgIHRleHRaaDogJ+S7luWAkeWNlOWKqeavlOi8g+efs+adkOmBuOmghe+8jOS4jeacg+S4gOWRs+aOqOiWpuacgOiytOeahOadkOaWmeOAgicsXG4gICAgICBuYW1lOiAnVmVyYSBTY290dCcsIHJvbGU6ICdBcmNoaXRlY3QnLCByb2xlWmg6ICflu7rnr4nluKsnLCBhdmF0YXI6IGF2YXRhclVybCgzNSksXG4gICAgfSxcbiAgICB7XG4gICAgICBpZDogJ3IzLTEyJywgdHlwZTogJ3Nob3J0JywgcmF0aW5nOiA0LjUsXG4gICAgICB0ZXh0OiAnVGhlIGZpbmFsIHdhbGwgbWF0ZXJpYWwgbG9va2VkIHJlZmluZWQgYW5kIG1hdGNoZWQgdGhlIHNwYWNlIHBlcmZlY3RseS4nLFxuICAgICAgdGV4dFpoOiAn5pyA5b6M54mG6Z2i5p2Q5paZ6LOq5oSf5b6I5aW977yM5ZKM56m66ZaT5pCt6YWN5b6X5b6I5a6M5pW044CCJyxcbiAgICAgIG5hbWU6ICdPc2NhciBUYW4nLCByb2xlOiAnSG90ZWwgTWFuYWdlcicsIHJvbGVaaDogJ+mjr+W6l+e2k+eQhicsIGF2YXRhcjogYXZhdGFyVXJsKDM2KSxcbiAgICB9LFxuICBdLFxuXTtcblxuY29uc3QgcmVuZGVyU3RhcnMgPSAocmF0aW5nKSA9PiAoXG4gIEFycmF5LmZyb20oeyBsZW5ndGg6IDUgfSwgKF8sIGluZGV4KSA9PiB7XG4gICAgY29uc3QgdmFsdWUgPSBpbmRleCArIDE7XG4gICAgY29uc3Qgc3RhdGUgPSByYXRpbmcgPj0gdmFsdWUgPyAnZnVsbCcgOiByYXRpbmcgPj0gdmFsdWUgLSAwLjUgPyAnaGFsZicgOiAnZW1wdHknO1xuXG4gICAgcmV0dXJuIDxzcGFuIGtleT17dmFsdWV9IGNsYXNzTmFtZT17YHN0YXIgJHtzdGF0ZX1gfSBhcmlhLWhpZGRlbj1cInRydWVcIiAvPjtcbiAgfSlcbik7XG5cbmNvbnN0IFRlc3RpbW9uaWFsQ2FyZCA9ICh7IGRhdGEgfSkgPT4gKFxuICA8ZGl2IGNsYXNzTmFtZT17YHRlc3RpbW9uaWFsLWNhcmQgJHtkYXRhLnR5cGUgPT09ICdsb25nJyA/ICdjYXJkLWxvbmcnIDogJ2NhcmQtc2hvcnQnfWB9PlxuICAgIDxkaXYgY2xhc3NOYW1lPVwic3RhcnNcIiBhcmlhLWxhYmVsPXtgJHtkYXRhLnJhdGluZ30gb3V0IG9mIDUgc3RhcnNgfT5cbiAgICAgIHtyZW5kZXJTdGFycyhkYXRhLnJhdGluZyl9XG4gICAgPC9kaXY+XG4gICAgPHAgY2xhc3NOYW1lPVwicmV2aWV3LXRleHRcIj57ZGF0YS50ZXh0fTwvcD5cbiAgICA8ZGl2IGNsYXNzTmFtZT1cInVzZXItaW5mb1wiPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJsZWZ0XCI+XG4gICAgICAgIDxpbWcgc3JjPXtkYXRhLmF2YXRhcn0gYWx0PXtkYXRhLm5hbWV9IGNsYXNzTmFtZT1cImF2YXRhclwiIC8+XG4gICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cIm5hbWVcIj57ZGF0YS5uYW1lfTwvc3Bhbj5cbiAgICAgIDwvZGl2PlxuICAgICAgPHNwYW4gY2xhc3NOYW1lPVwicm9sZVwiPntkYXRhLnJvbGV9PC9zcGFuPlxuICAgIDwvZGl2PlxuICA8L2Rpdj5cbik7XG5cbmNvbnN0IGxvY2FsaXplUm93cyA9IChyb3dzLCBpc0NoaW5lc2UpID0+IChcbiAgcm93cy5tYXAoKHJvdykgPT4gcm93Lm1hcCgoaXRlbSkgPT4gKHtcbiAgICAuLi5pdGVtLFxuICAgIHRleHQ6IGlzQ2hpbmVzZSA/IGl0ZW0udGV4dFpoIDogaXRlbS50ZXh0LFxuICAgIHJvbGU6IGlzQ2hpbmVzZSA/IGl0ZW0ucm9sZVpoIDogaXRlbS5yb2xlLFxuICB9KSkpXG4pO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBIb21lNigpIHtcbiAgY29uc3QgeyBpc0NoaW5lc2UgfSA9IHVzZUxhbmd1YWdlKCk7XG4gIGNvbnN0IFtyb3dPbmVCYXNlLCByb3dUd29CYXNlLCByb3dUaHJlZUJhc2VdID0gbG9jYWxpemVSb3dzKHRlc3RpbW9uaWFsUm93cywgaXNDaGluZXNlKTtcbiAgY29uc3Qgcm93T25lID0gWy4uLnJvd09uZUJhc2UsIC4uLnJvd09uZUJhc2VdO1xuICBjb25zdCByb3dUd28gPSBbLi4ucm93VHdvQmFzZSwgLi4ucm93VHdvQmFzZV07XG4gIGNvbnN0IHJvd1RocmVlID0gWy4uLnJvd1RocmVlQmFzZSwgLi4ucm93VGhyZWVCYXNlXTtcblxuICByZXR1cm4gKFxuICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cImhvbWU2LWNvbnRhaW5lclwiPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJoZWFkZXItY29udGVudFwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRhZ1wiPntpc0NoaW5lc2UgPyAn5a6i5oi26ZW35pyf5L+h6LO0JyA6ICdUUlVTVEVEIEJZIE9VUiBDTElFTlRTJ308L2Rpdj5cbiAgICAgICAgPGgyIGNsYXNzTmFtZT1cIm1haW4tdGl0bGVcIj5cbiAgICAgICAgICB7aXNDaGluZXNlID8gKFxuICAgICAgICAgICAgPD5cbiAgICAgICAgICAgICAg5Lul5L+h5Lu754K65Z+656SO77yMPGJyIC8+XG4gICAgICAgICAgICAgIDxzcGFuPuS7peaIkOaenOW7uueri+WPo+eikTwvc3Bhbj5cbiAgICAgICAgICAgIDwvPlxuICAgICAgICAgICkgOiAoXG4gICAgICAgICAgICA8PlxuICAgICAgICAgICAgICBCdWlsdCBvbiBUcnVzdCw8YnIgLz5cbiAgICAgICAgICAgICAgPHNwYW4+QmFja2VkIGJ5IFJlc3VsdHM8L3NwYW4+XG4gICAgICAgICAgICA8Lz5cbiAgICAgICAgICApfVxuICAgICAgICA8L2gyPlxuICAgICAgICA8cCBjbGFzc05hbWU9XCJzdWJ0aXRsZVwiPlxuICAgICAgICAgIHtpc0NoaW5lc2VcbiAgICAgICAgICAgID8gJ+mAj+mBjuepqeWumuWPr+mdoOeahOacjeWLmeiIh+mVt+acn+WQiOS9nO+8jOWNlOWKqeS8gealreaMgee6jOaIkOmVt+iIh+aIkOWKn+OAgidcbiAgICAgICAgICAgIDogJ1dlIHRha2UgcHJpZGUgaW4gZGVsaXZlcmluZyByZWxpYWJsZSBzb2x1dGlvbnMgdGhhdCBoZWxwIGJ1c2luZXNzZXMgc3VjY2VlZCB0aHJvdWdoIGxvbmctdGVybSBwYXJ0bmVyc2hpcHMuJ31cbiAgICAgICAgPC9wPlxuICAgICAgPC9kaXY+XG5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWFycXVlZS13cmFwcGVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWFycXVlZS1yb3cgc2Nyb2xsLWxlZnQgcm93LW9uZVwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidHJhY2tcIj5cbiAgICAgICAgICAgIHtyb3dPbmUubWFwKChpdGVtLCBpZHgpID0+IChcbiAgICAgICAgICAgICAgPFRlc3RpbW9uaWFsQ2FyZCBrZXk9e2ByMS0ke2l0ZW0uaWR9LSR7aWR4fWB9IGRhdGE9e2l0ZW19IC8+XG4gICAgICAgICAgICApKX1cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtYXJxdWVlLXJvdyBzY3JvbGwtcmlnaHQgcm93LXR3b1wiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidHJhY2tcIj5cbiAgICAgICAgICAgIHtyb3dUd28ubWFwKChpdGVtLCBpZHgpID0+IChcbiAgICAgICAgICAgICAgPFRlc3RpbW9uaWFsQ2FyZCBrZXk9e2ByMi0ke2l0ZW0uaWR9LSR7aWR4fWB9IGRhdGE9e2l0ZW19IC8+XG4gICAgICAgICAgICApKX1cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtYXJxdWVlLXJvdyBzY3JvbGwtbGVmdCByb3ctdGhyZWVcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRyYWNrXCI+XG4gICAgICAgICAgICB7cm93VGhyZWUubWFwKChpdGVtLCBpZHgpID0+IChcbiAgICAgICAgICAgICAgPFRlc3RpbW9uaWFsQ2FyZCBrZXk9e2ByMy0ke2l0ZW0uaWR9LSR7aWR4fWB9IGRhdGE9e2l0ZW19IC8+XG4gICAgICAgICAgICApKX1cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICA8L3NlY3Rpb24+XG4gICk7XG59XG4iXSwibmFtZXMiOlsiUmVhY3QiLCJ1c2VMYW5ndWFnZSIsImF2YXRhclVybCIsImlkIiwidGVzdGltb25pYWxSb3dzIiwidHlwZSIsInJhdGluZyIsInRleHQiLCJ0ZXh0WmgiLCJuYW1lIiwicm9sZSIsInJvbGVaaCIsImF2YXRhciIsInJlbmRlclN0YXJzIiwiQXJyYXkiLCJmcm9tIiwibGVuZ3RoIiwiXyIsImluZGV4IiwidmFsdWUiLCJzdGF0ZSIsInNwYW4iLCJjbGFzc05hbWUiLCJhcmlhLWhpZGRlbiIsIlRlc3RpbW9uaWFsQ2FyZCIsImRhdGEiLCJkaXYiLCJhcmlhLWxhYmVsIiwicCIsImltZyIsInNyYyIsImFsdCIsImxvY2FsaXplUm93cyIsInJvd3MiLCJpc0NoaW5lc2UiLCJtYXAiLCJyb3ciLCJpdGVtIiwiSG9tZTYiLCJyb3dPbmVCYXNlIiwicm93VHdvQmFzZSIsInJvd1RocmVlQmFzZSIsInJvd09uZSIsInJvd1R3byIsInJvd1RocmVlIiwic2VjdGlvbiIsImgyIiwiYnIiLCJpZHgiXSwibWFwcGluZ3MiOiI7O0FBQUEsT0FBT0EsV0FBVyxRQUFRO0FBQzFCLE9BQU8sZUFBZTtBQUN0QixTQUFTQyxXQUFXLFFBQVEsMEJBQTBCO0FBRXRELE1BQU1DLFlBQVksQ0FBQ0MsS0FBTyxDQUFDLDhCQUE4QixFQUFF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

@@ -1,0 +1,270 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/sections/Manufacturing1.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=6b69b0b0"; const _jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"]; const _Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"];
+var _s = $RefreshSig$();
+import __vite__cjsImport1_react from "/node_modules/.vite/deps/react.js?v=83a14ab1"; const React = __vite__cjsImport1_react.__esModule ? __vite__cjsImport1_react.default : __vite__cjsImport1_react; const Suspense = __vite__cjsImport1_react["Suspense"];
+import { Canvas } from "/node_modules/.vite/deps/@react-three_fiber.js?v=421bf7ab";
+import { ContactShadows, OrbitControls, Stage } from "/node_modules/.vite/deps/@react-three_drei.js?v=66cdb150";
+import "/src/sections/Manufacturing1.scss?t=1779355087337";
+import resinImg from "/src/assets/manufacturing1-2.png?import";
+import uvImg from "/src/assets/manufacturing1-3.png?import";
+import metalImg from "/src/assets/manufacturing1-4.png?import";
+import RobotModelObj from "/src/components/RobotModelObj.jsx";
+import { useLanguage } from "/src/i18n/LanguageContext.jsx";
+export default function Manufacturing1() {
+    _s();
+    const { isChinese } = useLanguage();
+    return /*#__PURE__*/ _jsxDEV("section", {
+        className: "manufacturing1-container",
+        id: "manufacturing",
+        children: /*#__PURE__*/ _jsxDEV("div", {
+            className: "content-wrapper",
+            children: [
+                /*#__PURE__*/ _jsxDEV("div", {
+                    className: `title-group ${isChinese ? 'title-group-zh' : ''}`,
+                    children: [
+                        /*#__PURE__*/ _jsxDEV("h1", {
+                            className: "main-title",
+                            children: isChinese ? /*#__PURE__*/ _jsxDEV(_Fragment, {
+                                children: [
+                                    "高精度 3D 列印解決方案",
+                                    /*#__PURE__*/ _jsxDEV("br", {}, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                                        lineNumber: 21,
+                                        columnNumber: 30
+                                    }, this),
+                                    "滿足原型開發與工業需求"
+                                ]
+                            }, void 0, true) : /*#__PURE__*/ _jsxDEV(_Fragment, {
+                                children: [
+                                    "Precision 3D Printing",
+                                    /*#__PURE__*/ _jsxDEV("br", {}, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                                        lineNumber: 25,
+                                        columnNumber: 38
+                                    }, this),
+                                    "Built for Industrial Needs"
+                                ]
+                            }, void 0, true)
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("h2", {
+                            className: "sub-title",
+                            children: isChinese ? '快速打樣・功能性製作・少量客製生產' : 'Rapid Prototyping・Functional Parts・Low-Volume Production'
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                            lineNumber: 29,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                    lineNumber: 17,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDEV("div", {
+                    className: "description-block",
+                    children: /*#__PURE__*/ _jsxDEV("p", {
+                        children: isChinese ? '從產品打樣到少量生產，提供功能性、工業應用與客製化需求的可靠 3D 列印方案。' : 'From prototyping to low-volume production, we deliver reliable 3D printing solutions for functional parts, industrial applications, and custom manufacturing needs.'
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                        lineNumber: 37,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                    lineNumber: 36,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDEV("div", {
+                    className: "hero-3d-container",
+                    children: /*#__PURE__*/ _jsxDEV(Canvas, {
+                        shadows: true,
+                        dpr: [
+                            1,
+                            2
+                        ],
+                        camera: {
+                            position: [
+                                0,
+                                0,
+                                10
+                            ],
+                            fov: 45
+                        },
+                        children: [
+                            /*#__PURE__*/ _jsxDEV(Suspense, {
+                                fallback: null,
+                                children: [
+                                    /*#__PURE__*/ _jsxDEV(Stage, {
+                                        environment: "city",
+                                        intensity: 0.5,
+                                        adjustCamera: false,
+                                        shadows: false,
+                                        children: /*#__PURE__*/ _jsxDEV(RobotModelObj, {
+                                            scale: 4.5,
+                                            position: [
+                                                0.35,
+                                                -4.75,
+                                                0
+                                            ]
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                                            lineNumber: 48,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                                        lineNumber: 47,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDEV(ContactShadows, {
+                                        position: [
+                                            0.35,
+                                            -4.87,
+                                            0
+                                        ],
+                                        opacity: 0.34,
+                                        scale: 12.5,
+                                        blur: 2.8,
+                                        far: 4
+                                    }, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                                        lineNumber: 50,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                                lineNumber: 46,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ _jsxDEV(OrbitControls, {
+                                autoRotate: true,
+                                autoRotateSpeed: 1.0,
+                                enableZoom: false,
+                                enablePan: false
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                                lineNumber: 53,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                        lineNumber: 45,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                    lineNumber: 44,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDEV("div", {
+                    className: "process-cards-container",
+                    children: [
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "process-card card-resin",
+                            style: {
+                                backgroundImage: `url(${resinImg})`
+                            },
+                            children: /*#__PURE__*/ _jsxDEV("div", {
+                                className: "card-label",
+                                children: "Resin"
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                                lineNumber: 59,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                            lineNumber: 58,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "process-card card-uv",
+                            style: {
+                                backgroundImage: `url(${uvImg})`
+                            },
+                            children: /*#__PURE__*/ _jsxDEV("div", {
+                                className: "card-label",
+                                children: "UV-Curing"
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                                lineNumber: 63,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                            lineNumber: 62,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "process-card card-metal",
+                            style: {
+                                backgroundImage: `url(${metalImg})`
+                            },
+                            children: /*#__PURE__*/ _jsxDEV("div", {
+                                className: "card-label",
+                                children: "Metal"
+                            }, void 0, false, {
+                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                                lineNumber: 67,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                            lineNumber: 66,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+                    lineNumber: 57,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+            lineNumber: 16,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx",
+        lineNumber: 15,
+        columnNumber: 5
+    }, this);
+}
+_s(Manufacturing1, "KVVXrx5Kazv1hD9Q89m5FnPwYgg=", false, function() {
+    return [
+        useLanguage
+    ];
+});
+_c = Manufacturing1;
+var _c;
+$RefreshReg$(_c, "Manufacturing1");
+
+
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react-swc can't detect preamble. Something is wrong."
+    );
+  }
+
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) { return RefreshRuntime.register(type, "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing1.jsx" + ' ' + id) }
+function $RefreshSig$() { return RefreshRuntime.createSignatureFunctionForTransform(); }
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIk1hbnVmYWN0dXJpbmcxLmpzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgU3VzcGVuc2UgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBDYW52YXMgfSBmcm9tICdAcmVhY3QtdGhyZWUvZmliZXInO1xuaW1wb3J0IHsgQ29udGFjdFNoYWRvd3MsIE9yYml0Q29udHJvbHMsIFN0YWdlIH0gZnJvbSAnQHJlYWN0LXRocmVlL2RyZWknO1xuaW1wb3J0ICcuL01hbnVmYWN0dXJpbmcxLnNjc3MnO1xuaW1wb3J0IHJlc2luSW1nIGZyb20gJy4uL2Fzc2V0cy9tYW51ZmFjdHVyaW5nMS0yLnBuZyc7XG5pbXBvcnQgdXZJbWcgZnJvbSAnLi4vYXNzZXRzL21hbnVmYWN0dXJpbmcxLTMucG5nJztcbmltcG9ydCBtZXRhbEltZyBmcm9tICcuLi9hc3NldHMvbWFudWZhY3R1cmluZzEtNC5wbmcnO1xuaW1wb3J0IFJvYm90TW9kZWxPYmogZnJvbSAnLi4vY29tcG9uZW50cy9Sb2JvdE1vZGVsT2JqJztcbmltcG9ydCB7IHVzZUxhbmd1YWdlIH0gZnJvbSAnLi4vaTE4bi9MYW5ndWFnZUNvbnRleHQnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBNYW51ZmFjdHVyaW5nMSgpIHtcbiAgY29uc3QgeyBpc0NoaW5lc2UgfSA9IHVzZUxhbmd1YWdlKCk7XG5cbiAgcmV0dXJuIChcbiAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJtYW51ZmFjdHVyaW5nMS1jb250YWluZXJcIiBpZD1cIm1hbnVmYWN0dXJpbmdcIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGVudC13cmFwcGVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPXtgdGl0bGUtZ3JvdXAgJHtpc0NoaW5lc2UgPyAndGl0bGUtZ3JvdXAtemgnIDogJyd9YH0+XG4gICAgICAgICAgPGgxIGNsYXNzTmFtZT1cIm1haW4tdGl0bGVcIj5cbiAgICAgICAgICAgIHtpc0NoaW5lc2UgPyAoXG4gICAgICAgICAgICAgIDw+XG4gICAgICAgICAgICAgICAg6auY57K+5bqmIDNEIOWIl+WNsOino+axuuaWueahiDxiciAvPua7v+i2s+WOn+Wei+mWi+eZvOiIh+W3pealremcgOaxglxuICAgICAgICAgICAgICA8Lz5cbiAgICAgICAgICAgICkgOiAoXG4gICAgICAgICAgICAgIDw+XG4gICAgICAgICAgICAgICAgUHJlY2lzaW9uIDNEIFByaW50aW5nPGJyIC8+QnVpbHQgZm9yIEluZHVzdHJpYWwgTmVlZHNcbiAgICAgICAgICAgICAgPC8+XG4gICAgICAgICAgICApfVxuICAgICAgICAgIDwvaDE+XG4gICAgICAgICAgPGgyIGNsYXNzTmFtZT1cInN1Yi10aXRsZVwiPlxuICAgICAgICAgICAge2lzQ2hpbmVzZVxuICAgICAgICAgICAgICA/ICflv6vpgJ/miZPmqKPjg7vlip/og73mgKfoo73kvZzjg7vlsJHph4/lrqLoo73nlJ/nlKInXG4gICAgICAgICAgICAgIDogJ1JhcGlkIFByb3RvdHlwaW5n44O7RnVuY3Rpb25hbCBQYXJ0c+ODu0xvdy1Wb2x1bWUgUHJvZHVjdGlvbid9XG4gICAgICAgICAgPC9oMj5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJkZXNjcmlwdGlvbi1ibG9ja1wiPlxuICAgICAgICAgIDxwPlxuICAgICAgICAgICAge2lzQ2hpbmVzZVxuICAgICAgICAgICAgICA/ICflvp7nlKLlk4HmiZPmqKPliLDlsJHph4/nlJ/nlKLvvIzmj5Dkvpvlip/og73mgKfjgIHlt6Xmpa3mh4nnlKjoiIflrqLoo73ljJbpnIDmsYLnmoTlj6/pnaAgM0Qg5YiX5Y2w5pa55qGI44CCJ1xuICAgICAgICAgICAgICA6ICdGcm9tIHByb3RvdHlwaW5nIHRvIGxvdy12b2x1bWUgcHJvZHVjdGlvbiwgd2UgZGVsaXZlciByZWxpYWJsZSAzRCBwcmludGluZyBzb2x1dGlvbnMgZm9yIGZ1bmN0aW9uYWwgcGFydHMsIGluZHVzdHJpYWwgYXBwbGljYXRpb25zLCBhbmQgY3VzdG9tIG1hbnVmYWN0dXJpbmcgbmVlZHMuJ31cbiAgICAgICAgICA8L3A+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaGVyby0zZC1jb250YWluZXJcIj5cbiAgICAgICAgICA8Q2FudmFzIHNoYWRvd3MgZHByPXtbMSwgMl19IGNhbWVyYT17eyBwb3NpdGlvbjogWzAsIDAsIDEwXSwgZm92OiA0NSB9fT5cbiAgICAgICAgICAgIDxTdXNwZW5zZSBmYWxsYmFjaz17bnVsbH0+XG4gICAgICAgICAgICAgIDxTdGFnZSBlbnZpcm9ubWVudD1cImNpdHlcIiBpbnRlbnNpdHk9ezAuNX0gYWRqdXN0Q2FtZXJhPXtmYWxzZX0gc2hhZG93cz17ZmFsc2V9PlxuICAgICAgICAgICAgICAgIDxSb2JvdE1vZGVsT2JqIHNjYWxlPXs0LjV9IHBvc2l0aW9uPXtbMC4zNSwgLTQuNzUsIDBdfSAvPlxuICAgICAgICAgICAgICA8L1N0YWdlPlxuICAgICAgICAgICAgICA8Q29udGFjdFNoYWRvd3MgcG9zaXRpb249e1swLjM1LCAtNC44NywgMF19IG9wYWNpdHk9ezAuMzR9IHNjYWxlPXsxMi41fSBibHVyPXsyLjh9IGZhcj17NH0gLz5cbiAgICAgICAgICAgIDwvU3VzcGVuc2U+XG5cbiAgICAgICAgICAgIDxPcmJpdENvbnRyb2xzIGF1dG9Sb3RhdGUgYXV0b1JvdGF0ZVNwZWVkPXsxLjB9IGVuYWJsZVpvb209e2ZhbHNlfSBlbmFibGVQYW49e2ZhbHNlfSAvPlxuICAgICAgICAgIDwvQ2FudmFzPlxuICAgICAgICA8L2Rpdj5cblxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInByb2Nlc3MtY2FyZHMtY29udGFpbmVyXCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwcm9jZXNzLWNhcmQgY2FyZC1yZXNpblwiIHN0eWxlPXt7IGJhY2tncm91bmRJbWFnZTogYHVybCgke3Jlc2luSW1nfSlgIH19PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjYXJkLWxhYmVsXCI+UmVzaW48L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHJvY2Vzcy1jYXJkIGNhcmQtdXZcIiBzdHlsZT17eyBiYWNrZ3JvdW5kSW1hZ2U6IGB1cmwoJHt1dkltZ30pYCB9fT5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY2FyZC1sYWJlbFwiPlVWLUN1cmluZzwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwcm9jZXNzLWNhcmQgY2FyZC1tZXRhbFwiIHN0eWxlPXt7IGJhY2tncm91bmRJbWFnZTogYHVybCgke21ldGFsSW1nfSlgIH19PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjYXJkLWxhYmVsXCI+TWV0YWw8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICA8L3NlY3Rpb24+XG4gICk7XG59XG4iXSwibmFtZXMiOlsiUmVhY3QiLCJTdXNwZW5zZSIsIkNhbnZhcyIsIkNvbnRhY3RTaGFkb3dzIiwiT3JiaXRDb250cm9scyIsIlN0YWdlIiwicmVzaW5JbWciLCJ1dkltZyIsIm1ldGFsSW1nIiwiUm9ib3RNb2RlbE9iaiIsInVzZUxhbmd1YWdlIiwiTWFudWZhY3R1cmluZzEiLCJpc0NoaW5lc2UiLCJzZWN0aW9uIiwiY2xhc3NOYW1lIiwiaWQiLCJkaXYiLCJoMSIsImJyIiwiaDIiLCJwIiwic2hhZG93cyIsImRwciIsImNhbWVyYSIsInBvc2l0aW9uIiwiZm92IiwiZmFsbGJhY2siLCJlbnZpcm9ubWVudCIsImludGVuc2l0eSIsImFkanVzdENhbWVyYSIsInNjYWxlIiwib3BhY2l0eSIsImJsdXIiLCJmYXIiLCJhdXRvUm90YXRlIiwiYXV0b1JvdGF0ZVNwZWVkIiwiZW5hYmxlWm9vbSIsImVuYWJsZVBhbiIsInN0eWxlIiwiYmFja2dyb3VuZEltYWdlIl0sIm1hcHBpbmdzIjoiOztB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
