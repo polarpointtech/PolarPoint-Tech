@@ -60,6 +60,24 @@
   }
 }
 
+@media (max-width: 480px) {
+  .home4-marquee {
+    height: 72px;
+    background: #d8eefb;
+
+    .keyword-item {
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      opacity: 0.58;
+    }
+
+    .keyword-separator {
+      margin: 0 18px;
+      font-size: 13px;
+    }
+  }
+}
+
 @keyframes home4Scroll {
   0% {
     transform: translate3d(0, 0, 0);

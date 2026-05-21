@@ -1,11 +1,22 @@
 import React from 'react';
 import './Footer.scss';
+import logo from '../assets/header1-1.png';
 
 export default function Footer() {
   return (
     <footer className="footer-container">
       <div className="footer-content">
-        
+        <button className="footer-mobile-brand" type="button" aria-label="PolarPoint Tech">
+          <span className="footer-logo-mark">
+            <img src={logo} alt="PolarPoint Tech" />
+          </span>
+          <span>
+            PolarPoint
+            <br />
+            Tech
+          </span>
+        </button>
+
         {/* 左側區域：社群圖示 + Copyright */}
         <div className="left-section">
           

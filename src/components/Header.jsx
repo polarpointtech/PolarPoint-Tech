@@ -38,6 +38,7 @@ export default function Header() {
   const [isShrunk, setIsShrunk] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, setLanguage, languageLabel, isChinese } = useLanguage();
   const navigate = useNavigate();
   const location = useLocation();
@@ -53,10 +54,16 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle('mobile-nav-open', isMobileMenuOpen);
+    return () => document.body.classList.remove('mobile-nav-open');
+  }, [isMobileMenuOpen]);
+
   const handleNavigation = (path) => {
     navigate(path);
     window.scrollTo({ top: 0, behavior: 'auto' });
     setIsLanguageOpen(false);
+    setIsMobileMenuOpen(false);
   };
 
   const handleLanguageChange = (nextLanguage) => {
@@ -83,12 +90,42 @@ export default function Header() {
     };
 
   return (
+    <>
+      <button
+        className={`mobile-menu-toggle ${isMobileMenuOpen ? 'is-open' : ''}`}
+        type="button"
+        aria-label={isMobileMenuOpen ? 'Close navigation' : 'Open navigation'}
+        aria-expanded={isMobileMenuOpen}
+        onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <button
+        className={`mobile-nav-backdrop ${isMobileMenuOpen ? 'is-open' : ''}`}
+        type="button"
+        aria-label="Close navigation"
+        onClick={() => setIsMobileMenuOpen(false)}
+      />
+
     <aside
-      className={`nav-card ${shouldShrink ? 'shrunk' : ''}`}
+      className={`nav-card ${shouldShrink ? 'shrunk' : ''} ${isMobileMenuOpen ? 'mobile-open' : ''}`}
       aria-label="Main navigation"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      <button
+        className="mobile-nav-close"
+        type="button"
+        aria-label="Close navigation"
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        <span></span>
+        <span></span>
+      </button>
+
       <div className="nav-top">
         <button className="logo-area" onClick={() => handleNavigation('/')} type="button">
           <span className="logo-mark">
@@ -224,5 +261,6 @@ export default function Header() {
         <span className="label">{navText.contact}</span>
       </button>
     </aside>
+    </>
   );
 }

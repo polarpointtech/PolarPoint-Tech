@@ -487,6 +487,96 @@
   }
 }
 
+@media (max-width: 480px) {
+  .home3-container {
+    height: 760px;
+    margin-top: -1px;
+    background:
+      radial-gradient(310px 260px at 50% 48%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.22) 58%, rgba(255, 255, 255, 0) 76%),
+      linear-gradient(180deg, #ffffff 0%, #eefaff 30%, #d8f5fb 100%);
+
+    .grid-overlay {
+      background-size: 32px 32px, 32px 32px, 54px 54px;
+      background-position: center top, center top, 28px 22px;
+      opacity: 0.82;
+    }
+
+    .content-wrapper {
+      position: relative;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      transform: none;
+
+      .text-content {
+        top: 56px;
+        width: min(286px, calc(100vw - 48px));
+
+        .sub-caption {
+          width: 210px;
+          margin-bottom: 12px;
+          font-size: 10px;
+          line-height: 1.45;
+          color: #6c7074;
+        }
+
+        .deco-line {
+          width: 150px;
+          height: 4px;
+          margin-bottom: 22px;
+        }
+
+        .main-title {
+          width: 100%;
+          font-size: 20px;
+          line-height: 1.35;
+          color: #363b40;
+        }
+      }
+
+      .image-container {
+        top: 324px;
+        width: min(292px, calc(100vw - 64px));
+
+        .arm-art {
+          width: 292px;
+          height: auto;
+        }
+      }
+    }
+
+    .floating-icons-layer {
+      left: 50%;
+      width: min(375px, 100vw);
+      height: 100%;
+      transform: translateX(-50%);
+      z-index: 16;
+
+      .floating-wrapper {
+        transform: scale(0.78);
+      }
+
+      .floating-wrapper.service-1 { top: 248px !important; left: 38px !important; }
+      .floating-wrapper.service-2 { top: 232px !important; left: 274px !important; }
+      .floating-wrapper.service-3 { top: 474px !important; left: 276px !important; }
+      .floating-wrapper.service-4 { top: 438px !important; left: 46px !important; }
+      .floating-wrapper.service-5 { top: 584px !important; left: 246px !important; }
+      .floating-wrapper.service-6,
+      .floating-wrapper.service-7,
+      .floating-wrapper.service-8,
+      .floating-wrapper.service-9,
+      .floating-wrapper.service-10 {
+        display: none;
+      }
+
+      .capability-glass-card {
+        display: none;
+      }
+    }
+  }
+}
+
 @keyframes clusterPanelIn {
   from {
     opacity: 0;
