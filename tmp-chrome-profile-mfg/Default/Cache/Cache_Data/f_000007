@@ -1,0 +1,256 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/Footer.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=6b69b0b0"; const _jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import __vite__cjsImport1_react from "/node_modules/.vite/deps/react.js?v=83a14ab1"; const React = __vite__cjsImport1_react.__esModule ? __vite__cjsImport1_react.default : __vite__cjsImport1_react;
+import "/src/components/Footer.scss";
+export default function Footer() {
+    return /*#__PURE__*/ _jsxDEV("footer", {
+        className: "footer-container",
+        children: /*#__PURE__*/ _jsxDEV("div", {
+            className: "footer-content",
+            children: [
+                /*#__PURE__*/ _jsxDEV("div", {
+                    className: "left-section",
+                    children: [
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "social-icons",
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("a", {
+                                    href: "#",
+                                    className: "icon-link",
+                                    children: /*#__PURE__*/ _jsxDEV("svg", {
+                                        width: "20",
+                                        height: "20",
+                                        viewBox: "0 0 24 24",
+                                        fill: "currentColor",
+                                        children: /*#__PURE__*/ _jsxDEV("path", {
+                                            d: "M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                            lineNumber: 17,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                        lineNumber: 16,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                    lineNumber: 15,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("a", {
+                                    href: "#",
+                                    className: "icon-link",
+                                    children: /*#__PURE__*/ _jsxDEV("svg", {
+                                        width: "20",
+                                        height: "20",
+                                        viewBox: "0 0 24 24",
+                                        fill: "currentColor",
+                                        children: /*#__PURE__*/ _jsxDEV("path", {
+                                            d: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                            lineNumber: 23,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                        lineNumber: 22,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                    lineNumber: 21,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("a", {
+                                    href: "#",
+                                    className: "icon-link",
+                                    children: /*#__PURE__*/ _jsxDEV("svg", {
+                                        width: "20",
+                                        height: "20",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDEV("rect", {
+                                                x: "2",
+                                                y: "2",
+                                                width: "20",
+                                                height: "20",
+                                                rx: "5",
+                                                ry: "5"
+                                            }, void 0, false, {
+                                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                                lineNumber: 29,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDEV("path", {
+                                                d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                                            }, void 0, false, {
+                                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                                lineNumber: 30,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDEV("line", {
+                                                x1: "17.5",
+                                                y1: "6.5",
+                                                x2: "17.51",
+                                                y2: "6.5"
+                                            }, void 0, false, {
+                                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                                lineNumber: 31,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                        lineNumber: 28,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                    lineNumber: 27,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("a", {
+                                    href: "#",
+                                    className: "icon-link",
+                                    children: /*#__PURE__*/ _jsxDEV("svg", {
+                                        width: "20",
+                                        height: "20",
+                                        viewBox: "0 0 24 24",
+                                        fill: "currentColor",
+                                        children: /*#__PURE__*/ _jsxDEV("path", {
+                                            d: "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                            lineNumber: 37,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                        lineNumber: 36,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                                    lineNumber: 35,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                            lineNumber: 13,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("p", {
+                            className: "copyright",
+                            children: "© 2025 PolarPoint Tech. All rights reserved."
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                            lineNumber: 43,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                    lineNumber: 10,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDEV("div", {
+                    className: "right-section",
+                    children: [
+                        /*#__PURE__*/ _jsxDEV("a", {
+                            href: "#",
+                            className: "footer-link",
+                            children: "About us"
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                            lineNumber: 50,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("a", {
+                            href: "#",
+                            className: "footer-link",
+                            children: "Contact"
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                            lineNumber: 51,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("a", {
+                            href: "#",
+                            className: "footer-link",
+                            children: "Privacy policy"
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                            lineNumber: 52,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("a", {
+                            href: "#",
+                            className: "footer-link",
+                            children: "Services"
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                            lineNumber: 53,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("a", {
+                            href: "#",
+                            className: "footer-link",
+                            children: "Terms of Use"
+                        }, void 0, false, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                            lineNumber: 54,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+                    lineNumber: 49,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+            lineNumber: 7,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx",
+        lineNumber: 6,
+        columnNumber: 5
+    }, this);
+}
+_c = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react-swc can't detect preamble. Something is wrong."
+    );
+  }
+
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) { return RefreshRuntime.register(type, "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/components/Footer.jsx" + ' ' + id) }
+function $RefreshSig$() { return RefreshRuntime.createSignatureFunctionForTransform(); }
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkZvb3Rlci5qc3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0ICcuL0Zvb3Rlci5zY3NzJztcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEZvb3RlcigpIHtcclxuICByZXR1cm4gKFxyXG4gICAgPGZvb3RlciBjbGFzc05hbWU9XCJmb290ZXItY29udGFpbmVyXCI+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZm9vdGVyLWNvbnRlbnRcIj5cclxuICAgICAgICBcclxuICAgICAgICB7Lyog5bem5YG05Y2A5Z+f77ya56S+576k5ZyW56S6ICsgQ29weXJpZ2h0ICovfVxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibGVmdC1zZWN0aW9uXCI+XHJcbiAgICAgICAgICBcclxuICAgICAgICAgIHsvKiDnpL7nvqTlnJbnpLrliJcgKi99XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNvY2lhbC1pY29uc1wiPlxyXG4gICAgICAgICAgICB7LyogVHdpdHRlciAvIFggKi99XHJcbiAgICAgICAgICAgIDxhIGhyZWY9XCIjXCIgY2xhc3NOYW1lPVwiaWNvbi1saW5rXCI+XHJcbiAgICAgICAgICAgICAgPHN2ZyB3aWR0aD1cIjIwXCIgaGVpZ2h0PVwiMjBcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiPlxyXG4gICAgICAgICAgICAgICAgPHBhdGggZD1cIk0yMyAzYTEwLjkgMTAuOSAwIDAgMS0zLjE0IDEuNTMgNC40OCA0LjQ4IDAgMCAwLTcuODYgM3YxQTEwLjY2IDEwLjY2IDAgMCAxIDMgNHMtNCA5IDUgMTNhMTEuNjQgMTEuNjQgMCAwIDEtNyAyYzkgNSAyMCAwIDIwLTExLjVhNC41IDQuNSAwIDAgMC0uMDgtLjgzQTcuNzIgNy43MiAwIDAgMCAyMyAzelwiPjwvcGF0aD5cclxuICAgICAgICAgICAgICA8L3N2Zz5cclxuICAgICAgICAgICAgPC9hPlxyXG4gICAgICAgICAgICB7LyogRmFjZWJvb2sgKi99XHJcbiAgICAgICAgICAgIDxhIGhyZWY9XCIjXCIgY2xhc3NOYW1lPVwiaWNvbi1saW5rXCI+XHJcbiAgICAgICAgICAgICAgPHN2ZyB3aWR0aD1cIjIwXCIgaGVpZ2h0PVwiMjBcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiPlxyXG4gICAgICAgICAgICAgICAgPHBhdGggZD1cIk0xOCAyaC0zYTUgNSAwIDAgMC01IDV2M0g3djRoM3Y4aDR2LThoM2wxLTRoLTRWN2ExIDEgMCAwIDEgMS0xaDN6XCI+PC9wYXRoPlxyXG4gICAgICAgICAgICAgIDwvc3ZnPlxyXG4gICAgICAgICAgICA8L2E+XHJcbiAgICAgICAgICAgIHsvKiBJbnN0YWdyYW0gKi99XHJcbiAgICAgICAgICAgIDxhIGhyZWY9XCIjXCIgY2xhc3NOYW1lPVwiaWNvbi1saW5rXCI+XHJcbiAgICAgICAgICAgICAgPHN2ZyB3aWR0aD1cIjIwXCIgaGVpZ2h0PVwiMjBcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgZmlsbD1cIm5vbmVcIiBzdHJva2U9XCJjdXJyZW50Q29sb3JcIiBzdHJva2VXaWR0aD1cIjJcIiBzdHJva2VMaW5lY2FwPVwicm91bmRcIiBzdHJva2VMaW5lam9pbj1cInJvdW5kXCI+XHJcbiAgICAgICAgICAgICAgICA8cmVjdCB4PVwiMlwiIHk9XCIyXCIgd2lkdGg9XCIyMFwiIGhlaWdodD1cIjIwXCIgcng9XCI1XCIgcnk9XCI1XCI+PC9yZWN0PlxyXG4gICAgICAgICAgICAgICAgPHBhdGggZD1cIk0xNiAxMS4zN0E0IDQgMCAxIDEgMTIuNjMgOCA0IDQgMCAwIDEgMTYgMTEuMzd6XCI+PC9wYXRoPlxyXG4gICAgICAgICAgICAgICAgPGxpbmUgeDE9XCIxNy41XCIgeTE9XCI2LjVcIiB4Mj1cIjE3LjUxXCIgeTI9XCI2LjVcIj48L2xpbmU+XHJcbiAgICAgICAgICAgICAgPC9zdmc+XHJcbiAgICAgICAgICAgIDwvYT5cclxuICAgICAgICAgICAgey8qIEdpdEh1YiAqL31cclxuICAgICAgICAgICAgPGEgaHJlZj1cIiNcIiBjbGFzc05hbWU9XCJpY29uLWxpbmtcIj5cclxuICAgICAgICAgICAgICA8c3ZnIHdpZHRoPVwiMjBcIiBoZWlnaHQ9XCIyMFwiIHZpZXdCb3g9XCIwIDAgMjQgMjRcIiBmaWxsPVwiY3VycmVudENvbG9yXCI+XHJcbiAgICAgICAgICAgICAgICA8cGF0aCBkPVwiTTkgMTljLTUgMS41LTUtMi41LTctM20xNCA2di0zLjg3YTMuMzcgMy4zNyAwIDAgMC0uOTQtMi42MWMzLjE0LS4zNSA2LjQ0LTEuNTQgNi40NC03QTUuNDQgNS40NCAwIDAgMCAyMCA0Ljc3IDUuMDcgNS4wNyAwIDAgMCAxOS45MSAxUzE4LjczLjY1IDE2IDIuNDhhMTMuMzggMTMuMzggMCAwIDAtNyAwQzYuMjcuNjUgNS4wOSAxIDUuMDkgMUE1LjA3IDUuMDcgMCAwIDAgNSA0Ljc3YTUuNDQgNS40NCAwIDAgMC0xLjUgMy43OGMwIDUuNDIgMy4zIDYuNjEgNi40NCA3QTMuMzcgMy4zNyAwIDAgMCA5IDE4LjEzVjIyXCI+PC9wYXRoPlxyXG4gICAgICAgICAgICAgIDwvc3ZnPlxyXG4gICAgICAgICAgICA8L2E+XHJcbiAgICAgICAgICA8L2Rpdj5cclxuXHJcbiAgICAgICAgICB7LyogQ29weXJpZ2h0IOaWh+WtlyAqL31cclxuICAgICAgICAgIDxwIGNsYXNzTmFtZT1cImNvcHlyaWdodFwiPlxyXG4gICAgICAgICAgICDCqSAyMDI1IFBvbGFyUG9pbnQgVGVjaC4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cclxuICAgICAgICAgIDwvcD5cclxuICAgICAgICA8L2Rpdj5cclxuXHJcbiAgICAgICAgey8qIOWPs+WBtOWNgOWfn++8muWwjuiIqumAo+e1kCAqL31cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInJpZ2h0LXNlY3Rpb25cIj5cclxuICAgICAgICAgIDxhIGhyZWY9XCIjXCIgY2xhc3NOYW1lPVwiZm9vdGVyLWxpbmtcIj5BYm91dCB1czwvYT5cclxuICAgICAgICAgIDxhIGhyZWY9XCIjXCIgY2xhc3NOYW1lPVwiZm9vdGVyLWxpbmtcIj5Db250YWN0PC9hPlxyXG4gICAgICAgICAgPGEgaHJlZj1cIiNcIiBjbGFzc05hbWU9XCJmb290ZXItbGlua1wiPlByaXZhY3kgcG9saWN5PC9hPlxyXG4gICAgICAgICAgPGEgaHJlZj1cIiNcIiBjbGFzc05hbWU9XCJmb290ZXItbGlua1wiPlNlcnZpY2VzPC9hPlxyXG4gICAgICAgICAgPGEgaHJlZj1cIiNcIiBjbGFzc05hbWU9XCJmb290ZXItbGlua1wiPlRlcm1zIG9mIFVzZTwvYT5cclxuICAgICAgICA8L2Rpdj5cclxuXHJcbiAgICAgIDwvZGl2PlxyXG4gICAgPC9mb290ZXI+XHJcbiAgKTtcclxufSJdLCJuYW1lcyI6WyJSZWFjdCIsIkZvb3RlciIsImZvb3RlciIsImNsYXNzTmFtZSIsImRpdiIsImEiLCJocmVmIiwic3ZnIiwid2lkdGgiLCJoZWlnaHQiLCJ2aWV3Qm94IiwiZmlsbCIsInBhdGgiLCJkIiwic3Ryb2tlIiwic3Ryb2tlV2lkdGgiLCJzdHJva2VMaW5lY2FwIiwic3Ryb2tlTGluZWpvaW4iLCJyZWN0IiwieCIsInkiLCJyeCIsInJ5IiwibGluZSIsIngxIiwieTEiLCJ4MiIsInkyIiwicCJdLCJtYXBwaW5ncyI6IjtBQUFBLE9BQU9BLFdBQVcsUUFBUTtBQUMxQixPQUFPLGdCQUFnQjtBQUV2QixlQUFlLFNBQVNDO0lBQ3RCLHFCQUNFLFFBQUNDO1FBQU9DLFdBQVU7a0JBQ2hCLGNBQUEsUUFBQ0M7WUFBSUQsV0FBVTs7OEJBR2IsUUFBQ0M7b0JBQUlELFdBQVU7O3NDQUdiLFFBQUNDOzRCQUFJRCxXQUFVOzs4Q0FFYixRQUFDRTtvQ0FBRUMsTUFBSztvQ0FBSUgsV0FBVTs4Q0FDcEIsY0FBQSxRQUFDSTt3Q0FBSUMsT0FBTTt3Q0FBS0MsUUFBTzt3Q0FBS0MsU0FBUTt3Q0FBWUMsTUFBSztrREFDbkQsY0FBQSxRQUFDQzs0Q0FBS0MsR0FBRTs7Ozs7Ozs7Ozs7Ozs7Ozs4Q0FJWixRQUFDUjtvQ0FBRUMsTUFBSztvQ0FBSUgsV0FBVTs4Q0FDcEIsY0FBQSxRQUFDSTt3Q0FBSUMsT0FBTTt3Q0FBS0MsUUFBTzt3Q0FBS0MsU0FBUTt3Q0FBWUMsTUFBSztrREFDbkQsY0FBQSxRQUFDQzs0Q0FBS0MsR0FBRTs7Ozs7Ozs7Ozs7Ozs7Ozs4Q0FJWixRQUFDUjtvQ0FBRUMsTUFBSztvQ0FBSUgsV0FBVTs4Q0FDcEIsY0FBQSxRQUFDSTt3Q0FBSUMsT0FBTTt3Q0FBS0MsUUFBTzt3Q0FBS0MsU0FBUTt3Q0FBWUMsTUFBSzt3Q0FBT0csUUFBTzt3Q0FBZUMsYUFBWTt3Q0FBSUMsZUFBYzt3Q0FBUUMsZ0JBQWU7OzBEQUNySSxRQUFDQztnREFBS0MsR0FBRTtnREFBSUMsR0FBRTtnREFBSVosT0FBTTtnREFBS0MsUUFBTztnREFBS1ksSUFBRztnREFBSUMsSUFBRzs7Ozs7OzBEQUNuRCxRQUFDVjtnREFBS0MsR0FBRTs7Ozs7OzBEQUNSLFFBQUNVO2dEQUFLQyxJQUFHO2dEQUFPQyxJQUFHO2dEQUFNQyxJQUFHO2dEQUFRQyxJQUFHOzs7Ozs7Ozs7Ozs7Ozs7Ozs4Q0FJM0MsUUFBQ3RCO29DQUFFQyxNQUFLO29DQUFJSCxXQUFVOzhDQUNwQixjQUFBLFFBQUNJO3dDQUFJQyxPQUFNO3dDQUFLQyxRQUFPO3dDQUFLQyxTQUFRO3dDQUFZQyxNQUFLO2tEQUNuRCxjQUFBLFFBQUNDOzRDQUFLQyxHQUFFOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O3NDQU1kLFFBQUNlOzRCQUFFekIsV0FBVTtzQ0FBWTs7Ozs7Ozs7Ozs7OzhCQU0zQixRQUFDQztvQkFBSUQsV0FBVTs7c0NBQ2IsUUFBQ0U7NEJBQUVDLE1BQUs7NEJBQUlILFdBQVU7c0NBQWM7Ozs7OztzQ0FDcEMsUUFBQ0U7NEJBQUVDLE1BQUs7NEJBQUlILFdBQVU7c0NBQWM7Ozs7OztzQ0FDcEMsUUFBQ0U7NEJBQUVDLE1BQUs7NEJBQUlILFdBQVU7c0NBQWM7Ozs7OztzQ0FDcEMsUUFBQ0U7NEJBQUVDLE1BQUs7NEJBQUlILFdBQVU7c0NBQWM7Ozs7OztzQ0FDcEMsUUFBQ0U7NEJBQUVDLE1BQUs7NEJBQUlILFdBQVU7c0NBQWM7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBTTlDO0tBeER3QkYifQ==

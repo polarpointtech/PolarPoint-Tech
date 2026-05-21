@@ -583,11 +583,16 @@
 
 @media (min-width: 1025px) and (max-width: 1500px) {
   .technology1-container {
+    height: var(--stage-1077-height, 1077px);
+    overflow-x: clip;
+
     .content-wrapper {
-      width: calc(100% - 112px);
+      width: 1440px;
       max-width: none;
-      margin-left: 112px;
-      margin-right: 0;
+      height: 1077px;
+      margin: 0;
+      transform: translate(var(--desktop-stage-left, 112px), var(--desktop-stage-top, 52px)) scale(var(--desktop-stage-scale, 1));
+      transform-origin: top left;
     }
   }
 }

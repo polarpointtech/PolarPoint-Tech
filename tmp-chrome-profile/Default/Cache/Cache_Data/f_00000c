@@ -1,0 +1,354 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/sections/Manufacturing4.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=6b69b0b0"; const _jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"]; const _Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"];
+var _s = $RefreshSig$();
+import __vite__cjsImport1_react from "/node_modules/.vite/deps/react.js?v=83a14ab1"; const React = __vite__cjsImport1_react.__esModule ? __vite__cjsImport1_react.default : __vite__cjsImport1_react;
+import "/src/sections/Manufacturing4.scss";
+import { useLanguage } from "/src/i18n/LanguageContext.jsx";
+export default function Manufacturing4() {
+    _s();
+    const { isChinese } = useLanguage();
+    const features = isChinese ? [
+        /*#__PURE__*/ _jsxDEV(_Fragment, {
+            children: "提供客製化工業零件的精密加工服務。"
+        }, void 0, false),
+        /*#__PURE__*/ _jsxDEV(_Fragment, {
+            children: "治具與工裝設計，提升生產效率與穩定性。"
+        }, void 0, false),
+        /*#__PURE__*/ _jsxDEV(_Fragment, {
+            children: "支援金屬、塑膠與多種客製材料加工。"
+        }, void 0, false),
+        /*#__PURE__*/ _jsxDEV(_Fragment, {
+            children: "提供 OEM / ODM 生產與客製化製造支援。"
+        }, void 0, false)
+    ] : [
+        /*#__PURE__*/ _jsxDEV(_Fragment, {
+            children: [
+                "Precision machining for",
+                /*#__PURE__*/ _jsxDEV("br", {}, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                    lineNumber: 16,
+                    columnNumber: 32
+                }, this),
+                "customized industrial components."
+            ]
+        }, void 0, true),
+        /*#__PURE__*/ _jsxDEV(_Fragment, {
+            children: [
+                "Jig and tooling solutions",
+                /*#__PURE__*/ _jsxDEV("br", {}, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                    lineNumber: 20,
+                    columnNumber: 34
+                }, this),
+                "designed for production efficiency."
+            ]
+        }, void 0, true),
+        /*#__PURE__*/ _jsxDEV(_Fragment, {
+            children: [
+                "Support for metals,",
+                /*#__PURE__*/ _jsxDEV("br", {}, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                    lineNumber: 24,
+                    columnNumber: 28
+                }, this),
+                "plastics, and custom materials."
+            ]
+        }, void 0, true),
+        /*#__PURE__*/ _jsxDEV(_Fragment, {
+            children: [
+                "OEM/ODM manufacturing",
+                /*#__PURE__*/ _jsxDEV("br", {}, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                    lineNumber: 28,
+                    columnNumber: 30
+                }, this),
+                "and customized production support."
+            ]
+        }, void 0, true)
+    ];
+    return /*#__PURE__*/ _jsxDEV("section", {
+        className: "manufacturing4-container",
+        children: /*#__PURE__*/ _jsxDEV("div", {
+            className: "content-wrapper",
+            children: [
+                /*#__PURE__*/ _jsxDEV("div", {
+                    className: "info-text-block",
+                    children: /*#__PURE__*/ _jsxDEV("h2", {
+                        children: isChinese ? /*#__PURE__*/ _jsxDEV(_Fragment, {
+                            children: [
+                                "穩定可靠的製造服務",
+                                /*#__PURE__*/ _jsxDEV("br", {}, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                    lineNumber: 42,
+                                    columnNumber: 26
+                                }, this),
+                                "依需求量身打造"
+                            ]
+                        }, void 0, true) : /*#__PURE__*/ _jsxDEV(_Fragment, {
+                            children: [
+                                "Reliable Manufacturing",
+                                /*#__PURE__*/ _jsxDEV("br", {}, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                    lineNumber: 47,
+                                    columnNumber: 39
+                                }, this),
+                                "Built Around Your Requirements"
+                            ]
+                        }, void 0, true)
+                    }, void 0, false, {
+                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                        lineNumber: 39,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                    lineNumber: 38,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDEV("div", {
+                    className: "features-container",
+                    children: [
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "feature-item item-1",
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("div", {
+                                    className: "icon-circle",
+                                    children: /*#__PURE__*/ _jsxDEV("svg", {
+                                        width: "24",
+                                        height: "24",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDEV("circle", {
+                                                cx: "11",
+                                                cy: "11",
+                                                r: "8"
+                                            }, void 0, false, {
+                                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                                lineNumber: 60,
+                                                columnNumber: 113
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDEV("line", {
+                                                x1: "21",
+                                                y1: "21",
+                                                x2: "16.65",
+                                                y2: "16.65"
+                                            }, void 0, false, {
+                                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                                lineNumber: 60,
+                                                columnNumber: 152
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                        lineNumber: 60,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                    lineNumber: 59,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    className: "feature-text",
+                                    children: features[0]
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                    lineNumber: 62,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                            lineNumber: 58,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "feature-item item-2",
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("div", {
+                                    className: "icon-circle",
+                                    children: /*#__PURE__*/ _jsxDEV("svg", {
+                                        width: "24",
+                                        height: "24",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        children: [
+                                            /*#__PURE__*/ _jsxDEV("polyline", {
+                                                points: "23 4 23 10 17 10"
+                                            }, void 0, false, {
+                                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                                lineNumber: 70,
+                                                columnNumber: 113
+                                            }, this),
+                                            /*#__PURE__*/ _jsxDEV("path", {
+                                                d: "M20.49 15a9 9 0 1 1-2.12-9.36L23 10"
+                                            }, void 0, false, {
+                                                fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                                lineNumber: 70,
+                                                columnNumber: 160
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                        lineNumber: 70,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                    lineNumber: 69,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    className: "feature-text",
+                                    children: features[1]
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                    lineNumber: 72,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                            lineNumber: 68,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "feature-item item-3",
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("div", {
+                                    className: "icon-circle",
+                                    children: /*#__PURE__*/ _jsxDEV("svg", {
+                                        width: "24",
+                                        height: "24",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        children: /*#__PURE__*/ _jsxDEV("path", {
+                                            d: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                            lineNumber: 80,
+                                            columnNumber: 113
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                        lineNumber: 80,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                    lineNumber: 79,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    className: "feature-text",
+                                    children: features[2]
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                    lineNumber: 82,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                            lineNumber: 78,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDEV("div", {
+                            className: "feature-item item-4",
+                            children: [
+                                /*#__PURE__*/ _jsxDEV("div", {
+                                    className: "icon-circle",
+                                    children: /*#__PURE__*/ _jsxDEV("svg", {
+                                        width: "24",
+                                        height: "24",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        children: /*#__PURE__*/ _jsxDEV("path", {
+                                            d: "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                                        }, void 0, false, {
+                                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                            lineNumber: 90,
+                                            columnNumber: 113
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                        lineNumber: 90,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                    lineNumber: 89,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ _jsxDEV("span", {
+                                    className: "feature-text",
+                                    children: features[3]
+                                }, void 0, false, {
+                                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                                    lineNumber: 92,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                            lineNumber: 88,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+                    lineNumber: 55,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+            lineNumber: 35,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx",
+        lineNumber: 34,
+        columnNumber: 5
+    }, this);
+}
+_s(Manufacturing4, "KVVXrx5Kazv1hD9Q89m5FnPwYgg=", false, function() {
+    return [
+        useLanguage
+    ];
+});
+_c = Manufacturing4;
+var _c;
+$RefreshReg$(_c, "Manufacturing4");
+
+
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react-swc can't detect preamble. Something is wrong."
+    );
+  }
+
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) { return RefreshRuntime.register(type, "C:/Users/user/Documents/GitHub/PolarPoint-Tech/src/sections/Manufacturing4.jsx" + ' ' + id) }
+function $RefreshSig$() { return RefreshRuntime.createSignatureFunctionForTransform(); }
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIk1hbnVmYWN0dXJpbmc0LmpzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0ICcuL01hbnVmYWN0dXJpbmc0LnNjc3MnO1xuaW1wb3J0IHsgdXNlTGFuZ3VhZ2UgfSBmcm9tICcuLi9pMThuL0xhbmd1YWdlQ29udGV4dCc7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIE1hbnVmYWN0dXJpbmc0KCkge1xuICBjb25zdCB7IGlzQ2hpbmVzZSB9ID0gdXNlTGFuZ3VhZ2UoKTtcbiAgY29uc3QgZmVhdHVyZXMgPSBpc0NoaW5lc2VcbiAgICA/IFtcbiAgICAgIDw+5o+Q5L6b5a6i6KO95YyW5bel5qWt6Zu25Lu255qE57K+5a+G5Yqg5bel5pyN5YuZ44CCPC8+LFxuICAgICAgPD7msrvlhbfoiIflt6Xoo53oqK3oqIjvvIzmj5DljYfnlJ/nlKLmlYjnjofoiIfnqanlrprmgKfjgII8Lz4sXG4gICAgICA8PuaUr+aPtOmHkeWxrOOAgeWhkeiGoOiIh+WkmueoruWuouijveadkOaWmeWKoOW3peOAgjwvPixcbiAgICAgIDw+5o+Q5L6bIE9FTSAvIE9ETSDnlJ/nlKLoiIflrqLoo73ljJboo73pgKDmlK/mj7TjgII8Lz4sXG4gICAgXVxuICAgIDogW1xuICAgICAgPD5cbiAgICAgICAgUHJlY2lzaW9uIG1hY2hpbmluZyBmb3I8YnIgLz5cbiAgICAgICAgY3VzdG9taXplZCBpbmR1c3RyaWFsIGNvbXBvbmVudHMuXG4gICAgICA8Lz4sXG4gICAgICA8PlxuICAgICAgICBKaWcgYW5kIHRvb2xpbmcgc29sdXRpb25zPGJyIC8+XG4gICAgICAgIGRlc2lnbmVkIGZvciBwcm9kdWN0aW9uIGVmZmljaWVuY3kuXG4gICAgICA8Lz4sXG4gICAgICA8PlxuICAgICAgICBTdXBwb3J0IGZvciBtZXRhbHMsPGJyIC8+XG4gICAgICAgIHBsYXN0aWNzLCBhbmQgY3VzdG9tIG1hdGVyaWFscy5cbiAgICAgIDwvPixcbiAgICAgIDw+XG4gICAgICAgIE9FTS9PRE0gbWFudWZhY3R1cmluZzxiciAvPlxuICAgICAgICBhbmQgY3VzdG9taXplZCBwcm9kdWN0aW9uIHN1cHBvcnQuXG4gICAgICA8Lz4sXG4gICAgXTtcblxuICByZXR1cm4gKFxuICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cIm1hbnVmYWN0dXJpbmc0LWNvbnRhaW5lclwiPlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRlbnQtd3JhcHBlclwiPlxyXG4gICAgICAgIFxyXG4gICAgICAgIHsvKiAxLiDkuIrmlrnol43oibLmloflrZfljYDloYogKi99XHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpbmZvLXRleHQtYmxvY2tcIj5cbiAgICAgICAgICA8aDI+XG4gICAgICAgICAgICB7aXNDaGluZXNlID8gKFxuICAgICAgICAgICAgICA8PlxuICAgICAgICAgICAgICAgIOepqeWumuWPr+mdoOeahOijvemAoOacjeWLmTxiciAvPlxuICAgICAgICAgICAgICAgIOS+nemcgOaxgumHj+i6q+aJk+mAoFxuICAgICAgICAgICAgICA8Lz5cbiAgICAgICAgICAgICkgOiAoXG4gICAgICAgICAgICAgIDw+XG4gICAgICAgICAgICAgICAgUmVsaWFibGUgTWFudWZhY3R1cmluZzxiciAvPlxuICAgICAgICAgICAgICAgIEJ1aWx0IEFyb3VuZCBZb3VyIFJlcXVpcmVtZW50c1xuICAgICAgICAgICAgICA8Lz5cbiAgICAgICAgICAgICl9XG4gICAgICAgICAgPC9oMj5cbiAgICAgICAgPC9kaXY+XG5cclxuICAgICAgICB7LyogMi4g5LiL5pa55Zub5YCL5ZyW56S6ICjoiIcgTWFudTIg57WQ5qeL55u45ZCMKSAqL31cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZlYXR1cmVzLWNvbnRhaW5lclwiPlxyXG4gICAgICAgICAgXHJcbiAgICAgICAgICB7LyogSXRlbSAxOiBIaWdoIHByZWNpc2lvbiAqL31cclxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmVhdHVyZS1pdGVtIGl0ZW0tMVwiPlxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImljb24tY2lyY2xlXCI+XHJcbiAgICAgICAgICAgICAgPHN2ZyB3aWR0aD1cIjI0XCIgaGVpZ2h0PVwiMjRcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgZmlsbD1cIm5vbmVcIiBzdHJva2U9XCJjdXJyZW50Q29sb3JcIiBzdHJva2VXaWR0aD1cIjJcIj48Y2lyY2xlIGN4PVwiMTFcIiBjeT1cIjExXCIgcj1cIjhcIj48L2NpcmNsZT48bGluZSB4MT1cIjIxXCIgeTE9XCIyMVwiIHgyPVwiMTYuNjVcIiB5Mj1cIjE2LjY1XCI+PC9saW5lPjwvc3ZnPlxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiZmVhdHVyZS10ZXh0XCI+XG4gICAgICAgICAgICAgIHtmZWF0dXJlc1swXX1cbiAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgIFxyXG4gICAgICAgICAgey8qIEl0ZW0gMjogUmFwaWQgcHJvdG90eXBpbmcgKi99XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZlYXR1cmUtaXRlbSBpdGVtLTJcIj5cclxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpY29uLWNpcmNsZVwiPlxyXG4gICAgICAgICAgICAgIDxzdmcgd2lkdGg9XCIyNFwiIGhlaWdodD1cIjI0XCIgdmlld0JveD1cIjAgMCAyNCAyNFwiIGZpbGw9XCJub25lXCIgc3Ryb2tlPVwiY3VycmVudENvbG9yXCIgc3Ryb2tlV2lkdGg9XCIyXCI+PHBvbHlsaW5lIHBvaW50cz1cIjIzIDQgMjMgMTAgMTcgMTBcIj48L3BvbHlsaW5lPjxwYXRoIGQ9XCJNMjAuNDkgMTVhOSA5IDAgMSAxLTIuMTItOS4zNkwyMyAxMFwiPjwvcGF0aD48L3N2Zz5cclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImZlYXR1cmUtdGV4dFwiPlxuICAgICAgICAgICAgICB7ZmVhdHVyZXNbMV19XG4gICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgPC9kaXY+XHJcblxyXG4gICAgICAgICAgey8qIEl0ZW0gMzogTWV0YWwgcHJpbnRpbmcgKi99XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZlYXR1cmUtaXRlbSBpdGVtLTNcIj5cclxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpY29uLWNpcmNsZVwiPlxyXG4gICAgICAgICAgICAgIDxzdmcgd2lkdGg9XCIyNFwiIGhlaWdodD1cIjI0XCIgdmlld0JveD1cIjAgMCAyNCAyNFwiIGZpbGw9XCJub25lXCIgc3Ryb2tlPVwiY3VycmVudENvbG9yXCIgc3Ryb2tlV2lkdGg9XCIyXCI+PHBhdGggZD1cIk0xMiAyTDIgN2wxMCA1IDEwLTUtMTAtNXpNMiAxN2wxMCA1IDEwLTVNMiAxMmwxMCA1IDEwLTVcIj48L3BhdGg+PC9zdmc+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJmZWF0dXJlLXRleHRcIj5cbiAgICAgICAgICAgICAge2ZlYXR1cmVzWzJdfVxuICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgIDwvZGl2PlxyXG5cclxuICAgICAgICAgIHsvKiBJdGVtIDQ6IE9wdGlvbmFsIHBvc3QtcHJvY2Vzc2luZyAqL31cclxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmVhdHVyZS1pdGVtIGl0ZW0tNFwiPlxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImljb24tY2lyY2xlXCI+XHJcbiAgICAgICAgICAgICAgPHN2ZyB3aWR0aD1cIjI0XCIgaGVpZ2h0PVwiMjRcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgZmlsbD1cIm5vbmVcIiBzdHJva2U9XCJjdXJyZW50Q29sb3JcIiBzdHJva2VXaWR0aD1cIjJcIj48cGF0aCBkPVwiTTE0LjcgNi4zYTEgMSAwIDAgMCAwIDEuNGwxLjYgMS42YTEgMSAwIDAgMCAxLjQgMGwzLjc3LTMuNzdhNiA2IDAgMCAxLTcuOTQgNy45NGwtNi45MSA2LjkxYTIuMTIgMi4xMiAwIDAgMS0zLTNsNi45MS02LjkxYTYgNiAwIDAgMSA3Ljk0LTcuOTRsLTMuNzYgMy43NnpcIj48L3BhdGg+PC9zdmc+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJmZWF0dXJlLXRleHRcIj5cbiAgICAgICAgICAgICAge2ZlYXR1cmVzWzNdfVxuICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgIDwvZGl2PlxyXG5cclxuICAgICAgICA8L2Rpdj5cclxuXHJcbiAgICAgIDwvZGl2PlxyXG4gICAgPC9zZWN0aW9uPlxyXG4gICk7XHJcbn1cbiJdLCJuYW1lcyI6WyJSZWFjdCIsInVzZUxhbmd1YWdlIiwiTWFudWZhY3R1cmluZzQiLCJpc0NoaW5lc2UiLCJmZWF0dXJlcyIsImJyIiwic2VjdGlvbiIsImNsYXNzTmFtZSIsImRpdiIsImgyIiwic3ZnIiwid2lkdGgiLCJoZWlnaHQiLCJ2aWV3Qm94IiwiZmlsbCIsInN0cm9rZSIsInN0cm9rZVdpZHRoIiwiY2lyY2xlIiwiY3giLCJjeSIsInIiLCJsaW5lIiwieDEiLCJ5MSIsIngyIiwieTIiLCJzcGFuIiwicG9seWxpbmUiLCJwb2ludHMiLCJwYXRoIiwiZCJdLCJtYXBwaW5ncyI6Ijs7QUFBQSxPQUFPQSxXQUFXLFFBQVE7QUFDMUIsT0FBTyx3QkFBd0I7QUFDL0IsU0FBU0MsV0FBVyxRQUFRLDBCQUEwQjtBQUV0RCxlQUFlLFNBQVNDOztJQUN0QixNQUFNLEVBQUVDLFNBQVMsRUFBRSxHQUFHRjtJQUN0QixNQUFNRyxXQUFXRCxZQUNiO3NCQUNBO3NCQUFFOztzQkFDRjtzQkFBRTs7c0JBQ0Y7c0JBQUU7O3NCQUNGO3NCQUFFOztLQUNILEdBQ0M7c0JBQ0E7O2dCQUFFOzhCQUN1QixRQUFDRTs7Ozs7Z0JBQUs7OztzQkFHL0I7O2dCQUFFOzhCQUN5QixRQUFDQTs7Ozs7Z0JBQUs7OztzQkFHakM7O2dCQUFFOzhCQUNtQixRQUFDQTs7Ozs7Z0JBQUs7OztzQkFHM0I7O2dCQUFFOzhCQUNxQixRQUFDQTs7Ozs7Z0JBQUs7OztLQUc5QjtJQUVILHFCQUNFLFFBQUNDO1FBQVFDLFdBQVU7a0JBQ2pCLGNBQUEsUUFBQ0M7WUFBSUQsV0FBVTs7OEJBR2IsUUFBQ0M7b0JBQUlELFdBQVU7OEJBQ2IsY0FBQSxRQUFDRTtrQ0FDRU4sMEJBQ0M7O2dDQUFFOzhDQUNTLFFBQUNFOzs7OztnQ0FBSzs7eURBSWpCOztnQ0FBRTs4Q0FDc0IsUUFBQ0E7Ozs7O2dDQUFLOzs7Ozs7Ozs7Ozs7OzhCQVFwQyxRQUFDRztvQkFBSUQsV0FBVTs7c0NBR2IsUUFBQ0M7NEJBQUlELFdBQVU7OzhDQUNiLFFBQUNDO29DQUFJRCxXQUFVOzhDQUNiLGNBQUEsUUFBQ0c7d0NBQUlDLE9BQU07d0NBQUtDLFFBQU87d0NBQUtDLFNBQVE7d0NBQVlDLE1BQUs7d0NBQU9DLFFBQU87d0NBQWVDLGFBQVk7OzBEQUFJLFFBQUNDO2dEQUFPQyxJQUFHO2dEQUFLQyxJQUFHO2dEQUFLQyxHQUFFOzs7Ozs7MERBQWEsUUFBQ0M7Z0RBQUtDLElBQUc7Z0RBQUtDLElBQUc7Z0RBQUtDLElBQUc7Z0RBQVFDLElBQUc7Ozs7Ozs7Ozs7Ozs7Ozs7OzhDQUUvSyxRQUFDQztvQ0FBS25CLFdBQVU7OENBQ2JILFFBQVEsQ0FBQyxFQUFFOzs7Ozs7Ozs7Ozs7c0NBS2hCLFFBQUNJOzRCQUFJRCxXQUFVOzs4Q0FDYixRQUFDQztvQ0FBSUQsV0FBVTs4Q0FDYixjQUFBLFFBQUNHO3dDQUFJQyxPQUFNO3dDQUFLQyxRQUFPO3dDQUFLQyxTQUFRO3dDQUFZQyxNQUFLO3dDQUFPQyxRQUFPO3dDQUFlQyxhQUFZOzswREFBSSxRQUFDVztnREFBU0MsUUFBTzs7Ozs7OzBEQUE4QixRQUFDQztnREFBS0MsR0FBRTs7Ozs7Ozs7Ozs7Ozs7Ozs7OENBRTNKLFFBQUNKO29DQUFLbkIsV0FBVTs4Q0FDYkgsUUFBUSxDQUFDLEVBQUU7Ozs7Ozs7Ozs7OztzQ0FLaEIsUUFBQ0k7NEJBQUlELFdBQVU7OzhDQUNiLFFBQUNDO29DQUFJRCxXQUFVOzhDQUNiLGNBQUEsUUFBQ0c7d0NBQUlDLE9BQU07d0NBQUtDLFFBQU87d0NBQUtDLFNBQVE7d0NBQVlDLE1BQUs7d0NBQU9DLFFBQU87d0NBQWVDLGFBQVk7a0RBQUksY0FBQSxRQUFDYTs0Q0FBS0MsR0FBRTs7Ozs7Ozs7Ozs7Ozs7Ozs4Q0FFNUcsUUFBQ0o7b0NBQUtuQixXQUFVOzhDQUNiSCxRQUFRLENBQUMsRUFBRTs7Ozs7Ozs7Ozs7O3NDQUtoQixRQUFDSTs0QkFBSUQsV0FBVTs7OENBQ2IsUUFBQ0M7b0NBQUlELFdBQVU7OENBQ2IsY0FBQSxRQUFDRzt3Q0FBSUMsT0FBTTt3Q0FBS0MsUUFBTzt3Q0FBS0MsU0FBUTt3Q0FBWUMsTUFBSzt3Q0FBT0MsUUFBTzt3Q0FBZUMsYUFBWTtrREFBSSxjQUFBLFFBQUNhOzRDQUFLQyxHQUFFOzs7Ozs7Ozs7Ozs7Ozs7OzhDQUU1RyxRQUFDSjtvQ0FBS25CLFdBQVU7OENBQ2JILFFBQVEsQ0FBQyxFQUFFOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQVMxQjtHQWpHd0JGOztRQUNBRDs7O0tBREFDIn0=
