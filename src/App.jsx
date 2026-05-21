@@ -11,6 +11,10 @@ import { LanguageProvider } from './i18n/LanguageContext';
 
 function App() {
   useEffect(() => {
+    document.title = 'PolarPointTech';
+  }, []);
+
+  useEffect(() => {
     const updateStageScale = () => {
       const width = window.innerWidth;
       const isDesktopCanvas = width >= 1025 && width <= 1500;
