@@ -635,6 +635,16 @@ $canvas-height: 900;
       opacity: 1;
       pointer-events: auto;
       transform: translate(-50%, -50%) scale(1);
+
+      * {
+        pointer-events: auto;
+      }
+    }
+
+    &:not(.mobile-open) {
+      * {
+        pointer-events: none !important;
+      }
     }
 
     .mobile-nav-close {
@@ -741,6 +751,7 @@ $canvas-height: 900;
     .menu-label {
       margin: 0;
       padding: 0 13px;
+      justify-content: flex-start;
 
       .left {
         width: auto;
@@ -763,7 +774,7 @@ $canvas-height: 900;
         width: 13px;
         flex: 0 0 13px;
         opacity: 1;
-        margin-left: auto;
+        margin-left: 6px;
       }
     }
 
@@ -792,11 +803,41 @@ $canvas-height: 900;
     }
 
     .language-switcher {
-      display: none;
+      display: block;
+      width: 100%;
+      margin-top: auto;
+      margin-bottom: 9px;
+      order: 6;
+    }
+
+    .language-trigger {
+      justify-content: center;
+      color: #ffffff;
+      background:
+        linear-gradient(135deg, rgba(20, 48, 62, 0.84), rgba(11, 37, 61, 0.78)),
+        rgba(16, 35, 45, 0.72);
+
+      .earth-icon {
+        width: 21px;
+        height: 21px;
+        flex-basis: 21px;
+      }
+
+      .label {
+        max-width: 34px;
+        opacity: 1;
+      }
+    }
+
+    .language-menu {
+      left: 50%;
+      bottom: calc(100% + 8px);
+      width: 168px;
     }
 
     .contact-btn {
-      margin-top: auto;
+      margin-top: 0;
+      order: 7;
       justify-content: center;
       color: #ffffff;
       background: #ff7f11;

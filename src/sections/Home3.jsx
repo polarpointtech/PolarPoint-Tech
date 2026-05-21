@@ -158,6 +158,9 @@ export default function Home3() {
                 className={`icon-btn ${btn.type === 'brand' ? 'brand-shadow' : ''}`}
                 type="button"
                 aria-label={btn.title}
+                onMouseEnter={() => setActiveCapability(btn)}
+                onFocus={() => setActiveCapability(btn)}
+                onClick={() => setActiveCapability((current) => current?.id === btn.id ? null : btn)}
               >
                 {IconComponent && <IconComponent />}
               </button>
@@ -165,7 +168,7 @@ export default function Home3() {
           );
         })}
         {activeCapability && (
-          <div className="capability-glass-card" key={activeCapability.id}>
+          <div className={`capability-glass-card service-${activeCapability.id}`} key={activeCapability.id}>
             <div className="card-content">
               <span className="category-badge">{activeCapability.category}</span>
               <h3>{activeCapability.title}</h3>
@@ -181,9 +184,9 @@ export default function Home3() {
           <div className="deco-line"></div>
           <h2 className="main-title">
             {isChinese ? (
-              <>
+              <span className="title-line title-line-zh">
                 依據您的需求，打造專屬解決方案
-              </>
+              </span>
             ) : (
               <>
                 Solutions Designed Around<br />Your Business Needs

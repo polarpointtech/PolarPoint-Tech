@@ -50,7 +50,8 @@ export default function Home2() {
               onClick={() => window.scrollTo({ top: 0, left: 0 })}
             >
               <AccentMark />
-              <span>{item.cta}</span>
+              <span className="desktop-label">{item.cta}</span>
+              <span className="mobile-label">{isChinese ? '查看詳情' : 'View Details'}</span>
             </Link>
           </div>
         </div>

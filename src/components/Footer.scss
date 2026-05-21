@@ -118,27 +118,31 @@
 @media (max-width: 480px) {
   .footer-container {
     height: auto;
-    padding: 54px 0 36px;
+    padding: 58px 0 36px;
 
     .footer-content {
       flex-direction: column;
       align-items: flex-start;
-      gap: 28px;
-      width: min(236px, calc(100vw - 88px));
+      gap: 45px;
+      width: min(292px, calc(100vw - 84px));
       padding: 0;
 
       .left-section {
         order: 2;
         align-items: flex-start;
         text-align: left;
-        gap: 18px;
+        gap: 28px;
 
         .social-icons {
-          gap: 22px;
+          width: 100%;
+          justify-content: space-around;
+          gap: 0;
         }
 
         .copyright {
-          font-size: 10px;
+          width: max-content;
+          max-width: calc(100vw - 48px);
+          font-size: 16px;
         }
       }
 
@@ -146,11 +150,12 @@
         order: 1;
         flex-direction: column;
         align-items: flex-start;
-        gap: 26px;
+        gap: 45px;
         padding-bottom: 0;
 
         .footer-link {
-          font-size: 12px;
+          font-size: 21px;
+          line-height: 1;
         }
       }
     }
@@ -165,23 +170,23 @@
   .footer-container .footer-content .footer-mobile-brand {
     display: flex;
     align-items: center;
-    gap: 9px;
-    margin: 0 0 8px;
+    gap: 14px;
+    margin: 0;
     padding: 0;
     border: 0;
     background: transparent;
     color: #10232d;
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 22px;
     font-weight: 500;
     line-height: 1.08;
     text-align: left;
 
     .footer-logo-mark {
       position: relative;
-      width: 42px;
-      height: 42px;
-      flex: 0 0 42px;
+      width: 68px;
+      height: 68px;
+      flex: 0 0 68px;
       border-radius: 50%;
       border: 3px solid #10232d;
       background: #6fcfe0;
@@ -192,9 +197,9 @@
     img {
       position: absolute;
       left: -5px;
-      top: -4px;
+      top: -6px;
       width: auto;
-      height: 51px;
+      height: 80px;
       max-width: none;
     }
   }

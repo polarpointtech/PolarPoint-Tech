@@ -489,7 +489,7 @@
 
 @media (max-width: 480px) {
   .home3-container {
-    height: 760px;
+    height: 920px;
     margin-top: -1px;
     background:
       radial-gradient(310px 260px at 50% 48%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.22) 58%, rgba(255, 255, 255, 0) 76%),
@@ -532,6 +532,12 @@
           font-size: 20px;
           line-height: 1.35;
           color: #363b40;
+
+          .title-line-zh {
+            display: block;
+            white-space: nowrap;
+            font-size: 18px;
+          }
         }
       }
 
@@ -557,21 +563,63 @@
         transform: scale(0.78);
       }
 
-      .floating-wrapper.service-1 { top: 248px !important; left: 38px !important; }
-      .floating-wrapper.service-2 { top: 232px !important; left: 274px !important; }
-      .floating-wrapper.service-3 { top: 474px !important; left: 276px !important; }
-      .floating-wrapper.service-4 { top: 438px !important; left: 46px !important; }
-      .floating-wrapper.service-5 { top: 584px !important; left: 246px !important; }
-      .floating-wrapper.service-6,
-      .floating-wrapper.service-7,
-      .floating-wrapper.service-8,
-      .floating-wrapper.service-9,
-      .floating-wrapper.service-10 {
-        display: none;
-      }
+      .floating-wrapper.service-1 { top: 236px !important; left: 78px !important; }
+      .floating-wrapper.service-2 { top: 336px !important; left: 34px !important; }
+      .floating-wrapper.service-3 { top: 444px !important; left: 76px !important; }
+      .floating-wrapper.service-6 { top: 236px !important; left: 252px !important; }
+      .floating-wrapper.service-9 { top: 358px !important; left: 300px !important; }
+      .floating-wrapper.service-4 { top: 598px !important; left: 70px !important; }
+      .floating-wrapper.service-5 { top: 718px !important; left: 152px !important; }
+      .floating-wrapper.service-7 { top: 564px !important; left: 300px !important; }
+      .floating-wrapper.service-8 { top: 690px !important; left: 260px !important; }
+      .floating-wrapper.service-10 { top: 812px !important; left: 302px !important; }
 
       .capability-glass-card {
-        display: none;
+        display: block;
+        top: 170px;
+        width: min(312px, calc(100vw - 48px));
+        min-height: 124px;
+        z-index: 80;
+
+        .card-content {
+          min-height: 124px;
+          padding: 17px 18px 16px;
+          border-radius: 20px;
+        }
+
+        .category-badge {
+          height: 24px;
+          padding: 0 10px;
+          margin-bottom: 9px;
+          font-size: 10px;
+        }
+
+        h3 {
+          margin-bottom: 7px;
+          font-size: 17px;
+        }
+
+        p {
+          max-width: 260px;
+          font-size: 12px;
+          line-height: 1.45;
+        }
+
+        &.service-1,
+        &.service-2,
+        &.service-3,
+        &.service-6,
+        &.service-9 {
+          top: 166px;
+        }
+
+        &.service-4,
+        &.service-5,
+        &.service-7,
+        &.service-8,
+        &.service-10 {
+          top: 418px;
+        }
       }
     }
   }
@@ -883,6 +931,59 @@
       .info-title {
         text-align: left;
       }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home3-container .floating-icons-layer > .capability-glass-card {
+    display: block;
+    top: 168px;
+    left: 50%;
+    width: min(312px, calc(100vw - 48px));
+    min-height: 124px;
+    z-index: 80;
+    transform: translateX(-50%);
+    pointer-events: none;
+
+    .card-content {
+      min-height: 124px;
+      padding: 17px 18px 16px;
+      border-radius: 20px;
+    }
+
+    .category-badge {
+      height: 24px;
+      padding: 0 10px;
+      margin-bottom: 9px;
+      font-size: 10px;
+    }
+
+    h3 {
+      margin-bottom: 7px;
+      font-size: 17px;
+    }
+
+    p {
+      max-width: 260px;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    &.service-1,
+    &.service-2,
+    &.service-3,
+    &.service-6,
+    &.service-9 {
+      top: 156px;
+    }
+
+    &.service-4,
+    &.service-5,
+    &.service-7,
+    &.service-8,
+    &.service-10 {
+      top: 476px;
     }
   }
 }
