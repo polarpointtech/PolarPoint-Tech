@@ -581,6 +581,215 @@
   }
 }
 
+@media (max-width: 480px) {
+  .technology1-container {
+    height: 1040px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #ffffff 0%, #dceefc 100%);
+
+    &::before {
+      display: block;
+      background-size: 48px 48px;
+      background-image:
+        linear-gradient(rgba(140, 200, 244, 0.45) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(140, 200, 244, 0.45) 1px, transparent 1px);
+      -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 10%, #000 88%, transparent 100%);
+      mask-image: linear-gradient(180deg, transparent 0%, #000 10%, #000 88%, transparent 100%);
+    }
+
+    .content-wrapper {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      position: relative;
+    }
+
+    .title-group,
+    .title-group.title-group-zh {
+      position: absolute;
+      top: 82px;
+      left: 42px;
+      width: calc(100vw - 84px);
+      margin: 0;
+      text-align: left;
+      z-index: 4;
+
+      .main-title {
+        margin: 0;
+        font-size: 34px;
+        line-height: 0.94;
+        color: #3f3f3f;
+        letter-spacing: 0;
+      }
+    }
+
+    .title-group.title-group-zh {
+      .main-title {
+        font-size: 32px;
+        line-height: 1.02;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+      }
+    }
+
+    .dynamic-card-container {
+      position: absolute;
+      top: 170px;
+      left: 41px;
+      width: calc(100vw - 82px);
+      max-width: 306px;
+      height: 377px;
+      min-height: 0;
+      margin: 0;
+      border-radius: 0;
+      z-index: 3;
+
+      &.theme-glass {
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+
+        .glass-content {
+          gap: 16px;
+
+          .header-block {
+            height: 58px;
+            border-radius: 14px;
+            padding: 12px 16px;
+
+            h3 {
+              font-size: 16px;
+              line-height: 1.1;
+              margin-bottom: 4px;
+            }
+
+            p {
+              font-size: 10px;
+              line-height: 1.25;
+            }
+          }
+
+          .music-block {
+            border-radius: 14px;
+            padding: 18px;
+
+            .card-visual {
+              min-height: 88px;
+
+              svg {
+                width: 74px;
+                height: 74px;
+              }
+            }
+
+            .player-controls {
+              border-radius: 14px;
+              padding: 14px;
+
+              .song-info {
+                margin-bottom: 10px;
+                font-size: 13px;
+              }
+
+              .artist {
+                font-size: 10px;
+              }
+
+              .control-buttons {
+                gap: 12px;
+                margin-top: 12px;
+
+                .ctrl-btn {
+                  width: 32px;
+                  height: 32px;
+
+                  svg {
+                    width: 15px;
+                    height: 15px;
+                  }
+
+                  &.play {
+                    width: 48px;
+                    height: 48px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .info-panel {
+      position: absolute;
+      top: 606px;
+      left: 41px;
+      width: calc(100vw - 82px);
+      max-width: 306px;
+      padding: 0;
+      z-index: 4;
+
+      .section-subtitle {
+        order: 1;
+        margin: 0 0 8px;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        color: #003680;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+        border-radius: 0;
+      }
+
+      .info-title {
+        order: 2;
+        margin: 0 0 8px;
+        color: #26343b;
+        font-size: 30px;
+        line-height: 1.02;
+        text-shadow: none;
+      }
+
+      .info-desc {
+        order: 3;
+        max-width: 100%;
+        margin: 0 0 28px;
+        color: #26343b;
+        font-size: 14px;
+        line-height: 1.28;
+      }
+
+      .tags-grid {
+        order: 4;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 22px;
+        width: 100%;
+
+        .tech-tag {
+          width: 116px;
+          height: 32px;
+          padding: 0 8px;
+          border-radius: 100px;
+          font-size: 9px;
+          font-weight: 600;
+          background: rgba(255, 255, 255, 0.38);
+          box-shadow:
+            0 8px 18px rgba(74, 122, 150, 0.12),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+          justify-self: start;
+        }
+
+        .tech-tag:nth-child(even) {
+          justify-self: end;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 1025px) and (max-width: 1500px) {
   .technology1-container {
     height: var(--stage-1077-height, 1077px);
