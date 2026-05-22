@@ -74,11 +74,11 @@ export default function Construction1() {
             <>
               石材與室內<br />應用方案
             </>
-          ) : (
-            <>
-              Stone & Interior<br />Material Solutions
-            </>
-          )}
+            ) : (
+              <>
+                Stone & Interior<br />Material Solutions
+              </>
+            )}
         </h2>
         <p className="section-subtitle">
           {isChinese

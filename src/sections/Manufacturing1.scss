@@ -308,6 +308,9 @@
       }
 
       &.title-group-zh {
+        width: min(270px, calc(100vw - 132px));
+        margin-top: 18px;
+
         .main-title,
         .sub-title {
           white-space: normal;
@@ -316,12 +319,13 @@
         }
 
         .main-title {
-          font-size: 40px;
+          font-size: 36px;
           line-height: 1.16;
         }
 
         .sub-title {
-          font-size: 23px;
+          width: 100%;
+          font-size: 20px;
           line-height: 1.34;
         }
       }
@@ -374,7 +378,7 @@
     .process-cards-container {
       order: 4;
       position: absolute;
-      top: calc(100vw * 680 / 375);
+      top: calc(100vw * 720 / 375);
       left: 50%;
       transform: translateX(-50%);
       width: 100%;

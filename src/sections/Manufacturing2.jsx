@@ -21,7 +21,7 @@ export default function Manufacturing2() {
   return (
     <section className="manufacturing2-container">
       <div className="content-wrapper">
-        <div className="features-container">
+        <div className={`features-container ${isChinese ? 'features-zh' : 'features-en'}`}>
           
           {/* 🌟 Item 1: 左上 */}
           <div className="feature-item item-1">

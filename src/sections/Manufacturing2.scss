@@ -135,7 +135,7 @@
 
     .content-wrapper {
       width: 100%;
-      padding: calc(100vw * 410 / 375) 0 56px;
+      padding: calc(100vw * 455 / 375) 0 56px;
     }
 
     .features-container {
@@ -189,13 +189,21 @@
 
       .feature-text {
         text-align: left;
-        transform: translateX(18px);
+        transform: translateX(8px);
       }
     }
 
     .item-2 {
       .feature-text {
-        transform: translateX(34px);
+        transform: translateX(14px);
+      }
+    }
+
+    .features-en {
+      .item-2 {
+        .feature-text {
+          transform: translateX(44px);
+        }
       }
     }
   }
