@@ -198,6 +198,8 @@
       font-size: 40px;
       line-height: 1.13;
       letter-spacing: 0;
+      word-break: break-word;
+      overflow-wrap: anywhere;
     }
 
     .sub-title {
@@ -233,6 +235,8 @@
         font-weight: 400;
         line-height: 1.5;
         letter-spacing: 0;
+        word-break: break-word;
+        overflow-wrap: anywhere;
       }
     }
   }

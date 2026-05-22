@@ -165,6 +165,8 @@
         font-size: 28px;
         line-height: 1.22;
         text-align: center;
+        word-break: break-word;
+        overflow-wrap: anywhere;
       }
     }
 
@@ -209,6 +211,8 @@
         font-size: 16px;
         line-height: 1.2;
         white-space: normal;
+        word-break: break-word;
+        overflow-wrap: anywhere;
       }
     }
 

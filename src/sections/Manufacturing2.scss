@@ -135,7 +135,7 @@
 
     .content-wrapper {
       width: 100%;
-      padding: calc(100vw * 550 / 375) 0 76px;
+      padding: calc(100vw * 410 / 375) 0 56px;
     }
 
     .features-container {
@@ -177,6 +177,8 @@
         font-size: 16px;
         line-height: 1.2;
         text-wrap: auto;
+        word-break: break-word;
+        overflow-wrap: anywhere;
       }
     }
 
@@ -188,6 +190,12 @@
       .feature-text {
         text-align: left;
         transform: translateX(18px);
+      }
+    }
+
+    .item-2 {
+      .feature-text {
+        transform: translateX(34px);
       }
     }
   }
