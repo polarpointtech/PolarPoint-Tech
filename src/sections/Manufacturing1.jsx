@@ -10,6 +10,7 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Manufacturing1() {
   const { isChinese } = useLanguage();
+  const isMobileViewport = typeof window !== 'undefined' && window.matchMedia('(max-width: 480px)').matches;
 
   return (
     <section className="manufacturing1-container" id="manufacturing">
@@ -42,12 +43,21 @@ export default function Manufacturing1() {
         </div>
 
         <div className="hero-3d-container">
-          <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 10], fov: 45 }}>
+          <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, isMobileViewport ? 9.4 : 10], fov: 45 }}>
             <Suspense fallback={null}>
               <Stage environment="city" intensity={0.5} adjustCamera={false} shadows={false}>
-                <RobotModelObj scale={4.5} position={[0.35, -4.75, 0]} />
+                <RobotModelObj
+                  scale={isMobileViewport ? 5.6 : 4.5}
+                  position={isMobileViewport ? [0.25, -4.9, 0] : [0.35, -4.75, 0]}
+                />
               </Stage>
-              <ContactShadows position={[0.35, -4.87, 0]} opacity={0.34} scale={12.5} blur={2.8} far={4} />
+              <ContactShadows
+                position={isMobileViewport ? [0.25, -5.02, 0] : [0.35, -4.87, 0]}
+                opacity={0.34}
+                scale={isMobileViewport ? 13 : 12.5}
+                blur={2.8}
+                far={4}
+              />
             </Suspense>
 
             <OrbitControls autoRotate autoRotateSpeed={1.0} enableZoom={false} enablePan={false} />

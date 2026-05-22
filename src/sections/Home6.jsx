@@ -249,7 +249,6 @@ const TestimonialCard = ({ data }) => (
         <img src={data.avatar} alt={data.name} className="avatar" />
         <span className="name">{data.name}</span>
       </div>
-      <span className="role">{data.role}</span>
     </div>
   </div>
 );

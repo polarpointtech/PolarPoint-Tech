@@ -21,8 +21,8 @@ export default function Manufacturing4() {
         designed for production efficiency.
       </>,
       <>
-        Support for metals,<br />
-        plastics, and custom materials.
+        Support for metals, plastics,<br />
+        and custom materials.
       </>,
       <>
         OEM/ODM manufacturing<br />

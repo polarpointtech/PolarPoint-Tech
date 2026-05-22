@@ -22,8 +22,10 @@ export default function Manufacturing3() {
               </>
             ) : (
               <>
-                Manufacturing<br />
-                Built for Real-World Applications
+                General<br />
+                Component<br />
+                Machining<br />
+                &amp; Parts Trading
               </>
             )}
           </h2>
@@ -38,7 +40,7 @@ export default function Manufacturing3() {
             <p>
               {isChinese
                 ? '提供精密加工、治具設計、OEM/ODM 生產與工業零件支援，滿足各類客製化製造需求。'
-                : 'We provide machining, tooling design, OEM/ODM production, and industrial component support for customized manufacturing needs.'}
+                : 'We provide complete CNC turning-milling machining capabilities for aluminum alloys, stainless steel, copper, engineering plastics, and more. OEM/ODM and component sourcing services are also available.'}
             </p>
           </div>
         </div>

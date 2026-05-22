@@ -47,10 +47,10 @@
 
   .data-column {
     position: absolute;
-    top: -88%;
+    top: -50%;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 0;
     width: 24px;
     color: rgba(230, 141, 26, 0.62);
     font-family: 'Inter', sans-serif;
@@ -68,6 +68,7 @@
       display: flex;
       flex-direction: column;
       gap: 11px;
+      padding-bottom: 11px;
       flex: 0 0 auto;
     }
 
@@ -204,6 +205,25 @@
 
 @media (max-width: 480px) {
   .home5-container {
+    height: 470px;
+
+    .data-stream-bg {
+      mask-image: linear-gradient(180deg, black 0%, black 88%, transparent 100%);
+      -webkit-mask-image: linear-gradient(180deg, black 0%, black 88%, transparent 100%);
+    }
+
+    .content-wrapper {
+      top: 76px;
+
+      .main-title {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home5-container {
     height: 420px;
     background-position: center;
     background:
@@ -222,6 +242,7 @@
 
       .stream-set {
         gap: 5px;
+        padding-bottom: 5px;
       }
 
       i {
@@ -266,14 +287,14 @@
 // RWD：手機版調整
 @keyframes data-rain {
   0% {
-    transform: translateY(-34%);
+    transform: translate3d(0, 0, 0);
     filter: blur(0);
   }
   50% {
     filter: blur(0.2px);
   }
   100% {
-    transform: translateY(34%);
+    transform: translate3d(0, 50%, 0);
     filter: blur(0);
   }
 }
