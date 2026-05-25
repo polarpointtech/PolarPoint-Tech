@@ -193,6 +193,10 @@ export default function ContactUs() {
           <p className="response-note">
             {isChinese ? '我們通常會於 1-2 個工作天內回覆。' : 'We typically respond within 1-2 business days.'}
           </p>
+          <p className="urgent-email-note">
+            {isChinese ? '急件可直接寄信至：' : 'For urgent requests, email us directly:'}
+            <a href="mailto:polarpointtech@gmail.com">polarpointtech@gmail.com</a>
+          </p>
         </form>
       </section>
     </main>

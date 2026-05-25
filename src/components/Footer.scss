@@ -19,7 +19,7 @@
     // 限制最大寬度為設計稿的 1440px
     max-width: 1440px;
     // 左右留一點邊距，以免太貼齊螢幕邊緣
-    padding: 0 60px; 
+    padding: 0 60px 0 150px; 
     
     display: flex;
     justify-content: space-between;
@@ -53,6 +53,32 @@
         &:hover {
           color: #1C1C1C; // Hover 變黑色
         }
+      }
+    }
+
+    .footer-email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #52525b;
+      font-size: 15px;
+      line-height: 1.4;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        flex: 0 0 auto;
+      }
+
+      &:hover {
+        color: #1c1c1c;
       }
     }
 
@@ -141,6 +167,13 @@
           width: 100%;
           justify-content: center;
           gap: 52px;
+        }
+
+        .footer-email-link {
+          justify-content: center;
+          width: 100%;
+          font-size: 14px;
+          overflow-wrap: anywhere;
         }
 
         .copyright {
