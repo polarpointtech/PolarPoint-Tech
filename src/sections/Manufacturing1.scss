@@ -245,8 +245,8 @@
 
 @media (max-width: 480px) {
   .manufacturing1-container {
-    height: calc(100vw * 877 / 375);
-    min-height: 877px;
+    height: auto;
+    min-height: 0;
     overflow: visible;
     background: linear-gradient(180deg, #ffffff 0%, #e8f6ff 54%, #f3fbff 100%);
 
@@ -269,8 +269,8 @@
       align-items: stretch;
       width: 100%;
       max-width: none;
-      height: 100%;
-      padding: 61px 0 72px;
+      height: auto;
+      padding: 61px 0 46px;
     }
 
     .title-group,
@@ -360,7 +360,7 @@
       top: auto;
       left: auto;
       width: min(306px, 81.6vw);
-      margin: 10px 0 58px clamp(30px, 10.13vw, 44px);
+      margin: 10px 0 28px clamp(30px, 10.13vw, 44px);
       padding: 0;
 
       p {
@@ -377,8 +377,8 @@
 
     .process-cards-container {
       order: 4;
-      position: absolute;
-      top: calc(100vw * 720 / 375);
+      position: relative;
+      top: auto;
       left: 50%;
       transform: translateX(-50%);
       width: 100%;

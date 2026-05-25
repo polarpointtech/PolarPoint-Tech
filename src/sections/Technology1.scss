@@ -583,7 +583,7 @@
 
 @media (max-width: 480px) {
   .technology1-container {
-    height: 1040px;
+    height: 1090px;
     overflow: hidden;
     background: linear-gradient(180deg, #ffffff 0%, #dceefc 100%);
 
@@ -634,95 +634,21 @@
 
     .dynamic-card-container {
       position: absolute;
-      top: 170px;
+      top: 216px;
       left: 41px;
-      width: calc(100vw - 82px);
-      max-width: 306px;
-      height: 377px;
+      width: 529px;
+      max-width: none;
+      height: 782px;
       min-height: 0;
       margin: 0;
-      border-radius: 0;
+      transform: scale(0.58);
+      transform-origin: top left;
       z-index: 3;
-
-      &.theme-glass {
-        padding: 20px;
-        border-radius: 0;
-        box-shadow: none;
-
-        .glass-content {
-          gap: 16px;
-
-          .header-block {
-            height: 58px;
-            border-radius: 14px;
-            padding: 12px 16px;
-
-            h3 {
-              font-size: 16px;
-              line-height: 1.1;
-              margin-bottom: 4px;
-            }
-
-            p {
-              font-size: 10px;
-              line-height: 1.25;
-            }
-          }
-
-          .music-block {
-            border-radius: 14px;
-            padding: 18px;
-
-            .card-visual {
-              min-height: 88px;
-
-              svg {
-                width: 74px;
-                height: 74px;
-              }
-            }
-
-            .player-controls {
-              border-radius: 14px;
-              padding: 14px;
-
-              .song-info {
-                margin-bottom: 10px;
-                font-size: 13px;
-              }
-
-              .artist {
-                font-size: 10px;
-              }
-
-              .control-buttons {
-                gap: 12px;
-                margin-top: 12px;
-
-                .ctrl-btn {
-                  width: 32px;
-                  height: 32px;
-
-                  svg {
-                    width: 15px;
-                    height: 15px;
-                  }
-
-                  &.play {
-                    width: 48px;
-                    height: 48px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
 
     .info-panel {
       position: absolute;
-      top: 606px;
+      top: 724px;
       left: 41px;
       width: calc(100vw - 82px);
       max-width: 306px;
@@ -739,8 +665,10 @@
         font-family: 'Inter', sans-serif;
         font-size: 14px;
         font-weight: 700;
-        line-height: 1;
+        line-height: 1.28;
         border-radius: 0;
+        white-space: normal;
+        overflow-wrap: anywhere;
       }
 
       .info-title {
@@ -786,6 +714,29 @@
           justify-self: end;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .technology1-container {
+    height: 1040px;
+
+    .title-group,
+    .title-group.title-group-zh {
+      left: 32px;
+      width: calc(100vw - 64px);
+    }
+
+    .dynamic-card-container {
+      left: 32px;
+      transform: scale(0.52);
+    }
+
+    .info-panel {
+      top: 688px;
+      left: 32px;
+      width: calc(100vw - 64px);
     }
   }
 }

@@ -33,8 +33,14 @@ const services = [
 
 function ServiceIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6.4 16.5c1.7-3.1 3.7-6.5 5.1-8.1.7-.8 1.5-.3 1.1.7l-2.3 6.1c-.3.9.5 1.4 1.2.8l2.6-2.5c.7-.6 1.6-.2 1.3.7l-.4 1.2c-.3.8.4 1.4 1.1.8l1.5-1.2" />
+    <svg className="button-mark" viewBox="0 0 32 24" fill="none" aria-hidden="true">
+      <path
+        d="M3 16.8C7.4 10.2 13.1 3.8 18.2 2.2C21.9 1.1 20.5 6.4 17.2 11.3C14.7 15.2 12.7 18.2 14.6 19.2C17.1 20.5 21.9 13.1 24 14.3C25.7 15.3 22.8 20.5 25.3 21.2C26.6 21.6 28.4 20.1 30 18.3"
+        stroke="currentColor"
+        strokeWidth="4.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -110,7 +116,7 @@ export default function ContactUs() {
                 key={service.id}
                 onClick={() => setSelectedService(selectedService?.id === service.id ? null : service)}
               >
-                {!isChinese && <ServiceIcon />}
+                <ServiceIcon />
                 {isChinese ? service.name.zh : service.name.en}
               </button>
             ))}

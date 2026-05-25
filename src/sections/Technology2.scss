@@ -200,3 +200,122 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .technology2-container {
+    height: 760px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 58%, #dceefc 100%);
+
+    .text-content {
+      top: 48px;
+      width: min(336px, calc(100vw - 52px));
+      z-index: 30;
+
+      p {
+        font-size: 21px;
+        line-height: 1.4;
+      }
+    }
+
+    .elliptical-bg {
+      top: 455px;
+      width: 158%;
+      height: 420px;
+      border-radius: 50% 50% 0 0;
+      border-top: 4px solid rgba(255, 255, 255, 0.9);
+      box-shadow: none;
+      background: linear-gradient(180deg, #dceefc 0%, rgba(255, 255, 255, 0) 100%);
+
+      .bg-viewport {
+        width: 100vw;
+      }
+
+      .bg-image {
+        opacity: 0.78;
+        background-size: 240% auto;
+        background-position: 100% 78%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .devices-layer {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 500px;
+      z-index: 20;
+
+      .device-item {
+        animation-duration: 5s;
+      }
+
+      .laptop {
+        width: min(420px, 104vw);
+        top: 316px;
+        left: 50%;
+        margin-left: 0;
+        z-index: 2;
+
+        img {
+          transform: translateX(-50%) rotate(-4.05deg);
+        }
+      }
+
+      .tablet {
+        width: min(240px, 60vw);
+        top: 232px;
+        right: -52px;
+        z-index: 3;
+
+        img {
+          transform: rotate(-6.38deg);
+        }
+      }
+
+      .phone {
+        width: min(108px, 27vw);
+        top: 282px;
+        left: -4px;
+        z-index: 4;
+
+        .phone-screen {
+          width: 84px;
+          height: 144px;
+          border-radius: 16px;
+          border-width: 2px;
+          transform: rotate(15deg);
+        }
+
+        .phone-island {
+          top: 8px;
+          width: 25px;
+          height: 7px;
+        }
+
+        .phone-card {
+          left: 15px;
+          right: 15px;
+          border-radius: 10px;
+
+          &.card-a {
+            top: 40px;
+            height: 38px;
+          }
+
+          &.card-b {
+            top: 88px;
+            height: 26px;
+          }
+        }
+
+        .phone-glow {
+          width: 64px;
+          height: 64px;
+          right: -14px;
+          bottom: -16px;
+        }
+      }
+    }
+  }
+}
