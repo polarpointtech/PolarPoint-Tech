@@ -7,8 +7,18 @@ const normalizeLanguage = (value) => {
   return 'en';
 };
 
+const getInitialLanguage = () => {
+  const queryLanguage = new URLSearchParams(window.location.search).get('lang');
+
+  if (queryLanguage) {
+    return normalizeLanguage(queryLanguage);
+  }
+
+  return normalizeLanguage(localStorage.getItem('siteLanguage'));
+};
+
 export function LanguageProvider({ children }) {
-  const [language, setLanguageState] = useState(() => normalizeLanguage(localStorage.getItem('siteLanguage')));
+  const [language, setLanguageState] = useState(getInitialLanguage);
 
   const setLanguage = (nextLanguage) => {
     const normalized = normalizeLanguage(nextLanguage);

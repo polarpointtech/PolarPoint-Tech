@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://polar-point-tech.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polar-point-tech.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://polar-point-tech.vercel.app/?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polar-point-tech.vercel.app/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://polar-point-tech.vercel.app/?lang=zh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polar-point-tech.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://polar-point-tech.vercel.app/?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polar-point-tech.vercel.app/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://polar-point-tech.vercel.app/manufacturing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polar-point-tech.vercel.app/manufacturing" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://polar-point-tech.vercel.app/manufacturing?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polar-point-tech.vercel.app/manufacturing" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://polar-point-tech.vercel.app/manufacturing?lang=zh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polar-point-tech.vercel.app/manufacturing" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://polar-point-tech.vercel.app/manufacturing?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polar-point-tech.vercel.app/manufacturing" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://polar-point-tech.vercel.app/technology</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polar-point-tech.vercel.app/technology" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://polar-point-tech.vercel.app/technology?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polar-point-tech.vercel.app/technology" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://polar-point-tech.vercel.app/technology?lang=zh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polar-point-tech.vercel.app/technology" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://polar-point-tech.vercel.app/technology?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polar-point-tech.vercel.app/technology" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://polar-point-tech.vercel.app/construction</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polar-point-tech.vercel.app/construction" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://polar-point-tech.vercel.app/construction?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polar-point-tech.vercel.app/construction" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://polar-point-tech.vercel.app/construction?lang=zh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polar-point-tech.vercel.app/construction" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://polar-point-tech.vercel.app/construction?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polar-point-tech.vercel.app/construction" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://polar-point-tech.vercel.app/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polar-point-tech.vercel.app/contact" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://polar-point-tech.vercel.app/contact?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polar-point-tech.vercel.app/contact" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polar-point-tech.vercel.app/contact?lang=zh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polar-point-tech.vercel.app/contact" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://polar-point-tech.vercel.app/contact?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polar-point-tech.vercel.app/contact" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
