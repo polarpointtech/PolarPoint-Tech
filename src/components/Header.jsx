@@ -132,9 +132,17 @@ export default function Header() {
             <img src={logo} alt="PolarPoint" className="logo-img" />
           </span>
           <span className="logo-text">
-            PolarPoint
-            <br />
-            Tech
+            {isChinese ? (
+              <>
+                <span className="logo-name">極點科技</span>
+                <span className="logo-subtitle">PolarPoint Tech</span>
+              </>
+            ) : (
+              <>
+                <span className="logo-name">PolarPoint</span>
+                <span className="logo-name">Tech</span>
+              </>
+            )}
           </span>
         </button>
       </div>

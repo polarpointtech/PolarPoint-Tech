@@ -84,12 +84,22 @@ $canvas-height: 900;
   }
 
   .logo-text {
+    display: flex;
+    flex-direction: column;
     font-size: 15px;
     font-weight: 700;
     line-height: 1.02;
     letter-spacing: 0;
     color: #111111;
     white-space: nowrap;
+  }
+
+  .logo-subtitle {
+    margin-top: 3px;
+    color: #31505d;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
   }
 
   .nav-menu {
@@ -707,6 +717,11 @@ $canvas-height: 900;
       font-size: 12px;
       line-height: 1.02;
       max-width: 86px;
+    }
+
+    .logo-subtitle {
+      margin-top: 2px;
+      font-size: 8px;
     }
 
     .nav-menu {

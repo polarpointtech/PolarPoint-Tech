@@ -25,7 +25,7 @@ const routeMeta = {
       keywords: '3D printing service, rapid prototyping, low-volume production, product validation, manufacturing support',
     },
     zh: {
-      title: '製造服務｜3D列印、快速打樣與小量生產｜PolarPoint Tech',
+      title: '製造服務｜3D列印、快速打樣與小量生產｜極點科技 PolarPoint Tech',
       description: '提供 3D 列印、快速打樣、小量生產、功能模型與產品驗證等製造支援，協助產品從概念進入可執行階段。',
       keywords: '3D列印服務, 快速打樣, 小量生產, 產品原型製作, 功能模型, 製造支援',
     },
@@ -37,7 +37,7 @@ const routeMeta = {
       keywords: 'web design, UI UX design, custom digital systems, digital experience, business automation',
     },
     zh: {
-      title: '數位服務｜網站設計、UI/UX 與客製化系統｜PolarPoint Tech',
+      title: '數位服務｜網站設計、UI/UX 與客製化系統｜極點科技 PolarPoint Tech',
       description: '提供網站設計、UI/UX、客製化數位體驗與企業系統規劃，協助品牌提升效率、流程與數位呈現。',
       keywords: '網站設計, UI/UX設計, 客製化系統, 數位體驗, 企業自動化',
     },
@@ -49,7 +49,7 @@ const routeMeta = {
       keywords: 'construction support, material sourcing, site project support, building materials, construction services',
     },
     zh: {
-      title: '營建支援｜建材、現場需求與工程協助｜PolarPoint Tech',
+      title: '營建支援｜建材、現場需求與工程協助｜極點科技 PolarPoint Tech',
       description: '協助營建與工程專案處理建材需求、現場支援、材料媒合與專案協調，讓工程需求更有效率地落地。',
       keywords: '營建支援, 建材媒合, 工程協助, 現場支援, 建築材料',
     },
@@ -61,7 +61,7 @@ const routeMeta = {
       keywords: 'contact PolarPoint Tech, project inquiry, manufacturing inquiry, digital services inquiry, construction inquiry',
     },
     zh: {
-      title: '聯絡 PolarPoint Tech｜專案諮詢與服務需求',
+      title: '聯絡極點科技 PolarPoint Tech｜專案諮詢與服務需求',
       description: '聯絡 PolarPoint Tech 極點科技，洽詢製造、數位服務與營建支援需求。急件可直接寄信至 polarpointtech@gmail.com。',
       keywords: '聯絡極點科技, 專案諮詢, 製造需求, 數位服務諮詢, 營建支援',
     },
@@ -148,6 +148,7 @@ export default function SEO() {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'PolarPoint Tech',
+      alternateName: ['極點科技', 'PolarPointTech'],
       url: SITE_URL,
       logo: `${SITE_URL}/favicon.png?v=penguin-round`,
       email: 'polarpointtech@gmail.com',

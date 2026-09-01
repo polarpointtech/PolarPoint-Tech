@@ -226,6 +226,19 @@
     line-height: 1.08;
     text-align: left;
 
+    span:not(.footer-logo-mark) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    small {
+      margin-top: 4px;
+      color: #31505d;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
     .footer-logo-mark {
       position: relative;
       width: 68px;

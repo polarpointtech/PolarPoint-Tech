@@ -2,21 +2,33 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.scss';
 import logo from '../assets/header1-1.png';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const scrollTop = () => window.scrollTo({ top: 0, left: 0 });
 
 export default function Footer() {
+  const { isChinese } = useLanguage();
+
   return (
     <footer className="footer-container">
       <div className="footer-content">
-        <button className="footer-mobile-brand" type="button" aria-label="PolarPoint Tech">
+        <button className="footer-mobile-brand" type="button" aria-label={isChinese ? '極點科技 PolarPoint Tech' : 'PolarPoint Tech'}>
           <span className="footer-logo-mark">
-            <img src={logo} alt="PolarPoint Tech" />
+            <img src={logo} alt={isChinese ? '極點科技 PolarPoint Tech' : 'PolarPoint Tech'} />
           </span>
           <span>
-            PolarPoint
-            <br />
-            Tech
+            {isChinese ? (
+              <>
+                極點科技
+                <small>PolarPoint Tech</small>
+              </>
+            ) : (
+              <>
+                PolarPoint
+                <br />
+                Tech
+              </>
+            )}
           </span>
         </button>
 
@@ -30,7 +42,7 @@ export default function Footer() {
           </a>
 
           <p className="copyright">
-            © 2025 PolarPoint Tech. All rights reserved.
+            © 2025 {isChinese ? '極點科技 PolarPoint Tech' : 'PolarPoint Tech'}. All rights reserved.
           </p>
         </div>
 
