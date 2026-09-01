@@ -12,14 +12,14 @@ export default function Footer() {
   return (
     <footer className="footer-container">
       <div className="footer-content">
-        <button className="footer-mobile-brand" type="button" aria-label={isChinese ? '極點科技 PolarPoint Tech' : 'PolarPoint Tech'}>
+        <button className="footer-mobile-brand" type="button" aria-label={isChinese ? '極點科技有限公司 PolarPoint Tech' : 'PolarPoint Tech'}>
           <span className="footer-logo-mark">
-            <img src={logo} alt={isChinese ? '極點科技 PolarPoint Tech' : 'PolarPoint Tech'} />
+            <img src={logo} alt={isChinese ? '極點科技有限公司 PolarPoint Tech' : 'PolarPoint Tech'} />
           </span>
           <span>
             {isChinese ? (
               <>
-                極點科技
+                極點科技有限公司
                 <small>PolarPoint Tech</small>
               </>
             ) : (
@@ -42,7 +42,7 @@ export default function Footer() {
           </a>
 
           <p className="copyright">
-            © 2025 {isChinese ? '極點科技 PolarPoint Tech' : 'PolarPoint Tech'}. All rights reserved.
+            © 2025 {isChinese ? '極點科技有限公司 PolarPoint Tech' : 'PolarPoint Tech'}. All rights reserved.
           </p>
         </div>
 
