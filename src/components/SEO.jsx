@@ -8,14 +8,14 @@ const OG_IMAGE = `${SITE_URL}/og-image.png?v=20260525`;
 const routeMeta = {
   '/': {
     en: {
-      title: 'PolarPoint Tech | Manufacturing, Digital Systems, and Construction Support',
-      description: 'PolarPoint Tech helps businesses turn complex requirements into practical solutions across manufacturing support, custom digital systems, and construction project services.',
-      keywords: 'PolarPoint Tech, manufacturing support, digital systems, construction support, business solutions',
+      title: 'PolarPoint Tech | Taiwan Business Systems, Manufacturing, and Digital Services',
+      description: 'PolarPoint Tech, also known as 極點科技有限公司, helps Taiwan businesses with manufacturing support, custom digital systems, web development, and practical business solutions.',
+      keywords: 'PolarPoint Tech, 極點科技, 極點科技有限公司, Taiwan business systems, manufacturing support, digital systems, web development, business solutions',
     },
     zh: {
-      title: 'PolarPoint Tech 極點科技｜製造、數位系統與營建支援',
-      description: 'PolarPoint Tech 極點科技協助企業整合製造支援、客製化數位系統與營建專案需求，將複雜需求轉化為可執行的商業解決方案。',
-      keywords: 'PolarPoint Tech, 極點科技, 製造支援, 數位系統, 營建支援, 企業解決方案',
+      title: '極點科技有限公司｜製造業數位轉型、系統整合與網站開發',
+      description: '極點科技有限公司 PolarPoint Tech 提供製造業數位轉型、企業系統整合、網站開發、客製化數位服務與營建專案支援，協助台灣企業提升營運效率。',
+      keywords: '極點科技, 極點科技有限公司, PolarPoint Tech, 台灣製造業數位轉型, 系統整合, 網站開發, 客製化系統, 企業自動化, 營建支援',
     },
   },
   '/manufacturing': {
@@ -25,9 +25,9 @@ const routeMeta = {
       keywords: '3D printing service, rapid prototyping, low-volume production, product validation, manufacturing support',
     },
     zh: {
-      title: '製造服務｜3D列印、快速打樣與小量生產｜極點科技 PolarPoint Tech',
-      description: '提供 3D 列印、快速打樣、小量生產、功能模型與產品驗證等製造支援，協助產品從概念進入可執行階段。',
-      keywords: '3D列印服務, 快速打樣, 小量生產, 產品原型製作, 功能模型, 製造支援',
+      title: '製造服務｜3D列印、快速打樣與小量生產｜極點科技有限公司',
+      description: '極點科技有限公司提供 3D 列印、快速打樣、小量生產、功能模型與產品驗證等製造支援，協助台灣企業讓產品從概念進入可執行階段。',
+      keywords: '極點科技, 極點科技有限公司, 3D列印服務, 快速打樣, 小量生產, 產品原型製作, 功能模型, 製造支援, 台灣製造服務',
     },
   },
   '/technology': {
@@ -37,9 +37,9 @@ const routeMeta = {
       keywords: 'web design, UI UX design, custom digital systems, digital experience, business automation',
     },
     zh: {
-      title: '數位服務｜網站設計、UI/UX 與客製化系統｜極點科技 PolarPoint Tech',
-      description: '提供網站設計、UI/UX、客製化數位體驗與企業系統規劃，協助品牌提升效率、流程與數位呈現。',
-      keywords: '網站設計, UI/UX設計, 客製化系統, 數位體驗, 企業自動化',
+      title: '數位服務｜網站設計、UI/UX 與客製化系統｜極點科技有限公司',
+      description: '極點科技有限公司提供網站設計、UI/UX、客製化系統、企業流程自動化與數位體驗規劃，協助台灣品牌提升效率與數位呈現。',
+      keywords: '極點科技, 極點科技有限公司, 網站設計, UI/UX設計, 客製化系統, 系統整合, 數位體驗, 企業自動化, 台灣網站開發',
     },
   },
   '/construction': {
@@ -49,9 +49,9 @@ const routeMeta = {
       keywords: 'construction support, material sourcing, site project support, building materials, construction services',
     },
     zh: {
-      title: '營建支援｜建材、現場需求與工程協助｜極點科技 PolarPoint Tech',
-      description: '協助營建與工程專案處理建材需求、現場支援、材料媒合與專案協調，讓工程需求更有效率地落地。',
-      keywords: '營建支援, 建材媒合, 工程協助, 現場支援, 建築材料',
+      title: '營建支援｜建材、現場需求與工程協助｜極點科技有限公司',
+      description: '極點科技有限公司協助營建與工程專案處理建材需求、現場支援、材料媒合與專案協調，讓工程需求更有效率地落地。',
+      keywords: '極點科技, 極點科技有限公司, 營建支援, 建材媒合, 工程協助, 現場支援, 建築材料, 台灣營建服務',
     },
   },
   '/contact': {
@@ -61,9 +61,9 @@ const routeMeta = {
       keywords: 'contact PolarPoint Tech, project inquiry, manufacturing inquiry, digital services inquiry, construction inquiry',
     },
     zh: {
-      title: '聯絡極點科技 PolarPoint Tech｜專案諮詢與服務需求',
-      description: '聯絡 PolarPoint Tech 極點科技，洽詢製造、數位服務與營建支援需求。急件可直接寄信至 polarpointtech@gmail.com。',
-      keywords: '聯絡極點科技, 專案諮詢, 製造需求, 數位服務諮詢, 營建支援',
+      title: '聯絡極點科技有限公司｜專案諮詢與服務需求',
+      description: '聯絡極點科技有限公司 PolarPoint Tech，洽詢製造服務、數位服務、系統整合、網站開發與營建支援需求。急件可直接寄信至 polarpointtech@gmail.com。',
+      keywords: '聯絡極點科技, 聯絡極點科技有限公司, 專案諮詢, 製造需求, 數位服務諮詢, 系統整合諮詢, 營建支援',
     },
   },
 };
@@ -130,9 +130,9 @@ export default function SEO() {
     setMeta('meta[property="og:image"]', { property: 'og:image', content: OG_IMAGE });
     setMeta('meta[property="og:image:width"]', { property: 'og:image:width', content: '1200' });
     setMeta('meta[property="og:image:height"]', { property: 'og:image:height', content: '630' });
-    setMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: 'PolarPoint Tech logo' });
+    setMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: language === 'zh' ? '極點科技有限公司 PolarPoint Tech logo' : 'PolarPoint Tech logo' });
     setMeta('meta[property="og:url"]', { property: 'og:url', content: canonical });
-    setMeta('meta[property="og:site_name"]', { property: 'og:site_name', content: 'PolarPoint Tech' });
+    setMeta('meta[property="og:site_name"]', { property: 'og:site_name', content: language === 'zh' ? '極點科技有限公司 PolarPoint Tech' : 'PolarPoint Tech' });
     setMeta('meta[property="og:locale"]', { property: 'og:locale', content: language === 'zh' ? 'zh_TW' : 'en_US' });
     setMeta('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' });
     setMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: meta.title });
@@ -147,12 +147,17 @@ export default function SEO() {
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'PolarPoint Tech',
+      name: '極點科技有限公司',
       legalName: '極點科技有限公司',
-      alternateName: ['極點科技', '極點科技有限公司', 'PolarPointTech'],
+      alternateName: ['極點科技', 'PolarPoint Tech', 'PolarPointTech'],
       url: SITE_URL,
       logo: `${SITE_URL}/favicon.png?v=penguin-round`,
       email: 'polarpointtech@gmail.com',
+      areaServed: {
+        '@type': 'Country',
+        name: 'Taiwan',
+      },
+      knowsAbout: ['製造業數位轉型', '系統整合', '網站開發', '客製化系統', '營建支援', 'manufacturing support', 'digital systems'],
       contactPoint: [{
         '@type': 'ContactPoint',
         email: 'polarpointtech@gmail.com',
