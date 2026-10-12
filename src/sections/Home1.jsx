@@ -24,6 +24,9 @@ export default function Home1() {
         </div>
 
         <div className="text-content">
+          {isChinese && (
+            <p className="brand-kicker">極點科技</p>
+          )}
           <h1 className="main-title">
             {isChinese ? (
               <>

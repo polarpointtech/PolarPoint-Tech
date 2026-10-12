@@ -117,6 +117,15 @@
     width: calc(846 / 1440 * 100%);
     text-align: center;
 
+    .brand-kicker {
+      margin: 0 0 calc(10 / 900 * min(100vh, 62.5vw));
+      color: #1b6675;
+      font-size: clamp(16px, calc(20 / 1440 * min(100vw, 160vh)), 20px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
     .main-title {
       margin: 0;
       color: #3f3f3f;
@@ -210,6 +219,11 @@
         br {
           display: none;
         }
+      }
+
+      .brand-kicker {
+        margin-bottom: 10px;
+        font-size: 14px;
       }
 
       .sub-description {
